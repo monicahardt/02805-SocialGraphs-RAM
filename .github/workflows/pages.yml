@@ -1,0 +1,36 @@
+name: Deploy site to GitHub Pages
+on:
+  push:
+    branches: [week1_anton_llm]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/analyze.mjs
+      - uses: actions/configure-pages@v5
+      - name: Stage public files
+        run: |
+          mkdir _site
+          cp index.html week1.html week1_nodes.tsv week1_edges.tsv _site/
+          cp -r assets scripts _site/
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy
+        id: deployment
+        uses: actions/deploy-pages@v4
