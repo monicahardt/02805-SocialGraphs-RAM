@@ -4,6 +4,9 @@
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Explore the Marvel network · RAM · Week 1</title>
   <link rel="stylesheet" href="assets/story.css">
+  <link rel="stylesheet" href="assets/explorer.css">
+  <script src="assets/plots/plotly.min.js" defer></script>
+  <script type="module" src="assets/explorer.js"></script>
 </head>
 <body>
 <header><a href="index.html">← RAM / Social Graphs Assemble</a><span>02805 · Week 01</span></header>
@@ -11,24 +14,56 @@
   <p class="eyebrow">Group RAM · Week 1</p>
   <h1>The Marvel network.</h1>
   <p class="lead">[Add a short introduction about what we wanted to explore this week.]</p>
-  <nav class="chart-nav" aria-label="Explore this post"><a href="#map">Network map</a><a href="#comparison">In vs. out</a><a href="#degrees">Degree distributions</a><a href="#rankings">Leaderboards</a><a href="#notebook">Notebook & data</a></nav>
+  <button class="nav-toggle" aria-expanded="false" aria-controls="section-nav">Sections ☰</button>
+  <nav class="chart-nav" id="section-nav" aria-label="Explore this post"><span class="nav-heading">Week 01 / Explore</span><a href="#map">01 · Network lab</a><a href="#resilience">02 · Remove the hubs</a><a href="#comparison">03 · In vs. out</a><a href="#degrees">04 · Distributions</a><a href="#rankings">05 · Leaderboards</a><a href="#notebook">06 · Notebook & data</a><span class="nav-status" id="nav-status">303 characters · 1,784 links</span></nav>
   <section id="map">
     <p class="eyebrow">01</p><h2>Network map</h2>
-    <figure><iframe class="plot network-plot" src="assets/plots/network.html" title="Interactive Marvel network: 277-node giant, nine-node island, and seventeen isolates"></iframe><figcaption>Hover or tap a node for its name and degrees. Drag to pan; use the toolbar to zoom or reset. Node size grows with incoming links. Lines omit arrows for readability. <a href="assets/plots/network.html">Open full graph ↗</a></figcaption></figure>
+    <div class="lab-controls">
+      <label>Character<select id="hero"><option value="">All characters</option></select></label>
+      <label>Spotlight<select id="direction"><option value="both">All neighbors</option><option value="incoming">Who links to them</option><option value="outgoing">Who they link to</option></select></label>
+      <label>Show<select id="component"><option value="all">Whole network</option><option value="giant">Original giant</option><option value="island">Nine-node island</option><option value="isolates">Original isolates</option></select></label>
+      <button id="reset-lab" type="button">Reset everything</button>
+    </div>
+    <figure><div class="plot network-plot" id="network-lab" role="img" aria-label="Interactive network with character spotlight, paths, and node removal"></div><figcaption>Click a node to spotlight its links. Red = original giant; blue = nine-node island; gold = original isolates. Highlighted neighbors: blue = incoming, pink = outgoing, gold = both. Size uses original in-degree; positions stay fixed during experiments.</figcaption></figure>
+    <p class="lab-status" id="selection-status" aria-live="polite">Loading the network…</p>
+    <div class="path-controls">
+      <label>Trace a route to<select id="destination"><option value="">Choose a destination</option></select></label>
+      <label>Follow links<select id="path-mode"><option value="directed">In their direction</option><option value="undirected">In either direction</option></select></label>
+      <button id="trace-path" type="button">Find shortest route →</button>
+      <button id="clear-path" type="button">Clear route</button>
+    </div>
+    <p class="lab-status" id="path-status" aria-live="polite">Select a starting character above, then choose a destination. Gold arrows follow the route; “either direction” may traverse a link backwards.</p>
+    <details><summary>Inspect the selected characters</summary><ul id="selection-list" class="selection-list"></ul></details>
     <p class="takeaway">[Add observations about the giant component, the smaller island, and the isolated characters. What surprised us?]</p>
   </section>
+  <section id="resilience">
+    <p class="eyebrow">02 / Experiment</p><h2>Remove the hubs</h2>
+    <div class="experiment">
+      <div class="lab-controls">
+        <label>Removal strategy<select id="strategy"><option value="target">Highest original in-degree first</option><option value="random">Random order · seed 42</option></select></label>
+        <label class="slider-label">Characters removed: <output id="removed-count" for="remove-count">0</output><input id="remove-count" type="range" min="0" max="60" value="0" step="1"></label>
+        <button id="export-experiment" type="button">Download experiment ↓</button>
+      </div>
+      <div class="experiment-stats" aria-live="polite"><div><strong id="remaining-nodes">303</strong><span>characters left</span></div><div><strong id="remaining-edges">1,784</strong><span>links left</span></div><div><strong id="largest-component">277</strong><span>largest weak component</span></div><div><strong id="current-isolates">17</strong><span>current isolates</span></div></div>
+      <figure><div id="robustness-plot" class="plot" role="img" aria-label="Largest weak component after targeted and random node removal"></div><figcaption>Drag the slider or click the curve to choose a removal count. Red = highest original in-degree first (ranked once); blue = random mean, with the min–max band over 30 seeds (42–71). The white marker shows the current experiment; the dashed curve is random seed 42. Counts are absolute surviving nodes, not percentages.</figcaption></figure>
+      <p id="experiment-status" class="lab-status" aria-live="polite"></p>
+      <details><summary>Removed characters</summary><ol id="removed-list" class="selection-list"></ol></details>
+      <a href="#map">Inspect this experiment on the network map ↑</a>
+    </div>
+    <p class="takeaway">[Add our prediction about removing hubs versus random characters. Compare it with the curves and describe what surprised us.]</p>
+  </section>
   <section id="comparison">
-    <p class="eyebrow">02</p><h2>Incoming vs. outgoing links</h2>
+    <p class="eyebrow">03</p><h2>Incoming vs. outgoing links</h2>
     <figure><iframe class="plot" src="assets/plots/comparison.html" title="Scatter plot comparing incoming and outgoing links for every character" loading="lazy"></iframe><figcaption>Each dot is a character. Above the diagonal: more links received than sent. Overlapping dots can represent several characters. <a href="assets/plots/comparison.html">Open full graph ↗</a></figcaption></figure>
     <p class="takeaway">[Add something about the characters that stand out and how their incoming and outgoing links differ.]</p>
   </section>
   <section id="degrees">
-    <p class="eyebrow">03</p><h2>Degree distributions</h2>
+    <p class="eyebrow">04</p><h2>Degree distributions</h2>
     <figure><iframe class="plot" src="assets/plots/distribution.html" title="Degree frequency chart with linear and log–log axis buttons" loading="lazy"></iframe><figcaption>Use the Linear / Log–log buttons. Red circles = incoming; blue diamonds = outgoing. Log–log omits degree zero because log(0) is undefined; the linear view includes it. <a href="assets/plots/distribution.html">Open full graph ↗</a></figcaption></figure>
     <p class="takeaway">[Add observations based on the linear and log–log plots. How do the two distributions compare?]</p>
   </section>
   <section id="rankings">
-    <p class="eyebrow">04</p><h2>Degree rankings</h2>
+    <p class="eyebrow">05</p><h2>Degree rankings</h2>
     <figure><iframe class="plot ranking-plot" src="assets/plots/rankings.html" title="Top five characters by incoming and outgoing links" loading="lazy"></iframe><figcaption>Separate axis scales show the five leaders in each ranking. Hover or tap a bar for its count. <a href="assets/plots/rankings.html">Open full graph ↗</a></figcaption></figure>
     <p class="takeaway">[Add something about who tops each ranking and why we think the leaders differ.]</p>
   </section>
@@ -39,5 +74,6 @@
     <p>Source: <a href="https://sunelehmann.com/socialgraphs2026-web/data/">course data page</a> · Frozen snapshot: 26 August 2026.</p>
   </section>
   <noscript><p>Enable JavaScript to use the interactive charts.</p></noscript>
+  <p id="lab-error" role="alert"></p>
 </main><footer>Group RAM · 02805 Social Graphs</footer>
 </body></html>

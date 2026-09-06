@@ -24,6 +24,14 @@ The original independent JavaScript analysis remains available with `node script
 
 The full roster is loaded before adding edges, preserving isolates. Both analyses validate node IDs, duplicate edges, and endpoints.
 
+## Interactive experiments
+
+The week-one page has fixed section navigation, a selectable network map, directed or undirected shortest routes, and a node-removal experiment. Selecting a scatter point, lasso group, degree bucket, or ranking bar also highlights those characters on the map.
+
+The notebook exports `assets/plots/explorer.json`: seeded coordinates, the directed graph, and robustness curves. Targeted removal ranks once by **original in-degree**, breaking ties by node ID. The random reference uses 30 permutations with seeds 42–71; the band shows their min–max, not a confidence interval. The displayed random experiment uses seed 42. Metrics count surviving nodes and weak components in the entire roster. Map positions and node sizes stay fixed to their original values. The scatter, distributions, and rankings remain views of the original snapshot.
+
+Browser interactions use `assets/explorer.js` and the small graph functions in `assets/network-model.mjs`; Python still produces the notebook figures, graph data, and comparison curves. After building, run `node scripts/test-network-model.mjs` to check paths and compare every slider step against the NetworkX results. GitHub Actions runs this check before publishing. The experiment can be downloaded as JSON with its settings, removed IDs, metrics, and route.
+
 ## Publish
 
 In the repository's **Settings → Pages**, an administrator should choose **GitHub Actions** as the source. Push changes to `main`; the included workflow executes the notebook and deploys the full site, including the interactive figures, week-one post, and notebook HTML. A notebook error fails the build before deployment.

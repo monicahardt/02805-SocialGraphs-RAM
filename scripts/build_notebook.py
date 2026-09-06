@@ -14,4 +14,4 @@ exporter = HTMLExporter()
 exporter.exclude_input = True
 body, _ = exporter.from_notebook_node(notebook)
 (output / "week1.html").write_text(body, encoding="utf-8")
-print("Published four interactive figures and notebooks/published/week1.html")
+print("Published four figures, explorer data and robustness curves, and notebooks/published/week1.html")
