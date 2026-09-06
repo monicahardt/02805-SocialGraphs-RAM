@@ -16,7 +16,7 @@ python scripts/build_notebook.py
 python -m http.server 8000
 ```
 
-Open http://localhost:8000 to preview the homepage and post. The build executes the notebook, exports its four interactive figures, and creates `notebooks/published/week1.html` with the code hidden, plus an executed notebook for inspection. Generated outputs are ignored by Git and rebuilt during deployment. The source notebook remains editable and downloadable.
+Open http://localhost:8000 to preview the homepage and post. The build executes the notebook, exports its four interactive figures, and creates `notebooks/published/week1.html` with the code hidden, plus an executed notebook for inspection. Published HTML and graph assets are checked into Git so branch-based Pages builds can serve them too. Only the executed `.ipynb` output is ignored. The source notebook remains editable and downloadable.
 
 For notebook editing, use VS Code's Jupyter extension with the `.venv` Python interpreter, or install JupyterLab separately. The website serves exported HTML and JavaScript; visitors do not need Python or a notebook server. Hover, zoom, and Plotly axis buttons work on GitHub Pages; Python callbacks would need a live server.
 
@@ -35,6 +35,8 @@ Browser interactions use `assets/explorer.js` and the small graph functions in `
 ## Publish
 
 In the repository's **Settings → Pages**, an administrator should choose **GitHub Actions** as the source. Push changes to `main`; the included workflow executes the notebook and deploys the full site, including the interactive figures, week-one post, and notebook HTML. A notebook error fails the build before deployment.
+
+If Pages still uses **Deploy from a branch**, its automatic deployment can overwrite the custom workflow's site. The repository therefore includes `assets/plots/` and `notebooks/published/week1.html` as a fallback. After editing the notebook, run `python scripts/build_notebook.py` and include the regenerated assets in the same commit. This keeps both deployment methods consistent. Switching the Pages source to GitHub Actions removes the competing branch deployment.
 
 The `github-pages` environment must allow deployments from `main`. After the **Deploy site to GitHub Pages** workflow succeeds in the Actions tab, refresh the site to see the update.
 

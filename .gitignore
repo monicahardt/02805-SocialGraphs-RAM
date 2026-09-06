@@ -1,6 +1,7 @@
 # Byte-compiled / optimized / DLL files
-/assets/plots/
-/notebooks/published/
+# Keep published HTML and chart assets available to branch-based GitHub Pages.
+# Only the bulky executed notebook is local/build output.
+/notebooks/published/*.ipynb
 __pycache__/
 *.py[codz]
 *$py.class
