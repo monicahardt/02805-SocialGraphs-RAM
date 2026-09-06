@@ -13,6 +13,7 @@ function seededRandom(seed) {return () => {seed |= 0; seed = seed + 0x6D2B79F5 |
 const rng = seededRandom(42);
 let graph, results, byId, adjacency, active, groups;
 let view = 'root', focused = null, mappedNodes = new Map(), positions = new Map();
+let displayedEdges = new Map();
 let playing = false, visible = false, animation = null, walkers = [], particleLayer;
 let selectedMotif = '300', exampleIndex = 0, motifPlotReady = false;
 let motifDrawing = false, motifDirty = false;
@@ -53,6 +54,7 @@ function pack(items) {
 }
 function setAtlasView(id, focus = null) {
   view = id; focused = focus; stopAnimation();
+  if (!focus) $('atlas-find').value = '';
   const group = groups[view];
   const items = group.children.length ? group.children.map(id => ({id,members:groups[id].members,group:true,r:Math.sqrt(groups[id].members.length)*12,color:nodeColor(groups[id].members[0])}))
     : group.members.map(id => ({id,members:[id],group:false,r:9+Math.sqrt(byId.get(id).incoming)*2,color:nodeColor(id)}));
@@ -61,6 +63,7 @@ function setAtlasView(id, focus = null) {
   const root = $('atlas-svg'); root.replaceChildren(); arrow(root,'atlas-arrow');
   const scene = svg(root,'g',{'data-view':view});
   const links = new Map();
+  displayedEdges = new Map();
   for (const [source,target] of graph.edges) {
     const a = mappedNodes.get(source), b = mappedNodes.get(target);
     if (a && b && a !== b) {const key = `${a}\t${b}`; links.set(key,(links.get(key)||0)+1);}
@@ -68,18 +71,20 @@ function setAtlasView(id, focus = null) {
   for (const [key,count] of links) {
     const [a,b] = key.split('\t');
     const path = svg(scene,'path',{d:lineCurve(positions.get(a),positions.get(b)),fill:'none',stroke:'#94b6e6',opacity:.18,'stroke-width':Math.min(4,.5+Math.sqrt(count)*.35),'data-source':a,'data-target':b});
+    displayedEdges.set(key,{path,length:path.getTotalLength()});
     svg(path,'title',{},`${positions.get(a).group ? groups[a].label : name(a)} → ${positions.get(b).group ? groups[b].label : name(b)}: ${count} directed links`);
   }
   for (const p of positions.values()) {
     const label = p.group ? groups[p.id].label : name(p.id);
-    const el = svg(scene,'g',{class:'atlas-node',transform:`translate(${p.x} ${p.y})`,tabindex:0,role:'button','aria-label':`${label}, ${p.members.length} character(s). ${p.group?'Open community':'Inspect character'}`,'data-id':p.id});
+    const action = p.group ? groups[p.id].children.length ? `Open ${groups[p.id].children.length} subgroups` : 'Open individual characters' : 'Inspect character';
+    const el = svg(scene,'g',{class:'atlas-node',transform:`translate(${p.x} ${p.y})`,tabindex:0,role:'button','aria-label':`${label}, ${p.members.length} character(s). ${action}`,'data-id':p.id});
     svg(el,'circle',{r:p.r,fill:p.color,'fill-opacity':p.id === focused ? .5 : .15,stroke:p.id === focused ? '#fff' : p.color,'stroke-width':p.id === focused ? 3 : 1.5});
     svg(el,'circle',{r:Math.max(1,p.r-6),fill:'none',stroke:p.color,'stroke-opacity':.15,'pointer-events':'none'});
-    svg(el,'title',{},p.group ? `${label} · ${p.members.length} characters\n${groups[p.id].leaders.map(name).join(', ')}` : `${label}\n${byId.get(p.id).incoming} incoming · ${byId.get(p.id).outgoing} outgoing`);
+    svg(el,'title',{},p.group ? `${label} · ${p.members.length} characters\n${action}\n${p.id==='isolates'?'Display group only; no simulated visits.':`Highest simulated visit probability: ${groups[p.id].leaders.map(name).join(', ')}`}` : `${label}\n${byId.get(p.id).incoming} incoming · ${byId.get(p.id).outgoing} outgoing`);
     if (p.group) {
-      svg(el,'text',{'text-anchor':'middle',y:-8,'font-size':p.r<30?10:13},p.id==='isolates'?'Isolates':p.id.slice(2).replaceAll('-','.'));
+      svg(el,'text',{'text-anchor':'middle',y:-8,'font-size':p.r<30?10:13},p.id==='isolates'?'Isolates':`C${p.id.slice(2).replaceAll('-','.')}`);
       svg(el,'text',{'text-anchor':'middle',y:15,class:'bubble-count'},p.members.length);
-      if (p.r>48) svg(el,'text',{'text-anchor':'middle',y:34,class:'bubble-leader'},name(groups[p.id].leaders[0]).split(' (')[0].slice(0,18));
+      if (p.r>48) svg(el,'text',{'text-anchor':'middle',y:34,class:'bubble-leader'},p.id==='isolates'?'display group':name(groups[p.id].leaders[0]).split(' (')[0].slice(0,18));
     } else if (p.r>14) svg(el,'text',{'text-anchor':'middle',y:5,'font-size':11},name(p.id).split(' ').map(s=>s[0]).slice(0,3).join(''));
     const click = () => p.group ? setAtlasView(p.id) : inspectCharacter(p.id);
     const highlight = on => {
@@ -102,16 +107,17 @@ function setAtlasView(id, focus = null) {
   const ancestry = []; for (let g=group;g;g=groups[g.parent]) ancestry.unshift(g);
   for (const g of ancestry) {$('atlas-breadcrumb').append(button(g.label,()=>setAtlasView(g.id)));}
   $('atlas-group').replaceChildren(new Option(group.children.length?'Choose a community':'Character level',''));
-  for (const id of group.children) $('atlas-group').append(new Option(`${groups[id].label} · ${groups[id].members.length}`,id));
+  for (const id of group.children) $('atlas-group').append(new Option(`${groups[id].label} · ${groups[id].members.length} members · ${groups[id].children.length ? `${groups[id].children.length} subgroups` : 'opens characters'}`,id));
   $('atlas-group').disabled = !group.children.length;
   $('atlas-status').textContent = `${group.members.length} characters · ${group.internalEdges} internal directed links · ${group.children.length ? `${group.children.length} groups in view` : 'individual characters'}. ${group.kind==='display-group'?'Isolates are grouped for display, not a detected community.':''}`;
   $('atlas-detail-title').textContent = group.label;
-  $('atlas-detail-text').textContent = `${group.incomingEdges} links enter from outside; ${group.outgoingEdges} links leave. ${group.kind==='display-group'?'No links to follow.':`Highest flow: ${group.leaders.map(name).join(', ')}.`}`;
+  $('atlas-detail-text').textContent = `${group.incomingEdges} links enter from outside; ${group.outgoingEdges} links leave. ${group.kind==='display-group'?'No links to follow.':`Highest simulated visit probability: ${group.leaders.map(name).join(', ')}.`}`;
   $('atlas-members').replaceChildren();
   for (const id of group.members) {const li=document.createElement('li');li.append(button(name(id),()=>findCharacter(id)));$('atlas-members').append(li);}
   $('atlas-flow').disabled = group.kind==='display-group';
   if (group.kind==='display-group') {playing=false;updatePlayButton();}
   if (focus) inspectCharacter(focus);
+  updateSensitivity();
   resetWalkers(); startAnimation();
   root.dataset.ready = 'true'; root.dataset.view = view;
 }
@@ -123,6 +129,43 @@ function inspectCharacter(id) {
   const node=byId.get(id), bridge=results.atlas.bridges.find(n=>n.id===id);
   $('atlas-detail-title').textContent = name(id);
   $('atlas-detail-text').textContent = `${node.incoming} incoming · ${node.outgoing} outgoing · ${bridge?.crossNeighbors||0} distinct neighbors in ${bridge?.otherCommunities||0} other top-level communities.`;
+  updateSensitivity();
+}
+function overlap(reference, alternative) {
+  const a=new Set(reference),b=new Set(alternative),shared=reference.filter(id=>b.has(id));
+  return {shared, lost:reference.filter(id=>!b.has(id)), gained:alternative.filter(id=>!a.has(id)), score:shared.length/(a.size+b.size-shared.length||1)};
+}
+function bestOverlap(reference, run) {
+  return Object.entries(run.groups).map(([id,members])=>({id,...overlap(reference,members)})).sort((a,b)=>b.score-a.score||a.id.localeCompare(b.id))[0];
+}
+function updateSensitivity() {
+  const run=results.atlas.sensitivity.find(r=>r.seed===Number($('atlas-seed').value));
+  $('atlas-seed-summary').textContent=`Seed ${run.seed}: ${Object.keys(run.groups).length} top-level groups. Same-group pairs shared with the displayed run: ${(100*run.pairJaccard).toFixed(1)}% of the pairs grouped together in either run.`;
+  const changes=$('atlas-seed-changes');changes.replaceChildren();
+  if(view==='isolates'||(focused&&results.atlas.nodePaths[focused][0]==='isolates')){
+    $('atlas-seed-detail').textContent='Isolates are excluded from community detection in every run. Their display group is not part of this comparison.';return;
+  }
+  if(view==='root'&&!focused){
+    $('atlas-seed-detail').textContent=run.seed===42?'This is the reference run shown in the map. Choose another seed to inspect membership changes.':'Groups with the lowest overlap with their best-matching alternative group. Open one to see which members change.';
+    // Preserve reference IDs: alternative group numbers are not comparable labels.
+    const sorted=groups.root.children.filter(id=>id!=='isolates').map(id=>({reference:id,match:bestOverlap(groups[id].members,run)})).filter(item=>item.match.score<1).sort((a,b)=>a.match.score-b.match.score);
+    const buttons=document.createElement('div');buttons.className='seed-buttons';
+    for(const item of sorted.slice(0,5))buttons.append(button(`${groups[item.reference].label}: ${item.match.lost.length} leave, ${item.match.gained.length} join`,()=>setAtlasView(item.reference)));
+    changes.append(buttons);return;
+  }
+  const top=results.atlas.nodePaths[focused||groups[view].members[0]][0];
+  let match;
+  if(focused){
+    const alternative=Object.values(run.groups).find(members=>members.includes(focused));
+    match=overlap(groups[top].members.filter(id=>id!==focused),alternative.filter(id=>id!==focused));
+    $('atlas-seed-detail').textContent=`${name(focused)}: ${match.shared.length} companions stay in the same group, ${match.lost.length} leave, and ${match.gained.length} join when changing from seed 42 to ${run.seed}.`;
+  }else{
+    match=bestOverlap(groups[top].members,run);
+    $('atlas-seed-detail').textContent=`Top-level ${groups[top].label}, matched by greatest member overlap: ${match.shared.length} members retained, ${match.lost.length} leave, ${match.gained.length} join. ${view!==top?'This compares its parent community, not the smaller subgroup currently open.':''}`;
+  }
+  for(const [label,ids]of [['Leave',match.lost],['Join',match.gained]]){
+    const p=document.createElement('p');p.textContent=`${label}: ${ids.length?ids.map(name).join(', '):'none'}.`;changes.append(p);
+  }
 }
 function findCharacter(id) {const path=results.atlas.nodePaths[id];if(path)setAtlasView(path.at(-1),id);}
 function chooseNext(walker) {
@@ -135,12 +178,12 @@ function chooseNext(walker) {
 function resetWalkers() {
   particleLayer.replaceChildren();
   const seeds=groups[view].members.filter(id=>results.atlas.nodePaths[id][0]!=='isolates');
-  walkers=seeds.length?Array.from({length:Number($('atlas-walkers').value)},()=>{
-    const walker={to:seeds[Math.floor(rng()*seeds.length)],progress:rng()};chooseNext(walker);walker.progress=rng();
+  walkers=seeds.length?Array.from({length:Number($('atlas-walkers').value)},(_,index)=>{
+    const walker={to:seeds[Math.floor(rng()*seeds.length)],progress:rng(),offset:index*2.399963229728653};chooseNext(walker);walker.progress=rng();
     walker.el=svg(particleLayer,'circle',{r:3,fill:'#fff6c4',opacity:0});return walker;
   }):[];
 }
-function updatePlayButton() {$('atlas-flow').textContent=playing?'Ⅱ Pause flow':'▶ Play flow';$('atlas-flow').setAttribute('aria-pressed',String(playing));}
+function updatePlayButton() {$('atlas-flow').textContent=playing?'Ⅱ Pause simulation':'▶ Simulate browsing';$('atlas-flow').setAttribute('aria-pressed',String(playing));}
 function stopAnimation() {if(animation!==null)cancelAnimationFrame(animation);animation=null;}
 function startAnimation() {
   if(!playing||!visible||document.hidden||animation!==null)return;
@@ -150,13 +193,14 @@ function startAnimation() {
     for(const w of walkers){
       w.progress+=dt/1500;if(w.progress>=1)chooseNext(w);
       const a=positions.get(mappedNodes.get(w.from)),b=positions.get(mappedNodes.get(w.to));
-      let x,y,opacity=0;
+      let x,y,opacity=0,radius=3;
       if(w.teleport){const p=w.progress<.5?a:b;if(p){x=p.x;y=p.y;opacity=Math.abs(w.progress-.5)*1.6;}}
       else if(a&&b){
-        if(a===b){const angle=w.progress*Math.PI*2;x=a.x+Math.cos(angle)*a.r*.65;y=a.y+Math.sin(angle)*a.r*.65;}
-        else {const t=w.progress,dx=b.x-a.x,dy=b.y-a.y,len=Math.hypot(dx,dy)||1;const cx=(a.x+b.x)/2-dy/len*14,cy=(a.y+b.y)/2+dx/len*14;x=(1-t)**2*a.x+2*(1-t)*t*cx+t*t*b.x;y=(1-t)**2*a.y+2*(1-t)*t*cy+t*t*b.y;}opacity=.9;
+        if(a===b){x=a.x+Math.cos(w.offset)*a.r*.3;y=a.y+Math.sin(w.offset)*a.r*.3;radius=2+4*Math.sin(w.progress*Math.PI);}
+        else {const edge=displayedEdges.get(`${mappedNodes.get(w.from)}\t${mappedNodes.get(w.to)}`);if(edge){const p=edge.path.getPointAtLength(w.progress*edge.length);x=p.x;y=p.y;}}opacity=.9;
       }
-      if(opacity){w.el.setAttribute('cx',x);w.el.setAttribute('cy',y);}w.el.setAttribute('opacity',opacity);
+      if(opacity&&x!==undefined){w.el.setAttribute('cx',x);w.el.setAttribute('cy',y);}else opacity=0;
+      w.el.setAttribute('r',radius);w.el.setAttribute('fill',w.teleport?'#ba97ff':'#fff6c4');w.el.setAttribute('opacity',opacity);
     }
     animation=requestAnimationFrame(step);
   };
@@ -226,6 +270,7 @@ async function start(){
   $('atlas-group').addEventListener('change',()=>{if($('atlas-group').value)setAtlasView($('atlas-group').value);});
   $('atlas-up').addEventListener('click',()=>{if(groups[view].parent)setAtlasView(groups[view].parent);});
   $('atlas-home').addEventListener('click',()=>{$('atlas-find').value='';setAtlasView('root');});
+  $('atlas-seed').addEventListener('change',updateSensitivity);
   $('atlas-flow').addEventListener('click',()=>{playing=!playing;updatePlayButton();if(playing)startAnimation();else stopAnimation();});
   $('atlas-walkers').addEventListener('input',resetWalkers);
   $('atlas-locate').addEventListener('click',()=>locate(focused?[focused]:groups[view].members,focused?`Atlas: ${name(focused)}`:`Atlas: ${groups[view].label}`));
@@ -233,6 +278,8 @@ async function start(){
   document.addEventListener('visibilitychange',()=>document.hidden?stopAnimation():startAnimation());
   for(const bridge of results.atlas.bridges.slice(0,10)){const li=document.createElement('li');li.append(button(`${name(bridge.id)} · ${bridge.crossNeighbors} cross-community neighbors`,()=>findCharacter(bridge.id)));$('atlas-bridges').append(li);}
   const method=results.atlas.method;
+  const deeper=groups.root.children.filter(id=>id!=='isolates'&&groups[id].children.length);
+  $('atlas-hierarchy-guide').textContent=`Click to open a group: ${method.topModules-deeper.length} open directly into characters; ${deeper.length} ${deeper.length===1?'has':'have'} smaller detected groups${deeper.length?` (${deeper.map(id=>`${groups[id].label}, ${groups[id].members.length} characters`).join('; ')})`:''}. Isolates are a separate display group.`;
   $('atlas-method').textContent=`Infomap ${method.version} · directed links · ${method.trials} trials · seed ${method.seed}. ${method.topModules} top-level communities on ${method.activeNodes} linked characters; ${method.isolatesExcluded} isolates excluded. Recorded teleportation: 15%, uniform active-node targets. One-level codelength: ${method.oneLevelCodelength.toFixed(3)}; fitted hierarchy: ${method.codelength.toFixed(3)} bits per step. Geometry is a circle packing, not a measure of network distance.`;
   $('motif-method').textContent=`Exact census of ${results.fingerprint.method.triads.toLocaleString()} unordered triples. Each of 100 random graphs starts from the snapshot and completes ${results.fingerprint.method.successfulSwapsPerGraph.toLocaleString()} directed swaps (10 per edge), seeds 4200–4299. Finite rewiring does not prove uniform sampling or adequate mixing. Z-scores are exploratory, not significance claims.`;
   for(const id of ['motif-filter','motif-order'])$(id).addEventListener('change',requestMotifs);

@@ -71,21 +71,33 @@
   </section>
   <section id="atlas">
     <p class="eyebrow">06 / Community discovery</p><h2>A living atlas</h2>
+    <div class="atlas-guide">
+      <p><b>One possible grouping of Wikipedia pages.</b> These communities are inferred from links; membership can change with the random seed. They are not verified Marvel teams.</p>
+      <ul><li><b>Community bubble area:</b> number of characters. “C2” means Community 2; the larger number is its member count. Once you open the individual characters, their sizes reflect incoming links.</li><li><b>Bubble position:</b> arranged to fit the screen. Distance between bubbles does not measure relatedness.</li><li id="atlas-hierarchy-guide">Loading the detected hierarchy…</li></ul>
+    </div>
     <div class="lab-controls">
       <label>Find a character<select id="atlas-find"><option value="">Choose a character</option></select></label>
       <label>Open a community<select id="atlas-group"><option value="">Choose a community</option></select></label>
       <button id="atlas-up" type="button" disabled>↑ One level up</button>
       <button id="atlas-home" type="button">All communities</button>
-      <button id="atlas-flow" type="button" aria-pressed="false">▶ Play flow</button>
+      <button id="atlas-flow" type="button" aria-pressed="false">▶ Simulate browsing</button>
       <label>Walkers<input id="atlas-walkers" type="range" min="1" max="40" value="16"></label>
     </div>
     <nav class="atlas-breadcrumb" id="atlas-breadcrumb" aria-label="Community hierarchy"></nav>
-    <figure class="atlas-figure"><svg id="atlas-svg" viewBox="0 0 900 560" role="group" aria-label="Drillable community atlas"></svg><figcaption>Click a community to open it; click a character to inspect it. Hover or focus to reveal link directions. Bubble area grows with member count at community level; line thickness grows with link count. Particles simulate directed walks, not observed traffic. Motion inside a bubble represents internal links; teleports fade. This atlas uses the original snapshot.</figcaption></figure>
+    <figure class="atlas-figure"><svg id="atlas-svg" viewBox="0 0 900 560" role="group" aria-label="Drillable community atlas"></svg><figcaption>Click a group to open it; hover or focus to reveal link directions. Gold dots follow displayed links. Stationary gold pulses represent steps between hidden members inside a group; purple fades are random jumps. These simulated visitors are not real traffic. The atlas always uses the original snapshot.</figcaption></figure>
     <p id="atlas-status" class="lab-status" aria-live="polite">Loading community hierarchy…</p>
     <div class="atlas-detail"><div><h3 id="atlas-detail-title">All communities</h3><p id="atlas-detail-text"></p></div><button id="atlas-locate" type="button">Show these characters on the original map ↑</button></div>
+    <div class="atlas-sensitivity">
+      <h3>Does another seed give the same groups?</h3>
+      <label>Compare with seed <select id="atlas-seed"><option value="42">42 · displayed reference</option><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="99">99</option></select></label>
+      <p id="atlas-seed-summary" aria-live="polite"></p>
+      <p id="atlas-seed-detail" aria-live="polite"></p>
+      <div id="atlas-seed-changes"></div>
+      <p class="lab-status">The map stays on seed 42. Agreement compares pairs of characters placed together in either run; 100% means identical top-level membership. It is a sensitivity check across five seeds, not a confidence score. Group IDs in different runs are arbitrary.</p>
+    </div>
     <details><summary>Members in this view</summary><ul id="atlas-members" class="selection-list"></ul></details>
     <details><summary>Characters with the most neighbors in other communities</summary><ol id="atlas-bridges" class="selection-list"></ol></details>
-    <details><summary>Detection and animation rules</summary><p id="atlas-method"></p><p>Numeric community names describe the detected partition, not Marvel teams. Isolates are grouped for display only. Walkers follow a uniformly chosen outgoing link with probability 85%; otherwise they teleport uniformly to an active character. A dangling node always restarts. Teleports draw no links. Walkers can leave the currently open community.</p></details>
+    <details><summary>Detection and animation rules</summary><p id="atlas-method"></p><p>Isolates are grouped for display only. Simulated visitors follow a uniformly chosen outgoing link with probability 85%; otherwise they jump uniformly to an active character. A page with no outgoing link always restarts. Jumps draw no links. Opening a group restarts visitors inside that view; they can then leave it. At character level, node size grows with original in-degree.</p></details>
     <p class="takeaway">[Explore a few communities. Do their members have something in common? Which characters connect different communities?]</p>
   </section>
   <section id="motifs">

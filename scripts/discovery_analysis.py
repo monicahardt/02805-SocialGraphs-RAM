@@ -58,7 +58,25 @@ def community_atlas(graph, names):
         bridges.append({"id": n, "crossNeighbors": len(other),
                         "otherCommunities": len({node_paths[v][0] for v in other})})
     bridges.sort(key=lambda item: (-item["crossNeighbors"], item["id"]))
+    reference = {key: groups[key]["members"] for key in groups["root"]["children"] if key != "isolates"}
+    def member_pairs(partition):
+        return {tuple(pair) for members in partition.values() for pair in combinations(sorted(members), 2)}
+    reference_pairs = member_pairs(reference)
+    sensitivity = [{"seed": 42, "groups": reference, "pairJaccard": 1.0, "codelength": result.codelength}]
+    for seed in [1, 2, 3, 99]:
+        alternative = infomap.run(active, directed=True, seed=seed, num_trials=20, num_threads=1,
+                                  to_nodes=True, recorded_teleportation=True, teleportation_probability=0.15)
+        partition = {}
+        for leaf in alternative.nodes(depth=-1):
+            partition.setdefault(f"m-{leaf.path[0]}", []).append(alternative.names[leaf.node_id])
+        partition = {key: sorted(members) for key, members in partition.items()}
+        pairs = member_pairs(partition)
+        union = reference_pairs | pairs
+        sensitivity.append({"seed": seed, "groups": partition,
+                            "pairJaccard": len(reference_pairs & pairs) / len(union) if union else 1.0,
+                            "codelength": alternative.codelength})
     return {"groups": groups, "nodePaths": node_paths, "flow": flow, "bridges": bridges,
+            "sensitivity": sensitivity,
             "method": {"algorithm": "Infomap", "version": infomap.__version__, "seed": 42,
                        "trials": 20, "directed": True, "teleportProbability": .15,
                        "teleportTargets": "uniform active nodes", "recordedTeleportation": True,

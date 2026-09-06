@@ -27,6 +27,17 @@ for node, path in atlas["nodePaths"].items():
     assert all(node in groups[group]["members"] for group in path)
     assert groups[path[0]]["parent"] == "root"
     assert all(groups[b]["parent"] == a for a, b in zip(path, path[1:]))
+from itertools import combinations
+active = set(graph) - set(nx.isolates(graph))
+reference_pairs = {pair for key in groups["root"]["children"] if key != "isolates"
+                   for pair in combinations(sorted(groups[key]["members"]), 2)}
+assert [run["seed"] for run in atlas["sensitivity"]] == [42, 1, 2, 3, 99]
+for run in atlas["sensitivity"]:
+    members = [n for group in run["groups"].values() for n in group]
+    assert Counter(members) == Counter(active)
+    pairs = {pair for group in run["groups"].values() for pair in combinations(sorted(group), 2)}
+    expected = len(pairs & reference_pairs) / len(pairs | reference_pairs) if pairs | reference_pairs else 1
+    assert math.isclose(run["pairJaccard"], expected)
 counts = nx.triadic_census(graph)
 assert sum(counts.values()) == math.comb(len(graph), 3)
 for motif in data["fingerprint"]["motifs"]:
@@ -48,4 +59,4 @@ for motif in data["fingerprint"]["motifs"]:
         assert motif["z"] is None
 for i in range(100):
     assert sum(m["nullCounts"][i] for m in data["fingerprint"]["motifs"]) == math.comb(len(graph), 3)
-print("Passed: full hierarchy coverage, isolates, flow normalization, all 16 triad counts and diagrams, 128 exact examples, 100 null-census totals, and z-score calculations.")
+print("Passed: hierarchy, isolates, flow, five seed partitions and pair agreement, triad counts, 128 examples, 100 null totals, and z-scores.")
