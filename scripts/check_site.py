@@ -30,7 +30,7 @@ for page in pages:
     else:
         Links(page).feed(page.read_text(encoding="utf-8"))
 # These resources are fetched by the explorer rather than declared in HTML.
-for resource in ["assets/plots/explorer.json", "assets/network-model.mjs"]:
+for resource in ["assets/plots/explorer.json", "assets/plots/discoveries.json", "assets/network-model.mjs"]:
     if not (root / resource).is_file():
         missing.append(resource)
 if missing:

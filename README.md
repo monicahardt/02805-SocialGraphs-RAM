@@ -16,7 +16,7 @@ python scripts/build_notebook.py
 python -m http.server 8000
 ```
 
-Open http://localhost:8000 to preview the homepage and post. The build executes the notebook, exports its four interactive figures, and creates `notebooks/published/week1.html` with the code hidden, plus an executed notebook for inspection. Published HTML and graph assets are checked into Git so branch-based Pages builds can serve them too. Only the executed `.ipynb` output is ignored. The source notebook remains editable and downloadable.
+Open http://localhost:8000 to preview the homepage and post. The build executes the notebook, exports six interactive figures plus the explorer datasets, and creates `notebooks/published/week1.html` with the code hidden, plus an executed notebook for inspection. Published HTML and graph assets are checked into Git so branch-based Pages builds can serve them too. Only the executed `.ipynb` output is ignored. The source notebook remains editable and downloadable.
 
 For notebook editing, use VS Code's Jupyter extension with the `.venv` Python interpreter, or install JupyterLab separately. The website serves exported HTML and JavaScript; visitors do not need Python or a notebook server. Hover, zoom, and Plotly axis buttons work on GitHub Pages; Python callbacks would need a live server.
 
@@ -31,6 +31,16 @@ The week-one page has fixed section navigation, a selectable network map, direct
 The notebook exports `assets/plots/explorer.json`: seeded coordinates, the directed graph, and robustness curves. Targeted removal ranks once by **original in-degree**, breaking ties by node ID. The random reference uses 30 permutations with seeds 42–71; the band shows their min–max, not a confidence interval. The displayed random experiment uses seed 42. Metrics count surviving nodes and weak components in the entire roster. Map positions and node sizes stay fixed to their original values. The scatter, distributions, and rankings remain views of the original snapshot.
 
 Browser interactions use `assets/explorer.js` and the small graph functions in `assets/network-model.mjs`; Python still produces the notebook figures, graph data, and comparison curves. After building, run `node scripts/test-network-model.mjs` to check paths and compare every slider step against the NetworkX results. GitHub Actions runs this check before publishing. The experiment can be downloaded as JSON with its settings, removed IDs, metrics, and route.
+
+## Community atlas and motif explorer
+
+The notebook calls `scripts/discovery_analysis.py` to export `assets/plots/discoveries.json` and two additional standalone figures. The site renders the atlas and motif gallery with `assets/discoveries.js`.
+
+- **Atlas:** directed Infomap 2.15.1, seed 42, 20 trials, one thread; recorded 15% uniform active-node teleportation. All 17 isolates are excluded from clustering and grouped only for display. Visitors can open real hierarchy levels, find characters, inspect cross-community neighbors, and play simulated directed walks. Particle motion is illustrative, not observed Wikipedia traffic. The atlas always uses the original snapshot.
+- **Motifs:** exact induced triadic census over all 16 types. The null ensemble contains 100 independently initialized rewired copies, each with 10 successful directed swaps per edge (seeds 4200–4299). Every node's in- and out-degree is validated. Finite swaps are not proof of uniform sampling or mixing. Z-scores are descriptive, not significance tests. Gallery examples are the first up to eight triples per type in node-ID order.
+- **Linked exploration:** atlas and motif buttons explicitly return to the original map, resetting node removals to zero. The atlas and motifs do not change with the removal experiment.
+
+After building, run `python scripts/test_discoveries.py`. It checks complete hierarchy membership, isolate handling, flow normalization, exact motif counts/diagrams/examples, null-census totals, and standardized scores. CI runs these checks before publication. Include the regenerated published assets when committing, as with the existing figures.
 
 ## Publish
 

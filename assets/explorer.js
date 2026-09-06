@@ -238,6 +238,12 @@ async function start() {
     const link = document.createElement('a'); link.href = url; link.download = 'ram-network-experiment.json'; link.click(); setTimeout(() => URL.revokeObjectURL(url),1000);
   });
   ready = true; await requestRender();
+  document.addEventListener('ram:select-original-nodes', event => {
+    const ids = event.detail.ids.filter(id => byId.has(id));
+    state.count = 0; $('remove-count').value = 0;
+    selectGroup(ids, event.detail.label, $('selection-status'));
+    $('map').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'instant' : 'smooth'});
+  });
   $('network-lab').on('plotly_click', event => {const id = event.points?.[0]?.customdata?.[0]; if (byId.has(id)) selectHero(id);});
   $('robustness-plot').on('plotly_click', event => {
     const count = Number(event.points?.[0]?.x); if (!Number.isFinite(count)) return;

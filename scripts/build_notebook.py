@@ -15,8 +15,8 @@ exporter = HTMLExporter()
 exporter.exclude_input = True
 body, _ = exporter.from_notebook_node(notebook)
 # Share the same local Plotly bundle as the chart pages instead of embedding
-# four copies in the readable notebook. Keep the executed .ipynb unchanged.
+# repeated copies in the readable notebook. Keep the executed .ipynb unchanged.
 body = body.replace(get_plotlyjs(), "")
 body = body.replace("</head>", '<script src="../../assets/plots/plotly.min.js"></script></head>')
 (output / "week1.html").write_text(body, encoding="utf-8")
-print("Published four figures, explorer data and robustness curves, and notebooks/published/week1.html")
+print("Published six figures, explorer data, community atlas, motif fingerprint, and notebook HTML")
