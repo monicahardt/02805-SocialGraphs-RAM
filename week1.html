@@ -2,37 +2,42 @@
 <html lang="en">
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Who gets the spotlight? · RAM · Week 1</title>
+  <title>Explore the Marvel network · RAM · Week 1</title>
   <link rel="stylesheet" href="assets/story.css">
-  <script src="assets/story.js" defer></script>
 </head>
 <body>
 <header><a href="index.html">← RAM / Social Graphs Assemble</a><span>02805 · Week 01</span></header>
 <main>
-  <p class="eyebrow">The bootstrap edition · Group RAM</p>
-  <h1>Who gets<br>the spotlight?</h1>
-  <p class="lead">303 Marvel characters. 1,784 directed links. We asked whether the heroes everyone mentions are also the ones who mention everyone else.</p>
-  <div class="stats"><div><strong>106</strong>pages link to Spider-Man</div><div><strong>28</strong>links out from Betsy Braddock</div><div><strong>17</strong>characters stand alone</div></div>
-  <section><h2>Fame and a long address book are different things.</h2>
-  <p>Our question: does being widely referenced also mean referencing many other heroes? We counted incoming and outgoing links separately. Spider-Man leads incoming links with 106—35.0% of the 303-page roster. Betsy Braddock leads outgoing links with 28. The two rankings tell different stories.</p>
-  <p>An edge A → B means A’s Wikipedia article links to B’s article. In-degree counts the roster pages linking to a character; out-degree counts the characters that their page links to. These measure this snapshot’s article structure, not superpowers, friendship, or audience popularity.</p>
-  <div class="tables"><div><h3>Most linked to</h3><table><caption>Top five by in-degree</caption><thead><tr><th scope="col">Character</th><th scope="col">Links in</th></tr></thead><tbody><tr><td>Spider-Man</td><td>106</td></tr><tr><td>Hulk</td><td>64</td></tr><tr><td>Wolverine</td><td>60</td></tr><tr><td>Doctor Strange</td><td>50</td></tr><tr><td>Deadpool</td><td>33</td></tr></tbody></table></div>
-  <div><h3>Most links out</h3><table><caption>Top five by out-degree</caption><thead><tr><th scope="col">Character</th><th scope="col">Links out</th></tr></thead><tbody><tr><td>Betsy Braddock</td><td>28</td></tr><tr><td>Cloak and Dagger</td><td>24</td></tr><tr><td>Adam Warlock</td><td>22</td></tr><tr><td>Venom</td><td>21</td></tr><tr><td>She-Hulk</td><td>20</td></tr></tbody></table></div></div>
-  <p>Our interpretation: a widely recurring character can collect links from many separate articles, while a page covering many relationships or storylines may link out widely. The counts alone cannot establish why Betsy’s article leads; checking article text would be a useful follow-up.</p></section>
-  <section><h2>A few hubs. A lot of quieter pages.</h2><p>The average in-degree and out-degree are both 5.89: every directed edge contributes once to each total. Yet the maxima differ sharply—106 incoming versus 28 outgoing links.</p>
-  <div class="controls"><label for="scale">Axes</label><select id="scale"><option value="linear">Linear</option><option value="log">Log–log</option></select></div>
-  <figure><svg id="distribution" viewBox="0 0 900 380" role="img" aria-label="In-degree and out-degree frequency distributions"></svg><figcaption>Number of characters at each exact degree; red = incoming, blue = outgoing. <span id="scale-note">Linear axes include degree zero.</span> Hover over a point for its counts.</figcaption></figure>
-  <p>The incoming distribution reaches much further than the outgoing one. A long tail is visible, but this small network and these plots do not establish a power law.</p></section>
-  <section><h2>The universe has an outside.</h2><p>Ignoring edge direction to find <em>weakly connected components</em>, we found one giant with 277 characters (91.4%), a separate nine-character island, and 17 singletons. That second island surprised us: everything outside the giant is not simply an isolated page.</p>
-  <figure><svg id="network" viewBox="0 0 900 600" role="img" aria-label="Network map showing a giant component, a nine-character island, and seventeen isolates"></svg><figcaption>Every node and edge in the snapshot. Lines omit arrows for readability; size reflects in-degree. A deterministic force layout places the giant at left, with the nine-node island and isolates at right. Positions have no geographic meaning.</figcaption></figure>
-  <label for="character">Inspect a character</label><select id="character"></select><p id="character-detail" aria-live="polite"></p>
-  <h3>The nine-character island</h3><p id="island"></p><h3>The 17 isolates</h3><p id="isolates"></p>
-  <p>“Isolated” means no incoming or outgoing links <em>within this roster and frozen snapshot</em>. It does not mean these characters have no Wikipedia links or no place in Marvel’s stories. Loading only the edge list would erase all 17 of them.</p></section>
-  <section><h2>How we counted</h2><p>We loaded every node from the roster first, then added the directed edges. We checked unique node IDs, duplicate edges, and that every edge endpoint appears in the roster. We counted degrees and traversed the undirected neighbor relationships to find weak components.</p>
-  <p>Source: the <a href="https://sunelehmann.com/socialgraphs2026-web/data/">course’s week-one release</a>, dated 26 August 2026 in the supplied file headers. This post uses the local frozen files; we have not independently re-crawled Wikipedia.</p>
-  <div class="downloads"><a href="week1_nodes.tsv">Node roster ↗</a><a href="week1_edges.tsv">Edge list ↗</a><a href="scripts/analyze.mjs">Analysis script ↗</a><a href="assets/week1-analysis.json">Computed data ↗</a></div>
-  <p>Reproduce from the repository root with <code>node scripts/analyze.mjs</code> (Node.js 18 or later; no packages required).</p></section>
-  <noscript><p>The findings and tables above work without JavaScript. Enable JavaScript for the interactive charts and full isolate list, or download the computed data.</p></noscript>
-  <p id="error" role="alert"></p>
-</main><footer>Group RAM · 02805 Social Graphs · One new exploration each week.</footer>
+  <p class="eyebrow">Group RAM · Week 1</p>
+  <h1>The Marvel network.</h1>
+  <p class="lead">[Add a short introduction about what we wanted to explore this week.]</p>
+  <nav class="chart-nav" aria-label="Explore this post"><a href="#map">Network map</a><a href="#comparison">In vs. out</a><a href="#degrees">Degree distributions</a><a href="#rankings">Leaderboards</a><a href="#notebook">Notebook & data</a></nav>
+  <section id="map">
+    <p class="eyebrow">01</p><h2>Network map</h2>
+    <figure><iframe class="plot network-plot" src="assets/plots/network.html" title="Interactive Marvel network: 277-node giant, nine-node island, and seventeen isolates"></iframe><figcaption>Hover or tap a node for its name and degrees. Drag to pan; use the toolbar to zoom or reset. Node size grows with incoming links. Lines omit arrows for readability. <a href="assets/plots/network.html">Open full graph ↗</a></figcaption></figure>
+    <p class="takeaway">[Add observations about the giant component, the smaller island, and the isolated characters. What surprised us?]</p>
+  </section>
+  <section id="comparison">
+    <p class="eyebrow">02</p><h2>Incoming vs. outgoing links</h2>
+    <figure><iframe class="plot" src="assets/plots/comparison.html" title="Scatter plot comparing incoming and outgoing links for every character" loading="lazy"></iframe><figcaption>Each dot is a character. Above the diagonal: more links received than sent. Overlapping dots can represent several characters. <a href="assets/plots/comparison.html">Open full graph ↗</a></figcaption></figure>
+    <p class="takeaway">[Add something about the characters that stand out and how their incoming and outgoing links differ.]</p>
+  </section>
+  <section id="degrees">
+    <p class="eyebrow">03</p><h2>Degree distributions</h2>
+    <figure><iframe class="plot" src="assets/plots/distribution.html" title="Degree frequency chart with linear and log–log axis buttons" loading="lazy"></iframe><figcaption>Use the Linear / Log–log buttons. Red circles = incoming; blue diamonds = outgoing. Log–log omits degree zero because log(0) is undefined; the linear view includes it. <a href="assets/plots/distribution.html">Open full graph ↗</a></figcaption></figure>
+    <p class="takeaway">[Add observations based on the linear and log–log plots. How do the two distributions compare?]</p>
+  </section>
+  <section id="rankings">
+    <p class="eyebrow">04</p><h2>Degree rankings</h2>
+    <figure><iframe class="plot ranking-plot" src="assets/plots/rankings.html" title="Top five characters by incoming and outgoing links" loading="lazy"></iframe><figcaption>Separate axis scales show the five leaders in each ranking. Hover or tap a bar for its count. <a href="assets/plots/rankings.html">Open full graph ↗</a></figcaption></figure>
+    <p class="takeaway">[Add something about who tops each ranking and why we think the leaders differ.]</p>
+  </section>
+  <section id="notebook">
+    <h2>Notebook & data</h2>
+    <p>[Add a short description of our method, the tools we used, and any limitations.]</p>
+    <div class="downloads"><a href="notebooks/published/week1.html">Read the executed notebook ↗</a><a href="notebooks/week1.ipynb" download>Download the source notebook ↓</a><a href="week1_nodes.tsv">Node roster ↓</a><a href="week1_edges.tsv">Edge list ↓</a></div>
+    <p>Source: <a href="https://sunelehmann.com/socialgraphs2026-web/data/">course data page</a> · Frozen snapshot: 26 August 2026.</p>
+  </section>
+  <noscript><p>Enable JavaScript to use the interactive charts.</p></noscript>
+</main><footer>Group RAM · 02805 Social Graphs</footer>
 </body></html>

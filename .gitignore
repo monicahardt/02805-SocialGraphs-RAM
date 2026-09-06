@@ -1,4 +1,6 @@
 # Byte-compiled / optimized / DLL files
+/assets/plots/
+/notebooks/published/
 __pycache__/
 *.py[codz]
 *$py.class

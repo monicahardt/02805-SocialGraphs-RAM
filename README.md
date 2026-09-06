@@ -4,13 +4,29 @@ A static GitHub Pages site for 02805 Social Graphs. The first post explores the 
 
 ## Reproduce
 
-Install Node.js 18 or later, then run `node scripts/analyze.mjs`. No npm packages are needed. The script reads the full node roster before adding edges, validates endpoints and uniqueness, and writes `assets/week1-analysis.json`.
+The graphs are authored in **[notebooks/week1.ipynb](notebooks/week1.ipynb)** using Python, NetworkX, and Plotly. Open it in Jupyter or VS Code and run all cells to regenerate the interactive HTML figures in `assets/plots/`.
 
-Serve the repository with any local HTTP server to view `index.html` and `week1.html`. Opening the files directly will prevent the charts from fetching their JSON in some browsers.
+To build everything from the command line with Python 3.13:
+
+```sh
+python -m venv .venv
+# Activate: .venv\Scripts\Activate.ps1 on Windows; source .venv/bin/activate on macOS/Linux
+python -m pip install -r requirements.txt
+python scripts/build_notebook.py
+python -m http.server 8000
+```
+
+Open http://localhost:8000 to preview the homepage and post. The build executes the notebook, exports its four interactive figures, and creates `notebooks/published/week1.html` with the code hidden, plus an executed notebook for inspection. Generated outputs are ignored by Git and rebuilt during deployment. The source notebook remains editable and downloadable.
+
+For notebook editing, use VS Code's Jupyter extension with the `.venv` Python interpreter, or install JupyterLab separately. The website serves exported HTML and JavaScript; visitors do not need Python or a notebook server. Hover, zoom, and Plotly axis buttons work on GitHub Pages; Python callbacks would need a live server.
+
+The original independent JavaScript analysis remains available with `node scripts/analyze.mjs` (Node.js 18+). It writes `assets/week1-analysis.json` and can be used to cross-check the Python results.
+
+The full roster is loaded before adding edges, preserving isolates. Both analyses validate node IDs, duplicate edges, and endpoints.
 
 ## Publish
 
-In the repository's **Settings → Pages**, an administrator should choose **GitHub Actions** as the source. Push changes to `main`; the included workflow builds the analysis and deploys the full site, including the week-one post.
+In the repository's **Settings → Pages**, an administrator should choose **GitHub Actions** as the source. Push changes to `main`; the included workflow executes the notebook and deploys the full site, including the interactive figures, week-one post, and notebook HTML. A notebook error fails the build before deployment.
 
 The `github-pages` environment must allow deployments from `main`. After the **Deploy site to GitHub Pages** workflow succeeds in the Actions tab, refresh the site to see the update.
 
