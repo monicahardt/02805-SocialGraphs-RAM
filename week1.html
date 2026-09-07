@@ -140,7 +140,16 @@
       <p class="lab-status">Each example shows all links among exactly three characters; links to the rest of the network are omitted. Examples are the first up to eight triples in node-ID order, not a representative sample.</p>
     </article>
     <details><summary>Null model and limits</summary><p id="motif-method"></p><p>The comparison preserves each character’s in-degree and out-degree, including isolates, but not communities, reciprocity, or connectivity. Every unordered triple is counted once, including disconnected triples in the full census. If the random sample has zero standard deviation, z is undefined and shown as N/A.</p></details>
-    <p class="takeaway">[Choose a pattern that stands out. Compare the observed count with the random distribution, then inspect some actual character triples. What might explain the difference?]</p>
+    <p class="takeaway">
+      This visualization looks at link patterns between three characters and compares them with 100 shuffled versions of our network.
+      Each character keeps the same amount of incoming and outgoing links, but who they link to changes.
+      You can click on a pattern above to inspect it. The blue bars show how many shuffled networks got each count, while the yellow "Observed" line shows the count in our actual network.
+      For example, 021U is two characters linking to the same third character, with no other links between the three.
+      This happens 10,508 times in our network, compared to around 15,600 in the shuffled versions.
+      One actual example is Abomination and Adam Warlock both linking to Spider-Man.
+      A possible explanation for the lower count is that characters also link to each other or link back, which would make the triple a different pattern.
+      You can use the examples below the graph to inspect these links and find the characters in the Network Lab.
+    </p>
   </section>
   <section id="notebook">
     <h2>Notebook & data</h2>
