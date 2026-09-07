@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>02805 Social Graphs RAM</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #fff8de;
+        --paper: #fff1a8;
+        --muted: #bed2ff;
+        --panel: rgba(7, 8, 19, 0.88);
+        --spider-red: #ff3048;
+        --spider-blue: #277bff;
+        --bat-gold: #ffd43b;
+        --storm-blue: #82ecff;
+        --shadow: rgba(0, 0, 0, 0.48);
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", "Segoe UI", system-ui, sans-serif;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 20% 16%, rgba(255, 212, 59, 0.35), transparent 18rem),
+          radial-gradient(circle at 85% 12%, rgba(39, 123, 255, 0.42), transparent 24rem),
+          radial-gradient(circle at 78% 75%, rgba(255, 48, 72, 0.34), transparent 28rem),
+          linear-gradient(145deg, #05050b 0%, #121a62 43%, #080811 100%);
+        overflow-x: hidden;
+      }
+
+      body::before,
+      body::after {
+        content: "";
+        position: fixed;
+        inset: 0;
+        pointer-events: none;
+        z-index: 0;
+      }
+
+      body::before {
+        background:
+          linear-gradient(26deg, transparent 0 49%, rgba(255, 255, 255, 0.14) 49.5% 50%, transparent 50.5% 100%),
+          linear-gradient(154deg, transparent 0 49%, rgba(255, 255, 255, 0.12) 49.5% 50%, transparent 50.5% 100%),
+          radial-gradient(circle at 82% 20%, transparent 0 4rem, rgba(255, 48, 72, 0.54) 4.08rem 4.28rem, transparent 4.36rem 100%),
+          radial-gradient(circle at 82% 20%, transparent 0 8rem, rgba(39, 123, 255, 0.5) 8.08rem 8.28rem, transparent 8.36rem 100%),
+          radial-gradient(circle at 82% 20%, transparent 0 13rem, rgba(255, 255, 255, 0.18) 13.08rem 13.24rem, transparent 13.34rem 100%);
+        opacity: 0.62;
+      }
+
+      body::after {
+        background:
+          repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 2px, transparent 2px 9px),
+          repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.22) 0 1px, transparent 1px 13px);
+        mix-blend-mode: overlay;
+        opacity: 0.55;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .page {
+        position: relative;
+        z-index: 1;
+        width: min(1220px, calc(100% - 32px));
+        margin: 0 auto;
+        padding: 24px 0 48px;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        margin-bottom: 20px;
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        min-height: 44px;
+        padding: 8px 14px;
+        border: 3px solid #05050b;
+        border-radius: 8px;
+        background: var(--paper);
+        color: #08080e;
+        box-shadow: 7px 7px 0 var(--shadow);
+        text-transform: uppercase;
+      }
+
+      .brand-mark {
+        width: 24px;
+        height: 24px;
+        background:
+          linear-gradient(135deg, transparent 0 32%, #05050b 33% 50%, transparent 51% 100%),
+          radial-gradient(circle, var(--spider-red) 0 38%, transparent 39%);
+        border: 3px solid #05050b;
+        border-radius: 50%;
+      }
+
+      .nav-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .nav-links a {
+        min-height: 40px;
+        display: inline-flex;
+        align-items: center;
+        padding: 0 13px;
+        border: 2px solid rgba(255, 255, 255, 0.26);
+        border-radius: 8px;
+        background: rgba(5, 5, 11, 0.58);
+        color: var(--paper);
+        font-size: 0.9rem;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .hero {
+        position: relative;
+        min-height: 78vh;
+        display: grid;
+        grid-template-columns: minmax(0, 0.82fr) minmax(360px, 1.18fr);
+        gap: 30px;
+        align-items: center;
+        padding: 24px 0 18px;
+      }
+
+      .hero::before,
+      .hero::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+      }
+
+      .hero::before {
+        width: 300px;
+        height: 130px;
+        left: -58px;
+        top: 78px;
+        background:
+          radial-gradient(ellipse at center, rgba(255, 212, 59, 0.9) 0 34%, transparent 35%),
+          linear-gradient(115deg, transparent 0 46%, rgba(255, 212, 59, 0.42) 47% 52%, transparent 53% 100%);
+        filter: blur(2px);
+        transform: rotate(-12deg);
+      }
+
+      .hero::after {
+        width: 132px;
+        height: 300px;
+        right: 36%;
+        top: -18px;
+        background: linear-gradient(160deg, transparent 0 15%, var(--storm-blue) 16% 26%, transparent 27% 38%, var(--bat-gold) 39% 50%, transparent 51% 100%);
+        filter: drop-shadow(0 0 18px rgba(130, 236, 255, 0.76));
+        transform: skew(-10deg);
+      }
+
+      .hero-copy {
+        position: relative;
+        z-index: 2;
+      }
+
+      .eyebrow {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0 0 18px;
+        padding: 8px 12px;
+        border: 2px solid #05050b;
+        border-radius: 8px;
+        background: var(--spider-red);
+        color: #fff;
+        box-shadow: 5px 5px 0 #05050b;
+        font-size: 0.96rem;
+        letter-spacing: 0;
+        text-transform: uppercase;
+      }
+
+      .burst {
+        width: 22px;
+        height: 22px;
+        background: var(--bat-gold);
+        clip-path: polygon(50% 0, 60% 32%, 94% 14%, 72% 46%, 100% 62%, 65% 66%, 72% 100%, 50% 72%, 28% 100%, 35% 66%, 0 62%, 28% 46%, 6% 14%, 40% 32%);
+      }
+
+      h1 {
+        margin: 0;
+        max-width: 720px;
+        color: #fff;
+        font-size: clamp(3.5rem, 9.2vw, 9.6rem);
+        line-height: 0.78;
+        letter-spacing: 0;
+        text-transform: uppercase;
+        text-shadow:
+          5px 5px 0 #05050b,
+          10px 10px 0 var(--spider-red),
+          15px 15px 0 var(--spider-blue);
+      }
+
+      .subtitle {
+        max-width: 620px;
+        margin: 30px 0 0;
+        padding: 18px;
+        border: 3px solid #05050b;
+        border-radius: 8px;
+        background: rgba(255, 241, 168, 0.94);
+        color: #11121f;
+        box-shadow: 8px 8px 0 var(--shadow);
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: clamp(1rem, 2vw, 1.18rem);
+        font-weight: 800;
+        line-height: 1.5;
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+      }
+
+      .button {
+        min-height: 52px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 0 20px;
+        border: 3px solid #05050b;
+        border-radius: 8px;
+        background: var(--spider-blue);
+        color: #fff;
+        box-shadow: 6px 6px 0 #05050b;
+        font-size: 1.06rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        transition: transform 160ms ease, box-shadow 160ms ease;
+      }
+
+      .button:hover {
+        transform: translate(3px, 3px);
+        box-shadow: 3px 3px 0 #05050b;
+      }
+
+      .button.primary {
+        background: var(--bat-gold);
+        color: #05050b;
+      }
+
+      .hero-art {
+        position: relative;
+        z-index: 1;
+        margin: 0;
+        padding: 14px;
+        border: 5px solid #05050b;
+        border-radius: 8px;
+        background: var(--paper);
+        box-shadow: 14px 14px 0 rgba(0, 0, 0, 0.66);
+        transform: rotate(1.5deg);
+      }
+
+      .hero-art img {
+        display: block;
+        width: 100%;
+        min-height: 360px;
+        object-fit: cover;
+        border: 4px solid #05050b;
+        border-radius: 6px;
+      }
+
+      .caption {
+        position: absolute;
+        right: -14px;
+        bottom: 26px;
+        max-width: 240px;
+        padding: 10px 14px;
+        border: 3px solid #05050b;
+        border-radius: 8px;
+        background: var(--spider-red);
+        color: #fff;
+        box-shadow: 6px 6px 0 #05050b;
+        font-size: clamp(1.25rem, 2.5vw, 2rem);
+        line-height: 0.92;
+        text-transform: uppercase;
+        transform: rotate(-5deg);
+      }
+
+      .sound {
+        position: absolute;
+        left: -18px;
+        top: 34px;
+        width: 128px;
+        height: 128px;
+        display: grid;
+        place-items: center;
+        border: 4px solid #05050b;
+        border-radius: 50%;
+        background: var(--bat-gold);
+        color: #05050b;
+        box-shadow: 7px 7px 0 #05050b;
+        font-size: 2rem;
+        text-transform: uppercase;
+        transform: rotate(-14deg);
+      }
+
+      .section {
+        padding: 48px 0 0;
+      }
+
+      .section-title {
+        margin: 0 0 18px;
+        color: var(--paper);
+        font-size: clamp(2.3rem, 5vw, 5rem);
+        line-height: 0.88;
+        text-transform: uppercase;
+        text-shadow: 4px 4px 0 #05050b;
+      }
+
+      .comic-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+        gap: 18px;
+      }
+
+      .panel {
+        position: relative;
+        min-height: 390px;
+        overflow: hidden;
+        border: 5px solid #05050b;
+        border-radius: 8px;
+        background: var(--panel);
+        box-shadow: 10px 10px 0 var(--shadow);
+      }
+
+      .panel img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        min-height: 390px;
+        object-fit: cover;
+      }
+
+      .panel-copy {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+        padding: 14px 16px;
+        border: 3px solid #05050b;
+        border-radius: 8px;
+        background: rgba(255, 241, 168, 0.94);
+        color: #11121f;
+        box-shadow: 6px 6px 0 #05050b;
+        font-family: "Segoe UI", Arial, sans-serif;
+      }
+
+      .panel-copy h2 {
+        margin: 0 0 6px;
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        font-size: 1.8rem;
+        line-height: 0.95;
+        text-transform: uppercase;
+      }
+
+      .panel-copy p {
+        margin: 0;
+        font-weight: 800;
+        line-height: 1.42;
+      }
+
+      .hero-gallery {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+      }
+
+      .hero-card {
+        position: relative;
+        min-height: 520px;
+        overflow: hidden;
+        border: 5px solid #05050b;
+        border-radius: 8px;
+        background: #05050b;
+        box-shadow: 10px 10px 0 var(--shadow);
+        isolation: isolate;
+      }
+
+      .hero-card::before,
+      .hero-card::after {
+        content: "";
+        position: absolute;
+        pointer-events: none;
+        z-index: 2;
+      }
+
+      .hero-card::before {
+        inset: 0;
+        background:
+          linear-gradient(180deg, transparent 0 46%, rgba(5, 5, 11, 0.2) 58%, rgba(5, 5, 11, 0.96) 100%),
+          repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.09) 0 2px, transparent 2px 10px);
+        mix-blend-mode: multiply;
+      }
+
+      .hero-card::after {
+        inset: 13px;
+        border: 3px solid rgba(255, 255, 255, 0.78);
+        border-radius: 6px;
+      }
+
+      .hero-card img {
+        width: 100%;
+        height: 100%;
+        min-height: 520px;
+        display: block;
+        object-fit: cover;
+        filter: saturate(1.25) contrast(1.08);
+        transform: scale(1.03);
+      }
+
+      .hero-card.batman-photo img {
+        object-position: center 24%;
+      }
+
+      .hero-card.thor-photo img {
+        object-position: center 16%;
+      }
+
+      .hero-card.spiderman-photo img {
+        object-position: center 12%;
+      }
+
+      .hero-card .nameplate {
+        position: absolute;
+        left: 18px;
+        right: 18px;
+        bottom: 18px;
+        z-index: 3;
+        padding: 14px 16px 12px;
+        border: 3px solid #05050b;
+        border-radius: 8px;
+        color: #05050b;
+        box-shadow: 6px 6px 0 #05050b;
+        transform: rotate(-2deg);
+      }
+
+      .batman-photo .nameplate {
+        background: var(--bat-gold);
+      }
+
+      .thor-photo .nameplate {
+        background: var(--storm-blue);
+      }
+
+      .spiderman-photo .nameplate {
+        background: var(--spider-red);
+        color: #fff;
+      }
+
+      .nameplate h2 {
+        margin: 0;
+        font-size: clamp(2rem, 4vw, 3.4rem);
+        line-height: 0.86;
+        text-transform: uppercase;
+      }
+
+      .nameplate a {
+        display: inline-flex;
+        margin-top: 8px;
+        color: inherit;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 0.82rem;
+        font-weight: 900;
+        text-transform: none;
+      }
+
+      .power-cards {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 16px;
+        margin-top: 18px;
+      }
+
+      .card {
+        position: relative;
+        min-height: 230px;
+        padding: 22px;
+        overflow: hidden;
+        border: 4px solid #05050b;
+        border-radius: 8px;
+        background: var(--paper);
+        color: #11121f;
+        box-shadow: 8px 8px 0 var(--shadow);
+      }
+
+      .card::after {
+        content: "";
+        position: absolute;
+        inset: auto -38px -44px auto;
+        width: 160px;
+        height: 160px;
+        border: 12px solid currentColor;
+        border-radius: 50%;
+        opacity: 0.14;
+      }
+
+      .card h3 {
+        margin: 0 0 12px;
+        font-size: 2rem;
+        line-height: 0.95;
+        text-transform: uppercase;
+      }
+
+      .card p {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-weight: 800;
+        line-height: 1.46;
+      }
+
+      .card.bats {
+        background: linear-gradient(145deg, #fff1a8, #ffd43b);
+      }
+
+      .card.lightning {
+        background: linear-gradient(145deg, #d8fbff, #82ecff);
+      }
+
+      .card.webs {
+        background:
+          radial-gradient(circle at 75% 16%, transparent 0 42px, rgba(255, 48, 72, 0.44) 43px 46px, transparent 47px),
+          linear-gradient(145deg, #d9e6ff, #ffffff 48%, #ffb8c1);
+      }
+
+      .icon {
+        width: 72px;
+        height: 72px;
+        margin-bottom: 18px;
+      }
+
+      .bat-icon {
+        background: #05050b;
+        clip-path: polygon(0 50%, 16% 26%, 31% 47%, 43% 12%, 50% 36%, 57% 12%, 69% 47%, 84% 26%, 100% 50%, 82% 60%, 68% 54%, 58% 76%, 50% 61%, 42% 76%, 32% 54%, 18% 60%);
+      }
+
+      .bolt-icon {
+        background: #05050b;
+        clip-path: polygon(56% 0, 16% 54%, 42% 54%, 29% 100%, 84% 38%, 55% 38%);
+      }
+
+      .web-icon {
+        border: 5px solid var(--spider-red);
+        border-radius: 50%;
+        background:
+          linear-gradient(90deg, transparent 0 46%, var(--spider-blue) 47% 53%, transparent 54% 100%),
+          linear-gradient(0deg, transparent 0 46%, var(--spider-blue) 47% 53%, transparent 54% 100%),
+          linear-gradient(45deg, transparent 0 47%, var(--spider-red) 48% 52%, transparent 53% 100%),
+          linear-gradient(135deg, transparent 0 47%, var(--spider-red) 48% 52%, transparent 53% 100%);
+      }
+
+      .data-strip {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 16px;
+      }
+
+      .data-link {
+        position: relative;
+        min-height: 118px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 16px;
+        padding: 22px;
+        overflow: hidden;
+        border: 4px solid #05050b;
+        border-radius: 8px;
+        background: var(--spider-red);
+        color: #fff;
+        box-shadow: 8px 8px 0 var(--shadow);
+        font-size: clamp(1.2rem, 2.5vw, 2.2rem);
+        line-height: 0.95;
+        text-decoration: none;
+        text-transform: uppercase;
+      }
+
+      .data-link:nth-child(2) {
+        background: var(--spider-blue);
+      }
+
+      .data-link::after {
+        content: "";
+        position: absolute;
+        right: -70px;
+        top: -70px;
+        width: 210px;
+        height: 210px;
+        border: 9px solid rgba(255, 255, 255, 0.62);
+        border-radius: 50%;
+      }
+
+      .data-link span {
+        position: relative;
+        z-index: 1;
+        min-width: max-content;
+        padding: 8px 10px;
+        border: 3px solid #05050b;
+        border-radius: 8px;
+        background: var(--bat-gold);
+        color: #05050b;
+        font-size: 0.94rem;
+      }
+
+      footer {
+        padding: 36px 0 0;
+        color: var(--muted);
+        font-family: "Segoe UI", Arial, sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+      }
+
+      @media (max-width: 900px) {
+        .topbar,
+        .hero {
+          grid-template-columns: 1fr;
+        }
+
+        .topbar {
+          align-items: flex-start;
+          flex-direction: column;
+        }
+
+        .hero {
+          min-height: auto;
+        }
+
+        .hero::after {
+          right: 8%;
+        }
+
+        .comic-grid,
+        .hero-gallery,
+        .power-cards,
+        .data-strip {
+          grid-template-columns: 1fr;
+        }
+
+        .hero-art {
+          transform: none;
+        }
+      }
+
+      @media (max-width: 560px) {
+        .page {
+          width: min(100% - 24px, 1220px);
+          padding-top: 14px;
+        }
+
+        h1 {
+          font-size: clamp(3rem, 18vw, 5.2rem);
+          text-shadow:
+            3px 3px 0 #05050b,
+            6px 6px 0 var(--spider-red),
+            9px 9px 0 var(--spider-blue);
+        }
+
+        .subtitle {
+          margin-top: 22px;
+        }
+
+        .actions,
+        .nav-links {
+          width: 100%;
+          flex-direction: column;
+        }
+
+        .button,
+        .nav-links a,
+        .data-link {
+          width: 100%;
+        }
+
+        .hero-art img {
+          min-height: 300px;
+        }
+
+        .hero-card,
+        .hero-card img {
+          min-height: 430px;
+        }
+
+        .sound {
+          width: 96px;
+          height: 96px;
+          font-size: 1.45rem;
+        }
+
+        .caption {
+          right: 8px;
+          bottom: 14px;
+          max-width: 190px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="page">
+      <header class="topbar">
+        <div class="brand"><span class="brand-mark" aria-hidden="true"></span>02805 Social Graphs RAM</div>
+        <nav class="nav-links" aria-label="Page sections">
+          <a href="../week1.html">Week 1 post</a>
+          <a href="#heroes">Heroes</a>
+          <a href="#powers">Powers</a>
+          <a href="#data">Data</a>
+        </nav>
+      </header>
+
+      <section class="hero" aria-labelledby="page-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="burst" aria-hidden="true"></span>Webs. Bats. Lightning. Graphs.</p>
+          <h1 id="page-title">Social Graphs Assemble</h1>
+          <p class="subtitle">
+            We are Group RAM. Each week we explore a frozen network of 303 Marvel characters. First up: who gets the spotlight, who links out, and who lives outside the giant component?
+          </p>
+          <div class="actions" aria-label="Repository links">
+            <a class="button primary" href="../week1.html">Explore the Marvel graphs →</a>
+            <a class="button" href="../week1_edges.tsv">Grab edges</a>
+          </div>
+        </div>
+        <figure class="hero-art">
+          <span class="sound" aria-hidden="true">Pow</span>
+          <img src="./assets/hero-crossover.svg" alt="Comic-style city with superhero-inspired webs, bats, lightning, and social graph nodes.">
+          <figcaption class="caption">Network city crossover</figcaption>
+        </figure>
+      </section>
+
+      <section class="section" id="latest-post" aria-labelledby="latest-post-title">
+        <h2 class="section-title" id="latest-post-title">Week 1 · Explore the Marvel Network</h2>
+        <div class="data-strip">
+          <a class="data-link" href="../week1.html">303 heroes. Who gets the spotlight? <span>Explore the network map, compare incoming and outgoing links, and find the islands. Open the interactive post →</span></a>
+        </div>
+      </section>
+
+      <section class="section" id="showdown" aria-labelledby="showdown-title">
+        <h2 class="section-title" id="showdown-title">The Showdown Panels</h2>
+        <div class="comic-grid">
+          <article class="panel">
+            <img src="./assets/bat-signal-panel.svg" alt="A yellow signal over a dark skyline with bat silhouettes.">
+            <div class="panel-copy">
+              <h2>Gotham Signal</h2>
+              <p>Yellow signal beams and bat silhouettes bring the dark detective corner of the theme forward.</p>
+            </div>
+          </article>
+          <article class="panel">
+            <img src="./assets/lightning-data-panel.svg" alt="Blue and gold lightning striking a colorful social graph.">
+            <div class="panel-copy">
+              <h2>Thunder Graph</h2>
+              <p>Lightning crashes through nodes and edges, turning the dataset into a heroic storm map.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="heroes" aria-labelledby="heroes-title">
+        <h2 class="section-title" id="heroes-title">Heroes Arrive</h2>
+        <div class="hero-gallery">
+          <article class="hero-card batman-photo">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Batman%20cossplay.JPG?width=900"
+              alt="Batman cosplayer in a black suit and cape."
+              loading="lazy"
+            >
+            <div class="nameplate">
+              <h2>Batman</h2>
+              <a href="https://commons.wikimedia.org/wiki/File:Batman_cossplay.JPG">Photo: Egon Eagle, CC0</a>
+            </div>
+          </article>
+          <article class="hero-card thor-photo">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Thor%20Cosplay.jpg?width=900"
+              alt="Thor cosplayer holding a hammer."
+              loading="lazy"
+            >
+            <div class="nameplate">
+              <h2>Thor</h2>
+              <a href="https://commons.wikimedia.org/wiki/File:Thor_Cosplay.jpg">Photo: Juan Ignacio Rodriguez de Leon, CC BY 2.0</a>
+            </div>
+          </article>
+          <article class="hero-card spiderman-photo">
+            <img
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Spider-Man%20cosplay.jpg?width=900"
+              alt="Spider-Man cosplayer in a red and blue suit."
+              loading="lazy"
+            >
+            <div class="nameplate">
+              <h2>Spider-Man</h2>
+              <a href="https://commons.wikimedia.org/wiki/File:Spider-Man_cosplay.jpg">Photo: ManoSolo13241324, CC BY-SA 4.0</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="powers" aria-labelledby="powers-title">
+        <h2 class="section-title" id="powers-title">Theme Powers</h2>
+        <div class="power-cards">
+          <article class="card bats">
+            <div class="icon bat-icon" aria-hidden="true"></div>
+            <h3>Bats</h3>
+            <p>Heavy black shapes, hard outlines, signal yellow, and a city-at-night mood.</p>
+          </article>
+          <article class="card lightning">
+            <div class="icon bolt-icon" aria-hidden="true"></div>
+            <h3>Lightning</h3>
+            <p>Blue-white storm glow, gold impact flashes, and diagonals that make the page feel fast.</p>
+          </article>
+          <article class="card webs">
+            <div class="icon web-icon" aria-hidden="true"></div>
+            <h3>Webs</h3>
+            <p>Red and blue web geometry connects the superhero look directly to social graph structure.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="data" aria-labelledby="data-title">
+        <h2 class="section-title" id="data-title">Open The Data Vault</h2>
+        <div class="data-strip">
+          <a class="data-link" href="../week1_nodes.tsv">week1_nodes.tsv <span>Node list</span></a>
+          <a class="data-link" href="../week1_edges.tsv">week1_edges.tsv <span>Edge list</span></a>
+        </div>
+      </section>
+
+      <footer>
+        Built for GitHub Pages with original superhero-inspired artwork. No official affiliation with Disney, Marvel, DC, or the named characters is implied.
+      </footer>
+    </main>
+  </body>
+</html>

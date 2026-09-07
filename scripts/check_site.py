@@ -22,7 +22,8 @@ class Links(HTMLParser):
             if not target.is_relative_to(root) or not target.exists():
                 missing.append(f"{self.page.relative_to(root)}: {attrs[key]}")
 
-pages = [root / "index.html", root / "week1.html", root / "notebooks/published/week1.html"]
+pages = [root / "index.html", root / "notebooks/published/week1.html", root / "scrapped/index.html"]
+pages += [root / f"week{week}.html" for week in range(1, 9)]
 pages += sorted((root / "assets/plots").glob("*.html"))
 for page in pages:
     if not page.is_file():

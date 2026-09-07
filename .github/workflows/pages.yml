@@ -34,8 +34,8 @@ jobs:
       - name: Stage public files
         run: |
           mkdir _site
-          cp index.html week1.html week1_nodes.tsv week1_edges.tsv _site/
-          cp -r assets scripts notebooks _site/
+          cp index.html week[1-8].html week1_nodes.tsv week1_edges.tsv _site/
+          cp -r assets scripts notebooks scrapped _site/
           cp requirements.txt _site/
       - name: Check published links and graph assets
         run: python scripts/check_site.py _site

@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 620" role="img" aria-labelledby="title desc">
+  <title id="title">Lightning striking a glowing social graph</title>
+  <desc id="desc">Electric blue and gold lightning strikes through colorful graph nodes and edges.</desc>
+  <defs>
+    <linearGradient id="storm" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0d1a5b"/>
+      <stop offset="0.55" stop-color="#11152e"/>
+      <stop offset="1" stop-color="#05050a"/>
+    </linearGradient>
+    <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  <rect width="900" height="620" fill="url(#storm)"/>
+  <g opacity="0.18" stroke="#ffffff" stroke-width="2">
+    <path d="M0 104h900 M0 206h900 M0 308h900 M0 410h900 M0 512h900"/>
+    <path d="M108 0v620 M222 0v620 M336 0v620 M450 0v620 M564 0v620 M678 0v620 M792 0v620"/>
+  </g>
+  <g filter="url(#glow)">
+    <path d="M500 -24 286 276h132L330 644 640 214H484L610 -24z" fill="#ffd43b"/>
+    <path d="M584 64 456 246h88L438 474 678 184H562L656 64z" fill="#82ecff"/>
+  </g>
+  <g stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.8">
+    <path d="M128 422 260 316 390 368 520 236 646 330 770 198"/>
+    <path d="M260 316 332 160 520 236 604 124"/>
+    <path d="M390 368 476 482 646 330"/>
+  </g>
+  <g filter="url(#glow)">
+    <circle cx="128" cy="422" r="26" fill="#ff3048"/>
+    <circle cx="260" cy="316" r="30" fill="#2f7cff"/>
+    <circle cx="390" cy="368" r="24" fill="#ffd43b"/>
+    <circle cx="520" cy="236" r="34" fill="#ff3048"/>
+    <circle cx="646" cy="330" r="28" fill="#2f7cff"/>
+    <circle cx="770" cy="198" r="30" fill="#ffd43b"/>
+    <circle cx="332" cy="160" r="22" fill="#ffffff"/>
+    <circle cx="604" cy="124" r="22" fill="#ffffff"/>
+    <circle cx="476" cy="482" r="22" fill="#ffffff"/>
+  </g>
+  <g fill="#05050a" opacity="0.9">
+    <path d="M60 96c22-24 46-31 72-13 25-19 50-14 75 13-31-8-52 0-75 24-24-25-43-33-72-24z"/>
+    <path d="M705 466c28-30 58-38 88-16 30-22 60-16 89 17-36-10-61 0-89 28-29-30-52-40-88-29z"/>
+  </g>
+</svg>

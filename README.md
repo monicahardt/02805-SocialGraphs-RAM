@@ -1,6 +1,8 @@
 # Social Graphs Assemble · Group RAM
 
-A static GitHub Pages site for 02805 Social Graphs. The first post explores the frozen week-one Marvel Wikipedia network with degree rankings, linear/log–log distributions, and a network map including all isolates.
+A static GitHub Pages site for 02805 Social Graphs. The homepage links to weeks 1–8 using the course topic names. Week 1 is live; weeks 2–8 have coming-soon pages. To publish a later post, replace its `weekN.html` page and update its homepage card's status and `live` class.
+
+The previous comic-themed homepage and its local artwork are preserved in `scrapped/`. Open `scrapped/index.html` to revisit it.
 
 ## Reproduce
 
