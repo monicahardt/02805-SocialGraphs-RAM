@@ -18,6 +18,9 @@ let playing = false, visible = false, animation = null, walkers = [], particleLa
 let selectedMotif = '300', exampleIndex = 0, motifPlotReady = false;
 let motifDrawing = false, motifDirty = false;
 const name = id => byId.get(id)?.name || id;
+const initials = label => label.replace(/\([^)]*\)/g, '').trim().split(/\s+/)
+  .map(word => word.match(/[\p{L}\p{N}]/u)?.[0] || '')
+  .filter(Boolean).slice(0, 3).join('').toUpperCase();
 const nodeColor = id => {
   const top = results.atlas.nodePaths[id]?.[0];
   return top === 'isolates' ? '#ffd43b' : palette[(Number(top?.split('-')[1]) - 1) % palette.length] || '#63caff';
@@ -85,7 +88,7 @@ function setAtlasView(id, focus = null) {
       svg(el,'text',{'text-anchor':'middle',y:-8,'font-size':p.r<30?10:13},p.id==='isolates'?'Isolates':`C${p.id.slice(2).replaceAll('-','.')}`);
       svg(el,'text',{'text-anchor':'middle',y:15,class:'bubble-count'},p.members.length);
       if (p.r>48) svg(el,'text',{'text-anchor':'middle',y:34,class:'bubble-leader'},p.id==='isolates'?'display group':name(groups[p.id].leaders[0]).split(' (')[0].slice(0,18));
-    } else if (p.r>14) svg(el,'text',{'text-anchor':'middle',y:5,'font-size':11},name(p.id).split(' ').map(s=>s[0]).slice(0,3).join(''));
+    } else if (p.r>14) svg(el,'text',{'text-anchor':'middle',y:5,'font-size':11},initials(name(p.id)));
     const click = () => p.group ? setAtlasView(p.id) : inspectCharacter(p.id);
     const highlight = on => {
       for (const edge of scene.querySelectorAll('path[data-source]')) {

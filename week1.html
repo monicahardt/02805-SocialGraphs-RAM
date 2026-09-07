@@ -15,9 +15,18 @@
 <main>
   <p class="eyebrow">Group RAM · Week 1</p>
   <h1>The Marvel network.</h1>
-  <p class="lead">[Add a short introduction about what we wanted to explore this week.]</p>
   <button class="nav-toggle" aria-expanded="false" aria-controls="section-nav">Sections ☰</button>
-  <nav class="chart-nav" id="section-nav" aria-label="Explore this post"><span class="nav-heading">Week 01 / Explore</span><a href="#map">01 · Network lab</a><a href="#resilience">02 · Remove the hubs</a><a href="#comparison">03 · In vs. out</a><a href="#degrees">04 · Distributions</a><a href="#rankings">05 · Leaderboards</a><a href="#atlas">06 · Living atlas</a><a href="#motifs">07 · Network fingerprint</a><a href="#notebook">08 · Notebook & data</a><span class="nav-status" id="nav-status">303 characters · 1,784 links</span></nav>
+  <nav class="chart-nav" id="section-nav" aria-label="Explore this post"><span class="nav-heading">Week 01 / Explore</span><a href="#write-up">Our first post</a><a href="#map">01 · Network lab</a><a href="#resilience">02 · Remove the hubs</a><a href="#comparison">03 · In vs. out</a><a href="#degrees">04 · Distributions</a><a href="#rankings">05 · Leaderboards</a><a href="#atlas">06 · Living atlas</a><a href="#motifs">07 · Network fingerprint</a><a href="#notebook">08 · Notebook & data</a><span class="nav-status" id="nav-status">303 characters · 1,784 links</span></nav>
+  <section id="write-up" aria-labelledby="write-up-title">
+    <h3>Weekly writeup</h3>
+    <p>
+      Working with AI is a very iterative process, with a lot of back and forth, so there is not a clear "list of questions" asked.
+      We first asked a lot of questions about setting up the github page, navigating between pages and general project scaffolding questions.
+      We then started working on the visualizations. Codex had just released their new GPT 6 Astra model, which we just let run amok at first with very vague prompts.
+      While the graphs produced were decent, it gave a big overhead in analyzing and trying to understand them. They were also written in .js as we hadn't specified the format, so we got them translated to .jpynb instead.
+      Next week we will likely take a more cautious approach, with smaller iterations and more precise prompts, to more easily grasp the visualizaitons made.
+    </p>
+  </section>
   <section id="map">
     <p class="eyebrow">01</p><h2>Network map</h2>
     <div class="lab-controls">
@@ -36,7 +45,12 @@
     </div>
     <p class="lab-status" id="path-status" aria-live="polite">Select a starting character above, then choose a destination. Gold arrows follow the route; “either direction” may traverse a link backwards.</p>
     <details><summary>Inspect the selected characters</summary><ul id="selection-list" class="selection-list"></ul></details>
-    <p class="takeaway">[Add observations about the giant component, the smaller island, and the isolated characters. What surprised us?]</p>
+    <p class="takeaway">
+      This is our "main" visualization. A lot of the graphs further down will affect this graph, so be sure to check back after adjusting the other graphs.
+      It visualizaes the network itself; how each character link to each other (incomming and outgoing links). 
+      Using the selector above and / or clicking on circles inside the visualization will let you see how characters are connected.
+      Using the "route tracker" just above this text explanation allows you to see the shortest path from one to the other (note; a selection must be made in both selectors to work)
+    </p>
   </section>
   <section id="resilience">
     <p class="eyebrow">02 / Experiment</p><h2>Remove the hubs</h2>
@@ -52,22 +66,28 @@
       <details><summary>Removed characters</summary><ol id="removed-list" class="selection-list"></ol></details>
       <a href="#map">Inspect this experiment on the network map ↑</a>
     </div>
-    <p class="takeaway">[Add our prediction about removing hubs versus random characters. Compare it with the curves and describe what surprised us.]</p>
+    <p class="takeaway">
+      This visualization was made to see how removing characters affects the network. It comes with two removal strategies; highest in degree out or "randomly" (seed chosen in advance).
+      You can use the slider above the graph to remove characters one by one and see the way it affects links, largest group and isolate amount. Also take a look at the Netowork Lab graph when adjusting it to see it visually.
+    </p>
   </section>
   <section id="comparison">
     <p class="eyebrow">03</p><h2>Incoming vs. outgoing links</h2>
     <figure><iframe class="plot" src="assets/plots/comparison.html" title="Scatter plot comparing incoming and outgoing links for every character" loading="lazy"></iframe><figcaption>Each dot is a character. Above the diagonal: more links received than sent. Overlapping dots can represent several characters. <a href="assets/plots/comparison.html">Open full graph ↗</a></figcaption></figure>
-    <p class="takeaway">[Add something about the characters that stand out and how their incoming and outgoing links differ.]</p>
+    <p class="takeaway">
+      This one shows the correlation between ingoing and outgoing links. Note that outliers are not sorted out and are included in the correlation.
+      This graph was mainly made to be able to choose interesting characters for the Network Lab, which is also why they are clickable and will select them in the Network Lab when clicked.
+    </p>
   </section>
   <section id="degrees">
     <p class="eyebrow">04</p><h2>Degree distributions</h2>
     <figure><iframe class="plot" src="assets/plots/distribution.html" title="Degree frequency chart with linear and log–log axis buttons" loading="lazy"></iframe><figcaption>Use the Linear / Log–log buttons. Red circles = incoming; blue diamonds = outgoing. Log–log omits degree zero because log(0) is undefined; the linear view includes it. <a href="assets/plots/distribution.html">Open full graph ↗</a></figcaption></figure>
-    <p class="takeaway">[Add observations based on the linear and log–log plots. How do the two distributions compare?]</p>
+    <p class="takeaway">A graph with the option to be seen in both linear and log-log. Shows the distribution of characters with x amount of outgoing and ingoing links.</p>
   </section>
   <section id="rankings">
     <p class="eyebrow">05</p><h2>Degree rankings</h2>
     <figure><iframe class="plot ranking-plot" src="assets/plots/rankings.html" title="Top five characters by incoming and outgoing links" loading="lazy"></iframe><figcaption>Separate axis scales show the five leaders in each ranking. Hover or tap a bar for its count. <a href="assets/plots/rankings.html">Open full graph ↗</a></figcaption></figure>
-    <p class="takeaway">[Add something about who tops each ranking and why we think the leaders differ.]</p>
+    <p class="takeaway">A simple plot showing the top "ranking" characters in terms of incomming and outgoing links.</p>
   </section>
   <section id="atlas">
     <p class="eyebrow">06 / Community discovery</p><h2>A living atlas</h2>
@@ -81,7 +101,7 @@
       <button id="atlas-up" type="button" disabled>↑ One level up</button>
       <button id="atlas-home" type="button">All communities</button>
       <button id="atlas-flow" type="button" aria-pressed="false">▶ Simulate browsing</button>
-      <label>Walkers<input id="atlas-walkers" type="range" min="1" max="40" value="16"></label>
+      <label>Walkers<input id="atlas-walkers" type="range" min="1" max="200" value="16"></label>
     </div>
     <nav class="atlas-breadcrumb" id="atlas-breadcrumb" aria-label="Community hierarchy"></nav>
     <figure class="atlas-figure"><svg id="atlas-svg" viewBox="0 0 900 560" role="group" aria-label="Drillable community atlas"></svg><figcaption>Click a group to open it; hover or focus to reveal link directions. Gold dots follow displayed links. Stationary gold pulses represent steps between hidden members inside a group; purple fades are random jumps. These simulated visitors are not real traffic. The atlas always uses the original snapshot.</figcaption></figure>
@@ -98,7 +118,13 @@
     <details><summary>Members in this view</summary><ul id="atlas-members" class="selection-list"></ul></details>
     <details><summary>Characters with the most neighbors in other communities</summary><ol id="atlas-bridges" class="selection-list"></ol></details>
     <details><summary>Detection and animation rules</summary><p id="atlas-method"></p><p>Isolates are grouped for display only. Simulated visitors follow a uniformly chosen outgoing link with probability 85%; otherwise they jump uniformly to an active character. A page with no outgoing link always restarts. Jumps draw no links. Opening a group restarts visitors inside that view; they can then leave it. At character level, node size grows with original in-degree.</p></details>
-    <p class="takeaway">[Explore a few communities. Do their members have something in common? Which characters connect different communities?]</p>
+    <p class="takeaway">
+      This is by far the most interesting visualization "visually" that we were able to make.
+      It separates the heroes into communities, based on how the characters link to each other, with a "leader" assigned to each (also based on link amount).
+      You can enter into a community to see how the characters link together. Once inside a community, you can also use the button below the visualization to find the characters on the Network Lab visualization.
+      But the best part of the visualization is the simulation. In the top right, you can select simulate "random clicks" (walkers) across wikipedia articles.
+      The visualization then shows how these clicks flow across communities. Clicking into a community will show them inside the communities (note they will disapear if they enter a link outside the community)
+    </p>
   </section>
   <section id="motifs">
     <p class="eyebrow">07 / Recurring link patterns</p><h2>The network fingerprint</h2>
