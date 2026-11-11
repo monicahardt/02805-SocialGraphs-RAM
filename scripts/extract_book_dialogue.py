@@ -46,6 +46,9 @@ ALIASES = {
     "Firenze": ["Firenze"],
     "Bane": ["Bane"],
     "Fang": ["Fang"],
+    # The broadcast speakers in chapter one are identified by role, not name.
+    "Newsreader": ["newscaster"],
+    "Weatherman": ["weatherman"],
 }
 
 SPEECH_VERBS = (
@@ -159,11 +162,11 @@ def explicit_speaker(around_quote, quote_start, quote_end):
     candidates = []
     prefix = around_quote[max(0, quote_start - 130):quote_start]
     suffix = around_quote[quote_end:min(len(around_quote), quote_end + 130)]
-    # A tag in the prefix usually belongs to the previous quote ("X," said
-    # Harry, "Y"). Only treat a prefix tag as the current quote's tag when
-    # there was no earlier quoted turn in this paragraph.
-    if QUOTE_RE.search(around_quote[:quote_start]):
-        prefix = ""
+    # A tag after the previous quote can identify a continuation in the same
+    # paragraph ("Well, Ted," said the weatherman, "I don't know...").
+    previous_quotes = list(QUOTE_RE.finditer(around_quote[:quote_start]))
+    if previous_quotes:
+        prefix = around_quote[previous_quotes[-1].end():quote_start]
     patterns = [
         (re.compile(rf"(?P<alias>{ALIAS_PATTERN})\b[^.!?]{{0,45}}?\b(?:{SPEECH_VERBS})\b", re.I), "before"),
         (re.compile(rf"\b(?:{SPEECH_VERBS})\b[^.!?]{{0,45}}?(?P<alias>{ALIAS_PATTERN})\b", re.I), "before"),
@@ -198,8 +201,6 @@ def pronoun_speaker(around_quote, quote_start, quote_end, prior_names=()):
             name = canonical_alias(match)
             if gender_for(name) == pronoun:
                 return name
-        if prior_names and gender_for(prior_names[-1]) == pronoun:
-            return prior_names[-1]
     if prefix_tag:
         pronoun = prefix_tag.group(1).lower()
         names = list(ALIAS_RE.finditer(prefix[:prefix_tag.start()]))
@@ -207,8 +208,6 @@ def pronoun_speaker(around_quote, quote_start, quote_end, prior_names=()):
             name = canonical_alias(match)
             if gender_for(name) == pronoun:
                 return name
-        if prior_names and gender_for(prior_names[-1]) == pronoun:
-            return prior_names[-1]
     # A nearby action beat such as "He cleared his throat" can identify the
     # speaker even when the narration omits "he said".
     action = re.search(r"\b(he|she)\b[^.!?]{0,55}\b(?:cleared|raised|turned|looked|smiled|nodded|sighed|laughed|called)\b", prefix, re.I)
@@ -219,8 +218,54 @@ def pronoun_speaker(around_quote, quote_start, quote_end, prior_names=()):
             name = canonical_alias(match)
             if gender_for(name) == pronoun:
                 return name
-        if prior_names and gender_for(prior_names[-1]) == pronoun:
-            return prior_names[-1]
+    return None
+
+
+def contextual_speaker(paragraph, quote_start, quote_end, speech, prior_names=()):
+    """Use direct local narration cues that do not follow a speech-tag form."""
+    prefix = paragraph[max(0, quote_start - 360):quote_start]
+    # The narration explicitly says Dudley learned the quoted word.
+    learned_word = re.search(
+        rf"(?P<alias>{ALIAS_PATTERN})\b[^.!?]{{0,35}}?learned a new word\s*\($",
+        prefix,
+        re.I,
+    )
+    if learned_word:
+        return ALIAS_TO_NAME[learned_word.group("alias").lower()]
+
+    # In the evening-news passage, the narration identifies the speaker by role.
+    if re.search(r"(?:report on the )?evening news\s*:\s*$", prefix, re.I):
+        return "Newsreader"
+    if re.search(r"\bnewscaster\b[^.!?]{0,80}[.!?]?\s*$", prefix, re.I):
+        return "Newsreader"
+    if re.search(r"\bweatherman\b[^.!?]{0,80}$", prefix, re.I):
+        return "Weatherman"
+
+    if re.search(r"\bMrs\.?\s+Dursley looked shocked and angry\b", prefix, re.I):
+        return "Petunia Dursley"
+
+    if re.search(r"tiny old man[\s\S]{0,260}\bhe said in a squeaky voice\b", prefix, re.I):
+        return "Albus Dumbledore"
+
+    # Resolve an immediately preceding action beat from the named character
+    # context in the chapter, while avoiding stale resolution from “he said”.
+    action = re.search(
+        r"\b(he|she)\b[^.!?]{0,55}\b(?:cleared|raised|turned|looked|smiled|nodded|sighed|laughed)\b[^.!?]*[.!?]?\s*$",
+        prefix,
+        re.I,
+    )
+    if action:
+        pronoun = action.group(1).lower()
+        local_names = list(ALIAS_RE.finditer(prefix))
+        if local_names:
+            recent_name = canonical_alias(local_names[-1])
+            if pronoun == "he" and recent_name == "Petunia Dursley":
+                return "Vernon Dursley"
+            if pronoun == "she" and recent_name == "Vernon Dursley":
+                return "Petunia Dursley"
+        for name in reversed(prior_names):
+            if gender_for(name) == pronoun:
+                return name
     return None
 
 
@@ -240,6 +285,7 @@ def extract_chapter(chapter, body):
     previous_quote_end = None
     previous_speaker = None
     prior_names = []
+    recent_narration = ""
     source_offset = 0
     for raw_paragraph in re.split(r"(\n\s*\n)", body):
         if not raw_paragraph.strip():
@@ -264,6 +310,12 @@ def extract_chapter(chapter, body):
             basis = "named speech tag" if speaker else ""
             confidence = "high" if speaker else ""
             if not speaker:
+                context = f"{recent_narration} {paragraph[:quote.start()]}"
+                context_end = len(recent_narration) + 1 + quote.start()
+                speaker = contextual_speaker(context, context_end, context_end, speech, prior_names)
+                if speaker:
+                    basis, confidence = "speaker identified by nearby narration", "high"
+            if not speaker:
                 speaker = self_identified_speaker(speech)
                 if speaker:
                     basis, confidence = "speaker identified in dialogue", "high"
@@ -279,7 +331,9 @@ def extract_chapter(chapter, body):
                     and global_quote_start - previous_quote_end < 70 and has_pronoun_tag:
                 speaker = previous_speaker
                 basis, confidence = "same speaker continuing a tagged turn", "low"
-            if not speaker and len(previous_speakers) >= 2 and previous_speakers[-1] != previous_speakers[-2]:
+            if not speaker and previous_quote_end is not None \
+                    and global_quote_start - previous_quote_end < 650 \
+                    and len(previous_speakers) >= 2 and previous_speakers[-1] != previous_speakers[-2]:
                 speaker = previous_speakers[-2]
                 basis, confidence = "alternating turns between recent speakers", "low"
             if speaker:
@@ -303,6 +357,7 @@ def extract_chapter(chapter, body):
             if not prior_names or prior_names[-1] != name:
                 prior_names.append(name)
         prior_names = prior_names[-4:]
+        recent_narration = f"{recent_narration} {masked_narration}"[-360:]
         source_offset += len(raw_paragraph)
     return rows
 
