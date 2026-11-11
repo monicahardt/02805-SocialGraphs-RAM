@@ -52,7 +52,13 @@ SPEECH_VERBS = (
     "said|asked|replied|whispered|shouted|yelled|cried|called|muttered|mumbled|answered|"
     "exclaimed|snapped|barked|groaned|moaned|laughed|gasped|continued|added|"
     "interrupted|demanded|suggested|stammered|sobbed|hissed|screamed|began|"
-    "remarked|insisted|inquired|told|argued|warned|pleaded|begged|announced"
+    "remarked|insisted|inquired|told|argued|warned|pleaded|begged|announced|"
+    # Common dialogue tags and inflected forms that occur in the OCR book files.
+    "chortled|grunted|snorted|scoffed|retorted|growled|roared|bellowed|boomed|"
+    "murmured|whined|whimpered|wailed|shrieked|squealed|yelped|jeered|urged|"
+    "repeated|protested|explained|reassured|complained|warned|ranted|drawled|"
+    "yelling|bellowing|roaring|chortling|grunting|murmuring|"
+    "speaking|instructed|ordered|commanded|stated|declared|announced"
 )
 VERB_RE = re.compile(rf"\b(?:{SPEECH_VERBS})\b", re.I)
 QUOTE_RE = re.compile(r"“([^”]*)”|\"([^\"]*)\"")
@@ -68,9 +74,58 @@ ALIAS_RE = re.compile(rf"(?<!\w)(?P<alias>{ALIAS_PATTERN})(?!\w)", re.I)
 
 
 def chapter_sections(text):
-    headings = list(re.finditer(r"(?im)^\s*CHAPTER\s+[^\n]+\s*$", text))
+    headings = list(re.finditer(r"(?m)^\s*CHAPTER\s+(?:\d+|[A-Z]+)\b[^\n]*$", text))
     if not headings:
-        raise ValueError("No chapter headings found (expected lines beginning with CHAPTER).")
+        # Some of the OCR text files lost the word "CHAPTER" and its number.
+        # In those files, chapter titles are standalone all-caps lines after a
+        # page footer (occasionally preceded by the chapter number).
+        lines = text.splitlines(keepends=True)
+        offsets = []
+        offset = 0
+        for line in lines:
+            offsets.append(offset)
+            offset += len(line)
+
+        candidates = []
+        page_footer = re.compile(r"^\s*Page\s*\|\s*\d+\b", re.I)
+        title_line = re.compile(r"^[A-Z][A-Z ’'&-]*(?:\s+[A-Z][A-Z ’'&-]*)*\s*$")
+        for i, line in enumerate(lines):
+            if not title_line.match(line.strip()) or len(re.findall(r"[A-Z]+", line)) < 1:
+                continue
+            # Combine a title broken over consecutive OCR lines.
+            end = i + 1
+            while end < len(lines) and title_line.match(lines[end].strip()):
+                end += 1
+            prior_lines = [part.strip() for part in lines[max(0, i - 12):i] if part.strip()]
+            has_page_footer = any(page_footer.match(part) for part in prior_lines)
+            has_chapter_number = any(part.isdigit() for part in prior_lines[-3:])
+            starts_book = not candidates and offsets[i] < 1200
+            if not (has_page_footer or has_chapter_number or starts_book):
+                continue
+            after = end
+            while after < len(lines) and not lines[after].strip():
+                after += 1
+            if after >= len(lines) or title_line.match(lines[after].strip()):
+                continue
+            # Skip the footer and optional printed chapter number in the section.
+            start = offsets[i]
+            candidates.append((start, " ".join(part.strip() for part in lines[i:end])))
+
+        if not candidates:
+            raise ValueError("No chapter headings found (expected CHAPTER lines or standalone all-caps titles).")
+        sections = []
+        for index, (start, title) in enumerate(candidates):
+            end = candidates[index + 1][0] if index + 1 < len(candidates) else len(text)
+            # The title starts at this offset; skip its line(s) and following blanks.
+            line_index = next(j for j, line_offset in enumerate(offsets) if line_offset == start)
+            next_index = line_index
+            while next_index < len(lines) and title_line.match(lines[next_index].strip()):
+                next_index += 1
+            while next_index < len(lines) and not lines[next_index].strip():
+                next_index += 1
+            body_start = offsets[next_index] if next_index < len(offsets) else len(text)
+            sections.append((title, text[body_start:end]))
+        return sections
     sections = []
     for index, match in enumerate(headings):
         end = headings[index + 1].start() if index + 1 < len(headings) else len(text)
@@ -136,6 +191,13 @@ def pronoun_speaker(around_quote, quote_start, quote_end, prior_names=()):
             name = canonical_alias(match)
             if gender_for(name) == pronoun:
                 return name
+        # A sentence may identify the pronoun's subject after the speech tag:
+        # “Sorry,” he grunted ... before Mr. Dursley realized ...
+        names = list(ALIAS_RE.finditer(suffix[suffix_tag.end():]))
+        for match in names:
+            name = canonical_alias(match)
+            if gender_for(name) == pronoun:
+                return name
         if prior_names and gender_for(prior_names[-1]) == pronoun:
             return prior_names[-1]
     if prefix_tag:
@@ -160,6 +222,16 @@ def pronoun_speaker(around_quote, quote_start, quote_end, prior_names=()):
         if prior_names and gender_for(prior_names[-1]) == pronoun:
             return prior_names[-1]
     return None
+
+
+def self_identified_speaker(speech):
+    """Recognize short self-identifications such as “Vernon Dursley speaking.”"""
+    match = re.match(
+        rf"\s*(?P<alias>{ALIAS_PATTERN})\s+(?:speaking|here|this is)\b",
+        speech,
+        re.I,
+    )
+    return ALIAS_TO_NAME[match.group("alias").lower()] if match else None
 
 
 def extract_chapter(chapter, body):
@@ -191,6 +263,10 @@ def extract_chapter(chapter, body):
             speaker = explicit_speaker(paragraph, quote.start(), quote.end())
             basis = "named speech tag" if speaker else ""
             confidence = "high" if speaker else ""
+            if not speaker:
+                speaker = self_identified_speaker(speech)
+                if speaker:
+                    basis, confidence = "speaker identified in dialogue", "high"
             if not speaker:
                 speaker = pronoun_speaker(paragraph, quote.start(), quote.end(), prior_names)
                 if speaker:
@@ -241,7 +317,12 @@ def main():
     rows = [row for chapter, body in chapter_sections(text) for row in extract_chapter(chapter, body)]
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding="utf-8", newline="") as handle:
-        writer = csv.DictWriter(handle, fieldnames=["movie", "chapter", "character", "dialog", "attribution", "confidence"])
+        writer = csv.DictWriter(
+            handle,
+            fieldnames=["movie", "chapter", "character", "dialog"],
+            extrasaction="ignore",
+            quoting=csv.QUOTE_ALL,
+        )
         writer.writeheader()
         writer.writerows(rows)
 
