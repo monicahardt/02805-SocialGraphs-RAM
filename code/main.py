@@ -21,8 +21,12 @@ def main() -> None:
         output_path = args.output
     else:
         name = args.csv.stem
-        suffix = "_book_networks.html" if "book_data" in args.csv.parts else "_movie_networks.html"
-        output_path = Path("graphs") / f"{name}{suffix}"
+        is_book = "book_data" in args.csv.parts
+        if is_book and name.startswith("book"):
+            name = "hp" + name.removeprefix("book").removesuffix("_dialogue")
+        graph_type = "books" if is_book else "movies"
+        suffix = "_book_networks.html" if is_book else "_movie_networks.html"
+        output_path = Path("graphs") / graph_type / f"{name}{suffix}"
 
     write_html(read_dialogue_records(args.csv), output_path)
     print(f"Wrote character network to {output_path}")

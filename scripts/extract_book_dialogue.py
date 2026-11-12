@@ -1,4 +1,4 @@
-"""Heuristically extract and attribute dialogue from the HP1 plain-text book."""
+"""Extract quoted dialogue and infer speakers from the seven Harry Potter books."""
 
 import argparse
 import csv
@@ -7,9 +7,17 @@ from pathlib import Path
 
 
 ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_INPUT = ROOT / "book_data" / "hp1_book.txt"
-DEFAULT_OUTPUT = ROOT / "book_data" / "hp1_dialogue_v2.csv"
-BOOK_TITLE = "Harry Potter and the Philosopher's Stone"
+DEFAULT_INPUT = ROOT / "book_data" / "Book1.txt"
+DEFAULT_OUTPUT = ROOT / "book_data" / "book1_dialogue.csv"
+BOOK_TITLES = {
+    1: "Harry Potter and the Philosopher's Stone",
+    2: "Harry Potter and the Chamber of Secrets",
+    3: "Harry Potter and the Prisoner of Azkaban",
+    4: "Harry Potter and the Goblet of Fire",
+    5: "Harry Potter and the Order of the Phoenix",
+    6: "Harry Potter and the Half-Blood Prince",
+    7: "Harry Potter and the Deathly Hallows",
+}
 
 # Surface forms in the novel mapped to one canonical name. Extend this table when
 # the review file shows a recurring form that is not recognized.
@@ -46,6 +54,99 @@ ALIASES = {
     "Firenze": ["Firenze"],
     "Bane": ["Bane"],
     "Fang": ["Fang"],
+    "Alicia Spinnet": ["Alicia Spinnet", "Alicia"],
+    "Amelia Bones": ["Amelia Bones", "Madam Bones"],
+    "Amos Diggory": ["Amos Diggory"],
+    "Angelina Johnson": ["Angelina Johnson", "Angelina"],
+    "Anthony Goldstein": ["Anthony Goldstein", "Anthony"],
+    "Aragog": ["Aragog"],
+    "Barty Crouch": ["Barty Crouch", "Crouch"],
+    "Bellatrix Lestrange": ["Bellatrix Lestrange", "Bellatrix"],
+    "Bill Weasley": ["Bill Weasley", "Bill"],
+    "Charlie Weasley": ["Charlie Weasley", "Charlie"],
+    "Cho Chang": ["Cho Chang", "Cho"],
+    "Colin Creevey": ["Colin Creevey", "Colin"],
+    "Cornelius Fudge": ["Cornelius Fudge", "Minister Fudge", "Fudge"],
+    "Dean Thomas": ["Dean Thomas", "Dean"],
+    "Dennis Creevey": ["Dennis Creevey", "Dennis"],
+    "Dolores Umbridge": ["Dolores Umbridge", "Professor Umbridge", "Umbridge"],
+    "Ernie Macmillan": ["Ernie Macmillan", "Ernie"],
+    "Fenrir Greyback": ["Fenrir Greyback", "Greyback"],
+    "Fleur Delacour": ["Fleur Delacour", "Fleur"],
+    "Gilderoy Lockhart": ["Gilderoy Lockhart", "Lockhart"],
+    "Ginny Weasley": ["Ginny Weasley", "Ginny"],
+    "Hannah Abbott": ["Hannah Abbott", "Hannah"],
+    "James Potter": ["James Potter", "James"],
+    "Katie Bell": ["Katie Bell", "Katie"],
+    "Kingsley Shacklebolt": ["Kingsley Shacklebolt", "Kingsley"],
+    "Kreacher": ["Kreacher"],
+    "Lavender Brown": ["Lavender Brown", "Lavender"],
+    "Lily Potter": ["Lily Potter", "Lily"],
+    "Luna Lovegood": ["Luna Lovegood", "Luna"],
+    "Lucius Malfoy": ["Lucius Malfoy", "Lucius"],
+    "Marcus Flint": ["Marcus Flint", "Flint"],
+    "Michael Corner": ["Michael Corner", "Michael"],
+    "Millicent Bulstrode": ["Millicent Bulstrode", "Millicent"],
+    "Moaning Myrtle": ["Moaning Myrtle", "Myrtle"],
+    "Mundungus Fletcher": ["Mundungus Fletcher", "Mundungus"],
+    "Narcissa Malfoy": ["Narcissa Malfoy", "Narcissa"],
+    "Padma Patil": ["Padma Patil", "Padma"],
+    "Pansy Parkinson": ["Pansy Parkinson", "Pansy"],
+    "Parvati Patil": ["Parvati Patil", "Parvati"],
+    "Peter Pettigrew": ["Peter Pettigrew", "Pettigrew", "Wormtail"],
+    "Rita Skeeter": ["Rita Skeeter", "Rita"],
+    "Romilda Vane": ["Romilda Vane", "Romilda"],
+    "Sirius Black": ["Sirius Black", "Sirius", "Padfoot"],
+    "Stan Shunpike": ["Stan Shunpike", "Stan"],
+    "Susan Bones": ["Susan Bones", "Susan"],
+    "Ted Tonks": ["Ted Tonks", "Ted"],
+    "Terry Boot": ["Terry Boot", "Terry"],
+    "Viktor Krum": ["Viktor Krum", "Krum"],
+    "Xenophilius Lovegood": ["Xenophilius Lovegood", "Xenophilius"],
+    "Zacharias Smith": ["Zacharias Smith", "Zacharias"],
+    # Additional named characters found by cross-referencing the movie roster
+    # against the book texts. Keep generic roles and non-speaking entities out.
+    "Aberforth Dumbledore": ["Aberforth Dumbledore", "Aberforth"],
+    "Alastor Moody": ["Alastor Moody", "Mad-Eye Moody", "Moody", "Alastor"],
+    "Alecto Carrow": ["Alecto Carrow", "Alecto"],
+    "Arabella Figg": ["Arabella Figg", "Mrs. Figg", "Mrs Figg", "Figg"],
+    "Arthur Weasley": ["Arthur Weasley", "Arthur"],
+    "Bartemius Crouch": ["Bartemius Crouch", "Barty Crouch", "Barty", "Crouch"],
+    "Bathilda Bagshot": ["Bathilda Bagshot", "Bathilda"],
+    "Blaise Zabini": ["Blaise Zabini", "Blaise"],
+    "Bloody Baron": ["Bloody Baron"],
+    "Cedric Diggory": ["Cedric Diggory", "Cedric"],
+    "Charity Burbage": ["Charity Burbage", "Charity"],
+    "Cormac McLaggen": ["Cormac McLaggen", "Cormac"],
+    "Corban Yaxley": ["Corban Yaxley", "Yaxley"],
+    "Dilys Derwent": ["Dilys Derwent", "Dilys"],
+    "Dobby": ["Dobby"],
+    "Eldred Worple": ["Eldred Worple", "Eldred", "Worple"],
+    "Elphias Doge": ["Elphias Doge", "Elphias", "Doge"],
+    "Everard": ["Everard"],
+    "Gellert Grindelwald": ["Gellert Grindelwald", "Grindelwald"],
+    "Gregory Goyle": ["Gregory Goyle", "Goyle"],
+    "Griselda Marchbanks": ["Griselda Marchbanks", "Marchbanks"],
+    "Helena Ravenclaw": ["Helena Ravenclaw", "Helena"],
+    "Horace Slughorn": ["Horace Slughorn", "Slughorn"],
+    "Igor Karkaroff": ["Igor Karkaroff", "Karkaroff"],
+    "Justin Finch-Fletchley": ["Justin Finch-Fletchley", "Justin"],
+    "Leanne": ["Leanne"],
+    "Magorian": ["Magorian"],
+    "Marcus Belby": ["Marcus Belby", "Belby"],
+    "Mary Cattermole": ["Mary Cattermole", "Mary"],
+    "Muriel": ["Aunt Muriel", "Muriel"],
+    "Nymphadora Tonks": ["Nymphadora Tonks", "Tonks"],
+    "Olympe Maxime": ["Olympe Maxime", "Madame Maxime", "Madam Maxime", "Maxime"],
+    "Pius Thicknesse": ["Pius Thicknesse", "Thicknesse"],
+    "Remus Lupin": ["Remus Lupin", "Professor Lupin", "Lupin"],
+    "Rosmerta": ["Madam Rosmerta", "Madam Rosmerta", "Rosmerta"],
+    "Rufus Scrimgeour": ["Rufus Scrimgeour", "Scrimgeour"],
+    "Scabior": ["Scabior"],
+    "Sybill Trelawney": ["Sybill Trelawney", "Professor Trelawney", "Trelawney"],
+    "Tom Riddle": ["Tom Riddle", "Tom Marvolo Riddle"],
+    "Vincent Crabbe": ["Vincent Crabbe", "Crabbe"],
+    "Walburga Black": ["Walburga Black", "Walburga"],
 }
 
 SPEECH_VERBS = (
@@ -173,8 +274,8 @@ def explicit_speaker(around_quote, quote_start, quote_end):
     for pattern, side in patterns:
         chunk = prefix if side == "before" else suffix
         for match in pattern.finditer(chunk):
-            candidates.append((abs(len(prefix) - match.end()) if side == "before" else match.start(),
-                               ALIAS_TO_NAME[match.group("alias").lower()]))
+            name = ALIAS_TO_NAME[match.group("alias").lower()]
+            candidates.append((abs(len(prefix) - match.end()) if side == "before" else match.start(), name))
     return min(candidates)[1] if candidates else None
 
 
@@ -226,11 +327,7 @@ def pronoun_speaker(around_quote, quote_start, quote_end, prior_names=()):
 
 def self_identified_speaker(speech):
     """Recognize short self-identifications such as “Vernon Dursley speaking.”"""
-    match = re.match(
-        rf"\s*(?P<alias>{ALIAS_PATTERN})\s+(?:speaking|here|this is)\b",
-        speech,
-        re.I,
-    )
+    match = re.match(rf"\s*(?P<alias>{ALIAS_PATTERN})\s+(?:speaking|here|this is)\b", speech, re.I)
     return ALIAS_TO_NAME[match.group("alias").lower()] if match else None
 
 
@@ -261,16 +358,10 @@ def extract_chapter(chapter, body):
             if previous_quote_end is not None and global_quote_start - previous_quote_end > 650:
                 previous_speakers = []
             speaker = explicit_speaker(paragraph, quote.start(), quote.end())
-            basis = "named speech tag" if speaker else ""
-            confidence = "high" if speaker else ""
             if not speaker:
                 speaker = self_identified_speaker(speech)
-                if speaker:
-                    basis, confidence = "speaker identified in dialogue", "high"
             if not speaker:
                 speaker = pronoun_speaker(paragraph, quote.start(), quote.end(), prior_names)
-                if speaker:
-                    basis, confidence = "pronoun resolved to nearby named character", "medium"
             between_turns = paragraph[max(0, quote.start() - 75):quote.start()]
             has_pronoun_tag = re.search(
                 rf"\b(?:he|she)\b[^.!?]{{0,35}}?\b(?:{SPEECH_VERBS})\b", between_turns, re.I
@@ -278,24 +369,20 @@ def extract_chapter(chapter, body):
             if not speaker and previous_speaker and previous_quote_end is not None \
                     and global_quote_start - previous_quote_end < 70 and has_pronoun_tag:
                 speaker = previous_speaker
-                basis, confidence = "same speaker continuing a tagged turn", "low"
             if not speaker and len(previous_speakers) >= 2 and previous_speakers[-1] != previous_speakers[-2]:
                 speaker = previous_speakers[-2]
-                basis, confidence = "alternating turns between recent speakers", "low"
             if speaker:
                 if not previous_speakers or previous_speakers[-1] != speaker:
                     previous_speakers.append(speaker)
                     previous_speakers = previous_speakers[-2:]
                 previous_speaker = speaker
             else:
-                speaker, basis, confidence = "Unknown", "no reliable attribution", "unattributed"
+                speaker = "Unknown"
             rows.append({
-                "movie": BOOK_TITLE,
+                "movie": "",
                 "chapter": chapter,
                 "character": speaker,
                 "dialog": re.sub(r"\s+", " ", speech),
-                "attribution": basis,
-                "confidence": confidence,
             })
             previous_quote_end = global_quote_start + quote.end() - quote.start()
         for alias_match in ALIAS_RE.finditer(masked_narration):
@@ -311,10 +398,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("input", nargs="?", type=Path, default=DEFAULT_INPUT)
     parser.add_argument("output", nargs="?", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--title", help="Book title to write in the movie column (defaults from Book1.txt … Book7.txt).")
     args = parser.parse_args()
 
     text = args.input.read_text(encoding="utf-8-sig")
     rows = [row for chapter, body in chapter_sections(text) for row in extract_chapter(chapter, body)]
+    number_match = re.search(r"book\s*([1-7])", args.input.stem, re.I)
+    title = args.title or (BOOK_TITLES[int(number_match.group(1))] if number_match else args.input.stem)
+    for row in rows:
+        row["movie"] = title
     args.output.parent.mkdir(parents=True, exist_ok=True)
     with args.output.open("w", encoding="utf-8", newline="") as handle:
         writer = csv.DictWriter(
@@ -326,11 +418,7 @@ def main():
         writer.writeheader()
         writer.writerows(rows)
 
-    total = len(rows)
-    attributed = sum(row["character"] != "Unknown" for row in rows)
-    print(f"Wrote {total:,} dialogue candidates to {args.output}")
-    print(f"Attributed: {attributed:,} ({attributed / total:.1%})" if total else "No dialogue candidates found.")
-    print("Review rows with confidence 'low' and 'unattributed' before making a book network.")
+    print(f"Wrote {len(rows):,} dialogue lines to {args.output}")
 
 
 if __name__ == "__main__":

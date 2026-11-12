@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harry Potter Dialogue Networks</title>
+  <style>
+    :root { color-scheme: light; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: #182230; background: #f3f6f9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; min-height: 100vh; }
+    .topbar { background: #102b3f; color: #fff; padding: 14px clamp(16px, 4vw, 48px) 0; box-shadow: 0 2px 12px #13283a2e; }
+    .brand-row { display: flex; align-items: center; justify-content: space-between; gap: 18px; padding-bottom: 12px; }
+    .brand { font-size: 19px; font-weight: 700; letter-spacing: .01em; }
+    .subtitle { color: #c5d5e0; font-size: 13px; margin-top: 3px; }
+    nav { display: flex; gap: 6px; overflow-x: auto; }
+    nav button { border: 0; border-bottom: 3px solid transparent; color: #c5d5e0; background: transparent; padding: 11px 14px 10px; font: inherit; font-size: 14px; font-weight: 600; white-space: nowrap; cursor: pointer; }
+    nav button:hover { color: #fff; background: #ffffff0d; }
+    nav button[aria-selected="true"] { color: #fff; border-bottom-color: #72c3d4; }
+    .collection-nav { border-top: 1px solid #ffffff20; }
+    .view-nav { background: #fff; border-bottom: 1px solid #dce3e9; padding: 0 clamp(10px, 3vw, 32px); }
+    .view-nav button { color: #526273; }
+    .view-nav button:hover { color: #102b3f; background: #eff5f7; }
+    .view-nav button[aria-selected="true"] { color: #102b3f; border-bottom-color: #1683a0; }
+    .page-intro { padding: 12px clamp(16px, 4vw, 48px); display: flex; align-items: baseline; justify-content: space-between; gap: 20px; }
+    .page-intro h1 { font-size: 18px; margin: 0; }
+    .page-intro p { color: #607080; font-size: 13px; margin: 0; }
+    main { padding: 0 12px 12px; }
+    iframe { display: block; width: 100%; height: calc(100vh - 204px); min-height: 500px; border: 1px solid #dce3e9; border-radius: 8px; background: #fff; box-shadow: 0 2px 10px #13283a12; }
+    @media (max-width: 700px) {
+      .brand-row { align-items: flex-start; flex-direction: column; gap: 9px; }
+      .topbar { padding-top: 13px; }
+      nav { width: calc(100% + 4px); }
+      nav button { padding-inline: 10px; }
+      .page-intro { align-items: flex-start; flex-direction: column; gap: 4px; }
+      iframe { height: calc(100vh - 245px); min-height: 560px; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand-row">
+      <div>
+        <div class="brand">Harry Potter Dialogue Networks</div>
+        <div class="subtitle">Explore character interactions in the books and films</div>
+      </div>
+    </div>
+    <nav id="collection-nav" class="collection-nav" role="tablist" aria-label="Choose books or movies">
+      <button id="collection-movies" role="tab" aria-selected="true">Movies</button>
+      <button id="collection-books" role="tab" aria-selected="false">Books</button>
+    </nav>
+  </header>
+  <nav id="view-nav" class="view-nav" role="tablist" aria-label="Choose an analysis">
+    <button id="view-network" role="tab" aria-selected="true">Interaction Network</button>
+    <button id="view-degree" role="tab" aria-selected="false">Degree Distribution</button>
+    <button id="view-clustering" role="tab" aria-selected="false">Clustering</button>
+    <button id="view-communities" role="tab" aria-selected="false">Communities</button>
+  </nav>
+  <div class="page-intro">
+    <h1 id="page-title">All Movies Network</h1>
+    <p id="page-description">Compare turn-based and chapter co-appearance connections across the films.</p>
+  </div>
+  <main>
+    <iframe id="graph-frame" title="All Movies Network" src="movies/all_movies_networks.html"></iframe>
+  </main>
+  <script>
+    const pages = {
+      movies: {
+        network: { src: 'movies/all_movies_networks.html', title: 'All Movies Network', description: 'Compare turn-based and chapter co-appearance connections across the films.' },
+        degree: { src: 'movies/analysis/degree_distribution.html', title: 'Movie Degree Distribution', description: 'Explore character degrees, P(k), and the illustrative power-law reference.' },
+        clustering: { src: 'movies/analysis/clustering_coefficients.html', title: 'Movie Clustering', description: 'Explore local clustering, transitivity, triangles, and the random-graph benchmark.' },
+        communities: { src: 'movies/analysis/interaction_communities.html', title: 'Movie Interaction Communities', description: 'Explore Louvain communities and compare community layouts.' }
+      },
+      books: {
+        network: { src: 'books/all_books_networks.html', title: 'All Books Network', description: 'Compare turn-based and chapter co-appearance connections across all seven books.' },
+        degree: { src: 'books/analysis/degree_distribution.html', title: 'Book Degree Distribution', description: 'Explore character degrees, P(k), and the illustrative power-law reference.' },
+        clustering: { src: 'books/analysis/clustering_coefficients.html', title: 'Book Clustering', description: 'Explore local clustering, transitivity, triangles, and the random-graph benchmark.' },
+        communities: { src: 'books/analysis/interaction_communities.html', title: 'Book Interaction Communities', description: 'Explore Louvain communities and compare community layouts.' }
+      }
+    };
+    const collectionTabs = [...document.querySelectorAll('#collection-nav [role="tab"]')];
+    const viewTabs = [...document.querySelectorAll('#view-nav [role="tab"]')];
+    const frame = document.getElementById('graph-frame');
+    const title = document.getElementById('page-title');
+    const description = document.getElementById('page-description');
+    let selectedCollection = 'movies';
+    let selectedView = 'network';
+
+    function render(updateHash = true) {
+      collectionTabs.forEach(tab => tab.setAttribute('aria-selected', String(tab.id === `collection-${selectedCollection}`)));
+      viewTabs.forEach(tab => tab.setAttribute('aria-selected', String(tab.id === `view-${selectedView}`)));
+      const page = pages[selectedCollection][selectedView];
+      frame.src = page.src;
+      frame.title = page.title;
+      title.textContent = page.title;
+      description.textContent = page.description;
+      if (updateHash) history.replaceState(null, '', `#${selectedCollection}/${selectedView}`);
+    }
+
+    collectionTabs.forEach(tab => tab.addEventListener('click', () => {
+      selectedCollection = tab.id.replace('collection-', '');
+      render();
+    }));
+    viewTabs.forEach(tab => tab.addEventListener('click', () => {
+      selectedView = tab.id.replace('view-', '');
+      render();
+    }));
+    [...collectionTabs, ...viewTabs].forEach((tab, index, tabs) => tab.addEventListener('keydown', event => {
+      if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
+      event.preventDefault();
+      const group = collectionTabs.includes(tab) ? collectionTabs : viewTabs;
+      const current = group.indexOf(tab);
+      const step = event.key === 'ArrowRight' ? 1 : -1;
+      const next = group[(current + step + group.length) % group.length];
+      next.focus();
+      next.click();
+    }));
+
+    const route = location.hash.slice(1).split('/');
+    if (route.length === 2 && pages[route[0]]?.[route[1]]) {
+      [selectedCollection, selectedView] = route;
+      render(false);
+    }
+  </script>
+</body>
+</html>
