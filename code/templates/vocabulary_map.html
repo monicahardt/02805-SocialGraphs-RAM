@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Harry Potter · vocabulary connections</title>
+  <style>
+    *{box-sizing:border-box}
+    body{margin:0;background:#f7f5ef;color:#213e38;font:15px/1.5 Arial,sans-serif}
+    main{max-width:1600px;margin:auto;padding:22px 28px 30px}
+    .kicker{font-size:11px;letter-spacing:.15em;color:#65756b;margin:0 0 5px}
+    h1{font:normal clamp(27px,3vw,37px)/1.18 Georgia,serif;margin:0 0 10px}
+    p{margin:8px 0}.intro{color:#52675e;font-size:14px}
+    .toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:14px 0;border-top:1px solid #cbd3c6;border-bottom:1px solid #cbd3c6;margin-top:15px}
+    select,button{font:inherit;color:inherit;background:transparent;border:1px solid #a5b5a7;padding:7px 10px;border-radius:0}
+    select{min-width:220px;max-width:100%}button{cursor:pointer}button:hover{background:#e7ede3}button:focus-visible,select:focus-visible{outline:2px solid #35675f;outline-offset:3px}
+    button.active{color:#fff;background:#264b42;border-color:#264b42}.layer-controls{display:flex;align-items:center;gap:5px;margin-left:auto}
+    .workspace{display:grid;grid-template-columns:minmax(0,1fr) 355px;gap:24px;align-items:start}
+    .map-column{min-width:0}.roles{display:flex;gap:18px;flex-wrap:wrap;padding-top:13px;font-size:13px;color:#425d51}
+    .roles span{display:inline-flex;align-items:center;gap:6px}.swatch{width:9px;height:9px;border-radius:50%;display:inline-block}
+    #map{width:100%;min-width:0}.map-status{min-height:24px;font-size:13px;color:#52675e;margin:0 12px 8px}
+    .detail{min-width:0;border-left:1px solid #cbd3c6;padding:20px 0 0 22px;align-self:stretch}
+    .detail h2{font:normal 26px/1.16 Georgia,serif;margin:0 0 7px;overflow-wrap:anywhere}
+    .detail h3{font-size:14px;font-weight:600;margin:19px 0 7px}.detail p{font-size:14px}.muted{color:#5f7367}.small{font-size:12px!important}
+    .profile-tabs{display:flex;gap:7px;margin:13px 0}.profile-tabs button{flex:1;padding:6px}
+    .counterpart{padding:9px 0;border-top:1px solid #d5ddcf;border-bottom:1px solid #d5ddcf;display:flex;align-items:center;justify-content:space-between;gap:10px;font-size:13px}
+    .counterpart strong{font-size:18px;font-weight:500;font-variant-numeric:tabular-nums}
+    .connection-list{max-height:390px;overflow-y:auto;overscroll-behavior:contain}
+    .connection{display:block;width:100%;border:0;border-bottom:1px solid #d5ddcf;padding:12px 6px;text-align:left;background:transparent}
+    .connection:hover,.connection.is-hovered{background:#e9eee4}.connection-heading{display:flex;align-items:baseline;justify-content:space-between;gap:10px}
+    .connection-name{font-size:14px;font-weight:600}.score{font-size:15px;font-variant-numeric:tabular-nums;white-space:nowrap}
+    .connection-medium{display:block;color:#607467;font-size:12px;margin-top:2px}.shared{display:block;font-size:13px;line-height:1.45;margin-top:6px;color:#35564a}
+    .list-toggle{border:0;border-bottom:1px solid #91a897;padding:6px 0;margin-top:9px;font-size:13px}.list-toggle:hover{background:transparent;color:#102b21}
+    .method{border-top:1px solid #cbd3c6;margin-top:12px;padding-top:12px;font-size:13px;color:#5a7163}.method summary{cursor:pointer;color:#284d3e}.method p{max-width:1100px}
+    .empty{padding:18px 0}.empty ol{padding-left:20px;line-height:1.8;font-size:14px}.eyebrow{font-size:12px!important;text-transform:uppercase;letter-spacing:.08em;color:#5b7363}
+    @media(max-width:1000px){main{padding:18px 16px}.workspace{grid-template-columns:minmax(0,1fr) 310px;gap:14px}.detail{padding-left:14px}.layer-controls{margin-left:0}}
+    @media(max-width:760px){main{padding:16px 12px}.workspace{grid-template-columns:1fr}.detail{border-left:0;border-top:1px solid #cbd3c6;padding:18px 0 0}.toolbar{gap:8px}.toolbar label{font-size:13px}.layer-controls{width:100%}.connection-list{max-height:none}.roles{gap:12px}select{min-width:190px;flex:1}}
+  </style>
+</head>
+<body>
+<main>
+  <p class="kicker">FROM PAGE TO SCREEN</p>
+  <h1>A network of character vocabularies</h1>
+  <p class="intro">Click a node to see who it connects to, how similar their vocabulary is, and which words contribute.</p>
+  <div class="toolbar">
+    <label for="character">Character</label>
+    <select id="character"><option value="">Explore all</option>__CHARACTER_OPTIONS__</select>
+    <button id="clear" type="button">Show full map</button>
+    <div class="layer-controls" aria-label="Visible profiles">
+      <span>Show</span><button class="active" data-layer="both" aria-pressed="true" type="button">Both</button><button data-layer="books" aria-pressed="false" type="button">Books</button><button data-layer="movies" aria-pressed="false" type="button">Films</button>
+    </div>
+  </div>
+  <div class="workspace">
+    <section class="map-column" aria-label="Vocabulary similarity map">
+      <div class="roles" aria-label="Provisional story labels">
+        <span><i class="swatch" style="background:#277b82"></i>Hero</span>
+        <span><i class="swatch" style="background:#b64a3f"></i>Villain</span>
+        <span><i class="swatch" style="background:#8b7294"></i>Ambiguous</span>
+        <span><i class="swatch" style="background:#a6a29b"></i>Unassigned</span>
+        <span>○ Book &nbsp; ▲ Film</span>
+      </div>
+      __MAP_PLOT__
+      <p id="map-status" class="map-status" aria-live="polite">Choose a profile to inspect its connections.</p>
+    </section>
+    <aside class="detail" id="detail" aria-live="polite"></aside>
+  </div>
+  <details class="method">
+    <summary>What a connection means</summary>
+    <p>Nodes are character vocabularies. A line means that one profile ranks the other among its nearest TF-IDF/cosine neighbors. It does not indicate a conversation between the characters. Similarity scores use the full vocabulary vectors, not distance in the drawing.</p>
+    <p>Selection shows up to three strongest actual connections to other characters. The book/film counterpart is shown separately with a dotted line. “List all” reveals incoming connections from other profiles too. Shared words are the largest contributions to the cosine score.</p>
+    <p>Each character's profiles cover the same story installments. Story labels and source speaker assignments remain provisional; sparse profiles and names can affect the results. The layout, graph and numerical analysis are unchanged by these display controls.</p>
+  </details>
+</main>
+<script>const data=__MAP_DATA__;</script>
+<script>__MAP_SCRIPT__</script>
+</body>
+</html>

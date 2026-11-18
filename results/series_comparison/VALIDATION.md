@@ -1,0 +1,11 @@
+# Verification of the series-wide figures
+
+- All 28 project unit tests pass. The four additional tests cover full-token polarity normalization without mutation, conflicting lexicon entries, matched LDA aggregation including the two final films and aliases, and independently calculated medium-specific PPMI marginals.
+- All 118 exported polarity profiles were independently checked against the source word-count tables and the saved dictionary, including every positive/negative count, raw denominator and rate per 1,000 words.
+- All 59 character cosine scores agree with the original vocabulary network to numerical precision. The interactive vocabulary network was preserved.
+- Every topic row sums to one. All seven stories occur in the matched comparisons; both media in a story use the same eligible character set. There are 51 matched LDA character pairs and 59 matched vocabulary/polarity pairs; their different eligibility rules are documented.
+- Original PPMI vocabulary indices are preserved. The separate book/film count matrices sum exactly to the earlier pooled matrix; recomputed pooled PPMI agrees within 1e-12. Every displayed within-medium PPMI score was independently checked from its observed count and complete row/column marginals.
+- Source-dialogue and word-count hashes still match the earlier LDA, TF-IDF and PPMI settings files. Independently read corpus word counts reconstruct every per-medium raw word total.
+- Headless Chrome checks passed for real pointer clicks on nodes, character selection, role filters, word-to-source evidence, rapid selections, reset, the 390px mobile layout and all six gallery images. No JavaScript errors or horizontal mobile overflow were observed.
+- All six static figures were visually inspected. PNG and editable SVG exports are provided. Text placement, the LDA plot range, similarity legend, long context labels and responsive map sizing were corrected during inspection.
+- A reproducible 20-line sample was read to inspect lexical matches. A separate source check confirmed a speaker-attribution error. See MEASUREMENT_AUDIT.md. These checks establish arithmetic and UI behavior, not sentiment-classification accuracy, topic stability or validity of a morality score.

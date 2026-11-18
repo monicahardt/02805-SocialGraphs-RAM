@@ -1,0 +1,12 @@
+# Spell analysis verification
+
+- All 34 project unit tests pass. Six new tests cover longest phrase matching, repeated occurrences and token boundaries, explicit book/film variants, separation of names and deliberate pronunciations, whole-phrase context windows and spell masking, record-level context vocabulary eligibility, and exclusion of partial self-repetitions.
+- An independent literal-regex matcher was run directly over both original CSVs, without reusing the token-matching implementation. It reproduced every exported variant-inclusive spell-family count in both media: 360 book and 135 film incantation mentions.
+- All seven story installments are present. Every normalized rate and strict-plus-variant sum was checked, and per-story counts reconstruct the full-series totals.
+- The bipartite GraphML has 126 nodes. Every edge joins a supplied speaker label to a spell family, every weight equals its book plus film attributes, and weights sum to the 495 detected incantation mentions. These checks establish mention counts, not caster identities.
+- All nonzero spell/context count cells were used to independently recalculate PPMI from complete row/column marginals. Values agree to numerical precision. The report's one supported association is Accio/wand: five contextual pairs across four distinct dialogue records.
+- Fifteen selected records (16 matched references) have context reviews. Book reviews were checked against the surrounding supplied original text, including the corrected speaker identifications for Harry, McGonagall and Bellatrix. Film reviews are transcript-based inferences and have not been independently checked against video. The remaining references are unreviewed.
+- Headless Chrome passed checks for all figure images loading, rate values and strict/expanded spelling toggle, spell/medium/story/form/search filters, reviewed speaker labels, neighboring dialogue, pagination, reset and empty states. The 390px layout has no horizontal overflow, and no JavaScript errors were observed. Desktop and evidence views were inspected.
+- All three PNG figures were visually inspected; matching SVG exports are provided. Original dialogue hashes still agree with the earlier PPMI inputs. This step preserves the original datasets and existing NLP model outputs.
+
+These checks verify the stated dictionary analysis, aggregation and UI. They do not establish an exhaustive spell inventory, complete casting recognition, correct source attribution outside the selected reviews, or a causal adaptation effect.

@@ -1,0 +1,34 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>From page to screen · Series comparisons</title><style>
+    *{box-sizing:border-box}body{margin:0;color:#243e3b;background:#f7f4ec;font:16px/1.6 Arial,sans-serif}
+    main{max-width:1300px;margin:auto;padding:45px 30px}.eyebrow{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:#66796f}
+    h1{font:normal clamp(34px,5vw,60px)/1.12 Georgia,serif;max-width:1000px;margin:10px 0 25px}h2{font:normal 28px/1.2 Georgia,serif}
+    header{border-bottom:1px solid #ccd3c4;padding-bottom:35px;margin-bottom:35px}header p{max-width:850px}.actions,.links{display:flex;gap:20px;flex-wrap:wrap}
+    a{color:#287c83;text-underline-offset:4px}article{padding:15px 0 30px;border-bottom:1px solid #ccd3c4;margin-bottom:30px}article>p{max-width:900px}
+    img{width:100%;max-height:820px;object-fit:contain;object-position:left center;border:1px solid #e0e1d5}.note{color:#66796f;font-size:14px;max-width:1000px}
+    </style></head><body><main><header><p class="eyebrow">Harry Potter / books & films</p>
+    <h1>Seven stories.<br>Many voices. Two versions.</h1>
+    <p>A series-wide collection of word counts, shared topics, vocabulary similarities and word contexts, followed by a transparent positive/negative vocabulary map.</p>
+    <p class="actions"><a href="character_word_map.html">Explore the character word map →</a>
+    <a href="../vocabulary_map/vocabulary_map.html">Explore the vocabulary network →</a><a href="../spells/index.html">Explore spell language →</a><a href="README.md">Methods, coverage & results</a></p>
+    <p class="note">All stories contribute. Character comparisons use matched installments and minimum word thresholds, so sparse or unmatched voices are excluded and listed in the data.
+    Word polarity measures vocabulary; it does not assign moral character. Earlier Umbridge figures remain available as case studies.</p></header>
+    <article><p class="eyebrow">01 / Word counts</p><h2>Seven stories, two dialogue budgets</h2><p>All seven books and eight films. Compare the amount of attributed dialogue before interpreting changes in vocabulary.</p>
+        <a href="01_dialogue_volume.png"><img src="01_dialogue_volume.png" alt="Seven stories, two dialogue budgets" loading="lazy"></a>
+        <p class="links"><a href="01_dialogue_volume.png">Full image</a> <a href="01_dialogue_volume.svg">Vector SVG</a>
+        </p></article><article><p class="eyebrow">02 / LDA</p><h2>Follow the topics through the series</h2><p>Eight shared topics across every story. Book and film averages match characters within each installment.</p>
+        <a href="02_topic_journeys.png"><img src="02_topic_journeys.png" alt="Follow the topics through the series" loading="lazy"></a>
+        <p class="links"><a href="02_topic_journeys.png">Full image</a> <a href="02_topic_journeys.svg">Vector SVG</a>
+        </p></article><article><p class="eyebrow">02B / LDA</p><h2>Every matched voice, side by side</h2><p>All 51 characters with matched LDA documents. Topic fingerprints use one color scale and shared topic IDs.</p>
+        <a href="02b_all_character_topics.png"><img src="02b_all_character_topics.png" alt="Every matched voice, side by side" loading="lazy"></a>
+        <p class="links"><a href="02b_all_character_topics.png">Full image</a> <a href="02b_all_character_topics.svg">Vector SVG</a>
+        </p></article><article><p class="eyebrow">03 / TF-IDF</p><h2>Who sounds most like their book version?</h2><p>All 59 matched characters, ranked by full-vector cosine similarity. No character is selected for having a striking result.</p>
+        <a href="03_vocabulary_retention.png"><img src="03_vocabulary_retention.png" alt="Who sounds most like their book version?" loading="lazy"></a>
+        <p class="links"><a href="03_vocabulary_retention.png">Full image</a> <a href="03_vocabulary_retention.svg">Vector SVG</a>
+        </p></article><article><p class="eyebrow">04 / PPMI</p><h2>Same word, different company</h2><p>Books and films now have separate context matrices. Shared vocabulary, five-word windows and visible pair counts.</p>
+        <a href="04_word_contexts.png"><img src="04_word_contexts.png" alt="Same word, different company" loading="lazy"></a>
+        <p class="links"><a href="04_word_contexts.png">Full image</a> <a href="04_word_contexts.svg">Vector SVG</a>
+        </p></article><article><p class="eyebrow">05 / Word-list polarity</p><h2>Where do the characters’ words place them?</h2><p>Positive and negative word densities for all 59 character pairs. Story roles supply colors; measured words supply coordinates.</p>
+        <a href="05_character_word_map.png"><img src="05_character_word_map.png" alt="Where do the characters’ words place them?" loading="lazy"></a>
+        <p class="links"><a href="05_character_word_map.png">Full image</a> <a href="05_character_word_map.svg">Vector SVG</a>
+        <a href="character_word_map.html">Explore interactively →</a></p></article><p class="note">Each image has a corresponding CSV in this folder. The original datasets and the earlier LDA, TF-IDF, PPMI and interactive network are preserved.</p></main></body></html>

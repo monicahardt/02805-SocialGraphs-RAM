@@ -1,0 +1,252 @@
+character,spell,books,movies,weight
+Alastor Moody,Avada Kedavra,2,0,2
+Alastor Moody,Engorgio,1,0,1
+Alastor Moody,Imperio,1,0,1
+Alastor Moody,Reducio,1,0,1
+Albus Dumbledore,Avada Kedavra,1,0,1
+Draco Malfoy,Avada Kedavra,1,0,1
+Gregory Goyle,Avada Kedavra,0,1,1
+Harry Potter,Avada Kedavra,2,0,2
+Hermione Granger,Avada Kedavra,1,0,1
+Nymphadora Tonks,Avada Kedavra,1,0,1
+Ron Weasley,Avada Kedavra,2,0,2
+Severus Snape,Avada Kedavra,0,1,1
+Unknown,Avada Kedavra,3,0,3
+Voldemort,Avada Kedavra,2,3,5
+Harry Potter,Engorgio,0,1,1
+Ron Weasley,Engorgio,1,0,1
+Harry Potter,Imperio,3,1,4
+Ron Weasley,Imperio,0,1,1
+Ted Tonks,Imperio,3,0,3
+Harry Potter,Reducio,1,1,2
+Albus Dumbledore,Accio,1,0,1
+Albus Dumbledore,Aguamenti,0,1,1
+Albus Dumbledore,Arresto Momentum,0,1,1
+Albus Dumbledore,Locomotor,1,0,1
+Albus Dumbledore,Lumos,2,1,3
+Albus Dumbledore,Portus,0,1,1
+Albus Dumbledore,Rennervate,1,0,1
+Albus Dumbledore,Sectumsempra,2,0,2
+Dolores Umbridge,Accio,0,1,1
+Draco Malfoy,Accio,1,0,1
+Fred Weasley,Accio,0,1,1
+George Weasley,Accio,3,1,4
+Harry Potter,Accio,7,4,11
+Hermione Granger,Accio,5,0,5
+Molly Weasley,Accio,1,0,1
+Neville Longbottom,Accio,1,0,1
+Ron Weasley,Accio,3,0,3
+Sirius Black,Accio,1,0,1
+Ted Tonks,Accio,2,0,2
+Unknown,Accio,7,0,7
+Harry Potter,Aguamenti,5,0,5
+Hermione Granger,Aguamenti,1,0,1
+Ron Weasley,Aguamenti,1,0,1
+Rubeus Hagrid,Aguamenti,1,0,1
+Nymphadora Tonks,Locomotor,1,0,1
+Dudley Dursley,Lumos,1,0,1
+Ginny Weasley,Lumos,1,0,1
+Harry Potter,Lumos,10,11,21
+Hermione Granger,Lumos,2,2,4
+Ron Weasley,Lumos,1,1,2
+Ted Tonks,Lumos,1,0,1
+Unknown,Lumos,4,0,4
+Ron Weasley,Portus,1,0,1
+Ted Tonks,Portus,1,0,1
+Ted Tonks,Rennervate,2,0,2
+Harry Potter,Sectumsempra,3,2,5
+Hermione Granger,Sectumsempra,1,0,1
+All,Riddikulus,0,2,2
+Molly Weasley,Riddikulus,4,0,4
+Neville Longbottom,Riddikulus,0,1,1
+Parvati Patil,Riddikulus,0,1,1
+Remus Lupin,Riddikulus,1,3,4
+Ron Weasley,Riddikulus,2,1,3
+Unknown,Riddikulus,1,0,1
+Angelina Johnson,Impervius,1,0,1
+Harry Potter,Impervius,2,0,2
+Hermione Granger,Impervius,2,0,2
+Argus Filch,Waddiwasi,1,0,1
+Bathilda Bagshot,Tergeo,1,0,1
+Hermione Granger,Tergeo,2,0,2
+Bellatrix Lestrange,Crucio,0,2,2
+Bellatrix Lestrange,Expelliarmus,1,0,1
+Bellatrix Lestrange,Stupefy,3,0,3
+Dean Thomas,Crucio,1,0,1
+Harry Potter,Crucio,3,1,4
+Neville Longbottom,Crucio,1,0,1
+Unknown,Crucio,6,0,6
+Gilderoy Lockhart,Expelliarmus,1,0,1
+Harry Potter,Expelliarmus,7,3,10
+Hermione Granger,Expelliarmus,1,1,2
+Neville Longbottom,Expelliarmus,1,4,5
+Remus Lupin,Expelliarmus,1,1,2
+Severus Snape,Expelliarmus,0,2,2
+Sirius Black,Expelliarmus,0,1,1
+Ted Tonks,Expelliarmus,1,0,1
+Unknown,Expelliarmus,2,0,2
+Vincent Crabbe,Expelliarmus,1,0,1
+Voldemort,Expelliarmus,1,0,1
+Zacharias Smith,Expelliarmus,2,0,2
+Cedric Diggory,Stupefy,2,0,2
+Dolores Umbridge,Stupefy,1,0,1
+Harry Potter,Stupefy,9,4,13
+Hermione Granger,Stupefy,2,0,2
+Neville Longbottom,Stupefy,1,0,1
+Ron Weasley,Stupefy,1,0,1
+Severus Snape,Stupefy,1,0,1
+Ted Tonks,Stupefy,1,0,1
+Unknown,Stupefy,5,0,5
+Bill Weasley,Evanesco,1,0,1
+Severus Snape,Evanesco,1,0,1
+Death Eater,Impedimenta,0,1,1
+Draco Malfoy,Impedimenta,1,0,1
+Fred Weasley,Impedimenta,1,0,1
+Harry Potter,Impedimenta,3,1,4
+James Potter,Impedimenta,0,1,1
+Madam Hooch,Impedimenta,0,1,1
+Severus Snape,Impedimenta,1,0,1
+Sirius Black,Impedimenta,1,0,1
+Ted Tonks,Impedimenta,1,0,1
+Unknown,Impedimenta,3,0,3
+Dolores Umbridge,Expecto Patronum,1,0,1
+Dolores Umbridge,Incarcerous,1,0,1
+Harry Potter,Expecto Patronum,16,10,26
+Hermione Granger,Expecto Patronum,5,0,5
+Remus Lupin,Expecto Patronum,0,2,2
+Ron Weasley,Expecto Patronum,2,0,2
+Severus Snape,Expecto Patronum,0,1,1
+Unknown,Expecto Patronum,5,0,5
+Harry Potter,Incarcerous,1,0,1
+Draco Malfoy,Petrificus Totalus,1,1,2
+Draco Malfoy,Reducto,1,0,1
+Draco Malfoy,Serpensortia,0,1,1
+Harry Potter,Petrificus Totalus,4,0,4
+Hermione Granger,Petrificus Totalus,0,2,2
+Lily Potter,Petrificus Totalus,1,0,1
+Neville Longbottom,Petrificus Totalus,1,0,1
+Unknown,Petrificus Totalus,2,0,2
+Fenrir Greyback,Reducto,2,0,2
+Unknown,Reducto,1,0,1
+Harry Potter,Serpensortia,1,0,1
+Filius Flitwick,Protego,1,0,1
+Filius Flitwick,Wingardium Leviosa,0,1,1
+Harry Potter,Protego,5,2,7
+Hermione Granger,Protego,2,1,3
+Professors,Protego,0,1,1
+Ron Weasley,Protego,2,0,2
+Ted Tonks,Protego,1,0,1
+Unknown,Protego,2,0,2
+Harry Potter,Wingardium Leviosa,1,1,2
+Hermione Granger,Wingardium Leviosa,0,1,1
+Remus Lupin,Wingardium Leviosa,1,0,1
+Ron Weasley,Wingardium Leviosa,0,1,1
+Ted Tonks,Wingardium Leviosa,1,0,1
+Unknown,Wingardium Leviosa,2,0,2
+George Weasley,Furnunculus,1,0,1
+Gilderoy Lockhart,Alohomora,1,0,1
+Gilderoy Lockhart,Brackium Emendo,0,1,1
+Gilderoy Lockhart,Obliviate,0,1,1
+Gilderoy Lockhart,Peskipiksi Pesternomi,0,1,1
+Harry Potter,Alohomora,4,1,5
+Hermione Granger,Alohomora,2,2,4
+Ron Weasley,Alohomora,0,2,2
+Unknown,Alohomora,1,0,1
+Hermione Granger,Obliviate,1,2,3
+Ron Weasley,Obliviate,1,0,1
+Ted Tonks,Obliviate,1,0,1
+Unknown,Obliviate,1,0,1
+Ginny Weasley,Incendio,1,0,1
+Harry Potter,Incendio,1,0,1
+Hermione Granger,Incendio,0,1,1
+Severus Snape,Incendio,1,0,1
+Harry Potter,Colloportus,2,0,2
+Harry Potter,Confringo,0,2,2
+Harry Potter,Diffindo,3,1,4
+Harry Potter,Dissendium,2,1,3
+Harry Potter,Episkey,1,0,1
+Harry Potter,Expulso,1,1,2
+Harry Potter,Finite,1,0,1
+Harry Potter,Geminio,1,0,1
+Harry Potter,Legilimens,1,0,1
+Harry Potter,Levicorpus,1,0,1
+Harry Potter,Liberacorpus,1,0,1
+Harry Potter,Morsmordre,1,0,1
+Harry Potter,Muffliato,2,0,2
+Harry Potter,Nox,0,1,1
+Harry Potter,Relashio,2,0,2
+Harry Potter,Reparo,2,0,2
+Harry Potter,Rictusempra,1,1,2
+Harry Potter,Salvio Hexia,0,1,1
+Harry Potter,Tarantallegra,1,0,1
+Hermione Granger,Colloportus,1,1,2
+Hermione Granger,Confringo,0,2,2
+Ted Tonks,Confringo,1,0,1
+Hermione Granger,Diffindo,1,0,1
+Ron Weasley,Diffindo,2,0,2
+Unknown,Diffindo,1,0,1
+Unknown,Dissendium,1,0,1
+Luna Lovegood,Episkey,0,1,1
+Nymphadora Tonks,Episkey,1,0,1
+Hermione Granger,Finite,1,2,3
+Neville Longbottom,Finite,1,0,1
+Ron Weasley,Finite,0,1,1
+Ted Tonks,Finite,1,0,1
+Severus Snape,Legilimens,2,0,2
+Unknown,Legilimens,1,0,1
+James Potter,Levicorpus,0,1,1
+Ted Tonks,Levicorpus,1,0,1
+Hermione Granger,Muffliato,1,1,2
+Ron Weasley,Muffliato,2,0,2
+Ron Weasley,Nox,1,0,1
+Unknown,Nox,1,0,1
+Hermione Granger,Relashio,0,2,2
+Ron Weasley,Relashio,1,0,1
+Ted Tonks,Relashio,1,0,1
+Unknown,Relashio,1,0,1
+Hermione Granger,Reparo,3,2,5
+Ron Weasley,Reparo,1,0,1
+Severus Snape,Reparo,1,0,1
+Ted Tonks,Reparo,1,0,1
+Unknown,Reparo,2,0,2
+Hermione Granger,Salvio Hexia,0,1,1
+Ron Weasley,Salvio Hexia,1,0,1
+Unknown,Salvio Hexia,1,0,1
+Hermione Granger,Aparecium,1,0,1
+Hermione Granger,Bombarda,0,1,1
+Hermione Granger,Defodio,1,0,1
+Hermione Granger,Deprimo,1,0,1
+Hermione Granger,Duro,1,0,1
+Hermione Granger,Glisseo,1,0,1
+Hermione Granger,Homenum Revelio,1,1,2
+Hermione Granger,Locomotor Mortis,1,0,1
+Hermione Granger,Mobiliarbus,1,0,1
+Hermione Granger,Oppugno,0,1,1
+Hermione Granger,Repello Muggletum,0,1,1
+Hermione Granger,Silencio,6,0,6
+Hermione Granger,Specialis Revelio,1,0,1
+Unknown,Homenum Revelio,1,0,1
+Sirius Black,Locomotor Mortis,0,1,1
+Ron Weasley,Oppugno,1,0,1
+Ron Weasley,Repello Muggletum,1,0,1
+Ron Weasley,Silencio,2,0,2
+Horace Slughorn,Anapneo,1,0,1
+Minerva McGonagall,Vera Verto,0,2,2
+Ron Weasley,Vera Verto,0,1,1
+Nymphadora Tonks,Scourgify,1,0,1
+Sirius Black,Scourgify,1,0,1
+Professors,Repello Inimicum,0,1,1
+Remus Lupin,Mobilicorpus,1,0,1
+Ron Weasley,Cave Inimicum,1,0,1
+Ron Weasley,Deletrius,1,0,1
+Ron Weasley,Descendo,1,0,1
+Ron Weasley,Ferula,1,0,1
+Ron Weasley,Meteolojinx Recanto,2,0,2
+Ron Weasley,Revelio,1,0,1
+Unknown,Cave Inimicum,1,0,1
+Ted Tonks,Obscuro,1,0,1
+Ted Tonks,Quietus,1,0,1
+Ted Tonks,Sonorus,2,0,2
+Unknown,Sonorus,1,0,1
+Unknown,Confundo,1,0,1
+Voldemort,Cistem Aperio,0,1,1

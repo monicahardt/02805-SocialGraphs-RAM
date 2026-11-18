@@ -1,0 +1,16 @@
+medium,record_index,spell,context,speaker,evidence
+books,10575,Imperio,casting_attempt,Alastor Moody (Barty Crouch Jr.),book_data/Book4.txt:10798-10803 identifies Moody demonstrating the curse on a spider; source speaker Ted Tonks is incorrect.
+books,10596,Avada Kedavra,discussion,Alastor Moody (Barty Crouch Jr.),Dialogue explains the name and purpose of the Killing Curse; this mention itself is not a casting event.
+books,10623,Avada Kedavra,reported_casting,Ron Weasley,Ron is describing what Moody did to a spider; Ron is not casting this curse in this line.
+books,10717,Imperio,casting_attempt,Alastor Moody (Barty Crouch Jr.),book_data/Book4.txt:11760-11765 identifies Moody pointing his wand at Harry in the classroom.
+books,22845,Crucio,casting_attempt,Bellatrix Lestrange,book_data/Book5.txt:45584-45595 identifies Bellatrix raising her wand and Neville as the victim; source speaker Neville is incorrect.
+books,22914,Crucio,casting_attempt,Bellatrix Lestrange,book_data/Book5.txt:46123-46131 follows Bellatrix threatening Harry and describes her screaming the incantation.
+books,33745,Imperio,casting_attempt,Harry Potter,book_data/Book7.txt:26752-26763 identifies Harry pointing his wand at the old goblin; source speaker Ted Tonks is incorrect.
+books,33750,Imperio,casting_attempt,Harry Potter,book_data/Book7.txt:26782-26787 identifies Harry pointing his wand at Travers.
+books,33770,Imperio,casting_attempt,Harry Potter,book_data/Book7.txt:26876-26885 identifies Harry pointing his wand at Travers again.
+books,33779,Imperio,casting_attempt,Harry Potter,book_data/Book7.txt:26964-26973 identifies Harry repeating the curse on Bogrod after the waterfall.
+books,34254,Crucio,casting_attempt,Harry Potter,book_data/Book7.txt:29779-29785 identifies Harry shouting the curse at Amycus; the following narration describes its effect.
+books,34275,Imperio,casting_attempt,Minerva McGonagall,book_data/Book7.txt:29849-29857 identifies McGonagall pointing her wand at Amycus; source speaker Ted Tonks is incorrect.
+movies,4499,Crucio,casting_attempt_in_transcript,Harry Potter,Film 5 transcript in the Bellatrix confrontation: Harry's incantation is between Bellatrix taunting him and her response. Inferred from the supplied transcript; video not independently reviewed.
+movies,6851,Imperio,casting_attempt_in_transcript,Harry Potter,Film 8 transcript: Harry says Imperio after Bogrod demands identification and before Bogrod agrees to guide the party. Video not independently reviewed.
+movies,6870,Imperio,casting_attempt_in_transcript,Ron Weasley,Film 8 transcript after the waterfall: Ron says Imperio after Griphook says they need Bogrod; Griphook responds Well done. Video not independently reviewed.

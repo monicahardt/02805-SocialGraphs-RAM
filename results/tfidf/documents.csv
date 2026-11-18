@@ -1,0 +1,378 @@
+row,medium,source,character,words,unique_words,positive_tfidf_words
+0,books,Harry Potter and the Chamber of Secrets,Albus Dumbledore,1114,454,454
+1,books,Harry Potter and the Chamber of Secrets,Aragog,292,150,150
+2,books,Harry Potter and the Chamber of Secrets,Argus Filch,118,88,88
+3,books,Harry Potter and the Chamber of Secrets,Colin Creevey,156,99,99
+4,books,Harry Potter and the Chamber of Secrets,Cornelius Fudge,151,118,118
+5,books,Harry Potter and the Chamber of Secrets,Dobby,613,236,236
+6,books,Harry Potter and the Chamber of Secrets,Draco Malfoy,1043,454,454
+7,books,Harry Potter and the Chamber of Secrets,Ernie Macmillan,244,153,153
+8,books,Harry Potter and the Chamber of Secrets,Fred Weasley,540,316,316
+9,books,Harry Potter and the Chamber of Secrets,George Weasley,602,334,334
+10,books,Harry Potter and the Chamber of Secrets,Gilderoy Lockhart,1034,467,467
+11,books,Harry Potter and the Chamber of Secrets,Ginny Weasley,216,141,141
+12,books,Harry Potter and the Chamber of Secrets,Harry Potter,6498,1397,1397
+13,books,Harry Potter and the Chamber of Secrets,Hermione Granger,1684,637,637
+14,books,Harry Potter and the Chamber of Secrets,Minerva McGonagall,574,278,278
+15,books,Harry Potter and the Chamber of Secrets,Moaning Myrtle,244,154,154
+16,books,Harry Potter and the Chamber of Secrets,Molly Weasley,523,262,262
+17,books,Harry Potter and the Chamber of Secrets,Nearly Headless Nick,312,184,184
+18,books,Harry Potter and the Chamber of Secrets,Oliver Wood,306,174,174
+19,books,Harry Potter and the Chamber of Secrets,Percy Weasley,238,153,153
+20,books,Harry Potter and the Chamber of Secrets,Pomona Sprout,103,79,79
+21,books,Harry Potter and the Chamber of Secrets,Ron Weasley,4579,1154,1154
+22,books,Harry Potter and the Chamber of Secrets,Rubeus Hagrid,423,240,240
+23,books,Harry Potter and the Chamber of Secrets,Severus Snape,436,245,245
+24,books,Harry Potter and the Chamber of Secrets,Ted Tonks,395,213,213
+25,books,Harry Potter and the Chamber of Secrets,Vernon Dursley,264,156,156
+26,books,Harry Potter and the Deathly Hallows,Aberforth Dumbledore,920,401,401
+27,books,Harry Potter and the Deathly Hallows,Alastor Moody,339,198,198
+28,books,Harry Potter and the Deathly Hallows,Albus Dumbledore,1864,605,605
+29,books,Harry Potter and the Deathly Hallows,Bellatrix Lestrange,529,254,254
+30,books,Harry Potter and the Deathly Hallows,Bill Weasley,778,365,365
+31,books,Harry Potter and the Deathly Hallows,Corban Yaxley,185,126,126
+32,books,Harry Potter and the Deathly Hallows,Dean Thomas,177,125,125
+33,books,Harry Potter and the Deathly Hallows,Dolores Umbridge,124,87,87
+34,books,Harry Potter and the Deathly Hallows,Draco Malfoy,204,122,122
+35,books,Harry Potter and the Deathly Hallows,Dudley Dursley,146,98,98
+36,books,Harry Potter and the Deathly Hallows,Elphias Doge,423,236,236
+37,books,Harry Potter and the Deathly Hallows,Fenrir Greyback,357,197,197
+38,books,Harry Potter and the Deathly Hallows,Fleur Delacour,296,191,191
+39,books,Harry Potter and the Deathly Hallows,Fred Weasley,470,288,288
+40,books,Harry Potter and the Deathly Hallows,George Weasley,269,187,187
+41,books,Harry Potter and the Deathly Hallows,Ginny Weasley,314,192,192
+42,books,Harry Potter and the Deathly Hallows,Griphook,750,336,336
+43,books,Harry Potter and the Deathly Hallows,Harry Potter,14986,2149,2149
+44,books,Harry Potter and the Deathly Hallows,Hermione Granger,8230,1587,1587
+45,books,Harry Potter and the Deathly Hallows,James Potter,166,108,108
+46,books,Harry Potter and the Deathly Hallows,Kingsley Shacklebolt,158,120,120
+47,books,Harry Potter and the Deathly Hallows,Kreacher,210,113,113
+48,books,Harry Potter and the Deathly Hallows,Lee Jordan,233,157,157
+49,books,Harry Potter and the Deathly Hallows,Lily Potter,242,144,144
+50,books,Harry Potter and the Deathly Hallows,Lucius Malfoy,260,142,142
+51,books,Harry Potter and the Deathly Hallows,Luna Lovegood,430,227,227
+52,books,Harry Potter and the Deathly Hallows,Minerva McGonagall,930,413,413
+53,books,Harry Potter and the Deathly Hallows,Molly Weasley,522,269,269
+54,books,Harry Potter and the Deathly Hallows,Mundungus Fletcher,118,87,87
+55,books,Harry Potter and the Deathly Hallows,Muriel,512,276,276
+56,books,Harry Potter and the Deathly Hallows,Narcissa Malfoy,121,80,80
+57,books,Harry Potter and the Deathly Hallows,Neville Longbottom,691,298,298
+58,books,Harry Potter and the Deathly Hallows,Nymphadora Tonks,162,105,105
+59,books,Harry Potter and the Deathly Hallows,Ollivander,548,265,265
+60,books,Harry Potter and the Deathly Hallows,Petunia Dursley,148,89,89
+61,books,Harry Potter and the Deathly Hallows,Remus Lupin,1375,535,535
+62,books,Harry Potter and the Deathly Hallows,Ron Weasley,8299,1648,1648
+63,books,Harry Potter and the Deathly Hallows,Rubeus Hagrid,580,285,285
+64,books,Harry Potter and the Deathly Hallows,Rufus Scrimgeour,465,240,240
+65,books,Harry Potter and the Deathly Hallows,Scabior,195,131,131
+66,books,Harry Potter and the Deathly Hallows,Severus Snape,1704,609,609
+67,books,Harry Potter and the Deathly Hallows,Ted Tonks,1255,507,507
+68,books,Harry Potter and the Deathly Hallows,Vernon Dursley,277,153,153
+69,books,Harry Potter and the Deathly Hallows,Viktor Krum,160,105,105
+70,books,Harry Potter and the Deathly Hallows,Voldemort,1423,510,510
+71,books,Harry Potter and the Deathly Hallows,Xenophilius Lovegood,536,258,258
+72,books,Harry Potter and the Goblet of Fire,Alastor Moody,1953,654,654
+73,books,Harry Potter and the Goblet of Fire,Albus Dumbledore,3574,992,992
+74,books,Harry Potter and the Goblet of Fire,Amos Diggory,187,118,118
+75,books,Harry Potter and the Goblet of Fire,Argus Filch,178,104,104
+76,books,Harry Potter and the Goblet of Fire,Bartemius Crouch,890,419,419
+77,books,Harry Potter and the Goblet of Fire,Bill Weasley,463,270,270
+78,books,Harry Potter and the Goblet of Fire,Cedric Diggory,436,224,224
+79,books,Harry Potter and the Goblet of Fire,Charlie Weasley,354,215,215
+80,books,Harry Potter and the Goblet of Fire,Cornelius Fudge,599,310,310
+81,books,Harry Potter and the Goblet of Fire,Dobby,538,199,199
+82,books,Harry Potter and the Goblet of Fire,Draco Malfoy,556,271,271
+83,books,Harry Potter and the Goblet of Fire,Fleur Delacour,288,191,191
+84,books,Harry Potter and the Goblet of Fire,Fred Weasley,1321,561,561
+85,books,Harry Potter and the Goblet of Fire,George Weasley,711,338,338
+86,books,Harry Potter and the Goblet of Fire,Ginny Weasley,298,188,188
+87,books,Harry Potter and the Goblet of Fire,Harry Potter,10888,1878,1878
+88,books,Harry Potter and the Goblet of Fire,Hermione Granger,6187,1281,1281
+89,books,Harry Potter and the Goblet of Fire,Igor Karkaroff,713,372,372
+90,books,Harry Potter and the Goblet of Fire,Minerva McGonagall,531,267,267
+91,books,Harry Potter and the Goblet of Fire,Moaning Myrtle,294,162,162
+92,books,Harry Potter and the Goblet of Fire,Molly Weasley,1059,436,436
+93,books,Harry Potter and the Goblet of Fire,Nearly Headless Nick,122,94,94
+94,books,Harry Potter and the Goblet of Fire,Olympe Maxime,216,142,142
+95,books,Harry Potter and the Goblet of Fire,Parvati Patil,105,84,84
+96,books,Harry Potter and the Goblet of Fire,Percy Weasley,1073,487,487
+97,books,Harry Potter and the Goblet of Fire,Peter Pettigrew,215,130,130
+98,books,Harry Potter and the Goblet of Fire,Remus Lupin,197,122,122
+99,books,Harry Potter and the Goblet of Fire,Rita Skeeter,358,212,212
+100,books,Harry Potter and the Goblet of Fire,Ron Weasley,6715,1525,1525
+101,books,Harry Potter and the Goblet of Fire,Rubeus Hagrid,1402,526,526
+102,books,Harry Potter and the Goblet of Fire,Severus Snape,822,381,381
+103,books,Harry Potter and the Goblet of Fire,Sirius Black,1362,508,508
+104,books,Harry Potter and the Goblet of Fire,Sybill Trelawney,222,125,125
+105,books,Harry Potter and the Goblet of Fire,Ted Tonks,567,309,309
+106,books,Harry Potter and the Goblet of Fire,Vernon Dursley,295,179,179
+107,books,Harry Potter and the Goblet of Fire,Viktor Krum,242,150,150
+108,books,Harry Potter and the Goblet of Fire,Voldemort,659,301,301
+109,books,Harry Potter and the Half-Blood Prince,Albus Dumbledore,10479,1914,1914
+110,books,Harry Potter and the Half-Blood Prince,Argus Filch,102,81,81
+111,books,Harry Potter and the Half-Blood Prince,Bellatrix Lestrange,502,247,247
+112,books,Harry Potter and the Half-Blood Prince,Bill Weasley,138,101,101
+113,books,Harry Potter and the Half-Blood Prince,Cornelius Fudge,937,393,393
+114,books,Harry Potter and the Half-Blood Prince,Dobby,107,67,67
+115,books,Harry Potter and the Half-Blood Prince,Draco Malfoy,1223,438,438
+116,books,Harry Potter and the Half-Blood Prince,Eldred Worple,124,93,93
+117,books,Harry Potter and the Half-Blood Prince,Fleur Delacour,274,165,165
+118,books,Harry Potter and the Half-Blood Prince,Fred Weasley,479,280,280
+119,books,Harry Potter and the Half-Blood Prince,George Weasley,315,204,204
+120,books,Harry Potter and the Half-Blood Prince,Ginny Weasley,1133,470,470
+121,books,Harry Potter and the Half-Blood Prince,Gregory Goyle,117,85,85
+122,books,Harry Potter and the Half-Blood Prince,Harry Potter,14514,2095,2095
+123,books,Harry Potter and the Half-Blood Prince,Hermione Granger,5365,1273,1273
+124,books,Harry Potter and the Half-Blood Prince,Horace Slughorn,2702,833,833
+125,books,Harry Potter and the Half-Blood Prince,Kreacher,121,80,80
+126,books,Harry Potter and the Half-Blood Prince,Luna Lovegood,466,249,249
+127,books,Harry Potter and the Half-Blood Prince,Minerva McGonagall,986,423,423
+128,books,Harry Potter and the Half-Blood Prince,Molly Weasley,1332,557,557
+129,books,Harry Potter and the Half-Blood Prince,Narcissa Malfoy,286,149,149
+130,books,Harry Potter and the Half-Blood Prince,Nearly Headless Nick,159,111,111
+131,books,Harry Potter and the Half-Blood Prince,Neville Longbottom,230,143,143
+132,books,Harry Potter and the Half-Blood Prince,Nymphadora Tonks,476,248,248
+133,books,Harry Potter and the Half-Blood Prince,Oliver Wood,118,92,92
+134,books,Harry Potter and the Half-Blood Prince,Pansy Parkinson,159,101,101
+135,books,Harry Potter and the Half-Blood Prince,Parvati Patil,154,104,104
+136,books,Harry Potter and the Half-Blood Prince,Pomona Sprout,121,97,97
+137,books,Harry Potter and the Half-Blood Prince,Remus Lupin,1052,439,439
+138,books,Harry Potter and the Half-Blood Prince,Ron Weasley,4995,1223,1223
+139,books,Harry Potter and the Half-Blood Prince,Rubeus Hagrid,1253,511,511
+140,books,Harry Potter and the Half-Blood Prince,Rufus Scrimgeour,692,304,304
+141,books,Harry Potter and the Half-Blood Prince,Severus Snape,2011,704,704
+142,books,Harry Potter and the Half-Blood Prince,Sybill Trelawney,400,206,206
+143,books,Harry Potter and the Half-Blood Prince,Ted Tonks,543,301,301
+144,books,Harry Potter and the Half-Blood Prince,Vernon Dursley,204,118,118
+145,books,Harry Potter and the Half-Blood Prince,Voldemort,532,265,265
+146,books,Harry Potter and the Order of the Phoenix,Alastor Moody,790,383,383
+147,books,Harry Potter and the Order of the Phoenix,Albus Dumbledore,4077,1081,1081
+148,books,Harry Potter and the Order of the Phoenix,Amelia Bones,148,98,98
+149,books,Harry Potter and the Order of the Phoenix,Angelina Johnson,706,319,319
+150,books,Harry Potter and the Order of the Phoenix,Arabella Figg,640,306,306
+151,books,Harry Potter and the Order of the Phoenix,Argus Filch,162,111,111
+152,books,Harry Potter and the Order of the Phoenix,Bellatrix Lestrange,313,175,175
+153,books,Harry Potter and the Order of the Phoenix,Bill Weasley,123,97,97
+154,books,Harry Potter and the Order of the Phoenix,Cho Chang,724,333,333
+155,books,Harry Potter and the Order of the Phoenix,Cornelius Fudge,1470,563,563
+156,books,Harry Potter and the Order of the Phoenix,Dean Thomas,224,153,153
+157,books,Harry Potter and the Order of the Phoenix,Dobby,187,106,106
+158,books,Harry Potter and the Order of the Phoenix,Dolores Umbridge,3546,954,954
+159,books,Harry Potter and the Order of the Phoenix,Draco Malfoy,835,378,378
+160,books,Harry Potter and the Order of the Phoenix,Dudley Dursley,378,199,199
+161,books,Harry Potter and the Order of the Phoenix,Ernie Macmillan,293,196,196
+162,books,Harry Potter and the Order of the Phoenix,Firenze,283,164,164
+163,books,Harry Potter and the Order of the Phoenix,Fred Weasley,2360,818,818
+164,books,Harry Potter and the Order of the Phoenix,George Weasley,1451,634,634
+165,books,Harry Potter and the Order of the Phoenix,Gilderoy Lockhart,233,150,150
+166,books,Harry Potter and the Order of the Phoenix,Ginny Weasley,921,396,396
+167,books,Harry Potter and the Order of the Phoenix,Harry Potter,16144,2183,2183
+168,books,Harry Potter and the Order of the Phoenix,Hermione Granger,11637,2015,2015
+169,books,Harry Potter and the Order of the Phoenix,James Potter,180,100,100
+170,books,Harry Potter and the Order of the Phoenix,Katie Bell,192,141,141
+171,books,Harry Potter and the Order of the Phoenix,Kingsley Shacklebolt,114,90,90
+172,books,Harry Potter and the Order of the Phoenix,Lee Jordan,234,139,139
+173,books,Harry Potter and the Order of the Phoenix,Lucius Malfoy,109,68,68
+174,books,Harry Potter and the Order of the Phoenix,Luna Lovegood,840,380,380
+175,books,Harry Potter and the Order of the Phoenix,Magorian,188,117,117
+176,books,Harry Potter and the Order of the Phoenix,Minerva McGonagall,1621,634,634
+177,books,Harry Potter and the Order of the Phoenix,Molly Weasley,1635,582,582
+178,books,Harry Potter and the Order of the Phoenix,Mundungus Fletcher,213,153,153
+179,books,Harry Potter and the Order of the Phoenix,Nearly Headless Nick,401,235,235
+180,books,Harry Potter and the Order of the Phoenix,Neville Longbottom,783,340,340
+181,books,Harry Potter and the Order of the Phoenix,Nymphadora Tonks,764,380,380
+182,books,Harry Potter and the Order of the Phoenix,Parvati Patil,324,199,199
+183,books,Harry Potter and the Order of the Phoenix,Petunia Dursley,340,179,179
+184,books,Harry Potter and the Order of the Phoenix,Remus Lupin,1454,587,587
+185,books,Harry Potter and the Order of the Phoenix,Rita Skeeter,314,195,195
+186,books,Harry Potter and the Order of the Phoenix,Ron Weasley,7741,1508,1508
+187,books,Harry Potter and the Order of the Phoenix,Rubeus Hagrid,3526,945,945
+188,books,Harry Potter and the Order of the Phoenix,Severus Snape,1890,652,652
+189,books,Harry Potter and the Order of the Phoenix,Sirius Black,3874,1079,1079
+190,books,Harry Potter and the Order of the Phoenix,Sybill Trelawney,146,95,95
+191,books,Harry Potter and the Order of the Phoenix,Ted Tonks,379,219,219
+192,books,Harry Potter and the Order of the Phoenix,Vernon Dursley,616,283,283
+193,books,Harry Potter and the Order of the Phoenix,Zacharias Smith,187,113,113
+194,books,Harry Potter and the Philosopher's Stone,Albus Dumbledore,1275,510,510
+195,books,Harry Potter and the Philosopher's Stone,Bane,117,71,71
+196,books,Harry Potter and the Philosopher's Stone,Draco Malfoy,290,182,182
+197,books,Harry Potter and the Philosopher's Stone,Dudley Dursley,153,111,111
+198,books,Harry Potter and the Philosopher's Stone,Firenze,248,138,138
+199,books,Harry Potter and the Philosopher's Stone,Fred Weasley,107,87,87
+200,books,Harry Potter and the Philosopher's Stone,Harry Potter,5100,1132,1132
+201,books,Harry Potter and the Philosopher's Stone,Hermione Granger,1619,559,559
+202,books,Harry Potter and the Philosopher's Stone,Minerva McGonagall,702,318,318
+203,books,Harry Potter and the Philosopher's Stone,Neville Longbottom,179,116,116
+204,books,Harry Potter and the Philosopher's Stone,Oliver Wood,465,236,236
+205,books,Harry Potter and the Philosopher's Stone,Percy Weasley,250,154,154
+206,books,Harry Potter and the Philosopher's Stone,Petunia Dursley,302,198,198
+207,books,Harry Potter and the Philosopher's Stone,Quirinus Quirrell,611,307,307
+208,books,Harry Potter and the Philosopher's Stone,Ron Weasley,3347,894,894
+209,books,Harry Potter and the Philosopher's Stone,Rubeus Hagrid,3313,939,939
+210,books,Harry Potter and the Philosopher's Stone,Severus Snape,312,182,182
+211,books,Harry Potter and the Philosopher's Stone,Vernon Dursley,579,303,303
+212,books,Harry Potter and the Prisoner of Azkaban,Albus Dumbledore,1202,502,502
+213,books,Harry Potter and the Prisoner of Azkaban,Cornelius Fudge,1079,446,446
+214,books,Harry Potter and the Prisoner of Azkaban,Draco Malfoy,407,235,235
+215,books,Harry Potter and the Prisoner of Azkaban,Fred Weasley,642,345,345
+216,books,Harry Potter and the Prisoner of Azkaban,George Weasley,408,244,244
+217,books,Harry Potter and the Prisoner of Azkaban,Harry Potter,6853,1394,1394
+218,books,Harry Potter and the Prisoner of Azkaban,Hermione Granger,3558,912,912
+219,books,Harry Potter and the Prisoner of Azkaban,Lavender Brown,269,171,171
+220,books,Harry Potter and the Prisoner of Azkaban,Lee Jordan,236,123,123
+221,books,Harry Potter and the Prisoner of Azkaban,Madam Hooch,124,87,87
+222,books,Harry Potter and the Prisoner of Azkaban,Madam Pomfrey,228,144,144
+223,books,Harry Potter and the Prisoner of Azkaban,Minerva McGonagall,704,344,344
+224,books,Harry Potter and the Prisoner of Azkaban,Molly Weasley,269,171,171
+225,books,Harry Potter and the Prisoner of Azkaban,Neville Longbottom,282,170,170
+226,books,Harry Potter and the Prisoner of Azkaban,Oliver Wood,452,245,245
+227,books,Harry Potter and the Prisoner of Azkaban,Percy Weasley,451,248,248
+228,books,Harry Potter and the Prisoner of Azkaban,Peter Pettigrew,818,339,339
+229,books,Harry Potter and the Prisoner of Azkaban,Remus Lupin,3789,1004,1004
+230,books,Harry Potter and the Prisoner of Azkaban,Ron Weasley,4265,1078,1078
+231,books,Harry Potter and the Prisoner of Azkaban,Rosmerta,322,177,177
+232,books,Harry Potter and the Prisoner of Azkaban,Rubeus Hagrid,1150,486,486
+233,books,Harry Potter and the Prisoner of Azkaban,Severus Snape,1620,586,586
+234,books,Harry Potter and the Prisoner of Azkaban,Stan Shunpike,518,262,262
+235,books,Harry Potter and the Prisoner of Azkaban,Sybill Trelawney,640,313,313
+236,books,Harry Potter and the Prisoner of Azkaban,Vernon Dursley,452,250,250
+237,movies,Harry Potter and the Chamber of Secrets,Albus Dumbledore,760,359,359
+238,movies,Harry Potter and the Chamber of Secrets,Aragog,132,85,85
+239,movies,Harry Potter and the Chamber of Secrets,Arthur Weasley,121,82,82
+240,movies,Harry Potter and the Chamber of Secrets,Dobby,498,212,212
+241,movies,Harry Potter and the Chamber of Secrets,Draco Malfoy,329,198,198
+242,movies,Harry Potter and the Chamber of Secrets,Gilderoy Lockhart,896,435,435
+243,movies,Harry Potter and the Chamber of Secrets,Harry Potter,2154,610,610
+244,movies,Harry Potter and the Chamber of Secrets,Hermione Granger,731,342,342
+245,movies,Harry Potter and the Chamber of Secrets,Lucius Malfoy,383,221,221
+246,movies,Harry Potter and the Chamber of Secrets,Minerva McGonagall,565,281,281
+247,movies,Harry Potter and the Chamber of Secrets,Moaning Myrtle,250,150,150
+248,movies,Harry Potter and the Chamber of Secrets,Molly Weasley,257,140,140
+249,movies,Harry Potter and the Chamber of Secrets,Pomona Sprout,163,111,111
+250,movies,Harry Potter and the Chamber of Secrets,Ron Weasley,892,401,401
+251,movies,Harry Potter and the Chamber of Secrets,Rubeus Hagrid,564,282,282
+252,movies,Harry Potter and the Chamber of Secrets,Severus Snape,219,143,143
+253,movies,Harry Potter and the Chamber of Secrets,Tom Riddle,659,320,320
+254,movies,Harry Potter and the Chamber of Secrets,Vernon Dursley,302,174,174
+255,movies,Harry Potter and the Deathly Hallows Part 1,Alastor Moody,233,146,146
+256,movies,Harry Potter and the Deathly Hallows Part 1,Arthur Weasley,108,86,86
+257,movies,Harry Potter and the Deathly Hallows Part 1,Bellatrix Lestrange,259,146,146
+258,movies,Harry Potter and the Deathly Hallows Part 1,Dobby,171,89,89
+259,movies,Harry Potter and the Deathly Hallows Part 1,Elphias Doge,209,138,138
+260,movies,Harry Potter and the Deathly Hallows Part 1,Harry Potter,2224,660,660
+261,movies,Harry Potter and the Deathly Hallows Part 1,Hermione Granger,1929,699,699
+262,movies,Harry Potter and the Deathly Hallows Part 1,Lily Potter,106,89,89
+263,movies,Harry Potter and the Deathly Hallows Part 1,Mundungus Fletcher,135,100,100
+264,movies,Harry Potter and the Deathly Hallows Part 1,Muriel,184,127,127
+265,movies,Harry Potter and the Deathly Hallows Part 1,Remus Lupin,117,89,89
+266,movies,Harry Potter and the Deathly Hallows Part 1,Ron Weasley,1707,599,599
+267,movies,Harry Potter and the Deathly Hallows Part 1,Rubeus Hagrid,158,117,117
+268,movies,Harry Potter and the Deathly Hallows Part 1,Rufus Scrimgeour,337,192,192
+269,movies,Harry Potter and the Deathly Hallows Part 1,Scabior,119,85,85
+270,movies,Harry Potter and the Deathly Hallows Part 1,Severus Snape,107,73,73
+271,movies,Harry Potter and the Deathly Hallows Part 1,Voldemort,386,203,203
+272,movies,Harry Potter and the Deathly Hallows Part 1,Xenophilius Lovegood,320,175,175
+273,movies,Harry Potter and the Deathly Hallows Part 2,Aberforth Dumbledore,260,159,159
+274,movies,Harry Potter and the Deathly Hallows Part 2,Albus Dumbledore,730,313,313
+275,movies,Harry Potter and the Deathly Hallows Part 2,Bogrod,144,102,102
+276,movies,Harry Potter and the Deathly Hallows Part 2,Garrick Ollivander,153,110,110
+277,movies,Harry Potter and the Deathly Hallows Part 2,Griphook,239,150,150
+278,movies,Harry Potter and the Deathly Hallows Part 2,Harry Potter,1563,499,499
+279,movies,Harry Potter and the Deathly Hallows Part 2,Helena Ravenclaw,143,86,86
+280,movies,Harry Potter and the Deathly Hallows Part 2,Hermione Granger,421,224,224
+281,movies,Harry Potter and the Deathly Hallows Part 2,Luna Lovegood,143,93,93
+282,movies,Harry Potter and the Deathly Hallows Part 2,Neville Longbottom,342,213,213
+283,movies,Harry Potter and the Deathly Hallows Part 2,Ron Weasley,531,254,254
+284,movies,Harry Potter and the Deathly Hallows Part 2,Severus Snape,442,235,235
+285,movies,Harry Potter and the Deathly Hallows Part 2,Voldemort,621,294,294
+286,movies,Harry Potter and the Goblet of Fire,Alastor Moody,843,389,389
+287,movies,Harry Potter and the Goblet of Fire,Albus Dumbledore,1421,553,553
+288,movies,Harry Potter and the Goblet of Fire,Arthur Weasley,153,111,111
+289,movies,Harry Potter and the Goblet of Fire,Bartemius Crouch,357,209,209
+290,movies,Harry Potter and the Goblet of Fire,Cedric Diggory,150,90,90
+291,movies,Harry Potter and the Goblet of Fire,Fred Weasley,103,87,87
+292,movies,Harry Potter and the Goblet of Fire,Harry Potter,1072,388,388
+293,movies,Harry Potter and the Goblet of Fire,Hermione Granger,659,322,322
+294,movies,Harry Potter and the Goblet of Fire,Igor Karkaroff,131,79,79
+295,movies,Harry Potter and the Goblet of Fire,Minerva McGonagall,314,175,175
+296,movies,Harry Potter and the Goblet of Fire,Neville Longbottom,105,81,81
+297,movies,Harry Potter and the Goblet of Fire,Rita Skeeter,258,173,173
+298,movies,Harry Potter and the Goblet of Fire,Ron Weasley,701,314,314
+299,movies,Harry Potter and the Goblet of Fire,Rubeus Hagrid,254,162,162
+300,movies,Harry Potter and the Goblet of Fire,Severus Snape,147,109,109
+301,movies,Harry Potter and the Goblet of Fire,Sirius Black,221,136,136
+302,movies,Harry Potter and the Goblet of Fire,Voldemort,438,229,229
+303,movies,Harry Potter and the Half-Blood Prince,Albus Dumbledore,1956,637,637
+304,movies,Harry Potter and the Half-Blood Prince,Arthur Weasley,212,152,152
+305,movies,Harry Potter and the Half-Blood Prince,Bellatrix Lestrange,210,135,135
+306,movies,Harry Potter and the Half-Blood Prince,Cormac McLaggen,100,82,82
+307,movies,Harry Potter and the Half-Blood Prince,Draco Malfoy,261,158,158
+308,movies,Harry Potter and the Half-Blood Prince,Ginny Weasley,265,174,174
+309,movies,Harry Potter and the Half-Blood Prince,Harry Potter,2057,648,648
+310,movies,Harry Potter and the Half-Blood Prince,Hermione Granger,1079,462,462
+311,movies,Harry Potter and the Half-Blood Prince,Horace Slughorn,2181,741,741
+312,movies,Harry Potter and the Half-Blood Prince,Luna Lovegood,152,109,109
+313,movies,Harry Potter and the Half-Blood Prince,Minerva McGonagall,195,127,127
+314,movies,Harry Potter and the Half-Blood Prince,Ron Weasley,826,376,376
+315,movies,Harry Potter and the Half-Blood Prince,Rubeus Hagrid,233,155,155
+316,movies,Harry Potter and the Half-Blood Prince,Severus Snape,373,213,213
+317,movies,Harry Potter and the Half-Blood Prince,Tom Riddle,372,154,154
+318,movies,Harry Potter and the Order of the Phoenix,Alastor Moody,119,84,84
+319,movies,Harry Potter and the Order of the Phoenix,Albus Dumbledore,1425,537,537
+320,movies,Harry Potter and the Order of the Phoenix,Arthur Weasley,226,143,143
+321,movies,Harry Potter and the Order of the Phoenix,Bellatrix Lestrange,145,93,93
+322,movies,Harry Potter and the Order of the Phoenix,Cornelius Fudge,280,154,154
+323,movies,Harry Potter and the Order of the Phoenix,Dolores Umbridge,884,402,402
+324,movies,Harry Potter and the Order of the Phoenix,Draco Malfoy,124,88,88
+325,movies,Harry Potter and the Order of the Phoenix,Fred Weasley,121,99,99
+326,movies,Harry Potter and the Order of the Phoenix,Harry Potter,1846,541,541
+327,movies,Harry Potter and the Order of the Phoenix,Hermione Granger,800,343,343
+328,movies,Harry Potter and the Order of the Phoenix,Lucius Malfoy,235,128,128
+329,movies,Harry Potter and the Order of the Phoenix,Luna Lovegood,178,106,106
+330,movies,Harry Potter and the Order of the Phoenix,Minerva McGonagall,184,118,118
+331,movies,Harry Potter and the Order of the Phoenix,Remus Lupin,165,108,108
+332,movies,Harry Potter and the Order of the Phoenix,Ron Weasley,379,209,209
+333,movies,Harry Potter and the Order of the Phoenix,Rubeus Hagrid,250,165,165
+334,movies,Harry Potter and the Order of the Phoenix,Severus Snape,311,167,167
+335,movies,Harry Potter and the Order of the Phoenix,Sirius Black,367,197,197
+336,movies,Harry Potter and the Order of the Phoenix,Sybill Trelawney,122,84,84
+337,movies,Harry Potter and the Order of the Phoenix,Voldemort,109,77,77
+338,movies,Harry Potter and the Philosopher's Stone,Albus Dumbledore,725,350,350
+339,movies,Harry Potter and the Philosopher's Stone,Argus Filch,144,102,102
+340,movies,Harry Potter and the Philosopher's Stone,Draco Malfoy,202,134,134
+341,movies,Harry Potter and the Philosopher's Stone,Firenze,113,73,73
+342,movies,Harry Potter and the Philosopher's Stone,Garrick Ollivander,144,94,94
+343,movies,Harry Potter and the Philosopher's Stone,Harry Potter,1733,556,556
+344,movies,Harry Potter and the Philosopher's Stone,Hermione Granger,972,415,415
+345,movies,Harry Potter and the Philosopher's Stone,Lee Jordan,102,66,66
+346,movies,Harry Potter and the Philosopher's Stone,Minerva McGonagall,524,265,265
+347,movies,Harry Potter and the Philosopher's Stone,Neville Longbottom,110,80,80
+348,movies,Harry Potter and the Philosopher's Stone,Oliver Wood,176,113,113
+349,movies,Harry Potter and the Philosopher's Stone,Percy Weasley,123,83,83
+350,movies,Harry Potter and the Philosopher's Stone,Petunia Dursley,280,144,144
+351,movies,Harry Potter and the Philosopher's Stone,Quirinus Quirrell,260,157,157
+352,movies,Harry Potter and the Philosopher's Stone,Rolanda Hooch,213,118,118
+353,movies,Harry Potter and the Philosopher's Stone,Ron Weasley,1076,451,451
+354,movies,Harry Potter and the Philosopher's Stone,Rubeus Hagrid,1449,530,530
+355,movies,Harry Potter and the Philosopher's Stone,Severus Snape,347,200,200
+356,movies,Harry Potter and the Philosopher's Stone,Vernon Dursley,209,141,141
+357,movies,Harry Potter and the Philosopher's Stone,Voldemort,157,100,100
+358,movies,Harry Potter and the Prisoner of Azkaban,Albus Dumbledore,639,319,319
+359,movies,Harry Potter and the Prisoner of Azkaban,Arthur Weasley,140,83,83
+360,movies,Harry Potter and the Prisoner of Azkaban,Cornelius Fudge,394,216,216
+361,movies,Harry Potter and the Prisoner of Azkaban,Draco Malfoy,239,151,151
+362,movies,Harry Potter and the Prisoner of Azkaban,Fred Weasley,141,105,105
+363,movies,Harry Potter and the Prisoner of Azkaban,George Weasley,182,128,128
+364,movies,Harry Potter and the Prisoner of Azkaban,Harry Potter,1329,432,432
+365,movies,Harry Potter and the Prisoner of Azkaban,Hermione Granger,1027,419,419
+366,movies,Harry Potter and the Prisoner of Azkaban,Marge Dursley,257,139,139
+367,movies,Harry Potter and the Prisoner of Azkaban,Minerva McGonagall,190,127,127
+368,movies,Harry Potter and the Prisoner of Azkaban,Peter Pettigrew,125,72,72
+369,movies,Harry Potter and the Prisoner of Azkaban,Remus Lupin,1484,531,531
+370,movies,Harry Potter and the Prisoner of Azkaban,Ron Weasley,796,335,335
+371,movies,Harry Potter and the Prisoner of Azkaban,Rubeus Hagrid,579,245,245
+372,movies,Harry Potter and the Prisoner of Azkaban,Severus Snape,439,242,242
+373,movies,Harry Potter and the Prisoner of Azkaban,Shrunken head,132,93,93
+374,movies,Harry Potter and the Prisoner of Azkaban,Sirius Black,491,237,237
+375,movies,Harry Potter and the Prisoner of Azkaban,Stanley Shunpike,174,101,101
+376,movies,Harry Potter and the Prisoner of Azkaban,Sybill Trelawney,298,161,161

@@ -1,0 +1,119 @@
+id,character,medium,role,words,installments,retained_vocabulary_words,community,degree,counterpart_cosine,top_words,x,y
+0,Aberforth Dumbledore,books,hero,920,7,364,5,3,0.12566976073338312,"prizes, brother, goat, hedge, kid, albus, sister, able",0.14599270545180484,-0.07379189462471453
+1,Aberforth Dumbledore,movies,hero,260,7,103,5,3,0.12566976073338312,"hacked, fool, fed, kidding, brother, sacrificed, where've, chasing",0.2802032904349381,-0.2864565766664365
+2,Alastor Moody,books,ambiguous,3082,4 5 7,1308,5,4,0.2569917812115131,"yeah, karkaroff, fathers, goblet, potter, crouch, dumbledore, curse",0.019161112713950403,0.013648384094606975
+3,Alastor Moody,movies,ambiguous,1195,4 5 7,498,5,4,0.2569917812115131,"curse, runs, strengths, unforgivable, correct, graveyard, led, prepare",-0.1018444083664107,0.1682368771129841
+4,Albus Dumbledore,books,hero,23585,1 2 3 4 5 6 7,8987,11,27,0.6164162627874352,"voldemort, harry, lord, professor, severus, cornelius, sirius, voldemort's",0.1279424538427195,0.2651068672224794
+5,Albus Dumbledore,movies,hero,7656,1 2 3 4 5 6 7,3055,11,9,0.6164162627874352,"horace, tom, severus, voldemort, harry, professor, prophesy, choosen",0.0006353924361391783,0.25643278863091734
+6,Aragog,books,unassigned,292,2,104,2,3,0.777141635618375,"hagrid, creature, blamed, midst, traveler, wanders, distant, feeding",-0.0643220374004742,-0.5174734837953004
+7,Aragog,movies,unassigned,132,2,52,2,3,0.777141635618375,"hagrid, midst, traveler, wanders, distant, daughters, willingly, meat",-0.12067910465776122,-0.5940556344206723
+8,Argus Filch,books,unassigned,540,1 2 3 5 6 7,219,5,3,0.10164765996400962,"peeves, squib, filch, argus, werewolves, ankles, frisbees, kwikspell",-0.07858188430005923,-0.2415120417387545
+9,Argus Filch,movies,unassigned,340,1 2 3 5 6 7,150,2,3,0.10164765996400962,"astronomy, cat, god, lady's, professors, thumbs, wits, detention",-0.012568142968244949,-0.3590719191936447
+10,Bartemius Crouch,books,ambiguous,890,4,347,5,3,0.058305835714653295,"winky, ludo, shortly, accuse, bulgarians, father's, bertha, jorkins",0.2910523020559463,-0.054857748757287245
+11,Bartemius Crouch,movies,ambiguous,357,4,145,11,3,0.058305835714653295,"counsel, concluded, egg, tri, delacour, witness, augustus, ministries",0.16869006073328316,0.5852728892331366
+12,Bellatrix Lestrange,books,villain,1344,5 6 7,528,1,5,0.3648697522272034,"lord, cissy, dark, greyback, prophecy, draco, mudblood, dispose",0.563188258082729,0.37636683851206765
+13,Bellatrix Lestrange,movies,villain,689,5 6 7,288,1,3,0.3648697522272034,"draco, cissy, vault, crucio, lord, he'll, prophesy, stole",0.641607086637326,0.25644444808961103
+14,Bill Weasley,books,hero,778,7,327,4,3,0.21361445058810513,"goblin, goblins, ownership, payment, tiara, gringotts, objects, bargain",-0.43555128613115973,0.15417456110787411
+15,Bill Weasley,movies,hero,104,7,49,4,3,0.21361445058810513,"griphook, aunt's, struck, forgiving, repay, bargain, disapparated, eye's",-0.5617030151586508,0.1700518715823541
+16,Cedric Diggory,books,hero,436,4,182,5,4,0.15644825944440985,"pine, task, fresh, champion, should've, hostages, races, win",0.24288450348768517,-0.22335389092441282
+17,Cedric Diggory,movies,hero,150,4,52,5,3,0.15644825944440985,"portkey, hey, bath, badges, body, hot, fifth, huh",0.39751206831818964,-0.45711198659852337
+18,Corban Yaxley,books,villain,185,7,75,11,3,0.3669866845814608,"cattermole, apparates, graver, reception, planted, wife's, satisfied, status",0.38509768965778923,0.660931202383073
+19,Corban Yaxley,movies,villain,100,7,50,11,3,0.3669866845814608,"thirtieth, exits, seal, wife's, interrogate, status, differently, priority",0.4502059288872193,0.6259007455956633
+20,Cornelius Fudge,books,ambiguous,3299,2 3 4 5,1377,5,5,0.3141377265779212,"dementors, dumbledore, black, m'dear, pettigrew, black's, minister, rosmerta",-0.0859977276500179,-0.007466751791557456
+21,Cornelius Fudge,movies,ambiguous,795,2 3 4 5,335,5,4,0.3141377265779212,"accused, charges, dumbledore, hagrid, pettigrew, business, vicious, finger",-0.14684864646143764,-0.2437249048500387
+22,Dobby,books,hero,825,2 5 7,378,2,3,0.881102434242224,"dobby, sir, named, punish, solved, free, harry, potter",0.339161800923685,-0.25121812327215615
+23,Dobby,movies,hero,738,2 5 7,381,2,3,0.881102434242224,"dobby, sir, huh, harry, bad, potter, ahh, vermin",0.4517888881076358,-0.25408864638682077
+24,Dolores Umbridge,books,villain,3670,5 7,1480,11,3,0.40016037112084396,"hem, minerva, professor, slinkhard, inquisitor, minister, weapon, class",0.1667716634353444,0.24101059088534296
+25,Dolores Umbridge,movies,villain,968,5 7,410,11,3,0.40016037112084396,"educational, ministry, cattermole, punishments, decree, cassandra, headmaster, attack",0.23133325497970852,0.4161229565089445
+26,Draco Malfoy,books,ambiguous,4558,1 2 3 4 5 6 7,1978,1,6,0.3654810441024744,"sir, mudblood, weasley, malfoy, borgin, got, potter, yeah",0.2438830852601226,-0.017652173972594897
+27,Draco Malfoy,movies,ambiguous,1282,1 2 3 4 5 6 7,575,1,3,0.3654810441024744,"goyle, father, blaise, weasleys, mudblood, filthy, crabbe, fainted",0.15939851561120413,0.03839643193709579
+28,Dudley Dursley,books,ambiguous,741,1 2 5 7,327,10,5,0.35189385193017625,"vernon, dad, cedric, boxing, dudley, thirty, quarters, felt",-0.13584590775681016,-0.476185203491836
+29,Dudley Dursley,movies,ambiguous,194,1 2 5 7,100,10,4,0.35189385193017625,"ahh, dad, tough, mummy, thirty, cedric, happening, guy",-0.21069425091587124,-0.45871483218101855
+30,Elphias Doge,books,hero,423,7,177,8,3,0.155979482518361,"ariana, kendra, pretended, bathilda, terrifying, albus, muriel, aberforth",-1.0,0.11410103104228134
+31,Elphias Doge,movies,hero,209,7,81,8,3,0.155979482518361,"muriel, aberforth, attest, conclude, distances, intimate, nigh, stress",-0.6339353702591468,0.21856038089127397
+32,Filius Flitwick,books,unassigned,166,1 3 4 6 7,71,9,4,0.08047565502617865,"consult, divided, established, granger's, model, resting, cheering, mmm",-0.24927076685302435,0.1697169857434535
+33,Filius Flitwick,movies,unassigned,115,1 3 4 6 7,47,9,3,0.08047565502617865,"flick, floor's, granger's, indefinitely, swish, splendid, wrist, leviosa",-0.13240643909033006,0.3822144225281352
+34,Firenze,books,unassigned,248,1,94,9,3,0.6562469810145116,"unicorn, cursed, death's, slain, slay, wrongly, commit, monstrous",-0.13794977790852878,0.486675077537972
+35,Firenze,movies,unassigned,113,1,45,9,3,0.6562469810145116,"unicorn, slain, slay, monstrous, touches, terrible, lips, inch",-0.20323108898054357,0.578988466573114
+36,Fred Weasley,books,hero,5919,1 2 3 4 5 6 7,2586,5,5,0.25737001027031203,"george, mum, dad, yeah, we've, percy, galleons, ron",0.03451462732272819,-0.3046504839708915
+37,Fred Weasley,movies,hero,600,1 2 3 4 5 6 7,294,5,3,0.25737001027031203,"maid, shh, george, mate, galleons, irish, handsome, viktor",0.15755402617939904,-0.503873223995833
+38,George Weasley,books,hero,3848,1 2 3 4 5 6 7,1706,5,4,0.2618261999506059,"yeah, percy, we've, mum, got, ear, fred, oliver",0.12098118224328867,-0.2520944775967128
+39,George Weasley,movies,hero,485,1 2 3 4 5 6 7,241,5,3,0.2618261999506059,"fred, maid, saint, galleons, yeah, ron, we've, viktor",0.22122550668118524,-0.46003890075728254
+40,Gilderoy Lockhart,books,villain,1034,2,448,3,4,0.3934116171964823,"disarm, autobiography, creevey, pixies, harry, celebrity, cast, page",0.126274419362889,-0.3314497696415728
+41,Gilderoy Lockhart,movies,villain,896,2,400,3,4,0.3934116171964823,"pixies, disarm, heh, hee, huh, round, excellent, celebrity",0.18236278915142332,-0.35412525711217674
+42,Ginny Weasley,books,hero,2889,2 3 4 5 6 7,1208,5,3,0.23142729097629317,"phlegm, ron, mum, fred, dean, hermione, okay, corridor",-0.009055035644422272,-0.14277585246522584
+43,Ginny Weasley,movies,hero,504,2 3 4 5 6 7,216,5,3,0.23142729097629317,"prince, bout, covered, blood, mum, ron, god, joking",-0.16130939016437681,-0.1854644164222772
+44,Griphook,books,ambiguous,791,1 7,318,4,5,0.4406974305244784,"sword, gringotts, vault, goblins, goblin, treasures, vaults, bogrod",-0.5381474359750587,0.24803278071110435
+45,Griphook,movies,ambiguous,280,1 7,103,4,3,0.4406974305244784,"sword, vault, thieves, gringotts, crushed, lamp, lestrange's, thief's",-0.7596935684053939,0.3686355053795863
+46,Harry Potter,books,hero,74983,1 2 3 4 5 6 7,31474,5,56,0.7335253628801023,"yeah, got, sir, hermione, dobby, voldemort, okay, going",0.028149184585548416,-0.057069088521395105
+47,Harry Potter,movies,hero,13978,1 2 3 4 5 6 7,5980,2,13,0.7335253628801023,"sir, hermione, ron, dobby, hagrid, yeah, professor, voldemort",0.10958893350862585,-0.28357481033800974
+48,Hermione Granger,books,hero,38280,1 2 3 4 5 6 7,16066,5,47,0.6736382384741009,"ron, harry, really, going, hagrid, got, just, we're",-0.012952367491821168,-0.054068458612425443
+49,Hermione Granger,movies,hero,7618,1 2 3 4 5 6 7,3375,5,5,0.6736382384741009,"ron, harry, potion, buckbeak, okay, going, honestly, dumbledore",-0.1538993298293567,-0.04825510270733811
+50,Horace Slughorn,books,ambiguous,2702,6,1157,11,3,0.5198133772183589,"m'boy, tom, potion, soul, felix, bottle, dear, course",0.03015562494037381,0.2959289849348243
+51,Horace Slughorn,movies,ambiguous,2181,6,896,11,3,0.5198133772183589,"m'boy, tom, beard, merlin's, academic, potion, soul, acromantula",0.022745271275874033,0.45061971919338023
+52,Igor Karkaroff,books,ambiguous,713,4,283,11,4,0.29997304708193345,"rosier, moody, countless, karkaroff, champions, names, rookwood, supporters",0.35866712567112885,0.5451905935098273
+53,Igor Karkaroff,movies,ambiguous,131,4,53,11,3,0.29997304708193345,"rosier, severus, evan, junior, frank, means, rookwood, sir",0.5286473791498049,0.5968991016331127
+54,Kreacher,books,ambiguous,294,5 7,137,7,3,0.6838751090137207,"kreacher, master, regulus, locket, basin, master's, crawled, lockets",0.46388243691924647,0.131427094083313
+55,Kreacher,movies,ambiguous,140,5 7,68,7,4,0.6838751090137207,"kreacher, locket, master, regulus, mundungus, fletcher, traitor, watches",0.49313268392789916,0.05419967987481663
+56,Lily Potter,books,hero,314,5 7,135,8,3,0.185286550166824,"freak, fancies, beg, envelope, toerag, bullying, contacted, muggle",-0.3050055605618475,-0.023071422903531376
+57,Lily Potter,movies,hero,180,5 7,80,8,4,0.185286550166824,"james, bathilda, sweetheart, birthday, frustrated, squid, apologize, choice",-0.47060084025022575,0.012015091107316585
+58,Lucius Malfoy,books,villain,405,2 5 7,145,1,3,0.2091099570906792,"lord, authority, prophecy, arthur, mudblood, dot, niece, resemble",0.5202250076265085,0.22901598338113502
+59,Lucius Malfoy,movies,villain,700,2 5 7,286,1,3,0.2091099570906792,"prophesy, lord, dobby, sticky, draco, hand, concern, dare",0.594182744862654,-0.016903206067681243
+60,Luna Lovegood,books,hero,1736,5 6 7,703,5,5,0.22410560515549552,"daddy, snorkack, ron, editor, wrackspurt, crumple, horned, party",-0.11905048235577473,-0.14327800051143286
+61,Luna Lovegood,movies,hero,554,5 6 7,237,5,3,0.22410560515549552,"quibbler, wrackspurts, diadem, ravenclaw's, rowena, veil, talk, hello",-0.23442580631650567,-0.18078754599844485
+62,Madam Hooch,books,unassigned,170,1 5,80,6,3,0.28775381143904205,"montague, bludger, whistle, brooms, quaffle, bell, katie, catches",-0.43445040357942893,0.621426879160724
+63,Madam Hooch,movies,unassigned,220,1 5,88,6,3,0.28775381143904205,"longbottom, broom, whistle, afternoon, ground, lean, slightly, wrist",-0.2876284140936684,0.5418382614665997
+64,Minerva McGonagall,books,hero,5118,1 2 3 4 5 6,2112,11,7,0.34801493500480185,"professor, potter, jordan, transfiguration, dumbledore, sibyll, informed, saying",0.0751997592029737,0.2185378596355293
+65,Minerva McGonagall,movies,hero,1972,1 2 3 4 5 6,790,11,3,0.34801493500480185,"dance, points, chamber, wood, heir, weasley, students, slytherin",0.08815939662768428,0.41630726698947207
+66,Moaning Myrtle,books,unassigned,538,2 4,214,3,3,0.3563778531531316,"myrtle, ages, toilet, upset, body, bathroom, diggory, breathing",0.2537356061069946,-0.36657086094695096
+67,Moaning Myrtle,movies,unassigned,326,2 4,141,3,3,0.3563778531531316,"hee, huh, oooh, myrtle, throw, moaning, cedric, blocked",0.35275401938805956,-0.5636527276803831
+68,Molly Weasley,books,hero,4292,1 2 3 5 6 7,1818,5,4,0.42159453143641973,"arthur, dear, fred, ginny, george, harry, ron, arthur's",0.24488023765545316,-0.14913037346160957
+69,Molly Weasley,movies,hero,540,1 2 3 5 6 7,230,5,3,0.42159453143641973,"dear, goodness, ron, platform, harry, arthur, percy, car",0.20828413097385762,-0.17916738259595566
+70,Mundungus Fletcher,books,ambiguous,118,7,49,7,3,0.4578479752031487,"bleedin, altogether, effing, protector, license, artifacts, meself, selling",0.5553213228124212,-0.30465848973161996
+71,Mundungus Fletcher,movies,ambiguous,135,7,59,7,3,0.4578479752031487,"bleedin, din, ouse, technically, wondrous, hadn, license, volunteered",0.6523296579291354,-0.24286506452422357
+72,Muriel,books,unassigned,512,7,223,8,4,0.333201058168403,"bathilda, ariana, dumbledores, elphias, imprisoning, kendra, aberforth, barry",-0.9055391830567284,0.07119932851525385
+73,Muriel,movies,unassigned,184,7,81,8,3,0.333201058168403,"elphias, bagshot, bathilda, rita, skeeter, bird's, patches, cage",-0.9154352385903741,-0.03720363676556992
+74,Nearly Headless Nick,books,unassigned,740,1 2 5,283,5,3,0.13871277475565433,"speech, baron, deathday, feast, peeves, amusing, ghosts, feels",-0.0727048608370637,-0.3170465267394843
+75,Nearly Headless Nick,movies,unassigned,108,1 2 5,57,2,4,0.13871277475565433,"hello, denied, clearwater, request, welcome, headless, nicholas, hermione",0.059921618951308,-0.44847260940104244
+76,Neville Longbottom,books,hero,2330,1 2 3 4 5 6 7,911,5,4,0.2839116218997333,"gran, gran's, carrows, i'b, neville, dem, yeah, harry",0.12018540941423168,-0.14302118003443182
+77,Neville Longbottom,movies,hero,768,1 2 3 4 5 6 7,349,5,4,0.2839116218997333,"hey, expelliarmus, seamus, ahh, okay, ahhhh, aah, carrows",0.19598619558082123,-0.28169051935891726
+78,Oliver Wood,books,unassigned,780,1 2 7,329,6,4,0.43795311426325984,"bludgers, team, hoops, quaffle, practice, field, booked, program",-0.22259453946975585,0.2569419009913701
+79,Oliver Wood,movies,unassigned,270,1 2 7,125,6,3,0.43795311426325984,"seeker, chasers, hoops, quaffle, game, catch, bludger, quidditch",-0.30637480795440447,0.3620190210267795
+80,Ollivander,books,unassigned,617,1 7,231,11,3,0.5677129854367268,"wand, inches, feather, deathstick, quarter, curious, elder, heartstring",0.6730499898916578,0.5375652103640415
+81,Ollivander,movies,unassigned,335,1 7,132,11,3,0.5677129854367268,"wand, curious, chooses, feather, inches, clear, elder, conveyed",0.7147451229199501,0.4919841718177957
+82,Percy Weasley,books,unassigned,1101,1 2 3 5 7,456,5,5,0.15860379683743617,"penelope, peeves, mom, sir, cadogan, bags, prefects, prefect",-0.13011017848341286,-0.32453565835688775
+83,Percy Weasley,movies,unassigned,247,1 2 3 5 7,109,2,3,0.15860379683743617,"gryffindors, dormitories, nicholas, follow, belongings, caput, draconis, staircases",-0.020181301948957304,-0.6278489749523322
+84,Peter Pettigrew,books,villain,1036,3 4 7,404,8,4,0.18820557871893578,"peter, voldemort's, supporters, remus, strength, james, lord, dog",0.13107801079488637,0.1784619085454697
+85,Peter Pettigrew,movies,villain,198,3 4 7,88,8,3,0.18820557871893578,"lord, bless, flobberworm, maggot, master, spared, weapons, willingly",0.36516356331501454,0.4059022263441212
+86,Petunia Dursley,books,ambiguous,939,1 2 3 5 7,391,10,3,0.3188732709103256,"marge, dudley's, news, vernon, diddy, popkin, shooting, stars",0.08138073999444197,-0.8666739580891656
+87,Petunia Dursley,movies,ambiguous,394,1 2 3 5 7,159,10,3,0.3188732709103256,"vernon, smeltings, darling, dursley, lovely, perfect, abnormal, dyeing",-0.0468956227366235,-0.8320984172379374
+88,Pomona Sprout,books,unassigned,152,2 7,50,9,3,0.3453997190567551,"earmuffs, chaps, indefinitely, thumbs, greenhouse, forms, kicked, points",-0.02910615461459995,0.7386401332745394
+89,Pomona Sprout,movies,unassigned,171,2 7,62,9,3,0.3453997190567551,"mandrake, earmuffs, grasp, pot, mandrakes, pull, cries, pour",0.022906494409135655,0.6377470098977706
+90,Quirinus Quirrell,books,villain,611,1,236,9,5,0.18253759563850128,"yeh, mirror, stone, trying, meet, ter, quirrell, faithfully",-0.1631796398393404,0.11158701554381402
+91,Quirinus Quirrell,movies,villain,260,1,93,9,3,0.18253759563850128,"dungeon, ahh, hehe, countercurse, rarely, type, vampire, bat",-0.3182287161972024,-0.2611265517549694
+92,Remus Lupin,books,hero,7670,3 5 6 7,3121,8,7,0.4473220965903469,"peter, boggart, sirius, james, harry, werewolf, dementor, neville",-0.08363926637965433,0.03651642521135702
+93,Remus Lupin,movies,hero,1907,3 5 6 7,800,8,3,0.4473220965903469,"boggart, memory, harry, riddikulus, voldemort, eat, wonderful, frightens",0.0020747441761723557,0.14828669308224385
+94,Rita Skeeter,books,ambiguous,358,4,166,8,5,0.22412806465234764,"lovely, reporter, rita, skeeter, creatures, prophet, conference, dumbledorel",-0.4491495989421585,-0.10930875808524909
+95,Rita Skeeter,movies,ambiguous,258,4,110,8,3,0.22412806465234764,"beneath, concerned, curls, emotionally, lurk, muscles, rebel, mature",-0.36721810630759,0.09583472686089407
+96,Ron Weasley,books,hero,39941,1 2 3 4 5 6 7,16772,5,29,0.5989743309804071,"yeah, hermione, got, going, d'you, fred, reckon, we've",0.0713050691986147,-0.1839120282010866
+97,Ron Weasley,movies,hero,6908,1 2 3 4 5 6 7,3042,5,7,0.5989743309804071,"bloody, hermione, hell, scabbers, brilliant, ahh, yeah, mate",-0.0006699538675638535,-0.23434488204813148
+98,Rubeus Hagrid,books,hero,11647,1 2 3 4 5 6 7,5555,9,4,0.5419418308070353,"ter, yeh, don, yer, fer, jus, bin, righ",-0.23898634753082104,0.014770540830197968
+99,Rubeus Hagrid,movies,hero,3487,1 2 3 4 5 6 7,1540,9,4,0.5419418308070353,"yeh, tha, righ, buckbeak, don, ter, ooh, arry",-0.2268250924860618,-0.11367067236139027
+100,Rufus Scrimgeour,books,unassigned,465,7,191,4,3,0.3352373821969544,"snitch, sword, historical, godric, dumbledore, remembered, object, contents",-0.6924036560805176,0.21954183290144327
+101,Rufus Scrimgeour,movies,unassigned,337,7,143,4,3,0.3352373821969544,"sword, granger, instructive, jean, similar, testament, bequest, current",-0.8489651306831157,0.3437171725101757
+102,Scabior,books,villain,195,7,89,10,3,0.15213655017109504,"greyback, ere, vernon, ave, dudley, camping, e's, haul",-0.48020624359878855,-0.684975753049012
+103,Scabior,movies,villain,119,7,51,10,3,0.15213655017109504,"smell, skinny, ell, forgetting, lovely, tipped, ginger, penelope",-0.5373630244690267,-0.5291708496718746
+104,Severus Snape,books,ambiguous,8795,1 2 3 4 5 6 7,3457,11,15,0.4255704214501904,"lord, potter, dark, draco, severus, lord's, office, points",0.30337421669729997,0.3139049804806326
+105,Severus Snape,movies,ambiguous,2385,1 2 3 4 5 6 7,933,11,3,0.4255704214501904,"werewolf, lord, fame, gilliweed, potter, page, asphodel, monkshood",0.25518770281917114,0.20082441040601864
+106,Sirius Black,books,hero,5255,4 5 7,2239,5,7,0.28461890497101283,"kreacher, molly, voldemort, dumbledore, family, crouch, trusts, got",0.2017592337786924,-0.023043589907798465
+107,Sirius Black,movies,hero,597,4 5 7,252,5,3,0.28461890497101283,"deatheater, goblet, harry, cousin, molly, son, bites, griffindore",0.2520444828377741,0.10694221680458792
+108,Stan Shunpike,books,unassigned,518,3,220,10,3,0.5332385078369047,"ern, ere, e's, arry, don, privet, street, laughed",-0.5412041144493474,-0.44579946571680695
+109,Stan Shunpike,movies,unassigned,174,3,58,10,3,0.5332385078369047,"ern, conductor, grass, emergency, supporter, transport, bus, shunpike",-0.43026309245188454,-0.3354676160112057
+110,Sybill Trelawney,books,unassigned,806,3 5 7,319,11,3,0.2889497889037269,"crystal, dear, divination, rise, gazing, mundane, omen, servant",0.26000407219528554,0.6145496138522808
+111,Sybill Trelawney,movies,unassigned,442,3 5 7,167,11,3,0.2889497889037269,"art, broaden, minds, dear, leaves, cup, divination, shall",0.14109707443661215,0.6541892266894633
+112,Vernon Dursley,books,ambiguous,2188,1 2 3 5 7,916,10,4,0.41147940339318917,"petunia, dudley, marge, owls, ter, yeh, son, ruddy",0.06598206345553542,-0.5926581025499333
+113,Vernon Dursley,movies,ambiguous,683,1 2 3 5 7,273,10,3,0.41147940339318917,"marge, ripper, dudley, ahh, sunday, arrive, petunia, bloody",0.1430180133918622,-0.7157412216758354
+114,Voldemort,books,villain,2752,1 2 4 5 6 7,1009,11,7,0.38984279385324355,"severus, lucius, wand, lord, master, elder, faithful, wormtail",0.44687656901667594,0.41066244539797037
+115,Voldemort,movies,villain,2742,1 2 4 5 6 7,1096,11,5,0.38984279385324355,"nagini, sir, wormtail, wand, severus, live, ahhhh, avada",0.35938523594333355,0.268399493047431
+116,Xenophilius Lovegood,books,unassigned,536,7,212,12,3,0.5614325962133893,"hallows, deathly, possessor, brothers, snorkack, luna, crumple, horned",-0.41717554832960474,-0.20862796098532727
+117,Xenophilius Lovegood,movies,unassigned,320,7,127,12,3,0.5614325962133893,"hallows, deathly, familiar, tale, brothers, fully, luna, antioch",-0.35392084955010195,-0.14791666048564125

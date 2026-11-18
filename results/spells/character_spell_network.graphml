@@ -1,0 +1,1816 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d6" for="edge" attr.name="weight" attr.type="long" />
+  <key id="d5" for="edge" attr.name="movies" attr.type="long" />
+  <key id="d4" for="edge" attr.name="books" attr.type="long" />
+  <key id="d3" for="node" attr.name="role" attr.type="string" />
+  <key id="d2" for="node" attr.name="label" attr.type="string" />
+  <key id="d1" for="node" attr.name="bipartite" attr.type="long" />
+  <key id="d0" for="graph" attr.name="relation" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="character:Alastor Moody">
+      <data key="d1">0</data>
+      <data key="d2">Alastor Moody</data>
+      <data key="d3">ambiguous</data>
+    </node>
+    <node id="spell:Avada Kedavra">
+      <data key="d1">1</data>
+      <data key="d2">Avada Kedavra</data>
+    </node>
+    <node id="spell:Engorgio">
+      <data key="d1">1</data>
+      <data key="d2">Engorgio</data>
+    </node>
+    <node id="spell:Imperio">
+      <data key="d1">1</data>
+      <data key="d2">Imperio</data>
+    </node>
+    <node id="spell:Reducio">
+      <data key="d1">1</data>
+      <data key="d2">Reducio</data>
+    </node>
+    <node id="character:Albus Dumbledore">
+      <data key="d1">0</data>
+      <data key="d2">Albus Dumbledore</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="spell:Accio">
+      <data key="d1">1</data>
+      <data key="d2">Accio</data>
+    </node>
+    <node id="spell:Aguamenti">
+      <data key="d1">1</data>
+      <data key="d2">Aguamenti</data>
+    </node>
+    <node id="spell:Arresto Momentum">
+      <data key="d1">1</data>
+      <data key="d2">Arresto Momentum</data>
+    </node>
+    <node id="spell:Locomotor">
+      <data key="d1">1</data>
+      <data key="d2">Locomotor</data>
+    </node>
+    <node id="spell:Lumos">
+      <data key="d1">1</data>
+      <data key="d2">Lumos</data>
+    </node>
+    <node id="spell:Portus">
+      <data key="d1">1</data>
+      <data key="d2">Portus</data>
+    </node>
+    <node id="spell:Rennervate">
+      <data key="d1">1</data>
+      <data key="d2">Rennervate</data>
+    </node>
+    <node id="spell:Sectumsempra">
+      <data key="d1">1</data>
+      <data key="d2">Sectumsempra</data>
+    </node>
+    <node id="character:All">
+      <data key="d1">0</data>
+      <data key="d2">All</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="spell:Riddikulus">
+      <data key="d1">1</data>
+      <data key="d2">Riddikulus</data>
+    </node>
+    <node id="character:Angelina Johnson">
+      <data key="d1">0</data>
+      <data key="d2">Angelina Johnson</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="spell:Impervius">
+      <data key="d1">1</data>
+      <data key="d2">Impervius</data>
+    </node>
+    <node id="character:Argus Filch">
+      <data key="d1">0</data>
+      <data key="d2">Argus Filch</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="spell:Waddiwasi">
+      <data key="d1">1</data>
+      <data key="d2">Waddiwasi</data>
+    </node>
+    <node id="character:Bathilda Bagshot">
+      <data key="d1">0</data>
+      <data key="d2">Bathilda Bagshot</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="spell:Tergeo">
+      <data key="d1">1</data>
+      <data key="d2">Tergeo</data>
+    </node>
+    <node id="character:Bellatrix Lestrange">
+      <data key="d1">0</data>
+      <data key="d2">Bellatrix Lestrange</data>
+      <data key="d3">villain</data>
+    </node>
+    <node id="spell:Crucio">
+      <data key="d1">1</data>
+      <data key="d2">Crucio</data>
+    </node>
+    <node id="spell:Expelliarmus">
+      <data key="d1">1</data>
+      <data key="d2">Expelliarmus</data>
+    </node>
+    <node id="spell:Stupefy">
+      <data key="d1">1</data>
+      <data key="d2">Stupefy</data>
+    </node>
+    <node id="character:Bill Weasley">
+      <data key="d1">0</data>
+      <data key="d2">Bill Weasley</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="spell:Evanesco">
+      <data key="d1">1</data>
+      <data key="d2">Evanesco</data>
+    </node>
+    <node id="character:Cedric Diggory">
+      <data key="d1">0</data>
+      <data key="d2">Cedric Diggory</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="character:Dean Thomas">
+      <data key="d1">0</data>
+      <data key="d2">Dean Thomas</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="character:Death Eater">
+      <data key="d1">0</data>
+      <data key="d2">Death Eater</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="spell:Impedimenta">
+      <data key="d1">1</data>
+      <data key="d2">Impedimenta</data>
+    </node>
+    <node id="character:Dolores Umbridge">
+      <data key="d1">0</data>
+      <data key="d2">Dolores Umbridge</data>
+      <data key="d3">villain</data>
+    </node>
+    <node id="spell:Expecto Patronum">
+      <data key="d1">1</data>
+      <data key="d2">Expecto Patronum</data>
+    </node>
+    <node id="spell:Incarcerous">
+      <data key="d1">1</data>
+      <data key="d2">Incarcerous</data>
+    </node>
+    <node id="character:Draco Malfoy">
+      <data key="d1">0</data>
+      <data key="d2">Draco Malfoy</data>
+      <data key="d3">ambiguous</data>
+    </node>
+    <node id="spell:Petrificus Totalus">
+      <data key="d1">1</data>
+      <data key="d2">Petrificus Totalus</data>
+    </node>
+    <node id="spell:Reducto">
+      <data key="d1">1</data>
+      <data key="d2">Reducto</data>
+    </node>
+    <node id="spell:Serpensortia">
+      <data key="d1">1</data>
+      <data key="d2">Serpensortia</data>
+    </node>
+    <node id="character:Dudley Dursley">
+      <data key="d1">0</data>
+      <data key="d2">Dudley Dursley</data>
+      <data key="d3">ambiguous</data>
+    </node>
+    <node id="character:Fenrir Greyback">
+      <data key="d1">0</data>
+      <data key="d2">Fenrir Greyback</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="character:Filius Flitwick">
+      <data key="d1">0</data>
+      <data key="d2">Filius Flitwick</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="spell:Protego">
+      <data key="d1">1</data>
+      <data key="d2">Protego</data>
+    </node>
+    <node id="spell:Wingardium Leviosa">
+      <data key="d1">1</data>
+      <data key="d2">Wingardium Leviosa</data>
+    </node>
+    <node id="character:Fred Weasley">
+      <data key="d1">0</data>
+      <data key="d2">Fred Weasley</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="character:George Weasley">
+      <data key="d1">0</data>
+      <data key="d2">George Weasley</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="spell:Furnunculus">
+      <data key="d1">1</data>
+      <data key="d2">Furnunculus</data>
+    </node>
+    <node id="character:Gilderoy Lockhart">
+      <data key="d1">0</data>
+      <data key="d2">Gilderoy Lockhart</data>
+      <data key="d3">villain</data>
+    </node>
+    <node id="spell:Alohomora">
+      <data key="d1">1</data>
+      <data key="d2">Alohomora</data>
+    </node>
+    <node id="spell:Brackium Emendo">
+      <data key="d1">1</data>
+      <data key="d2">Brackium Emendo</data>
+    </node>
+    <node id="spell:Obliviate">
+      <data key="d1">1</data>
+      <data key="d2">Obliviate</data>
+    </node>
+    <node id="spell:Peskipiksi Pesternomi">
+      <data key="d1">1</data>
+      <data key="d2">Peskipiksi Pesternomi</data>
+    </node>
+    <node id="character:Ginny Weasley">
+      <data key="d1">0</data>
+      <data key="d2">Ginny Weasley</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="spell:Incendio">
+      <data key="d1">1</data>
+      <data key="d2">Incendio</data>
+    </node>
+    <node id="character:Gregory Goyle">
+      <data key="d1">0</data>
+      <data key="d2">Gregory Goyle</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="character:Harry Potter">
+      <data key="d1">0</data>
+      <data key="d2">Harry Potter</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="spell:Colloportus">
+      <data key="d1">1</data>
+      <data key="d2">Colloportus</data>
+    </node>
+    <node id="spell:Confringo">
+      <data key="d1">1</data>
+      <data key="d2">Confringo</data>
+    </node>
+    <node id="spell:Diffindo">
+      <data key="d1">1</data>
+      <data key="d2">Diffindo</data>
+    </node>
+    <node id="spell:Dissendium">
+      <data key="d1">1</data>
+      <data key="d2">Dissendium</data>
+    </node>
+    <node id="spell:Episkey">
+      <data key="d1">1</data>
+      <data key="d2">Episkey</data>
+    </node>
+    <node id="spell:Expulso">
+      <data key="d1">1</data>
+      <data key="d2">Expulso</data>
+    </node>
+    <node id="spell:Finite">
+      <data key="d1">1</data>
+      <data key="d2">Finite</data>
+    </node>
+    <node id="spell:Geminio">
+      <data key="d1">1</data>
+      <data key="d2">Geminio</data>
+    </node>
+    <node id="spell:Legilimens">
+      <data key="d1">1</data>
+      <data key="d2">Legilimens</data>
+    </node>
+    <node id="spell:Levicorpus">
+      <data key="d1">1</data>
+      <data key="d2">Levicorpus</data>
+    </node>
+    <node id="spell:Liberacorpus">
+      <data key="d1">1</data>
+      <data key="d2">Liberacorpus</data>
+    </node>
+    <node id="spell:Morsmordre">
+      <data key="d1">1</data>
+      <data key="d2">Morsmordre</data>
+    </node>
+    <node id="spell:Muffliato">
+      <data key="d1">1</data>
+      <data key="d2">Muffliato</data>
+    </node>
+    <node id="spell:Nox">
+      <data key="d1">1</data>
+      <data key="d2">Nox</data>
+    </node>
+    <node id="spell:Relashio">
+      <data key="d1">1</data>
+      <data key="d2">Relashio</data>
+    </node>
+    <node id="spell:Reparo">
+      <data key="d1">1</data>
+      <data key="d2">Reparo</data>
+    </node>
+    <node id="spell:Rictusempra">
+      <data key="d1">1</data>
+      <data key="d2">Rictusempra</data>
+    </node>
+    <node id="spell:Salvio Hexia">
+      <data key="d1">1</data>
+      <data key="d2">Salvio Hexia</data>
+    </node>
+    <node id="spell:Tarantallegra">
+      <data key="d1">1</data>
+      <data key="d2">Tarantallegra</data>
+    </node>
+    <node id="character:Hermione Granger">
+      <data key="d1">0</data>
+      <data key="d2">Hermione Granger</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="spell:Aparecium">
+      <data key="d1">1</data>
+      <data key="d2">Aparecium</data>
+    </node>
+    <node id="spell:Bombarda">
+      <data key="d1">1</data>
+      <data key="d2">Bombarda</data>
+    </node>
+    <node id="spell:Defodio">
+      <data key="d1">1</data>
+      <data key="d2">Defodio</data>
+    </node>
+    <node id="spell:Deprimo">
+      <data key="d1">1</data>
+      <data key="d2">Deprimo</data>
+    </node>
+    <node id="spell:Duro">
+      <data key="d1">1</data>
+      <data key="d2">Duro</data>
+    </node>
+    <node id="spell:Glisseo">
+      <data key="d1">1</data>
+      <data key="d2">Glisseo</data>
+    </node>
+    <node id="spell:Homenum Revelio">
+      <data key="d1">1</data>
+      <data key="d2">Homenum Revelio</data>
+    </node>
+    <node id="spell:Locomotor Mortis">
+      <data key="d1">1</data>
+      <data key="d2">Locomotor Mortis</data>
+    </node>
+    <node id="spell:Mobiliarbus">
+      <data key="d1">1</data>
+      <data key="d2">Mobiliarbus</data>
+    </node>
+    <node id="spell:Oppugno">
+      <data key="d1">1</data>
+      <data key="d2">Oppugno</data>
+    </node>
+    <node id="spell:Repello Muggletum">
+      <data key="d1">1</data>
+      <data key="d2">Repello Muggletum</data>
+    </node>
+    <node id="spell:Silencio">
+      <data key="d1">1</data>
+      <data key="d2">Silencio</data>
+    </node>
+    <node id="spell:Specialis Revelio">
+      <data key="d1">1</data>
+      <data key="d2">Specialis Revelio</data>
+    </node>
+    <node id="character:Horace Slughorn">
+      <data key="d1">0</data>
+      <data key="d2">Horace Slughorn</data>
+      <data key="d3">ambiguous</data>
+    </node>
+    <node id="spell:Anapneo">
+      <data key="d1">1</data>
+      <data key="d2">Anapneo</data>
+    </node>
+    <node id="character:James Potter">
+      <data key="d1">0</data>
+      <data key="d2">James Potter</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="character:Lily Potter">
+      <data key="d1">0</data>
+      <data key="d2">Lily Potter</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="character:Luna Lovegood">
+      <data key="d1">0</data>
+      <data key="d2">Luna Lovegood</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="character:Madam Hooch">
+      <data key="d1">0</data>
+      <data key="d2">Madam Hooch</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="character:Minerva McGonagall">
+      <data key="d1">0</data>
+      <data key="d2">Minerva McGonagall</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="spell:Vera Verto">
+      <data key="d1">1</data>
+      <data key="d2">Vera Verto</data>
+    </node>
+    <node id="character:Molly Weasley">
+      <data key="d1">0</data>
+      <data key="d2">Molly Weasley</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="character:Neville Longbottom">
+      <data key="d1">0</data>
+      <data key="d2">Neville Longbottom</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="character:Nymphadora Tonks">
+      <data key="d1">0</data>
+      <data key="d2">Nymphadora Tonks</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="spell:Scourgify">
+      <data key="d1">1</data>
+      <data key="d2">Scourgify</data>
+    </node>
+    <node id="character:Parvati Patil">
+      <data key="d1">0</data>
+      <data key="d2">Parvati Patil</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="character:Professors">
+      <data key="d1">0</data>
+      <data key="d2">Professors</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="spell:Repello Inimicum">
+      <data key="d1">1</data>
+      <data key="d2">Repello Inimicum</data>
+    </node>
+    <node id="character:Remus Lupin">
+      <data key="d1">0</data>
+      <data key="d2">Remus Lupin</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="spell:Mobilicorpus">
+      <data key="d1">1</data>
+      <data key="d2">Mobilicorpus</data>
+    </node>
+    <node id="character:Ron Weasley">
+      <data key="d1">0</data>
+      <data key="d2">Ron Weasley</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="spell:Cave Inimicum">
+      <data key="d1">1</data>
+      <data key="d2">Cave Inimicum</data>
+    </node>
+    <node id="spell:Deletrius">
+      <data key="d1">1</data>
+      <data key="d2">Deletrius</data>
+    </node>
+    <node id="spell:Descendo">
+      <data key="d1">1</data>
+      <data key="d2">Descendo</data>
+    </node>
+    <node id="spell:Ferula">
+      <data key="d1">1</data>
+      <data key="d2">Ferula</data>
+    </node>
+    <node id="spell:Meteolojinx Recanto">
+      <data key="d1">1</data>
+      <data key="d2">Meteolojinx Recanto</data>
+    </node>
+    <node id="spell:Revelio">
+      <data key="d1">1</data>
+      <data key="d2">Revelio</data>
+    </node>
+    <node id="character:Rubeus Hagrid">
+      <data key="d1">0</data>
+      <data key="d2">Rubeus Hagrid</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="character:Severus Snape">
+      <data key="d1">0</data>
+      <data key="d2">Severus Snape</data>
+      <data key="d3">ambiguous</data>
+    </node>
+    <node id="character:Sirius Black">
+      <data key="d1">0</data>
+      <data key="d2">Sirius Black</data>
+      <data key="d3">hero</data>
+    </node>
+    <node id="character:Ted Tonks">
+      <data key="d1">0</data>
+      <data key="d2">Ted Tonks</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="spell:Obscuro">
+      <data key="d1">1</data>
+      <data key="d2">Obscuro</data>
+    </node>
+    <node id="spell:Quietus">
+      <data key="d1">1</data>
+      <data key="d2">Quietus</data>
+    </node>
+    <node id="spell:Sonorus">
+      <data key="d1">1</data>
+      <data key="d2">Sonorus</data>
+    </node>
+    <node id="character:Unknown">
+      <data key="d1">0</data>
+      <data key="d2">Unknown</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="spell:Confundo">
+      <data key="d1">1</data>
+      <data key="d2">Confundo</data>
+    </node>
+    <node id="character:Vincent Crabbe">
+      <data key="d1">0</data>
+      <data key="d2">Vincent Crabbe</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <node id="character:Voldemort">
+      <data key="d1">0</data>
+      <data key="d2">Voldemort</data>
+      <data key="d3">villain</data>
+    </node>
+    <node id="spell:Cistem Aperio">
+      <data key="d1">1</data>
+      <data key="d2">Cistem Aperio</data>
+    </node>
+    <node id="character:Zacharias Smith">
+      <data key="d1">0</data>
+      <data key="d2">Zacharias Smith</data>
+      <data key="d3">unassigned</data>
+    </node>
+    <edge source="character:Alastor Moody" target="spell:Avada Kedavra">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Alastor Moody" target="spell:Engorgio">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Alastor Moody" target="spell:Imperio">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Alastor Moody" target="spell:Reducio">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Avada Kedavra" target="character:Albus Dumbledore">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Avada Kedavra" target="character:Draco Malfoy">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Avada Kedavra" target="character:Gregory Goyle">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Avada Kedavra" target="character:Harry Potter">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Avada Kedavra" target="character:Hermione Granger">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Avada Kedavra" target="character:Nymphadora Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Avada Kedavra" target="character:Ron Weasley">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Avada Kedavra" target="character:Severus Snape">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Avada Kedavra" target="character:Unknown">
+      <data key="d4">3</data>
+      <data key="d5">0</data>
+      <data key="d6">3</data>
+    </edge>
+    <edge source="spell:Avada Kedavra" target="character:Voldemort">
+      <data key="d4">2</data>
+      <data key="d5">3</data>
+      <data key="d6">5</data>
+    </edge>
+    <edge source="spell:Engorgio" target="character:Harry Potter">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Engorgio" target="character:Ron Weasley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Imperio" target="character:Harry Potter">
+      <data key="d4">3</data>
+      <data key="d5">1</data>
+      <data key="d6">4</data>
+    </edge>
+    <edge source="spell:Imperio" target="character:Ron Weasley">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Imperio" target="character:Ted Tonks">
+      <data key="d4">3</data>
+      <data key="d5">0</data>
+      <data key="d6">3</data>
+    </edge>
+    <edge source="spell:Reducio" target="character:Harry Potter">
+      <data key="d4">1</data>
+      <data key="d5">1</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Albus Dumbledore" target="spell:Accio">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Albus Dumbledore" target="spell:Aguamenti">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Albus Dumbledore" target="spell:Arresto Momentum">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Albus Dumbledore" target="spell:Locomotor">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Albus Dumbledore" target="spell:Lumos">
+      <data key="d4">2</data>
+      <data key="d5">1</data>
+      <data key="d6">3</data>
+    </edge>
+    <edge source="character:Albus Dumbledore" target="spell:Portus">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Albus Dumbledore" target="spell:Rennervate">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Albus Dumbledore" target="spell:Sectumsempra">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Accio" target="character:Dolores Umbridge">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Accio" target="character:Draco Malfoy">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Accio" target="character:Fred Weasley">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Accio" target="character:George Weasley">
+      <data key="d4">3</data>
+      <data key="d5">1</data>
+      <data key="d6">4</data>
+    </edge>
+    <edge source="spell:Accio" target="character:Harry Potter">
+      <data key="d4">7</data>
+      <data key="d5">4</data>
+      <data key="d6">11</data>
+    </edge>
+    <edge source="spell:Accio" target="character:Hermione Granger">
+      <data key="d4">5</data>
+      <data key="d5">0</data>
+      <data key="d6">5</data>
+    </edge>
+    <edge source="spell:Accio" target="character:Molly Weasley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Accio" target="character:Neville Longbottom">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Accio" target="character:Ron Weasley">
+      <data key="d4">3</data>
+      <data key="d5">0</data>
+      <data key="d6">3</data>
+    </edge>
+    <edge source="spell:Accio" target="character:Sirius Black">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Accio" target="character:Ted Tonks">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Accio" target="character:Unknown">
+      <data key="d4">7</data>
+      <data key="d5">0</data>
+      <data key="d6">7</data>
+    </edge>
+    <edge source="spell:Aguamenti" target="character:Harry Potter">
+      <data key="d4">5</data>
+      <data key="d5">0</data>
+      <data key="d6">5</data>
+    </edge>
+    <edge source="spell:Aguamenti" target="character:Hermione Granger">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Aguamenti" target="character:Ron Weasley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Aguamenti" target="character:Rubeus Hagrid">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Locomotor" target="character:Nymphadora Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Lumos" target="character:Dudley Dursley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Lumos" target="character:Ginny Weasley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Lumos" target="character:Harry Potter">
+      <data key="d4">10</data>
+      <data key="d5">11</data>
+      <data key="d6">21</data>
+    </edge>
+    <edge source="spell:Lumos" target="character:Hermione Granger">
+      <data key="d4">2</data>
+      <data key="d5">2</data>
+      <data key="d6">4</data>
+    </edge>
+    <edge source="spell:Lumos" target="character:Ron Weasley">
+      <data key="d4">1</data>
+      <data key="d5">1</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Lumos" target="character:Ted Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Lumos" target="character:Unknown">
+      <data key="d4">4</data>
+      <data key="d5">0</data>
+      <data key="d6">4</data>
+    </edge>
+    <edge source="spell:Portus" target="character:Ron Weasley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Portus" target="character:Ted Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Rennervate" target="character:Ted Tonks">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Sectumsempra" target="character:Harry Potter">
+      <data key="d4">3</data>
+      <data key="d5">2</data>
+      <data key="d6">5</data>
+    </edge>
+    <edge source="spell:Sectumsempra" target="character:Hermione Granger">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:All" target="spell:Riddikulus">
+      <data key="d4">0</data>
+      <data key="d5">2</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Riddikulus" target="character:Molly Weasley">
+      <data key="d4">4</data>
+      <data key="d5">0</data>
+      <data key="d6">4</data>
+    </edge>
+    <edge source="spell:Riddikulus" target="character:Neville Longbottom">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Riddikulus" target="character:Parvati Patil">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Riddikulus" target="character:Remus Lupin">
+      <data key="d4">1</data>
+      <data key="d5">3</data>
+      <data key="d6">4</data>
+    </edge>
+    <edge source="spell:Riddikulus" target="character:Ron Weasley">
+      <data key="d4">2</data>
+      <data key="d5">1</data>
+      <data key="d6">3</data>
+    </edge>
+    <edge source="spell:Riddikulus" target="character:Unknown">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Angelina Johnson" target="spell:Impervius">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Impervius" target="character:Harry Potter">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Impervius" target="character:Hermione Granger">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Argus Filch" target="spell:Waddiwasi">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Bathilda Bagshot" target="spell:Tergeo">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Tergeo" target="character:Hermione Granger">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Bellatrix Lestrange" target="spell:Crucio">
+      <data key="d4">0</data>
+      <data key="d5">2</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Bellatrix Lestrange" target="spell:Expelliarmus">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Bellatrix Lestrange" target="spell:Stupefy">
+      <data key="d4">3</data>
+      <data key="d5">0</data>
+      <data key="d6">3</data>
+    </edge>
+    <edge source="spell:Crucio" target="character:Dean Thomas">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Crucio" target="character:Harry Potter">
+      <data key="d4">3</data>
+      <data key="d5">1</data>
+      <data key="d6">4</data>
+    </edge>
+    <edge source="spell:Crucio" target="character:Neville Longbottom">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Crucio" target="character:Unknown">
+      <data key="d4">6</data>
+      <data key="d5">0</data>
+      <data key="d6">6</data>
+    </edge>
+    <edge source="spell:Expelliarmus" target="character:Gilderoy Lockhart">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Expelliarmus" target="character:Harry Potter">
+      <data key="d4">7</data>
+      <data key="d5">3</data>
+      <data key="d6">10</data>
+    </edge>
+    <edge source="spell:Expelliarmus" target="character:Hermione Granger">
+      <data key="d4">1</data>
+      <data key="d5">1</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Expelliarmus" target="character:Neville Longbottom">
+      <data key="d4">1</data>
+      <data key="d5">4</data>
+      <data key="d6">5</data>
+    </edge>
+    <edge source="spell:Expelliarmus" target="character:Remus Lupin">
+      <data key="d4">1</data>
+      <data key="d5">1</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Expelliarmus" target="character:Severus Snape">
+      <data key="d4">0</data>
+      <data key="d5">2</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Expelliarmus" target="character:Sirius Black">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Expelliarmus" target="character:Ted Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Expelliarmus" target="character:Unknown">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Expelliarmus" target="character:Vincent Crabbe">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Expelliarmus" target="character:Voldemort">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Expelliarmus" target="character:Zacharias Smith">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Stupefy" target="character:Cedric Diggory">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Stupefy" target="character:Dolores Umbridge">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Stupefy" target="character:Harry Potter">
+      <data key="d4">9</data>
+      <data key="d5">4</data>
+      <data key="d6">13</data>
+    </edge>
+    <edge source="spell:Stupefy" target="character:Hermione Granger">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Stupefy" target="character:Neville Longbottom">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Stupefy" target="character:Ron Weasley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Stupefy" target="character:Severus Snape">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Stupefy" target="character:Ted Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Stupefy" target="character:Unknown">
+      <data key="d4">5</data>
+      <data key="d5">0</data>
+      <data key="d6">5</data>
+    </edge>
+    <edge source="character:Bill Weasley" target="spell:Evanesco">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Evanesco" target="character:Severus Snape">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Death Eater" target="spell:Impedimenta">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Impedimenta" target="character:Draco Malfoy">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Impedimenta" target="character:Fred Weasley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Impedimenta" target="character:Harry Potter">
+      <data key="d4">3</data>
+      <data key="d5">1</data>
+      <data key="d6">4</data>
+    </edge>
+    <edge source="spell:Impedimenta" target="character:James Potter">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Impedimenta" target="character:Madam Hooch">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Impedimenta" target="character:Severus Snape">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Impedimenta" target="character:Sirius Black">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Impedimenta" target="character:Ted Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Impedimenta" target="character:Unknown">
+      <data key="d4">3</data>
+      <data key="d5">0</data>
+      <data key="d6">3</data>
+    </edge>
+    <edge source="character:Dolores Umbridge" target="spell:Expecto Patronum">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Dolores Umbridge" target="spell:Incarcerous">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Expecto Patronum" target="character:Harry Potter">
+      <data key="d4">16</data>
+      <data key="d5">10</data>
+      <data key="d6">26</data>
+    </edge>
+    <edge source="spell:Expecto Patronum" target="character:Hermione Granger">
+      <data key="d4">5</data>
+      <data key="d5">0</data>
+      <data key="d6">5</data>
+    </edge>
+    <edge source="spell:Expecto Patronum" target="character:Remus Lupin">
+      <data key="d4">0</data>
+      <data key="d5">2</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Expecto Patronum" target="character:Ron Weasley">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Expecto Patronum" target="character:Severus Snape">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Expecto Patronum" target="character:Unknown">
+      <data key="d4">5</data>
+      <data key="d5">0</data>
+      <data key="d6">5</data>
+    </edge>
+    <edge source="spell:Incarcerous" target="character:Harry Potter">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Draco Malfoy" target="spell:Petrificus Totalus">
+      <data key="d4">1</data>
+      <data key="d5">1</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Draco Malfoy" target="spell:Reducto">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Draco Malfoy" target="spell:Serpensortia">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Petrificus Totalus" target="character:Harry Potter">
+      <data key="d4">4</data>
+      <data key="d5">0</data>
+      <data key="d6">4</data>
+    </edge>
+    <edge source="spell:Petrificus Totalus" target="character:Hermione Granger">
+      <data key="d4">0</data>
+      <data key="d5">2</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Petrificus Totalus" target="character:Lily Potter">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Petrificus Totalus" target="character:Neville Longbottom">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Petrificus Totalus" target="character:Unknown">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Reducto" target="character:Fenrir Greyback">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Reducto" target="character:Unknown">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Serpensortia" target="character:Harry Potter">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Filius Flitwick" target="spell:Protego">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Filius Flitwick" target="spell:Wingardium Leviosa">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Protego" target="character:Harry Potter">
+      <data key="d4">5</data>
+      <data key="d5">2</data>
+      <data key="d6">7</data>
+    </edge>
+    <edge source="spell:Protego" target="character:Hermione Granger">
+      <data key="d4">2</data>
+      <data key="d5">1</data>
+      <data key="d6">3</data>
+    </edge>
+    <edge source="spell:Protego" target="character:Professors">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Protego" target="character:Ron Weasley">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Protego" target="character:Ted Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Protego" target="character:Unknown">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Wingardium Leviosa" target="character:Harry Potter">
+      <data key="d4">1</data>
+      <data key="d5">1</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Wingardium Leviosa" target="character:Hermione Granger">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Wingardium Leviosa" target="character:Remus Lupin">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Wingardium Leviosa" target="character:Ron Weasley">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Wingardium Leviosa" target="character:Ted Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Wingardium Leviosa" target="character:Unknown">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:George Weasley" target="spell:Furnunculus">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Gilderoy Lockhart" target="spell:Alohomora">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Gilderoy Lockhart" target="spell:Brackium Emendo">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Gilderoy Lockhart" target="spell:Obliviate">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Gilderoy Lockhart" target="spell:Peskipiksi Pesternomi">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Alohomora" target="character:Harry Potter">
+      <data key="d4">4</data>
+      <data key="d5">1</data>
+      <data key="d6">5</data>
+    </edge>
+    <edge source="spell:Alohomora" target="character:Hermione Granger">
+      <data key="d4">2</data>
+      <data key="d5">2</data>
+      <data key="d6">4</data>
+    </edge>
+    <edge source="spell:Alohomora" target="character:Ron Weasley">
+      <data key="d4">0</data>
+      <data key="d5">2</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Alohomora" target="character:Unknown">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Obliviate" target="character:Hermione Granger">
+      <data key="d4">1</data>
+      <data key="d5">2</data>
+      <data key="d6">3</data>
+    </edge>
+    <edge source="spell:Obliviate" target="character:Ron Weasley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Obliviate" target="character:Ted Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Obliviate" target="character:Unknown">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Ginny Weasley" target="spell:Incendio">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Incendio" target="character:Harry Potter">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Incendio" target="character:Hermione Granger">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Incendio" target="character:Severus Snape">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Colloportus">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Confringo">
+      <data key="d4">0</data>
+      <data key="d5">2</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Diffindo">
+      <data key="d4">3</data>
+      <data key="d5">1</data>
+      <data key="d6">4</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Dissendium">
+      <data key="d4">2</data>
+      <data key="d5">1</data>
+      <data key="d6">3</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Episkey">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Expulso">
+      <data key="d4">1</data>
+      <data key="d5">1</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Finite">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Geminio">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Legilimens">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Levicorpus">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Liberacorpus">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Morsmordre">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Muffliato">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Nox">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Relashio">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Reparo">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Rictusempra">
+      <data key="d4">1</data>
+      <data key="d5">1</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Salvio Hexia">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Harry Potter" target="spell:Tarantallegra">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Colloportus" target="character:Hermione Granger">
+      <data key="d4">1</data>
+      <data key="d5">1</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Confringo" target="character:Hermione Granger">
+      <data key="d4">0</data>
+      <data key="d5">2</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Confringo" target="character:Ted Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Diffindo" target="character:Hermione Granger">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Diffindo" target="character:Ron Weasley">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Diffindo" target="character:Unknown">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Dissendium" target="character:Unknown">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Episkey" target="character:Luna Lovegood">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Episkey" target="character:Nymphadora Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Finite" target="character:Hermione Granger">
+      <data key="d4">1</data>
+      <data key="d5">2</data>
+      <data key="d6">3</data>
+    </edge>
+    <edge source="spell:Finite" target="character:Neville Longbottom">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Finite" target="character:Ron Weasley">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Finite" target="character:Ted Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Legilimens" target="character:Severus Snape">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Legilimens" target="character:Unknown">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Levicorpus" target="character:James Potter">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Levicorpus" target="character:Ted Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Muffliato" target="character:Hermione Granger">
+      <data key="d4">1</data>
+      <data key="d5">1</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Muffliato" target="character:Ron Weasley">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Nox" target="character:Ron Weasley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Nox" target="character:Unknown">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Relashio" target="character:Hermione Granger">
+      <data key="d4">0</data>
+      <data key="d5">2</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Relashio" target="character:Ron Weasley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Relashio" target="character:Ted Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Relashio" target="character:Unknown">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Reparo" target="character:Hermione Granger">
+      <data key="d4">3</data>
+      <data key="d5">2</data>
+      <data key="d6">5</data>
+    </edge>
+    <edge source="spell:Reparo" target="character:Ron Weasley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Reparo" target="character:Severus Snape">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Reparo" target="character:Ted Tonks">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Reparo" target="character:Unknown">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Salvio Hexia" target="character:Hermione Granger">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Salvio Hexia" target="character:Ron Weasley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Salvio Hexia" target="character:Unknown">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Hermione Granger" target="spell:Aparecium">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Hermione Granger" target="spell:Bombarda">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Hermione Granger" target="spell:Defodio">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Hermione Granger" target="spell:Deprimo">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Hermione Granger" target="spell:Duro">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Hermione Granger" target="spell:Glisseo">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Hermione Granger" target="spell:Homenum Revelio">
+      <data key="d4">1</data>
+      <data key="d5">1</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Hermione Granger" target="spell:Locomotor Mortis">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Hermione Granger" target="spell:Mobiliarbus">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Hermione Granger" target="spell:Oppugno">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Hermione Granger" target="spell:Repello Muggletum">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Hermione Granger" target="spell:Silencio">
+      <data key="d4">6</data>
+      <data key="d5">0</data>
+      <data key="d6">6</data>
+    </edge>
+    <edge source="character:Hermione Granger" target="spell:Specialis Revelio">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Homenum Revelio" target="character:Unknown">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Locomotor Mortis" target="character:Sirius Black">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Oppugno" target="character:Ron Weasley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Repello Muggletum" target="character:Ron Weasley">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Silencio" target="character:Ron Weasley">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Horace Slughorn" target="spell:Anapneo">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Minerva McGonagall" target="spell:Vera Verto">
+      <data key="d4">0</data>
+      <data key="d5">2</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Vera Verto" target="character:Ron Weasley">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Nymphadora Tonks" target="spell:Scourgify">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Scourgify" target="character:Sirius Black">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Professors" target="spell:Repello Inimicum">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Remus Lupin" target="spell:Mobilicorpus">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Ron Weasley" target="spell:Cave Inimicum">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Ron Weasley" target="spell:Deletrius">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Ron Weasley" target="spell:Descendo">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Ron Weasley" target="spell:Ferula">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Ron Weasley" target="spell:Meteolojinx Recanto">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="character:Ron Weasley" target="spell:Revelio">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="spell:Cave Inimicum" target="character:Unknown">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Ted Tonks" target="spell:Obscuro">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Ted Tonks" target="spell:Quietus">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Ted Tonks" target="spell:Sonorus">
+      <data key="d4">2</data>
+      <data key="d5">0</data>
+      <data key="d6">2</data>
+    </edge>
+    <edge source="spell:Sonorus" target="character:Unknown">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Unknown" target="spell:Confundo">
+      <data key="d4">1</data>
+      <data key="d5">0</data>
+      <data key="d6">1</data>
+    </edge>
+    <edge source="character:Voldemort" target="spell:Cistem Aperio">
+      <data key="d4">0</data>
+      <data key="d5">1</data>
+      <data key="d6">1</data>
+    </edge>
+    <data key="d0">bipartite character/spell incantation references; not confirmed casting</data>
+  </graph>
+</graphml>

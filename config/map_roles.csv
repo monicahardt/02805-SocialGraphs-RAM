@@ -1,0 +1,48 @@
+character,role,note
+Harry Potter,hero,Central protagonist
+Ron Weasley,hero,Central protagonist
+Hermione Granger,hero,Central protagonist
+Albus Dumbledore,hero,Opposes Voldemort
+Rubeus Hagrid,hero,Supports Harry and opposes Voldemort
+Minerva McGonagall,hero,Opposes Voldemort
+Sirius Black,hero,Order of the Phoenix
+Remus Lupin,hero,Order of the Phoenix
+Nymphadora Tonks,hero,Order of the Phoenix
+Kingsley Shacklebolt,hero,Order of the Phoenix
+Neville Longbottom,hero,Opposes Voldemort
+Luna Lovegood,hero,Opposes Voldemort
+Ginny Weasley,hero,Opposes Voldemort
+Molly Weasley,hero,Opposes Voldemort
+Arthur Weasley,hero,Order of the Phoenix
+Fred Weasley,hero,Opposes Voldemort
+George Weasley,hero,Opposes Voldemort
+Bill Weasley,hero,Order of the Phoenix
+Fleur Delacour,hero,Supports resistance to Voldemort
+Aberforth Dumbledore,hero,Helps the resistance
+Elphias Doge,hero,Order of the Phoenix
+Lily Potter,hero,Protects Harry against Voldemort
+Cedric Diggory,hero,Sympathetic protagonist ally
+Dobby,hero,Helps Harry resist Voldemort
+Voldemort,villain,Central antagonist; explicit Tom Riddle labels are merged
+Bellatrix Lestrange,villain,Death Eater
+Dolores Umbridge,villain,Institutional antagonist
+Lucius Malfoy,villain,Death Eater; provisional whole-series role
+Peter Pettigrew,villain,Serves Voldemort
+Quirinus Quirrell,villain,Serves Voldemort
+Corban Yaxley,villain,Death Eater
+Scabior,villain,Snatcher
+Gilderoy Lockhart,villain,Antagonist; label is not restricted to Death Eaters
+Severus Snape,ambiguous,Apparent and revealed allegiances differ
+Draco Malfoy,ambiguous,Antagonist with changing behavior and coercion
+Alastor Moody,ambiguous,Speaker label includes an impersonator in installment four
+Bartemius Crouch,ambiguous,Supplied label does not reliably distinguish father and son
+Cornelius Fudge,ambiguous,Institutional opposition outside a clear binary alignment
+Horace Slughorn,ambiguous,Self-interest and assistance to Harry coexist
+Igor Karkaroff,ambiguous,Former Death Eater with changing allegiance
+Kreacher,ambiguous,Changing loyalty
+Griphook,ambiguous,Cooperation and betrayal
+Mundungus Fletcher,ambiguous,Order member with conflicting behavior
+Rita Skeeter,ambiguous,Antagonistic journalist outside the main alignment
+Vernon Dursley,ambiguous,Domestic antagonist outside the main alignment
+Petunia Dursley,ambiguous,Domestic antagonist outside the main alignment
+Dudley Dursley,ambiguous,Domestic antagonist with changing behavior

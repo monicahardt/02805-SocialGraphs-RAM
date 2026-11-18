@@ -1,0 +1,42 @@
+{
+  "documents": 377,
+  "dialogue_lines": 37907,
+  "word_occurrences": 371191,
+  "vocabulary_words": 2506,
+  "directed_context_pairs": 2381142,
+  "observed_pair_cells": 514364,
+  "positive_ppmi_cells": 400669,
+  "formula": "max(log2(pair_count * total_pairs / (row_total * column_total)), 0)",
+  "corpus": "eligible dialogue from both media pooled into one matrix",
+  "boundaries": "original token positions; each dialogue line is a separate sequence",
+  "parameters": {
+    "min_words": 100,
+    "window": 5,
+    "min_count": 10,
+    "max_words": 5000,
+    "min_pair_count": 3,
+    "top": 15
+  },
+  "target_words": [
+    "blood",
+    "power",
+    "death",
+    "love"
+  ],
+  "missing_target_words": [],
+  "inputs": {
+    "books": {
+      "path": "book_data\\all_books.csv",
+      "sha256": "4b1f58b9fbe5dbc5cda00c01e43f725202274de791b226e1604e1722f7ba043c"
+    },
+    "movies": {
+      "path": "movie_data\\all_movies.csv",
+      "sha256": "d08c615b95fb3c81f394ba93b477baf8e60b722908335e284971741a28b00051"
+    }
+  },
+  "versions": {
+    "numpy": "2.3.2",
+    "scipy": "1.18.1",
+    "matplotlib": "3.11.2"
+  }
+}

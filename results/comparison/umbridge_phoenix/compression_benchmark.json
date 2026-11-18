@@ -1,0 +1,13 @@
+{
+  "definition": "fraction of book TF-IDF weight whose word types occur in the comparison text",
+  "observed_film_coverage": 0.3462103058909402,
+  "simulated_mean": 0.4994335518124964,
+  "exact_expected_coverage": 0.4995171609000619,
+  "simulated_2_5_percentile": 0.4728418895445053,
+  "simulated_97_5_percentile": 0.5244677169377854,
+  "simulations": 1000,
+  "seed": 42,
+  "book_words": 3546,
+  "sample_words": 884,
+  "sampling": "word tokens drawn without replacement; no order or sentence preservation"
+}

@@ -1,0 +1,288 @@
+character,family,medium,count,words,per_10000,role
+Alastor Moody,Avada Kedavra,books,2,3082,6.489292667099286,ambiguous
+Alastor Moody,Engorgio,books,1,3082,3.244646333549643,ambiguous
+Alastor Moody,Imperio,books,1,3082,3.244646333549643,ambiguous
+Alastor Moody,Reducio,books,1,3082,3.244646333549643,ambiguous
+Albus Dumbledore,Accio,books,1,23585,0.42399830400678395,hero
+Albus Dumbledore,Aguamenti,movies,1,7656,1.3061650992685476,hero
+Albus Dumbledore,Arresto Momentum,movies,1,7656,1.3061650992685476,hero
+Albus Dumbledore,Avada Kedavra,books,1,23585,0.42399830400678395,hero
+Albus Dumbledore,Locomotor,books,1,23585,0.42399830400678395,hero
+Albus Dumbledore,Lumos,books,2,23585,0.8479966080135679,hero
+Albus Dumbledore,Lumos,movies,1,7656,1.3061650992685476,hero
+Albus Dumbledore,Portus,movies,1,7656,1.3061650992685476,hero
+Albus Dumbledore,Rennervate,books,1,23585,0.42399830400678395,hero
+Albus Dumbledore,Sectumsempra,books,2,23585,0.8479966080135679,hero
+All,Riddikulus,movies,2,13,1538.4615384615386,unassigned
+Angelina Johnson,Impervius,books,1,749,13.35113484646195,unassigned
+Argus Filch,Waddiwasi,books,1,718,13.927576601671309,unassigned
+Bathilda Bagshot,Tergeo,books,1,63,158.73015873015873,unassigned
+Bellatrix Lestrange,Crucio,movies,2,689,29.027576197387518,villain
+Bellatrix Lestrange,Expelliarmus,books,1,1344,7.440476190476191,villain
+Bellatrix Lestrange,Stupefy,books,3,1344,22.321428571428573,villain
+Bill Weasley,Evanesco,books,1,1502,6.657789613848203,hero
+Cedric Diggory,Stupefy,books,2,436,45.87155963302752,hero
+Dean Thomas,Crucio,books,1,642,15.576323987538942,unassigned
+Death Eater,Impedimenta,movies,1,43,232.5581395348837,unassigned
+Dolores Umbridge,Accio,movies,1,968,10.330578512396695,villain
+Dolores Umbridge,Expecto Patronum,books,1,3670,2.7247956403269753,villain
+Dolores Umbridge,Incarcerous,books,1,3670,2.7247956403269753,villain
+Dolores Umbridge,Stupefy,books,1,3670,2.7247956403269753,villain
+Draco Malfoy,Accio,books,1,4558,2.1939447125932428,ambiguous
+Draco Malfoy,Avada Kedavra,books,1,4558,2.1939447125932428,ambiguous
+Draco Malfoy,Impedimenta,books,1,4558,2.1939447125932428,ambiguous
+Draco Malfoy,Petrificus Totalus,books,1,4558,2.1939447125932428,ambiguous
+Draco Malfoy,Petrificus Totalus,movies,1,1282,7.800312012480499,ambiguous
+Draco Malfoy,Reducto,books,1,4558,2.1939447125932428,ambiguous
+Draco Malfoy,Serpensortia,movies,1,1282,7.800312012480499,ambiguous
+Dudley Dursley,Lumos,books,1,756,13.227513227513228,ambiguous
+Fenrir Greyback,Reducto,books,2,433,46.18937644341801,unassigned
+Filius Flitwick,Protego,books,1,223,44.84304932735426,unassigned
+Filius Flitwick,Wingardium Leviosa,movies,1,115,86.95652173913044,unassigned
+Fred Weasley,Accio,movies,1,600,16.666666666666668,hero
+Fred Weasley,Impedimenta,books,1,5919,1.6894745734076702,hero
+George Weasley,Accio,books,3,3848,7.796257796257796,hero
+George Weasley,Accio,movies,1,485,20.61855670103093,hero
+George Weasley,Furnunculus,books,1,3848,2.598752598752599,hero
+Gilderoy Lockhart,Alohomora,books,1,1267,7.892659826361484,villain
+Gilderoy Lockhart,Brackium Emendo,movies,1,896,11.160714285714286,villain
+Gilderoy Lockhart,Expelliarmus,books,1,1267,7.892659826361484,villain
+Gilderoy Lockhart,Obliviate,movies,1,896,11.160714285714286,villain
+Gilderoy Lockhart,Peskipiksi Pesternomi,movies,1,896,11.160714285714286,villain
+Ginny Weasley,Incendio,books,1,2889,3.461405330564209,hero
+Ginny Weasley,Lumos,books,1,2889,3.461405330564209,hero
+Gregory Goyle,Avada Kedavra,movies,1,10,1000.0,unassigned
+Harry Potter,Accio,books,7,74983,0.9335449368523532,hero
+Harry Potter,Accio,movies,4,13978,2.8616397195593075,hero
+Harry Potter,Aguamenti,books,5,74983,0.6668178120373951,hero
+Harry Potter,Alohomora,books,4,74983,0.5334542496299162,hero
+Harry Potter,Alohomora,movies,1,13978,0.7154099298898269,hero
+Harry Potter,Avada Kedavra,books,2,74983,0.2667271248149581,hero
+Harry Potter,Colloportus,books,2,74983,0.2667271248149581,hero
+Harry Potter,Confringo,movies,2,13978,1.4308198597796538,hero
+Harry Potter,Crucio,books,3,74983,0.40009068722243707,hero
+Harry Potter,Crucio,movies,1,13978,0.7154099298898269,hero
+Harry Potter,Diffindo,books,3,74983,0.40009068722243707,hero
+Harry Potter,Diffindo,movies,1,13978,0.7154099298898269,hero
+Harry Potter,Dissendium,books,2,74983,0.2667271248149581,hero
+Harry Potter,Dissendium,movies,1,13978,0.7154099298898269,hero
+Harry Potter,Engorgio,movies,1,13978,0.7154099298898269,hero
+Harry Potter,Episkey,books,1,74983,0.13336356240747904,hero
+Harry Potter,Expecto Patronum,books,16,74983,2.1338169985196647,hero
+Harry Potter,Expecto Patronum,movies,10,13978,7.154099298898268,hero
+Harry Potter,Expelliarmus,books,7,74983,0.9335449368523532,hero
+Harry Potter,Expelliarmus,movies,3,13978,2.1462297896694804,hero
+Harry Potter,Expulso,books,1,74983,0.13336356240747904,hero
+Harry Potter,Expulso,movies,1,13978,0.7154099298898269,hero
+Harry Potter,Finite,books,1,74983,0.13336356240747904,hero
+Harry Potter,Geminio,books,1,74983,0.13336356240747904,hero
+Harry Potter,Impedimenta,books,3,74983,0.40009068722243707,hero
+Harry Potter,Impedimenta,movies,1,13978,0.7154099298898269,hero
+Harry Potter,Imperio,books,3,74983,0.40009068722243707,hero
+Harry Potter,Imperio,movies,1,13978,0.7154099298898269,hero
+Harry Potter,Impervius,books,2,74983,0.2667271248149581,hero
+Harry Potter,Incarcerous,books,1,74983,0.13336356240747904,hero
+Harry Potter,Incendio,books,1,74983,0.13336356240747904,hero
+Harry Potter,Legilimens,books,1,74983,0.13336356240747904,hero
+Harry Potter,Levicorpus,books,1,74983,0.13336356240747904,hero
+Harry Potter,Liberacorpus,books,1,74983,0.13336356240747904,hero
+Harry Potter,Lumos,books,10,74983,1.3336356240747902,hero
+Harry Potter,Lumos,movies,11,13978,7.869509228788096,hero
+Harry Potter,Morsmordre,books,1,74983,0.13336356240747904,hero
+Harry Potter,Muffliato,books,2,74983,0.2667271248149581,hero
+Harry Potter,Nox,movies,1,13978,0.7154099298898269,hero
+Harry Potter,Petrificus Totalus,books,4,74983,0.5334542496299162,hero
+Harry Potter,Protego,books,5,74983,0.6668178120373951,hero
+Harry Potter,Protego,movies,2,13978,1.4308198597796538,hero
+Harry Potter,Reducio,books,1,74983,0.13336356240747904,hero
+Harry Potter,Reducio,movies,1,13978,0.7154099298898269,hero
+Harry Potter,Relashio,books,2,74983,0.2667271248149581,hero
+Harry Potter,Reparo,books,2,74983,0.2667271248149581,hero
+Harry Potter,Rictusempra,books,1,74983,0.13336356240747904,hero
+Harry Potter,Rictusempra,movies,1,13978,0.7154099298898269,hero
+Harry Potter,Salvio Hexia,movies,1,13978,0.7154099298898269,hero
+Harry Potter,Sectumsempra,books,3,74983,0.40009068722243707,hero
+Harry Potter,Sectumsempra,movies,2,13978,1.4308198597796538,hero
+Harry Potter,Serpensortia,books,1,74983,0.13336356240747904,hero
+Harry Potter,Stupefy,books,9,74983,1.2002720616673113,hero
+Harry Potter,Stupefy,movies,4,13978,2.8616397195593075,hero
+Harry Potter,Tarantallegra,books,1,74983,0.13336356240747904,hero
+Harry Potter,Wingardium Leviosa,books,1,74983,0.13336356240747904,hero
+Harry Potter,Wingardium Leviosa,movies,1,13978,0.7154099298898269,hero
+Hermione Granger,Accio,books,5,38280,1.3061650992685476,hero
+Hermione Granger,Aguamenti,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Alohomora,books,2,38280,0.522466039707419,hero
+Hermione Granger,Alohomora,movies,2,7618,2.625360987135731,hero
+Hermione Granger,Aparecium,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Avada Kedavra,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Bombarda,movies,1,7618,1.3126804935678655,hero
+Hermione Granger,Colloportus,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Colloportus,movies,1,7618,1.3126804935678655,hero
+Hermione Granger,Confringo,movies,2,7618,2.625360987135731,hero
+Hermione Granger,Defodio,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Deprimo,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Diffindo,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Duro,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Expecto Patronum,books,5,38280,1.3061650992685476,hero
+Hermione Granger,Expelliarmus,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Expelliarmus,movies,1,7618,1.3126804935678655,hero
+Hermione Granger,Finite,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Finite,movies,2,7618,2.625360987135731,hero
+Hermione Granger,Glisseo,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Homenum Revelio,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Homenum Revelio,movies,1,7618,1.3126804935678655,hero
+Hermione Granger,Impervius,books,2,38280,0.522466039707419,hero
+Hermione Granger,Incendio,movies,1,7618,1.3126804935678655,hero
+Hermione Granger,Locomotor Mortis,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Lumos,books,2,38280,0.522466039707419,hero
+Hermione Granger,Lumos,movies,2,7618,2.625360987135731,hero
+Hermione Granger,Mobiliarbus,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Muffliato,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Muffliato,movies,1,7618,1.3126804935678655,hero
+Hermione Granger,Obliviate,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Obliviate,movies,2,7618,2.625360987135731,hero
+Hermione Granger,Oppugno,movies,1,7618,1.3126804935678655,hero
+Hermione Granger,Petrificus Totalus,movies,2,7618,2.625360987135731,hero
+Hermione Granger,Protego,books,2,38280,0.522466039707419,hero
+Hermione Granger,Protego,movies,1,7618,1.3126804935678655,hero
+Hermione Granger,Relashio,movies,2,7618,2.625360987135731,hero
+Hermione Granger,Reparo,books,3,38280,0.7836990595611285,hero
+Hermione Granger,Reparo,movies,2,7618,2.625360987135731,hero
+Hermione Granger,Repello Muggletum,movies,1,7618,1.3126804935678655,hero
+Hermione Granger,Salvio Hexia,movies,1,7618,1.3126804935678655,hero
+Hermione Granger,Sectumsempra,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Silencio,books,6,38280,1.567398119122257,hero
+Hermione Granger,Specialis Revelio,books,1,38280,0.2612330198537095,hero
+Hermione Granger,Stupefy,books,2,38280,0.522466039707419,hero
+Hermione Granger,Tergeo,books,2,38280,0.522466039707419,hero
+Hermione Granger,Wingardium Leviosa,movies,1,7618,1.3126804935678655,hero
+Horace Slughorn,Anapneo,books,1,2734,3.6576444769568397,ambiguous
+James Potter,Impedimenta,movies,1,109,91.74311926605505,unassigned
+James Potter,Levicorpus,movies,1,109,91.74311926605505,unassigned
+Lily Potter,Petrificus Totalus,books,1,314,31.84713375796178,hero
+Luna Lovegood,Episkey,movies,1,554,18.050541516245488,hero
+Madam Hooch,Impedimenta,movies,1,220,45.45454545454545,unassigned
+Minerva McGonagall,Vera Verto,movies,2,1972,10.141987829614605,hero
+Molly Weasley,Accio,books,1,5351,1.8688095683049897,hero
+Molly Weasley,Riddikulus,books,4,5351,7.475238273219959,hero
+Neville Longbottom,Accio,books,1,2330,4.291845493562231,hero
+Neville Longbottom,Crucio,books,1,2330,4.291845493562231,hero
+Neville Longbottom,Expelliarmus,books,1,2330,4.291845493562231,hero
+Neville Longbottom,Expelliarmus,movies,4,768,52.083333333333336,hero
+Neville Longbottom,Finite,books,1,2330,4.291845493562231,hero
+Neville Longbottom,Petrificus Totalus,books,1,2330,4.291845493562231,hero
+Neville Longbottom,Riddikulus,movies,1,768,13.020833333333334,hero
+Neville Longbottom,Stupefy,books,1,2330,4.291845493562231,hero
+Nymphadora Tonks,Avada Kedavra,books,1,1402,7.132667617689016,hero
+Nymphadora Tonks,Episkey,books,1,1402,7.132667617689016,hero
+Nymphadora Tonks,Locomotor,books,1,1402,7.132667617689016,hero
+Nymphadora Tonks,Scourgify,books,1,1402,7.132667617689016,hero
+Parvati Patil,Riddikulus,movies,1,17,588.2352941176471,unassigned
+Professors,Protego,movies,1,6,1666.6666666666667,unassigned
+Professors,Repello Inimicum,movies,1,6,1666.6666666666667,unassigned
+Remus Lupin,Expecto Patronum,movies,2,1907,10.48767697954903,hero
+Remus Lupin,Expelliarmus,books,1,7867,1.271132579128003,hero
+Remus Lupin,Expelliarmus,movies,1,1907,5.243838489774515,hero
+Remus Lupin,Mobilicorpus,books,1,7867,1.271132579128003,hero
+Remus Lupin,Riddikulus,books,1,7867,1.271132579128003,hero
+Remus Lupin,Riddikulus,movies,3,1907,15.731515469323545,hero
+Remus Lupin,Wingardium Leviosa,books,1,7867,1.271132579128003,hero
+Ron Weasley,Accio,books,3,39941,0.7511078841290904,hero
+Ron Weasley,Aguamenti,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Alohomora,movies,2,6908,2.895193977996526,hero
+Ron Weasley,Avada Kedavra,books,2,39941,0.5007385894193936,hero
+Ron Weasley,Cave Inimicum,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Deletrius,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Descendo,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Diffindo,books,2,39941,0.5007385894193936,hero
+Ron Weasley,Engorgio,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Expecto Patronum,books,2,39941,0.5007385894193936,hero
+Ron Weasley,Ferula,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Finite,movies,1,6908,1.447596988998263,hero
+Ron Weasley,Imperio,movies,1,6908,1.447596988998263,hero
+Ron Weasley,Lumos,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Lumos,movies,1,6908,1.447596988998263,hero
+Ron Weasley,Meteolojinx Recanto,books,2,39941,0.5007385894193936,hero
+Ron Weasley,Muffliato,books,2,39941,0.5007385894193936,hero
+Ron Weasley,Nox,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Obliviate,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Oppugno,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Portus,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Protego,books,2,39941,0.5007385894193936,hero
+Ron Weasley,Relashio,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Reparo,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Repello Muggletum,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Revelio,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Riddikulus,books,2,39941,0.5007385894193936,hero
+Ron Weasley,Riddikulus,movies,1,6908,1.447596988998263,hero
+Ron Weasley,Salvio Hexia,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Silencio,books,2,39941,0.5007385894193936,hero
+Ron Weasley,Stupefy,books,1,39941,0.2503692947096968,hero
+Ron Weasley,Vera Verto,movies,1,6908,1.447596988998263,hero
+Ron Weasley,Wingardium Leviosa,movies,1,6908,1.447596988998263,hero
+Rubeus Hagrid,Aguamenti,books,1,11647,0.8585901948999742,hero
+Severus Snape,Avada Kedavra,movies,1,2385,4.1928721174004195,ambiguous
+Severus Snape,Evanesco,books,1,8795,1.137009664582149,ambiguous
+Severus Snape,Expecto Patronum,movies,1,2385,4.1928721174004195,ambiguous
+Severus Snape,Expelliarmus,movies,2,2385,8.385744234800839,ambiguous
+Severus Snape,Impedimenta,books,1,8795,1.137009664582149,ambiguous
+Severus Snape,Incendio,books,1,8795,1.137009664582149,ambiguous
+Severus Snape,Legilimens,books,2,8795,2.274019329164298,ambiguous
+Severus Snape,Reparo,books,1,8795,1.137009664582149,ambiguous
+Severus Snape,Stupefy,books,1,8795,1.137009664582149,ambiguous
+Sirius Black,Accio,books,1,5255,1.9029495718363463,hero
+Sirius Black,Expelliarmus,movies,1,1088,9.191176470588236,hero
+Sirius Black,Impedimenta,books,1,5255,1.9029495718363463,hero
+Sirius Black,Locomotor Mortis,movies,1,1088,9.191176470588236,hero
+Sirius Black,Scourgify,books,1,5255,1.9029495718363463,hero
+Ted Tonks,Accio,books,2,3253,6.148170919151553,unassigned
+Ted Tonks,Confringo,books,1,3253,3.0740854595757763,unassigned
+Ted Tonks,Expelliarmus,books,1,3253,3.0740854595757763,unassigned
+Ted Tonks,Finite,books,1,3253,3.0740854595757763,unassigned
+Ted Tonks,Impedimenta,books,1,3253,3.0740854595757763,unassigned
+Ted Tonks,Imperio,books,3,3253,9.222256378727328,unassigned
+Ted Tonks,Levicorpus,books,1,3253,3.0740854595757763,unassigned
+Ted Tonks,Lumos,books,1,3253,3.0740854595757763,unassigned
+Ted Tonks,Obliviate,books,1,3253,3.0740854595757763,unassigned
+Ted Tonks,Obscuro,books,1,3253,3.0740854595757763,unassigned
+Ted Tonks,Portus,books,1,3253,3.0740854595757763,unassigned
+Ted Tonks,Protego,books,1,3253,3.0740854595757763,unassigned
+Ted Tonks,Quietus,books,1,3253,3.0740854595757763,unassigned
+Ted Tonks,Relashio,books,1,3253,3.0740854595757763,unassigned
+Ted Tonks,Rennervate,books,2,3253,6.148170919151553,unassigned
+Ted Tonks,Reparo,books,1,3253,3.0740854595757763,unassigned
+Ted Tonks,Sonorus,books,2,3253,6.148170919151553,unassigned
+Ted Tonks,Stupefy,books,1,3253,3.0740854595757763,unassigned
+Ted Tonks,Wingardium Leviosa,books,1,3253,3.0740854595757763,unassigned
+Unknown,Accio,books,7,35839,1.9531794971957923,unassigned
+Unknown,Alohomora,books,1,35839,0.27902564245654177,unassigned
+Unknown,Avada Kedavra,books,3,35839,0.8370769273696252,unassigned
+Unknown,Cave Inimicum,books,1,35839,0.27902564245654177,unassigned
+Unknown,Confundo,books,1,35839,0.27902564245654177,unassigned
+Unknown,Crucio,books,6,35839,1.6741538547392505,unassigned
+Unknown,Diffindo,books,1,35839,0.27902564245654177,unassigned
+Unknown,Dissendium,books,1,35839,0.27902564245654177,unassigned
+Unknown,Expecto Patronum,books,5,35839,1.395128212282709,unassigned
+Unknown,Expelliarmus,books,2,35839,0.5580512849130835,unassigned
+Unknown,Homenum Revelio,books,1,35839,0.27902564245654177,unassigned
+Unknown,Impedimenta,books,3,35839,0.8370769273696252,unassigned
+Unknown,Legilimens,books,1,35839,0.27902564245654177,unassigned
+Unknown,Lumos,books,4,35839,1.116102569826167,unassigned
+Unknown,Nox,books,1,35839,0.27902564245654177,unassigned
+Unknown,Obliviate,books,1,35839,0.27902564245654177,unassigned
+Unknown,Petrificus Totalus,books,2,35839,0.5580512849130835,unassigned
+Unknown,Protego,books,2,35839,0.5580512849130835,unassigned
+Unknown,Reducto,books,1,35839,0.27902564245654177,unassigned
+Unknown,Relashio,books,1,35839,0.27902564245654177,unassigned
+Unknown,Reparo,books,2,35839,0.5580512849130835,unassigned
+Unknown,Riddikulus,books,1,35839,0.27902564245654177,unassigned
+Unknown,Salvio Hexia,books,1,35839,0.27902564245654177,unassigned
+Unknown,Sonorus,books,1,35839,0.27902564245654177,unassigned
+Unknown,Stupefy,books,5,35839,1.395128212282709,unassigned
+Unknown,Wingardium Leviosa,books,2,35839,0.5580512849130835,unassigned
+Vincent Crabbe,Expelliarmus,books,1,124,80.64516129032258,unassigned
+Voldemort,Avada Kedavra,books,2,2752,7.267441860465116,villain
+Voldemort,Avada Kedavra,movies,3,2742,10.940919037199125,villain
+Voldemort,Cistem Aperio,movies,1,2742,3.6469730123997084,villain
+Voldemort,Expelliarmus,books,1,2752,3.633720930232558,villain
+Zacharias Smith,Expelliarmus,books,2,225,88.88888888888889,unassigned

@@ -1,0 +1,38 @@
+{
+  "without_names": {
+    "characters": 59,
+    "eligible_characters": 29,
+    "villain_characters": 9,
+    "hero_characters": 20,
+    "eligible_edges": 111,
+    "same_role_weight_fraction": 0.8469478545629621,
+    "permutation_mean": 0.5586343838562582,
+    "permutation_95_range": [
+      0.37437359033226153,
+      0.7631690701758587
+    ],
+    "one_sided_permutation_p": 0.000999000999000999,
+    "permutations": 1000,
+    "seed": 42,
+    "unit": "character; both medium versions keep the same shuffled label",
+    "identity_edges": "excluded"
+  },
+  "minimum_300_words": {
+    "characters": 34,
+    "eligible_characters": 20,
+    "villain_characters": 5,
+    "hero_characters": 15,
+    "eligible_edges": 73,
+    "same_role_weight_fraction": 0.9074369679442383,
+    "permutation_mean": 0.6056246884242772,
+    "permutation_95_range": [
+      0.38639635910231285,
+      0.8095259897963307
+    ],
+    "one_sided_permutation_p": 0.000999000999000999,
+    "permutations": 1000,
+    "seed": 42,
+    "unit": "character; both medium versions keep the same shuffled label",
+    "identity_edges": "excluded"
+  }
+}

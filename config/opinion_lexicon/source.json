@@ -1,0 +1,6 @@
+{
+  "url": "https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora/opinion_lexicon.zip",
+  "sha256": "7a5da68d53016c5d1fca38f7dd81844cff73466371f90968d1ef15c85b873193",
+  "source": "Hu and Liu opinion lexicon, distributed by NLTK",
+  "reference": "Hu, Minqing and Bing Liu. Mining and Summarizing Customer Reviews. KDD 2004."
+}
