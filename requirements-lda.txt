@@ -1,0 +1,5 @@
+# Needed for step 2; word_counts.py uses only the Python standard library.
+numpy>=1.26,<3
+scipy>=1.12,<2
+scikit-learn>=1.6,<2
+matplotlib>=3.9,<4

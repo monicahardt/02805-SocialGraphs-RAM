@@ -1,0 +1,66 @@
+{
+  "characters": 59,
+  "nodes": 118,
+  "edges": 298,
+  "components": 1,
+  "communities": 12,
+  "weighted_modularity": 0.44329896239661154,
+  "role_characters": {
+    "hero": 20,
+    "ambiguous": 14,
+    "unassigned": 16,
+    "villain": 9
+  },
+  "role_permutation_check": {
+    "eligible_characters": 29,
+    "villain_characters": 9,
+    "hero_characters": 20,
+    "eligible_edges": 104,
+    "same_role_weight_fraction": 0.8545166781389485,
+    "permutation_mean": 0.5586139788432266,
+    "permutation_95_range": [
+      0.3866637123664051,
+      0.7637845820249676
+    ],
+    "one_sided_permutation_p": 0.000999000999000999,
+    "same_role_neighbor_share": {
+      "hero": 0.9190885509702276,
+      "villain": 0.2795855756327432
+    },
+    "permuted_neighbor_share_mean": {
+      "hero": 0.6567969313677907,
+      "villain": 0.23457856741714245
+    },
+    "permutations": 1000,
+    "seed": 42,
+    "unit": "character; both medium versions keep the same shuffled label",
+    "identity_edges": "excluded"
+  },
+  "parameters": {
+    "min_words_per_medium": 100,
+    "nearest_neighbors": 3,
+    "min_document_frequency": 2,
+    "remove_names": false,
+    "seed": 42
+  },
+  "aliases": {
+    "Tom Riddle": "Voldemort",
+    "Garrick Ollivander": "Ollivander",
+    "Poppy Pomfrey": "Madam Pomfrey",
+    "Rolanda Hooch": "Madam Hooch",
+    "Stanley Shunpike": "Stan Shunpike",
+    "Collin Creevey": "Colin Creevey",
+    "Ernest Macmillan": "Ernie Macmillan"
+  },
+  "inputs": {
+    "books": {
+      "path": "C:\\Projects\\02805-SocialGraphs-RAM\\results\\word_counts\\books\\character_word_counts.csv",
+      "sha256": "f01113cd6d57ae3af350eb1873b917dd935fb1e10a1202a8a6504a4a3df02661"
+    },
+    "movies": {
+      "path": "C:\\Projects\\02805-SocialGraphs-RAM\\results\\word_counts\\movies\\character_word_counts.csv",
+      "sha256": "4e298786d131725b707822600a4abdb367abd9a9e3a4975087ca27c863b423c1"
+    }
+  },
+  "roles_sha256": "07136d44c6d6f18c88a58ccb6b217a241ef7de1649dc0f85318bbb0dc95d6c4d"
+}

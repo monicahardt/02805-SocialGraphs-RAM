@@ -1,0 +1,21 @@
+id,character,medium,source,chapter,record_index,positive,negative,matched_words,text
+98,Rubeus Hagrid,books,Harry Potter and the Deathly Hallows,THE BATTLE OF HOGWARTS,34504,0,1,cave:1,"Heard You-Know-Who from up in our cave,"
+48,Hermione Granger,books,Harry Potter and the Deathly Hallows,THE GOBLIN’S REVENGE,31681,1,0,better:1,Better?
+48,Hermione Granger,books,Harry Potter and the Prisoner of Azkaban,OWL POST AGAIN,8850,1,0,pleased:1,Yeah ... I bet the Dursleys’d be pleased to let me come ... especially after what I did to Aunt Marge. ...
+97,Ron Weasley,movies,Harry Potter and the Deathly Hallows Part 1,Lighting the Way Back,6528,3,0,"enough:1, right:2","Just knew.  On account of Hermione's voice.  And sure enough, it floated toward me, the ball of light, right to my chest and then -- went straight through -- right here."
+97,Ron Weasley,movies,Harry Potter and the Chamber of Secrets,Petrified,1568,1,2,"dirty:1, like:1, rotten:1","We don't even know this Tom Riddle. He sounds like a dirty, rotten snitch to me."
+48,Hermione Granger,books,Harry Potter and the Deathly Hallows,GRINGOTTS,33797,0,1,burned:1,It burned me!
+38,George Weasley,books,Harry Potter and the Prisoner of Azkaban,THE LEAKY CAULDRON,5578,1,0,fun:1,It’d take all the fun out of life.
+22,Dobby,books,Harry Potter and the Chamber of Secrets,THE ROGUE BLUDGER,3843,0,2,"burn:1, shocked:1","Dobby was so shocked when he heard Harry Potter was back at Hogwarts, he let his master’s dinner burn! Such a flogging Dobby never had, sir. ..."
+92,Remus Lupin,books,Harry Potter and the Half-Blood Prince,THE PHOENIX LAMENT,29059,0,1,fault:1,"It’s not your fault,"
+42,Ginny Weasley,books,Harry Potter and the Order of the Phoenix,BEYOND THE VEIL,23216,2,0,"good:1, magic:1","Oh, he just says it was a really good bit of magic,"
+4,Albus Dumbledore,books,Harry Potter and the Order of the Phoenix,LUNA LOVEGOOD,19600,1,0,work:1,"Your father has been injured in the course of his work for the Order of the Phoenix,"
+40,Gilderoy Lockhart,books,Harry Potter and the Chamber of Secrets,THE ROGUE BLUDGER,3728,2,0,"best:1, well:1","Well, I’m sure no one will mind me giving the best student of the year a little extra help,"
+46,Harry Potter,books,Harry Potter and the Order of the Phoenix,LUNA LOVEGOOD,20378,1,0,good:1,"It’s because you’re good when you’re on form, that’s why,"
+5,Albus Dumbledore,movies,Harry Potter and the Prisoner of Azkaban,Flight of the Fat Lady,2181,2,0,"great:1, secure:1","Secure the castle, Mr. Filch. The rest of you, to the Great Hall."
+46,Harry Potter,books,Harry Potter and the Chamber of Secrets,THE POLY JUICE POTION,4070,1,0,right:1,"You’ve been wondering whether I put you in the right House,"
+96,Ron Weasley,books,Harry Potter and the Deathly Hallows,BROTHERS,32602,1,1,"death:1, master:1",When you say ‘master of Death’ —
+46,Harry Potter,books,Harry Potter and the Deathly Hallows,THE FOREST AGAIN,35118,0,1,kill:1,Kill the snake?
+38,George Weasley,books,Harry Potter and the Order of the Phoenix,LUNA LOVEGOOD,19862,1,0,work:1,"— didn’t work,"
+48,Hermione Granger,books,Harry Potter and the Deathly Hallows,KREACHER’S TALE,30894,2,0,"incredible:1, magical:1",So your parents knew her? She was an incredible magical historian.
+4,Albus Dumbledore,books,Harry Potter and the Half-Blood Prince,HORACE SLUGHORN,23895,1,0,sensation:1,The sensation does take some getting used to.

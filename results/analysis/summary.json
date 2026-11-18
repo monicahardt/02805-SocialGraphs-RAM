@@ -1,0 +1,133 @@
+{
+  "hagrid_dialect": {
+    "books": {
+      "marker_count": 539,
+      "words": 11647,
+      "per_1000": 46.27801150510861
+    },
+    "movies": {
+      "marker_count": 37,
+      "words": 3487,
+      "per_1000": 10.61084026383711
+    }
+  },
+  "hagrid_rate_ratio_books_over_films": 4.36138989508956,
+  "umbridge_institutional_terms_phoenix": {
+    "books": {
+      "word_occurrences": 8,
+      "words": 3546,
+      "per_1000": 2.2560631697687534
+    },
+    "movies": {
+      "word_occurrences": 9,
+      "words": 884,
+      "per_1000": 10.180995475113122
+    }
+  },
+  "umbridge_rate_ratio_films_over_books": 4.512726244343892,
+  "topic_support": {
+    "2": {
+      "character_shares": {
+        "Albus Dumbledore": 0.31709807465182155,
+        "Severus Snape": 0.11610362134868207,
+        "Harry Potter": 0.08658509174200577,
+        "Voldemort": 0.07247566587615789,
+        "Minerva McGonagall": 0.05914382065412209,
+        "Draco Malfoy": 0.042409985205390424
+      },
+      "installment_shares": {
+        "1": 0.02431119926239532,
+        "2": 0.17380712628640527,
+        "3": 0.0562155502645502,
+        "4": 0.11172037982907879,
+        "5": 0.0885477716805941,
+        "6": 0.3459207626629971,
+        "7": 0.19947721001397908
+      }
+    },
+    "6": {
+      "character_shares": {
+        "Griphook": 0.1435872526254392,
+        "Lee Jordan": 0.13902013351845677,
+        "Xenophilius Lovegood": 0.13826371283364247,
+        "Voldemort": 0.10239998186468038,
+        "Bellatrix Lestrange": 0.0582594032972827,
+        "Albus Dumbledore": 0.03524679739439837
+      },
+      "installment_shares": {
+        "1": 0.012600823653130417,
+        "2": 0.030480770233175244,
+        "3": 0.10127813142019217,
+        "4": 0.024106004144596363,
+        "5": 0.08029446754299216,
+        "6": 0.022006517310493735,
+        "7": 0.7292332856954198
+      }
+    },
+    "8": {
+      "character_shares": {
+        "Rubeus Hagrid": 0.4156567612710222,
+        "Harry Potter": 0.21454540472322367,
+        "Ron Weasley": 0.10830531693574272,
+        "Hermione Granger": 0.07332274738372978,
+        "Vernon Dursley": 0.0447817806671528,
+        "Albus Dumbledore": 0.026609002826584797
+      },
+      "installment_shares": {
+        "1": 0.28852585466423053,
+        "2": 0.2904422197362165,
+        "3": 0.07155455682387658,
+        "4": 0.07363679100303822,
+        "5": 0.17525186158468303,
+        "6": 0.0765144390603861,
+        "7": 0.02407427712756926
+      }
+    }
+  },
+  "focus_ppmi_pairs": [
+    {
+      "word": "blood",
+      "context": "pure",
+      "ppmi": 7.8249019469379,
+      "pair_count": 22,
+      "dialogue_lines": 20,
+      "sources": 6,
+      "speaker_labels": 9,
+      "book_lines": 18,
+      "film_lines": 2
+    },
+    {
+      "word": "power",
+      "context": "punishments",
+      "ppmi": 6.992008755756983,
+      "pair_count": 3,
+      "dialogue_lines": 3,
+      "sources": 2,
+      "speaker_labels": 2,
+      "book_lines": 2,
+      "film_lines": 1
+    },
+    {
+      "word": "death",
+      "context": "eaters",
+      "ppmi": 7.077369429446734,
+      "pair_count": 141,
+      "dialogue_lines": 137,
+      "sources": 8,
+      "speaker_labels": 26,
+      "book_lines": 125,
+      "film_lines": 12
+    },
+    {
+      "word": "love",
+      "context": "impossible",
+      "ppmi": 6.2886412709740425,
+      "pair_count": 3,
+      "dialogue_lines": 2,
+      "sources": 2,
+      "speaker_labels": 2,
+      "book_lines": 1,
+      "film_lines": 1
+    }
+  ]
+}

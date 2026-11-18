@@ -1,0 +1,40 @@
+{
+  "books": {
+    "nodes": 59,
+    "edges": 163,
+    "eligible_characters": 29,
+    "villain_characters": 9,
+    "hero_characters": 20,
+    "eligible_edges": 65,
+    "same_role_weight_fraction": 0.8355289437242451,
+    "permutation_mean": 0.5578834411057645,
+    "permutation_95_range": [
+      0.37719114553859406,
+      0.7499246172830102
+    ],
+    "one_sided_permutation_p": 0.000999000999000999,
+    "permutations": 1000,
+    "seed": 42,
+    "unit": "character; both medium versions keep the same shuffled label",
+    "identity_edges": "excluded"
+  },
+  "movies": {
+    "nodes": 59,
+    "edges": 159,
+    "eligible_characters": 29,
+    "villain_characters": 9,
+    "hero_characters": 20,
+    "eligible_edges": 68,
+    "same_role_weight_fraction": 0.7897502125721049,
+    "permutation_mean": 0.5574212168827787,
+    "permutation_95_range": [
+      0.3884534761183833,
+      0.7463161601739724
+    ],
+    "one_sided_permutation_p": 0.004995004995004995,
+    "permutations": 1000,
+    "seed": 42,
+    "unit": "character; both medium versions keep the same shuffled label",
+    "identity_edges": "excluded"
+  }
+}

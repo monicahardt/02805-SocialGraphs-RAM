@@ -1,0 +1,61 @@
+{
+  "scope": "Curated incantation inventory for the seven novels/eight films; not an exhaustive census of magic. Ordinary-word spells Pack and Point Me are omitted to avoid lexical false positives.",
+  "sources": [
+    "https://www.harrypotter.com/features/your-guide-to-the-best-spells-in-harry-potter",
+    "https://www.harrypotter.com/features/a-handy-guide-to-the-lesser-known-spells-in-the-wizarding-world",
+    "https://www.harrypotter.com/fact-file/spells/the-unforgivable-curses",
+    "https://www.harrypotter.com/fact-file/spells/the-killing-curse",
+    "https://www.harrypotter.com/fact-file/spells/the-cruciatus-curse",
+    "https://www.harrypotter.com/fact-file/spells/the-imperius-curse"
+  ],
+  "incantations": [
+    "Accio", "Aguamenti", "Alohomora", "Anapneo", "Aparecium", "Arresto Momentum", "Ascendio",
+    "Avada Kedavra", "Avis", "Bombarda", "Bombarda Maxima", "Brackium Emendo", "Cave Inimicum",
+    "Cistem Aperio", "Colloportus", "Confringo", "Confundo", "Crucio", "Defodio", "Deletrius",
+    "Densaugeo", "Deprimo", "Depulso", "Descendo", "Diffindo", "Dissendium", "Duro", "Engorgio",
+    "Episkey", "Erecto", "Evanesco", "Everte Statum", "Expecto Patronum", "Expelliarmus", "Expulso",
+    "Ferula", "Fianto Duri", "Finite", "Finite Incantatem", "Flagrate", "Furnunculus", "Geminio",
+    "Glisseo", "Harmonia Nectere Passus", "Homenum Revelio", "Impedimenta", "Imperio", "Impervius",
+    "Incarcerous", "Incendio", "Lacarnum Inflamari", "Langlock", "Legilimens", "Levicorpus",
+    "Liberacorpus", "Locomotor", "Locomotor Mortis", "Lumos", "Lumos Maxima", "Lumos Solem",
+    "Meteolojinx Recanto", "Mobiliarbus", "Mobilicorpus", "Morsmordre", "Muffliato", "Nox",
+    "Obliviate", "Obscuro", "Oculus Reparo", "Oppugno", "Orchideous", "Periculum",
+    "Peskipiksi Pesternomi", "Petrificus Totalus", "Piertotum Locomotor", "Portus", "Prior Incantato",
+    "Protego", "Protego Horribilis", "Protego Maxima", "Protego Totalum", "Quietus", "Reducio",
+    "Reducto", "Relashio", "Rennervate", "Reparo", "Repello Inimicum", "Repello Muggletum",
+    "Revelio", "Rictusempra", "Riddikulus", "Salvio Hexia", "Scourgify", "Sectumsempra",
+    "Serpensortia", "Silencio", "Slugulus Eructo", "Slugulus Erecto", "Sonorus", "Specialis Revelio",
+    "Stupefy", "Tarantallegra", "Tergeo", "Vera Verto", "Vipera Evanesca", "Vulnera Sanentur", "Waddiwasi",
+    "Wingardium Leviosa"
+  ],
+  "families": {
+    "Lumos Maxima": "Lumos", "Lumos Solem": "Lumos", "Bombarda Maxima": "Bombarda",
+    "Oculus Reparo": "Reparo", "Finite Incantatem": "Finite",
+    "Protego Horribilis": "Protego", "Protego Maxima": "Protego", "Protego Totalum": "Protego"
+  },
+  "references": {
+    "Killing Curse": "Avada Kedavra", "Cruciatus": "Crucio", "Imperius": "Imperio",
+    "Priori Incantatem": "Priori Incantatem", "Confundus Charm": "Confundo"
+  },
+  "unforgivable": ["Avada Kedavra", "Crucio", "Imperio"],
+  "ocr_variants": {
+    "Accio": ["Acciol"], "Alohomora": ["Alohomoral"], "Avada Kedavra": ["Avada Kedavral"],
+    "Colloportus": ["Colloportusl"], "Crucio": ["Cruciol"], "Defodio": ["Defodiol"],
+    "Diffindo": ["Diffindol"], "Evanesco": ["Evanescol"], "Expelliarmus": ["Expelliarmusl", "ExpelliarmusV"],
+    "Expulso": ["Expulsol"], "Impedimenta": ["Impedimental"], "Imperio": ["Imperiol"],
+    "Impervius": ["Imperviusl"], "Incarcerous": ["Incarcerousl"], "Incendio": ["Incendiol"],
+    "Legilimens": ["Legilimensl"], "Lumos": ["Lumosl"], "Morsmordre": ["Morsmordrel"],
+    "Obliviate": ["Obliviatel"], "Petrificus Totalus": ["Petrificus Totalusl"],
+    "Protego": ["Protegol"], "Reducto": ["Reductol"], "Relashio": ["Relashiol"],
+    "Rennervate": ["Rennervatel"], "Reparo": ["Reparol"], "Revelio": ["Reveliol"],
+    "Rictusempra": ["Rictusempral"], "Riddikulus": ["Riddikulusl", "RiddikulusV"],
+    "Scourgify": ["Scourgifyl"], "Sectumsempra": ["Sectumsempral"], "Serpensortia": ["Serpensortial"],
+    "Silencio": ["Silenciol"], "Sonorus": ["Sonorusl"], "Stupefy": ["Stupefyl"],
+    "Tarantallegra": ["Tarantallegral"], "Tergeo": ["Tergeol"], "Waddiwasi": ["Waddiwasil"],
+    "Wingardium Leviosa": ["Wingardium Leviosal", "Wingardium Levioscd"]
+  },
+  "reference_variants": {"Imperio": ["Imperious Curse", "Imperius Cursel"], "Crucio": ["Cruciatus Cursel"]},
+  "incantation_transcript_variants": {"Avada Kedavra": ["Avada Kadavra"]},
+  "pronunciation_variants": {"Wingardium Leviosa": ["Wingardrium Leviosar", "Wingardium Levio-saaa"]},
+  "notes": "OCR variants are explicit exploratory repairs in this derived analysis only; strict counts are always exported. Deliberate film pronunciation variants and partial incantations are excluded from primary counts. Named references are separate. No generic fuzzy matching, ordinary-word crucial correction, or casting inference."
+}

@@ -1,0 +1,20 @@
+medium,source,record_index,source_speaker,token,text
+books,Harry Potter and the Prisoner of Azkaban,7164,Harry Potter,expecto,"Expecto patrono — no, patronum — sorry — expecto patronum, expecto patronum —"
+books,Harry Potter and the Prisoner of Azkaban,7170,Harry Potter,expecto,Expecto patronurrd
+books,Harry Potter and the Prisoner of Azkaban,7171,Harry Potter,expecto,Expecto patronum). Expecto —
+books,Harry Potter and the Prisoner of Azkaban,7191,Harry Potter,expecto,Expecto patronuml Expecto pat —
+books,Harry Potter and the Prisoner of Azkaban,7191,Harry Potter,expecto,Expecto patronuml Expecto pat —
+books,Harry Potter and the Prisoner of Azkaban,8386,Hermione Granger,expecto,Expecto —
+books,Harry Potter and the Prisoner of Azkaban,8389,Hermione Granger,expecto,Expecto — expecto patronum —
+books,Harry Potter and the Prisoner of Azkaban,8392,Harry Potter,expecto,He’s innocent ... expecto — expecto patronum —
+books,Harry Potter and the Order of the Phoenix,14787,Harry Potter,expecto,Expecto Patronurrd
+books,Harry Potter and the Order of the Phoenix,22736,Hermione Granger,avada,Avada —
+books,Harry Potter and the Deathly Hallows,29710,Unknown,avada,Avada —
+books,Harry Potter and the Deathly Hallows,35086,Severus Snape,expecto,Expecto Patronuml
+movies,Harry Potter and the Philosopher's Stone,424,Hermione Granger,leviosar,"Stop, stop, stop. You're going to take someone's eye out. Besides, you're saying it wrong. It's Levi-o-sa, not Leviosar."
+movies,Harry Potter and the Philosopher's Stone,432,Ron Weasley,leviosaaaar,"It's Levioooosa, not Leviosaaaar.  She's a nightmare, honestly. No wonder she hasn't got any friends!"
+movies,Harry Potter and the Prisoner of Azkaban,2341,Harry Potter,expecto,Expecto Patronum! Expecto... Expecto... Expect...
+movies,Harry Potter and the Prisoner of Azkaban,2341,Harry Potter,expecto,Expecto Patronum! Expecto... Expecto... Expect...
+movies,Harry Potter and the Order of the Phoenix,3571,Harry Potter,expecto,Expecto--!
+movies,Harry Potter and the Order of the Phoenix,4442,Bellatrix Lestrange,avada,Avada-—
+movies,Harry Potter and the Deathly Hallows Part 1,5847,Voldemort,avada,Avada...

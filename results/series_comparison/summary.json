@@ -1,0 +1,281 @@
+{
+  "matched_characters": 59,
+  "matched_lda_characters": 51,
+  "installments": 7,
+  "films": 8,
+  "lexicon_words": {
+    "positive": 2003,
+    "negative": 4780
+  },
+  "excluded_overlapping_entry": [
+    "envious"
+  ],
+  "minimum_profile_words": 100,
+  "small_profile_flag_below": 300,
+  "sentiment_formula": "1,000 * exact polarity token matches / all profile word tokens",
+  "sentiment_role_mean_balance_equal_character_weight": {
+    "hero": {
+      "books": 7.4257933145137685,
+      "movies": 10.30865842898102
+    },
+    "villain": {
+      "books": 7.401350994015449,
+      "movies": 6.922535385751196
+    }
+  },
+  "sentiment_changes_300_words_each": [
+    {
+      "character": "Argus Filch",
+      "role": "unassigned",
+      "book_words": 540,
+      "film_words": 340,
+      "book_balance": 5.555555555555555,
+      "film_balance": -26.470588235294116,
+      "change": -32.02614379084967
+    },
+    {
+      "character": "George Weasley",
+      "role": "hero",
+      "book_words": 3848,
+      "film_words": 485,
+      "book_balance": 7.536382536382536,
+      "film_balance": 35.05154639175258,
+      "change": 27.515163855370044
+    },
+    {
+      "character": "Petunia Dursley",
+      "role": "ambiguous",
+      "book_words": 939,
+      "film_words": 394,
+      "book_balance": 0.0,
+      "film_balance": 22.84263959390863,
+      "change": 22.84263959390863
+    },
+    {
+      "character": "Remus Lupin",
+      "role": "hero",
+      "book_words": 7670,
+      "film_words": 1907,
+      "book_balance": 4.302477183833116,
+      "film_balance": 23.597273203985317,
+      "change": 19.2947960201522
+    },
+    {
+      "character": "Lucius Malfoy",
+      "role": "villain",
+      "book_words": 405,
+      "film_words": 700,
+      "book_balance": 0.0,
+      "film_balance": -18.571428571428573,
+      "change": -18.571428571428573
+    },
+    {
+      "character": "Draco Malfoy",
+      "role": "ambiguous",
+      "book_words": 4558,
+      "film_words": 1282,
+      "book_balance": -2.6327336551118914,
+      "film_balance": -20.2808112324493,
+      "change": -17.648077577337407
+    },
+    {
+      "character": "Neville Longbottom",
+      "role": "hero",
+      "book_words": 2330,
+      "film_words": 768,
+      "book_balance": 13.304721030042918,
+      "film_balance": -3.90625,
+      "change": -17.21097103004292
+    },
+    {
+      "character": "Moaning Myrtle",
+      "role": "unassigned",
+      "book_words": 538,
+      "film_words": 326,
+      "book_balance": -1.858736059479554,
+      "film_balance": -18.404907975460123,
+      "change": -16.54617191598057
+    }
+  ],
+  "lowest_cosine_300_words_each": [
+    {
+      "character": "Bartemius Crouch",
+      "role": "ambiguous",
+      "installments": "4",
+      "book_words": 890,
+      "film_words": 357,
+      "cosine": 0.058305835714653295,
+      "book_fingerprint": "winky, ludo, shortly, accuse",
+      "film_fingerprint": "counsel, concluded, egg, tri"
+    },
+    {
+      "character": "Argus Filch",
+      "role": "unassigned",
+      "installments": "1 2 3 5 6 7",
+      "book_words": 540,
+      "film_words": 340,
+      "cosine": 0.10164765996400962,
+      "book_fingerprint": "peeves, squib, filch, argus",
+      "film_fingerprint": "astronomy, cat, god, lady's"
+    },
+    {
+      "character": "Lucius Malfoy",
+      "role": "villain",
+      "installments": "2 5 7",
+      "book_words": 405,
+      "film_words": 700,
+      "cosine": 0.2091099570906792,
+      "book_fingerprint": "lord, authority, prophecy, arthur",
+      "film_fingerprint": "prophesy, lord, dobby, sticky"
+    },
+    {
+      "character": "Luna Lovegood",
+      "role": "hero",
+      "installments": "5 6 7",
+      "book_words": 1736,
+      "film_words": 554,
+      "cosine": 0.22410560515549552,
+      "book_fingerprint": "daddy, snorkack, ron, editor",
+      "film_fingerprint": "quibbler, wrackspurts, diadem, ravenclaw's"
+    },
+    {
+      "character": "Ginny Weasley",
+      "role": "hero",
+      "installments": "2 3 4 5 6 7",
+      "book_words": 2889,
+      "film_words": 504,
+      "cosine": 0.23142729097629317,
+      "book_fingerprint": "phlegm, ron, mum, fred",
+      "film_fingerprint": "prince, bout, covered, blood"
+    }
+  ],
+  "highest_cosine_300_words_each": [
+    {
+      "character": "Dobby",
+      "role": "hero",
+      "installments": "2 5 7",
+      "book_words": 825,
+      "film_words": 738,
+      "cosine": 0.881102434242224,
+      "book_fingerprint": "dobby, sir, named, punish",
+      "film_fingerprint": "dobby, sir, huh, harry"
+    },
+    {
+      "character": "Harry Potter",
+      "role": "hero",
+      "installments": "1 2 3 4 5 6 7",
+      "book_words": 74983,
+      "film_words": 13978,
+      "cosine": 0.7335253628801023,
+      "book_fingerprint": "yeah, got, sir, hermione",
+      "film_fingerprint": "sir, hermione, ron, dobby"
+    },
+    {
+      "character": "Hermione Granger",
+      "role": "hero",
+      "installments": "1 2 3 4 5 6 7",
+      "book_words": 38280,
+      "film_words": 7618,
+      "cosine": 0.6736382384741009,
+      "book_fingerprint": "ron, harry, really, going",
+      "film_fingerprint": "ron, harry, potion, buckbeak"
+    },
+    {
+      "character": "Albus Dumbledore",
+      "role": "hero",
+      "installments": "1 2 3 4 5 6 7",
+      "book_words": 23585,
+      "film_words": 7656,
+      "cosine": 0.6164162627874352,
+      "book_fingerprint": "voldemort, harry, lord, professor",
+      "film_fingerprint": "horace, tom, severus, voldemort"
+    },
+    {
+      "character": "Ron Weasley",
+      "role": "hero",
+      "installments": "1 2 3 4 5 6 7",
+      "book_words": 39941,
+      "film_words": 6908,
+      "cosine": 0.5989743309804071,
+      "book_fingerprint": "yeah, hermione, got, going",
+      "film_fingerprint": "bloody, hermione, hell, scabbers"
+    }
+  ],
+  "largest_lda_shifts": [
+    {
+      "installment": 1,
+      "topic": 8,
+      "book_proportion": 0.4510745965808074,
+      "film_proportion": 0.18662599966730678,
+      "difference": -0.26444859691350064
+    },
+    {
+      "installment": 1,
+      "topic": 4,
+      "book_proportion": 0.052666267233107654,
+      "film_proportion": 0.30197549553579744,
+      "difference": 0.24930922830268978
+    },
+    {
+      "installment": 6,
+      "topic": 2,
+      "book_proportion": 0.11520625469121211,
+      "film_proportion": 0.29305895951612376,
+      "difference": 0.17785270482491167
+    },
+    {
+      "installment": 2,
+      "topic": 3,
+      "book_proportion": 0.26230448014424285,
+      "film_proportion": 0.09645968055534965,
+      "difference": -0.1658447995888932
+    },
+    {
+      "installment": 3,
+      "topic": 4,
+      "book_proportion": 0.3838057575046408,
+      "film_proportion": 0.5398336418302833,
+      "difference": 0.15602788432564246
+    },
+    {
+      "installment": 5,
+      "topic": 7,
+      "book_proportion": 0.385424771609452,
+      "film_proportion": 0.527185896708556,
+      "difference": 0.141761125099104
+    },
+    {
+      "installment": 6,
+      "topic": 7,
+      "book_proportion": 0.3536837677313432,
+      "film_proportion": 0.21677283499434763,
+      "difference": -0.13691093273699556
+    },
+    {
+      "installment": 4,
+      "topic": 2,
+      "book_proportion": 0.0375035880633101,
+      "film_proportion": 0.1378558300906659,
+      "difference": 0.1003522420273558
+    }
+  ],
+  "ppmi": {
+    "vocabulary_words": 2506,
+    "window": 5,
+    "marginals": "separate by medium",
+    "eligible_documents": 377,
+    "eligibility": "same character/source groups as the previous pooled run",
+    "display": "top 8 pooled-PPMI contexts per target with >=3 total pairs; alphabetic non-stopwords only",
+    "pooled_reconstruction_verified": true
+  },
+  "inputs": {
+    "book_data\\all_books.csv": "4b1f58b9fbe5dbc5cda00c01e43f725202274de791b226e1604e1722f7ba043c",
+    "movie_data\\all_movies.csv": "d08c615b95fb3c81f394ba93b477baf8e60b722908335e284971741a28b00051",
+    "results\\lda\\document_topics.csv": "be47894da7d1c6487dae1923c3b426e139977d3471a85b0771a2c13851bbe45f",
+    "config\\map_roles.csv": "07136d44c6d6f18c88a58ccb6b217a241ef7de1649dc0f85318bbb0dc95d6c4d",
+    "results\\word_counts\\books\\character_word_counts.csv": "f01113cd6d57ae3af350eb1873b917dd935fb1e10a1202a8a6504a4a3df02661",
+    "results\\word_counts\\movies\\character_word_counts.csv": "4e298786d131725b707822600a4abdb367abd9a9e3a4975087ca27c863b423c1",
+    "config\\opinion_lexicon\\positive-words.txt": "9f643e85bcd7eb32e680f05df3d87fdd3277d6626122b3efec94f3ee3790b596",
+    "config\\opinion_lexicon\\negative-words.txt": "f80f5cfe3a62e7e07768eca9435b9ba514dbd5fc0eecf181e80b16f8f4578b34"
+  }
+}

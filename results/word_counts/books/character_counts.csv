@@ -1,0 +1,385 @@
+source,character,utterances,words,unique_words
+Harry Potter and the Chamber of Secrets,Albus Dumbledore,96,1114,454
+Harry Potter and the Chamber of Secrets,Alicia Spinnet,2,20,20
+Harry Potter and the Chamber of Secrets,Aragog,15,292,150
+Harry Potter and the Chamber of Secrets,Argus Filch,11,118,88
+Harry Potter and the Chamber of Secrets,Colin Creevey,15,156,99
+Harry Potter and the Chamber of Secrets,Cornelius Fudge,17,151,118
+Harry Potter and the Chamber of Secrets,Dean Thomas,3,15,14
+Harry Potter and the Chamber of Secrets,Dobby,49,613,236
+Harry Potter and the Chamber of Secrets,Draco Malfoy,98,1043,454
+Harry Potter and the Chamber of Secrets,Dudley Dursley,6,64,48
+Harry Potter and the Chamber of Secrets,Ernie Macmillan,20,244,153
+Harry Potter and the Chamber of Secrets,Fred Weasley,58,540,316
+Harry Potter and the Chamber of Secrets,George Weasley,58,602,334
+Harry Potter and the Chamber of Secrets,Gilderoy Lockhart,97,1034,467
+Harry Potter and the Chamber of Secrets,Ginny Weasley,16,216,141
+Harry Potter and the Chamber of Secrets,Hannah Abbott,3,54,46
+Harry Potter and the Chamber of Secrets,Harry Potter,731,6498,1397
+Harry Potter and the Chamber of Secrets,Hermione Granger,174,1684,637
+Harry Potter and the Chamber of Secrets,Justin Finch-Fletchley,2,7,7
+Harry Potter and the Chamber of Secrets,Lee Jordan,3,53,41
+Harry Potter and the Chamber of Secrets,Lucius Malfoy,2,36,32
+Harry Potter and the Chamber of Secrets,Madam Hooch,9,39,32
+Harry Potter and the Chamber of Secrets,Madam Pomfrey,9,37,34
+Harry Potter and the Chamber of Secrets,Marcus Flint,7,73,61
+Harry Potter and the Chamber of Secrets,Mary Cattermole,1,16,16
+Harry Potter and the Chamber of Secrets,Minerva McGonagall,57,574,278
+Harry Potter and the Chamber of Secrets,Moaning Myrtle,26,244,154
+Harry Potter and the Chamber of Secrets,Molly Weasley,52,523,262
+Harry Potter and the Chamber of Secrets,Nearly Headless Nick,25,312,184
+Harry Potter and the Chamber of Secrets,Neville Longbottom,12,84,62
+Harry Potter and the Chamber of Secrets,Oliver Wood,36,306,174
+Harry Potter and the Chamber of Secrets,Percy Weasley,29,238,153
+Harry Potter and the Chamber of Secrets,Petunia Dursley,12,71,53
+Harry Potter and the Chamber of Secrets,Pomona Sprout,11,103,79
+Harry Potter and the Chamber of Secrets,Ron Weasley,570,4579,1154
+Harry Potter and the Chamber of Secrets,Rubeus Hagrid,51,423,240
+Harry Potter and the Chamber of Secrets,Severus Snape,41,436,245
+Harry Potter and the Chamber of Secrets,Sorting Hat,1,1,1
+Harry Potter and the Chamber of Secrets,Ted Tonks,26,395,213
+Harry Potter and the Chamber of Secrets,Unknown,323,3320,974
+Harry Potter and the Chamber of Secrets,Vernon Dursley,29,264,156
+Harry Potter and the Chamber of Secrets,Voldemort,1,44,36
+Harry Potter and the Deathly Hallows,Aberforth Dumbledore,52,920,401
+Harry Potter and the Deathly Hallows,Alastor Moody,31,339,198
+Harry Potter and the Deathly Hallows,Albus Dumbledore,146,1864,605
+Harry Potter and the Deathly Hallows,Argus Filch,5,24,20
+Harry Potter and the Deathly Hallows,Bathilda Bagshot,10,63,40
+Harry Potter and the Deathly Hallows,Bellatrix Lestrange,59,529,254
+Harry Potter and the Deathly Hallows,Bill Weasley,50,778,365
+Harry Potter and the Deathly Hallows,Charlie Weasley,9,50,45
+Harry Potter and the Deathly Hallows,Cho Chang,3,25,24
+Harry Potter and the Deathly Hallows,Corban Yaxley,14,185,126
+Harry Potter and the Deathly Hallows,Dean Thomas,25,177,125
+Harry Potter and the Deathly Hallows,Dobby,2,25,20
+Harry Potter and the Deathly Hallows,Dolores Umbridge,18,124,87
+Harry Potter and the Deathly Hallows,Draco Malfoy,27,204,122
+Harry Potter and the Deathly Hallows,Dudley Dursley,24,146,98
+Harry Potter and the Deathly Hallows,Elphias Doge,43,423,236
+Harry Potter and the Deathly Hallows,Ernie Macmillan,5,39,31
+Harry Potter and the Deathly Hallows,Fang,4,22,20
+Harry Potter and the Deathly Hallows,Fenrir Greyback,44,357,197
+Harry Potter and the Deathly Hallows,Filius Flitwick,5,33,28
+Harry Potter and the Deathly Hallows,Fleur Delacour,29,296,191
+Harry Potter and the Deathly Hallows,Fred Weasley,37,470,288
+Harry Potter and the Deathly Hallows,Gellert Grindelwald,4,91,70
+Harry Potter and the Deathly Hallows,George Weasley,31,269,187
+Harry Potter and the Deathly Hallows,Ginny Weasley,42,314,192
+Harry Potter and the Deathly Hallows,Gregory Goyle,4,21,18
+Harry Potter and the Deathly Hallows,Griphook,78,750,336
+Harry Potter and the Deathly Hallows,Harry Potter,1600,14986,2149
+Harry Potter and the Deathly Hallows,Helena Ravenclaw,7,56,41
+Harry Potter and the Deathly Hallows,Hermione Granger,861,8230,1587
+Harry Potter and the Deathly Hallows,Horace Slughorn,1,32,26
+Harry Potter and the Deathly Hallows,James Potter,22,166,108
+Harry Potter and the Deathly Hallows,Kingsley Shacklebolt,18,158,120
+Harry Potter and the Deathly Hallows,Kreacher,20,210,113
+Harry Potter and the Deathly Hallows,Lee Jordan,13,233,157
+Harry Potter and the Deathly Hallows,Lily Potter,37,242,144
+Harry Potter and the Deathly Hallows,Lucius Malfoy,31,260,142
+Harry Potter and the Deathly Hallows,Luna Lovegood,52,430,227
+Harry Potter and the Deathly Hallows,Michael Corner,3,21,19
+Harry Potter and the Deathly Hallows,Minerva McGonagall,81,930,413
+Harry Potter and the Deathly Hallows,Molly Weasley,59,522,269
+Harry Potter and the Deathly Hallows,Mundungus Fletcher,14,118,87
+Harry Potter and the Deathly Hallows,Muriel,26,512,276
+Harry Potter and the Deathly Hallows,Narcissa Malfoy,13,121,80
+Harry Potter and the Deathly Hallows,Neville Longbottom,67,691,298
+Harry Potter and the Deathly Hallows,Nymphadora Tonks,21,162,105
+Harry Potter and the Deathly Hallows,Oliver Wood,1,9,9
+Harry Potter and the Deathly Hallows,Ollivander,38,548,265
+Harry Potter and the Deathly Hallows,Pansy Parkinson,3,18,16
+Harry Potter and the Deathly Hallows,Percy Weasley,8,94,74
+Harry Potter and the Deathly Hallows,Peter Pettigrew,2,3,3
+Harry Potter and the Deathly Hallows,Petunia Dursley,21,148,89
+Harry Potter and the Deathly Hallows,Pius Thicknesse,4,34,31
+Harry Potter and the Deathly Hallows,Pomona Sprout,5,49,43
+Harry Potter and the Deathly Hallows,Remus Lupin,114,1375,535
+Harry Potter and the Deathly Hallows,Ron Weasley,860,8299,1648
+Harry Potter and the Deathly Hallows,Rubeus Hagrid,68,580,285
+Harry Potter and the Deathly Hallows,Rufus Scrimgeour,45,465,240
+Harry Potter and the Deathly Hallows,Scabior,25,195,131
+Harry Potter and the Deathly Hallows,Severus Snape,151,1704,609
+Harry Potter and the Deathly Hallows,Sirius Black,4,19,19
+Harry Potter and the Deathly Hallows,Sorting Hat,2,11,11
+Harry Potter and the Deathly Hallows,Sybill Trelawney,5,20,15
+Harry Potter and the Deathly Hallows,Ted Tonks,134,1255,507
+Harry Potter and the Deathly Hallows,Terry Boot,3,30,26
+Harry Potter and the Deathly Hallows,Unknown,735,7520,1673
+Harry Potter and the Deathly Hallows,Vernon Dursley,35,277,153
+Harry Potter and the Deathly Hallows,Viktor Krum,21,160,105
+Harry Potter and the Deathly Hallows,Vincent Crabbe,11,62,48
+Harry Potter and the Deathly Hallows,Voldemort,129,1423,510
+Harry Potter and the Deathly Hallows,Xenophilius Lovegood,55,536,258
+Harry Potter and the Goblet of Fire,Alastor Moody,186,1953,654
+Harry Potter and the Goblet of Fire,Albus Dumbledore,275,3574,992
+Harry Potter and the Goblet of Fire,Alicia Spinnet,2,26,23
+Harry Potter and the Goblet of Fire,Amos Diggory,22,187,118
+Harry Potter and the Goblet of Fire,Angelina Johnson,3,17,16
+Harry Potter and the Goblet of Fire,Argus Filch,21,178,104
+Harry Potter and the Goblet of Fire,Bartemius Crouch,76,890,419
+Harry Potter and the Goblet of Fire,Bill Weasley,43,463,270
+Harry Potter and the Goblet of Fire,Bloody Baron,4,42,36
+Harry Potter and the Goblet of Fire,Cedric Diggory,72,436,224
+Harry Potter and the Goblet of Fire,Charlie Weasley,29,354,215
+Harry Potter and the Goblet of Fire,Cho Chang,13,37,25
+Harry Potter and the Goblet of Fire,Colin Creevey,9,63,50
+Harry Potter and the Goblet of Fire,Cornelius Fudge,53,599,310
+Harry Potter and the Goblet of Fire,Dean Thomas,10,77,63
+Harry Potter and the Goblet of Fire,Dennis Creevey,3,11,11
+Harry Potter and the Goblet of Fire,Dobby,43,538,199
+Harry Potter and the Goblet of Fire,Draco Malfoy,52,556,271
+Harry Potter and the Goblet of Fire,Dudley Dursley,1,8,8
+Harry Potter and the Goblet of Fire,Ernie Macmillan,1,4,4
+Harry Potter and the Goblet of Fire,Filius Flitwick,1,15,14
+Harry Potter and the Goblet of Fire,Fleur Delacour,31,288,191
+Harry Potter and the Goblet of Fire,Fred Weasley,148,1321,561
+Harry Potter and the Goblet of Fire,George Weasley,87,711,338
+Harry Potter and the Goblet of Fire,Ginny Weasley,30,298,188
+Harry Potter and the Goblet of Fire,Hannah Abbott,2,10,10
+Harry Potter and the Goblet of Fire,Harry Potter,1377,10888,1878
+Harry Potter and the Goblet of Fire,Hermione Granger,629,6187,1281
+Harry Potter and the Goblet of Fire,Igor Karkaroff,64,713,372
+Harry Potter and the Goblet of Fire,Katie Bell,3,28,27
+Harry Potter and the Goblet of Fire,Lavender Brown,7,56,45
+Harry Potter and the Goblet of Fire,Lee Jordan,10,49,42
+Harry Potter and the Goblet of Fire,Madam Pomfrey,10,79,60
+Harry Potter and the Goblet of Fire,Minerva McGonagall,58,531,267
+Harry Potter and the Goblet of Fire,Moaning Myrtle,25,294,162
+Harry Potter and the Goblet of Fire,Molly Weasley,104,1059,436
+Harry Potter and the Goblet of Fire,Nearly Headless Nick,20,122,94
+Harry Potter and the Goblet of Fire,Neville Longbottom,11,81,67
+Harry Potter and the Goblet of Fire,Oliver Wood,5,73,62
+Harry Potter and the Goblet of Fire,Olympe Maxime,26,216,142
+Harry Potter and the Goblet of Fire,Padma Patil,6,35,31
+Harry Potter and the Goblet of Fire,Pansy Parkinson,5,26,25
+Harry Potter and the Goblet of Fire,Parvati Patil,18,105,84
+Harry Potter and the Goblet of Fire,Percy Weasley,73,1073,487
+Harry Potter and the Goblet of Fire,Peter Pettigrew,17,215,130
+Harry Potter and the Goblet of Fire,Petunia Dursley,5,35,27
+Harry Potter and the Goblet of Fire,Pomona Sprout,8,89,69
+Harry Potter and the Goblet of Fire,Remus Lupin,4,197,122
+Harry Potter and the Goblet of Fire,Rita Skeeter,41,358,212
+Harry Potter and the Goblet of Fire,Ron Weasley,832,6715,1525
+Harry Potter and the Goblet of Fire,Rubeus Hagrid,150,1402,526
+Harry Potter and the Goblet of Fire,Severus Snape,82,822,381
+Harry Potter and the Goblet of Fire,Sirius Black,81,1362,508
+Harry Potter and the Goblet of Fire,Sybill Trelawney,17,222,125
+Harry Potter and the Goblet of Fire,Ted Tonks,59,567,309
+Harry Potter and the Goblet of Fire,Unknown,705,7609,1717
+Harry Potter and the Goblet of Fire,Vernon Dursley,38,295,179
+Harry Potter and the Goblet of Fire,Viktor Krum,33,242,150
+Harry Potter and the Goblet of Fire,Vincent Crabbe,2,25,21
+Harry Potter and the Goblet of Fire,Voldemort,45,659,301
+Harry Potter and the Half-Blood Prince,Albus Dumbledore,781,10479,1914
+Harry Potter and the Half-Blood Prince,Argus Filch,10,102,81
+Harry Potter and the Half-Blood Prince,Bellatrix Lestrange,36,502,247
+Harry Potter and the Half-Blood Prince,Bill Weasley,12,138,101
+Harry Potter and the Half-Blood Prince,Cornelius Fudge,60,937,393
+Harry Potter and the Half-Blood Prince,Dean Thomas,9,46,38
+Harry Potter and the Half-Blood Prince,Dobby,10,107,67
+Harry Potter and the Half-Blood Prince,Draco Malfoy,96,1223,438
+Harry Potter and the Half-Blood Prince,Eldred Worple,8,124,93
+Harry Potter and the Half-Blood Prince,Ernie Macmillan,5,28,26
+Harry Potter and the Half-Blood Prince,Fenrir Greyback,12,76,54
+Harry Potter and the Half-Blood Prince,Filius Flitwick,7,53,41
+Harry Potter and the Half-Blood Prince,Fleur Delacour,28,274,165
+Harry Potter and the Half-Blood Prince,Fred Weasley,49,479,280
+Harry Potter and the Half-Blood Prince,George Weasley,33,315,204
+Harry Potter and the Half-Blood Prince,Ginny Weasley,122,1133,470
+Harry Potter and the Half-Blood Prince,Gregory Goyle,9,117,85
+Harry Potter and the Half-Blood Prince,Harry Potter,1652,14514,2095
+Harry Potter and the Half-Blood Prince,Hermione Granger,529,5365,1273
+Harry Potter and the Half-Blood Prince,Horace Slughorn,235,2702,833
+Harry Potter and the Half-Blood Prince,Katie Bell,4,80,64
+Harry Potter and the Half-Blood Prince,Kreacher,9,121,80
+Harry Potter and the Half-Blood Prince,Lavender Brown,8,69,53
+Harry Potter and the Half-Blood Prince,Leanne,4,23,22
+Harry Potter and the Half-Blood Prince,Luna Lovegood,50,466,249
+Harry Potter and the Half-Blood Prince,Madam Pomfrey,8,79,64
+Harry Potter and the Half-Blood Prince,Marcus Belby,5,41,32
+Harry Potter and the Half-Blood Prince,Michael Corner,1,6,6
+Harry Potter and the Half-Blood Prince,Minerva McGonagall,87,986,423
+Harry Potter and the Half-Blood Prince,Moaning Myrtle,12,92,63
+Harry Potter and the Half-Blood Prince,Molly Weasley,126,1332,557
+Harry Potter and the Half-Blood Prince,Mundungus Fletcher,6,25,21
+Harry Potter and the Half-Blood Prince,Narcissa Malfoy,31,286,149
+Harry Potter and the Half-Blood Prince,Nearly Headless Nick,9,159,111
+Harry Potter and the Half-Blood Prince,Neville Longbottom,26,230,143
+Harry Potter and the Half-Blood Prince,Nymphadora Tonks,49,476,248
+Harry Potter and the Half-Blood Prince,Oliver Wood,14,118,92
+Harry Potter and the Half-Blood Prince,Ollivander,2,24,24
+Harry Potter and the Half-Blood Prince,Pansy Parkinson,16,159,101
+Harry Potter and the Half-Blood Prince,Parvati Patil,20,154,104
+Harry Potter and the Half-Blood Prince,Percy Weasley,2,9,9
+Harry Potter and the Half-Blood Prince,Petunia Dursley,2,20,18
+Harry Potter and the Half-Blood Prince,Pomona Sprout,16,121,97
+Harry Potter and the Half-Blood Prince,Remus Lupin,72,1052,439
+Harry Potter and the Half-Blood Prince,Romilda Vane,4,27,25
+Harry Potter and the Half-Blood Prince,Ron Weasley,581,4995,1223
+Harry Potter and the Half-Blood Prince,Rosmerta,4,43,40
+Harry Potter and the Half-Blood Prince,Rubeus Hagrid,125,1253,511
+Harry Potter and the Half-Blood Prince,Rufus Scrimgeour,59,692,304
+Harry Potter and the Half-Blood Prince,Severus Snape,162,2011,704
+Harry Potter and the Half-Blood Prince,Sybill Trelawney,43,400,206
+Harry Potter and the Half-Blood Prince,Ted Tonks,47,543,301
+Harry Potter and the Half-Blood Prince,Terry Boot,1,9,9
+Harry Potter and the Half-Blood Prince,Unknown,493,5079,1303
+Harry Potter and the Half-Blood Prince,Vernon Dursley,21,204,118
+Harry Potter and the Half-Blood Prince,Voldemort,41,532,265
+Harry Potter and the Half-Blood Prince,Zacharias Smith,5,38,34
+Harry Potter and the Order of the Phoenix,Alastor Moody,78,790,383
+Harry Potter and the Order of the Phoenix,Albus Dumbledore,262,4077,1081
+Harry Potter and the Order of the Phoenix,Alicia Spinnet,7,47,44
+Harry Potter and the Order of the Phoenix,Amelia Bones,26,148,98
+Harry Potter and the Order of the Phoenix,Angelina Johnson,72,706,319
+Harry Potter and the Order of the Phoenix,Anthony Goldstein,3,28,26
+Harry Potter and the Order of the Phoenix,Arabella Figg,50,640,306
+Harry Potter and the Order of the Phoenix,Argus Filch,11,162,111
+Harry Potter and the Order of the Phoenix,Bane,6,44,39
+Harry Potter and the Order of the Phoenix,Bellatrix Lestrange,32,313,175
+Harry Potter and the Order of the Phoenix,Bill Weasley,12,123,97
+Harry Potter and the Order of the Phoenix,Cho Chang,97,724,333
+Harry Potter and the Order of the Phoenix,Colin Creevey,2,19,18
+Harry Potter and the Order of the Phoenix,Cornelius Fudge,130,1470,563
+Harry Potter and the Order of the Phoenix,Dean Thomas,33,224,153
+Harry Potter and the Order of the Phoenix,Dobby,17,187,106
+Harry Potter and the Order of the Phoenix,Dolores Umbridge,327,3546,954
+Harry Potter and the Order of the Phoenix,Draco Malfoy,90,835,378
+Harry Potter and the Order of the Phoenix,Dudley Dursley,45,378,199
+Harry Potter and the Order of the Phoenix,Ernie Macmillan,20,293,196
+Harry Potter and the Order of the Phoenix,Fang,2,7,7
+Harry Potter and the Order of the Phoenix,Filius Flitwick,8,57,46
+Harry Potter and the Order of the Phoenix,Firenze,29,283,164
+Harry Potter and the Order of the Phoenix,Fred Weasley,255,2360,818
+Harry Potter and the Order of the Phoenix,George Weasley,161,1451,634
+Harry Potter and the Order of the Phoenix,Gilderoy Lockhart,11,233,150
+Harry Potter and the Order of the Phoenix,Ginny Weasley,117,921,396
+Harry Potter and the Order of the Phoenix,Gregory Goyle,8,43,37
+Harry Potter and the Order of the Phoenix,Griselda Marchbanks,5,55,51
+Harry Potter and the Order of the Phoenix,Harry Potter,2143,16144,2183
+Harry Potter and the Order of the Phoenix,Hermione Granger,1174,11637,2015
+Harry Potter and the Order of the Phoenix,James Potter,33,180,100
+Harry Potter and the Order of the Phoenix,Katie Bell,11,192,141
+Harry Potter and the Order of the Phoenix,Kingsley Shacklebolt,13,114,90
+Harry Potter and the Order of the Phoenix,Kreacher,6,84,67
+Harry Potter and the Order of the Phoenix,Lavender Brown,9,37,33
+Harry Potter and the Order of the Phoenix,Lee Jordan,21,234,139
+Harry Potter and the Order of the Phoenix,Lily Potter,11,72,53
+Harry Potter and the Order of the Phoenix,Lucius Malfoy,15,109,68
+Harry Potter and the Order of the Phoenix,Luna Lovegood,92,840,380
+Harry Potter and the Order of the Phoenix,Madam Hooch,4,85,62
+Harry Potter and the Order of the Phoenix,Madam Pomfrey,5,75,65
+Harry Potter and the Order of the Phoenix,Magorian,20,188,117
+Harry Potter and the Order of the Phoenix,Michael Corner,5,42,37
+Harry Potter and the Order of the Phoenix,Minerva McGonagall,152,1621,634
+Harry Potter and the Order of the Phoenix,Molly Weasley,171,1635,582
+Harry Potter and the Order of the Phoenix,Mundungus Fletcher,28,213,153
+Harry Potter and the Order of the Phoenix,Nearly Headless Nick,41,401,235
+Harry Potter and the Order of the Phoenix,Neville Longbottom,125,783,340
+Harry Potter and the Order of the Phoenix,Nymphadora Tonks,73,764,380
+Harry Potter and the Order of the Phoenix,Oliver Wood,4,28,20
+Harry Potter and the Order of the Phoenix,Pansy Parkinson,2,22,22
+Harry Potter and the Order of the Phoenix,Parvati Patil,32,324,199
+Harry Potter and the Order of the Phoenix,Percy Weasley,8,68,51
+Harry Potter and the Order of the Phoenix,Petunia Dursley,33,340,179
+Harry Potter and the Order of the Phoenix,Pomona Sprout,2,12,11
+Harry Potter and the Order of the Phoenix,Remus Lupin,139,1454,587
+Harry Potter and the Order of the Phoenix,Rita Skeeter,26,314,195
+Harry Potter and the Order of the Phoenix,Ron Weasley,899,7741,1508
+Harry Potter and the Order of the Phoenix,Rubeus Hagrid,318,3526,945
+Harry Potter and the Order of the Phoenix,Severus Snape,188,1890,652
+Harry Potter and the Order of the Phoenix,Sirius Black,323,3874,1079
+Harry Potter and the Order of the Phoenix,Stan Shunpike,4,84,71
+Harry Potter and the Order of the Phoenix,Susan Bones,1,11,11
+Harry Potter and the Order of the Phoenix,Sybill Trelawney,17,146,95
+Harry Potter and the Order of the Phoenix,Ted Tonks,49,379,219
+Harry Potter and the Order of the Phoenix,Terry Boot,6,75,57
+Harry Potter and the Order of the Phoenix,Unknown,553,6034,1581
+Harry Potter and the Order of the Phoenix,Vernon Dursley,91,616,283
+Harry Potter and the Order of the Phoenix,Vincent Crabbe,2,24,24
+Harry Potter and the Order of the Phoenix,Voldemort,11,79,57
+Harry Potter and the Order of the Phoenix,Zacharias Smith,18,187,113
+Harry Potter and the Philosopher's Stone,Albus Dumbledore,95,1275,510
+Harry Potter and the Philosopher's Stone,Angelina Johnson,1,2,2
+Harry Potter and the Philosopher's Stone,Argus Filch,9,94,71
+Harry Potter and the Philosopher's Stone,Bane,6,117,71
+Harry Potter and the Philosopher's Stone,Bloody Baron,4,23,19
+Harry Potter and the Philosopher's Stone,Dean Thomas,4,34,27
+Harry Potter and the Philosopher's Stone,Draco Malfoy,35,290,182
+Harry Potter and the Philosopher's Stone,Dudley Dursley,29,153,111
+Harry Potter and the Philosopher's Stone,Filius Flitwick,6,45,38
+Harry Potter and the Philosopher's Stone,Firenze,16,248,138
+Harry Potter and the Philosopher's Stone,Fred Weasley,11,107,87
+Harry Potter and the Philosopher's Stone,George Weasley,11,92,72
+Harry Potter and the Philosopher's Stone,Griphook,5,41,39
+Harry Potter and the Philosopher's Stone,Harry Potter,614,5100,1132
+Harry Potter and the Philosopher's Stone,Hermione Granger,153,1619,559
+Harry Potter and the Philosopher's Stone,Madam Hooch,6,85,68
+Harry Potter and the Philosopher's Stone,Madam Pomfrey,2,11,8
+Harry Potter and the Philosopher's Stone,Minerva McGonagall,63,702,318
+Harry Potter and the Philosopher's Stone,Molly Weasley,2,11,10
+Harry Potter and the Philosopher's Stone,Nearly Headless Nick,2,27,24
+Harry Potter and the Philosopher's Stone,Neville Longbottom,25,179,116
+Harry Potter and the Philosopher's Stone,Newsreader,2,80,62
+Harry Potter and the Philosopher's Stone,Oliver Wood,37,465,236
+Harry Potter and the Philosopher's Stone,Ollivander,2,69,47
+Harry Potter and the Philosopher's Stone,Pansy Parkinson,2,13,13
+Harry Potter and the Philosopher's Stone,Parvati Patil,1,3,3
+Harry Potter and the Philosopher's Stone,Percy Weasley,34,250,154
+Harry Potter and the Philosopher's Stone,Petunia Dursley,36,302,198
+Harry Potter and the Philosopher's Stone,Quirinus Quirrell,34,611,307
+Harry Potter and the Philosopher's Stone,Ron Weasley,377,3347,894
+Harry Potter and the Philosopher's Stone,Rubeus Hagrid,291,3313,939
+Harry Potter and the Philosopher's Stone,Severus Snape,32,312,182
+Harry Potter and the Philosopher's Stone,Susan Bones,4,7,7
+Harry Potter and the Philosopher's Stone,Ted Tonks,7,43,36
+Harry Potter and the Philosopher's Stone,Unknown,323,3345,997
+Harry Potter and the Philosopher's Stone,Vernon Dursley,68,579,303
+Harry Potter and the Philosopher's Stone,Vincent Crabbe,3,12,11
+Harry Potter and the Philosopher's Stone,Voldemort,3,15,8
+Harry Potter and the Philosopher's Stone,Weatherman,2,72,56
+Harry Potter and the Prisoner of Azkaban,Albus Dumbledore,101,1202,502
+Harry Potter and the Prisoner of Azkaban,Alicia Spinnet,4,17,15
+Harry Potter and the Prisoner of Azkaban,Angelina Johnson,4,24,20
+Harry Potter and the Prisoner of Azkaban,Argus Filch,6,40,35
+Harry Potter and the Prisoner of Azkaban,Cho Chang,7,71,59
+Harry Potter and the Prisoner of Azkaban,Cornelius Fudge,79,1079,446
+Harry Potter and the Prisoner of Azkaban,Dean Thomas,14,69,53
+Harry Potter and the Prisoner of Azkaban,Draco Malfoy,61,407,235
+Harry Potter and the Prisoner of Azkaban,Dudley Dursley,2,7,7
+Harry Potter and the Prisoner of Azkaban,Ernie Macmillan,3,19,19
+Harry Potter and the Prisoner of Azkaban,Filius Flitwick,3,20,20
+Harry Potter and the Prisoner of Azkaban,Fred Weasley,67,642,345
+Harry Potter and the Prisoner of Azkaban,George Weasley,41,408,244
+Harry Potter and the Prisoner of Azkaban,Ginny Weasley,3,7,7
+Harry Potter and the Prisoner of Azkaban,Harry Potter,917,6853,1394
+Harry Potter and the Prisoner of Azkaban,Hermione Granger,445,3558,912
+Harry Potter and the Prisoner of Azkaban,Katie Bell,1,3,3
+Harry Potter and the Prisoner of Azkaban,Lavender Brown,22,269,171
+Harry Potter and the Prisoner of Azkaban,Lee Jordan,15,236,123
+Harry Potter and the Prisoner of Azkaban,Madam Hooch,12,124,87
+Harry Potter and the Prisoner of Azkaban,Madam Pomfrey,27,228,144
+Harry Potter and the Prisoner of Azkaban,Marcus Flint,3,9,8
+Harry Potter and the Prisoner of Azkaban,Minerva McGonagall,67,704,344
+Harry Potter and the Prisoner of Azkaban,Molly Weasley,20,269,171
+Harry Potter and the Prisoner of Azkaban,Neville Longbottom,31,282,170
+Harry Potter and the Prisoner of Azkaban,Oliver Wood,42,452,245
+Harry Potter and the Prisoner of Azkaban,Pansy Parkinson,4,22,20
+Harry Potter and the Prisoner of Azkaban,Parvati Patil,5,69,58
+Harry Potter and the Prisoner of Azkaban,Percy Weasley,53,451,248
+Harry Potter and the Prisoner of Azkaban,Peter Pettigrew,50,818,339
+Harry Potter and the Prisoner of Azkaban,Petunia Dursley,14,78,67
+Harry Potter and the Prisoner of Azkaban,Pomona Sprout,1,3,2
+Harry Potter and the Prisoner of Azkaban,Remus Lupin,345,3789,1004
+Harry Potter and the Prisoner of Azkaban,Ron Weasley,535,4265,1078
+Harry Potter and the Prisoner of Azkaban,Rosmerta,23,322,177
+Harry Potter and the Prisoner of Azkaban,Rubeus Hagrid,119,1150,486
+Harry Potter and the Prisoner of Azkaban,Severus Snape,129,1620,586
+Harry Potter and the Prisoner of Azkaban,Stan Shunpike,52,518,262
+Harry Potter and the Prisoner of Azkaban,Sybill Trelawney,46,640,313
+Harry Potter and the Prisoner of Azkaban,Ted Tonks,7,71,59
+Harry Potter and the Prisoner of Azkaban,Unknown,284,2932,959
+Harry Potter and the Prisoner of Azkaban,Vernon Dursley,49,452,250
+Harry Potter and the Prisoner of Azkaban,Vincent Crabbe,1,1,1

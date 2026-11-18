@@ -1,0 +1,55 @@
+{
+  "books": {
+    "words": 343976,
+    "incantation_mentions": 360,
+    "strict_mentions": 244,
+    "per_10000": 10.465846454403795,
+    "strict_per_10000": 7.093518152429239,
+    "detected_incantations": 78,
+    "incantation_only_lines": 237,
+    "lines_with_incantations": 335
+  },
+  "movies": {
+    "words": 76253,
+    "incantation_mentions": 135,
+    "strict_mentions": 134,
+    "per_10000": 17.70422147325351,
+    "strict_per_10000": 17.57307909197015,
+    "detected_incantations": 50,
+    "incantation_only_lines": 88,
+    "lines_with_incantations": 124
+  },
+  "film_over_book_rate_ratio": 1.6916186904121806,
+  "strict_film_over_book_rate_ratio": 2.4773432187457067,
+  "dictionary_incantations": 109,
+  "manual_review_rows": 16,
+  "context_pairs_with_three_distinct_lines": [
+    {
+      "spell": "Accio",
+      "rank": 1,
+      "word": "wand",
+      "pair_count": 5,
+      "supporting_lines": 4,
+      "ppmi": 3.0906025487809066
+    }
+  ],
+  "parameters": {
+    "context_window": 5,
+    "context_min_word_count": 3,
+    "context_min_distinct_lines": 3,
+    "context_scope": "one dialogue line; full spell spans and own partial components excluded",
+    "rates": "mentions per 10,000 full raw dialogue tokens; unknown speakers retained",
+    "matching": "longest non-overlapping token patterns; explicit variants; no fuzzy match"
+  },
+  "inputs": {
+    "book_data\\all_books.csv": "4b1f58b9fbe5dbc5cda00c01e43f725202274de791b226e1604e1722f7ba043c",
+    "movie_data\\all_movies.csv": "d08c615b95fb3c81f394ba93b477baf8e60b722908335e284971741a28b00051",
+    "config\\spells.json": "6bc4848e841112816780bce19151dd5ec4eda8e0191886095630c2091be5f57b",
+    "config\\spell_reviews.csv": "c49cb2037f3f6a31fe4ade33527c7c9ce64d88e894e8ddee7694823d39d2e528"
+  },
+  "review_source_hashes": {
+    "book_data/Book4.txt": "0f2b957606aed527da8a9b222e18370e3a00912da510d155c113070986229b1f",
+    "book_data/Book5.txt": "f9eb4fd0970326117a48f53795a6b920ae170047b9dd32168d9b2254d9976867",
+    "book_data/Book7.txt": "b61580873533a217799ffbbaae156a1320f3d5c7537886ea3c75a93fe50efcd9"
+  }
+}
