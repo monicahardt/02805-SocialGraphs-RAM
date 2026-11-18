@@ -47,6 +47,7 @@
     <nav id="collection-nav" class="collection-nav" role="tablist" aria-label="Choose books or movies">
       <button id="collection-movies" role="tab" aria-selected="true">Movies</button>
       <button id="collection-books" role="tab" aria-selected="false">Books</button>
+      <button id="collection-research" role="tab" aria-selected="false">Big Graphs</button>
     </nav>
   </header>
   <nav id="view-nav" class="view-nav" role="tablist" aria-label="Choose an analysis">
@@ -56,6 +57,9 @@
     <button id="view-communities" role="tab" aria-selected="false">Communities</button>
     <button id="view-centrality" role="tab" aria-selected="false" hidden>Centrality</button>
     <button id="view-bridges" role="tab" aria-selected="false" hidden>Bridges</button>
+    <button id="view-big1" role="tab" aria-selected="false" hidden>Big Graph 1</button>
+    <button id="view-big2" role="tab" aria-selected="false" hidden>Big Graph 2</button>
+    <button id="view-big3" role="tab" aria-selected="false" hidden>Big Graph 3</button>
   </nav>
   <div class="page-intro">
     <h1 id="page-title">All Movies Network</h1>
@@ -79,6 +83,11 @@
         degree: { src: 'books/analysis/degree_distribution.html', title: 'Book Degree Distribution', description: 'Explore character degrees, P(k), and the illustrative power-law reference.' },
         clustering: { src: 'books/analysis/clustering_coefficients.html', title: 'Book Clustering', description: 'Explore local clustering, transitivity, triangles, and the random-graph benchmark.' },
         communities: { src: 'books/analysis/interaction_communities.html', title: 'Book Interaction Communities', description: 'Explore Louvain communities and compare community layouts.' }
+      },
+      research: {
+        big1: { src: 'research/big_graph1.html', title: 'Big Graph 1 · Bridges and Language Diversity', description: 'Compare character betweenness with vocabulary and utterance diversity across books and movies.' },
+        big2: { src: 'research/big_graph2.html', title: 'Big Graph 2 · Communities and Language', description: 'See whether characters in the same interaction community use more similar language.' },
+        big3: { src: 'research/big_graph3.html', title: 'Big Graph 3 · Adaptation and Network Retention', description: 'Compare book–film language similarity with how much of a character’s interaction neighborhood is retained.' }
       }
     };
     const collectionTabs = [...document.querySelectorAll('#collection-nav [role="tab"]')];
@@ -90,9 +99,16 @@
     let selectedView = 'network';
 
     function render(updateHash = true) {
-      if (selectedCollection === 'books' && ['centrality', 'bridges'].includes(selectedView)) selectedView = 'network';
-      document.getElementById('view-centrality').hidden = selectedCollection !== 'movies';
-      document.getElementById('view-bridges').hidden = selectedCollection !== 'movies';
+      if (!pages[selectedCollection][selectedView]) selectedView = selectedCollection === 'research' ? 'big1' : 'network';
+      for (const view of ['network', 'degree', 'clustering', 'communities']) {
+        document.getElementById(`view-${view}`).hidden = selectedCollection === 'research';
+      }
+      for (const view of ['centrality', 'bridges']) {
+        document.getElementById(`view-${view}`).hidden = selectedCollection !== 'movies';
+      }
+      for (const view of ['big1', 'big2', 'big3']) {
+        document.getElementById(`view-${view}`).hidden = selectedCollection !== 'research';
+      }
       collectionTabs.forEach(tab => tab.setAttribute('aria-selected', String(tab.id === `collection-${selectedCollection}`)));
       viewTabs.forEach(tab => tab.setAttribute('aria-selected', String(tab.id === `view-${selectedView}`)));
       const page = pages[selectedCollection][selectedView];
