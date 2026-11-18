@@ -1,5 +1,11 @@
 TO DO:
 
+# Big graph questions
+
+- Combine who speaks (communities) and compare if they speak alike (cosine similarity)
+- Compare who speaks the most (network) and something with Anton???
+- Compare TF-IDF (Anton) with Bert/Word2Vec (Monha)
+
 # Research question
 
 - Questions: Do villians talk differently in books and in movies?
