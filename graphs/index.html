@@ -54,6 +54,8 @@
     <button id="view-degree" role="tab" aria-selected="false">Degree Distribution</button>
     <button id="view-clustering" role="tab" aria-selected="false">Clustering</button>
     <button id="view-communities" role="tab" aria-selected="false">Communities</button>
+    <button id="view-centrality" role="tab" aria-selected="false" hidden>Centrality</button>
+    <button id="view-bridges" role="tab" aria-selected="false" hidden>Bridges</button>
   </nav>
   <div class="page-intro">
     <h1 id="page-title">All Movies Network</h1>
@@ -68,7 +70,9 @@
         network: { src: 'movies/all_movies_networks.html', title: 'All Movies Network', description: 'Compare turn-based and chapter co-appearance connections; toggle named people only to hide generic roles and groups.' },
         degree: { src: 'movies/analysis/degree_distribution.html', title: 'Movie Degree Distribution', description: 'Explore character degrees, P(k), and the illustrative power-law reference.' },
         clustering: { src: 'movies/analysis/clustering_coefficients.html', title: 'Movie Clustering', description: 'Explore local clustering, transitivity, triangles, and the random-graph benchmark.' },
-        communities: { src: 'movies/analysis/interaction_communities.html', title: 'Movie Interaction Communities', description: 'Explore Louvain communities and compare community layouts.' }
+        communities: { src: 'movies/analysis/interaction_communities.html', title: 'Movie Interaction Communities', description: 'Explore Louvain communities and compare community layouts.' },
+        centrality: { src: 'movies/analysis/centrality.html', title: 'Movie Centrality', description: 'Compare degree, closeness, betweenness, and eigenvector centrality.' },
+        bridges: { src: 'movies/analysis/bridges.html', title: 'Movie Social Bridges', description: 'Compare brokers, articulation points, link betweenness, and structural bridges.' }
       },
       books: {
         network: { src: 'books/all_books_networks.html', title: 'All Books Network', description: 'Explore the rebuilt dialogue network across all seven books, with turn-based and chapter co-appearance connections.' },
@@ -86,6 +90,9 @@
     let selectedView = 'network';
 
     function render(updateHash = true) {
+      if (selectedCollection === 'books' && ['centrality', 'bridges'].includes(selectedView)) selectedView = 'network';
+      document.getElementById('view-centrality').hidden = selectedCollection !== 'movies';
+      document.getElementById('view-bridges').hidden = selectedCollection !== 'movies';
       collectionTabs.forEach(tab => tab.setAttribute('aria-selected', String(tab.id === `collection-${selectedCollection}`)));
       viewTabs.forEach(tab => tab.setAttribute('aria-selected', String(tab.id === `view-${selectedView}`)));
       const page = pages[selectedCollection][selectedView];
@@ -108,9 +115,10 @@
       if (event.key !== 'ArrowLeft' && event.key !== 'ArrowRight') return;
       event.preventDefault();
       const group = collectionTabs.includes(tab) ? collectionTabs : viewTabs;
-      const current = group.indexOf(tab);
+      const visibleGroup = group.filter(item => !item.hidden);
+      const current = visibleGroup.indexOf(tab);
       const step = event.key === 'ArrowRight' ? 1 : -1;
-      const next = group[(current + step + group.length) % group.length];
+      const next = visibleGroup[(current + step + visibleGroup.length) % visibleGroup.length];
       next.focus();
       next.click();
     }));
@@ -118,6 +126,8 @@
     const route = location.hash.slice(1).split('/');
     if (route.length === 2 && pages[route[0]]?.[route[1]]) {
       [selectedCollection, selectedView] = route;
+      render(false);
+    } else {
       render(false);
     }
   </script>

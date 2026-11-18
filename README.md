@@ -1,5 +1,9 @@
 TO DO:
 
+
+How does a character’s position in the Harry Potter interaction network relate to their language? In particular, do characters who bridge otherwise separate groups use more diverse language, and do characters in the same community speak more similarly to one another?
+
+
 # Big graph questions
 
 - Combine who speaks (communities) and compare if they speak alike (cosine similarity)
