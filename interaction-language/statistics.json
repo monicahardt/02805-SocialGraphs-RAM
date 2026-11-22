@@ -1,0 +1,2503 @@
+{
+  "sources": {
+    "Books": {
+      "file": "book_data/all_books.csv",
+      "sha256": "4b1f58b9fbe5dbc5cda00c01e43f725202274de791b226e1604e1722f7ba043c",
+      "rows": 35550,
+      "unknown_rows": 3416,
+      "count_by_source": {
+        "Harry Potter and the Philosopher's Stone": 2357,
+        "Harry Potter and the Chamber of Secrets": 2804,
+        "Harry Potter and the Prisoner of Azkaban": 3714,
+        "Harry Potter and the Goblet of Fire": 5787,
+        "Harry Potter and the Order of the Phoenix": 8794,
+        "Harry Potter and the Half-Blood Prince": 5868,
+        "Harry Potter and the Deathly Hallows": 6226
+      },
+      "bracketed_rows": 0,
+      "recorded_blocks_by_story": {
+        "1": 17,
+        "2": 18,
+        "3": 22,
+        "4": 30,
+        "5": 10,
+        "6": 31,
+        "7": 38
+      }
+    },
+    "Films": {
+      "file": "movie_data/all_movies.csv",
+      "sha256": "d08c615b95fb3c81f394ba93b477baf8e60b722908335e284971741a28b00051",
+      "rows": 7445,
+      "unknown_rows": 0,
+      "count_by_source": {
+        "Harry Potter and the Philosopher's Stone": 885,
+        "Harry Potter and the Chamber of Secrets": 987,
+        "Harry Potter and the Prisoner of Azkaban": 881,
+        "Harry Potter and the Goblet of Fire": 741,
+        "Harry Potter and the Order of the Phoenix": 1157,
+        "Harry Potter and the Half-Blood Prince": 1070,
+        "Harry Potter and the Deathly Hallows Part 1": 1012,
+        "Harry Potter and the Deathly Hallows Part 2": 712
+      },
+      "bracketed_rows": 0,
+      "recorded_blocks_by_story": {
+        "1": 34,
+        "2": 40,
+        "3": 33,
+        "4": 28,
+        "5": 27,
+        "6": 26,
+        "7": 51
+      }
+    }
+  },
+  "minimum_raw_words": 100,
+  "seed": 2805,
+  "matched_pairs": 951,
+  "matched_speaker_story_profiles": 116,
+  "unique_speakers": 53,
+  "matched_raw_word_totals": {
+    "Books": 258450,
+    "Films": 64786
+  },
+  "matched_filtered_word_totals": {
+    "Books": 102110,
+    "Films": 25467
+  },
+  "language_axes": {
+    "cues": {
+      "hostile": [
+        "how dare you",
+        "don't you dare",
+        "you fool",
+        "you idiot",
+        "you stupid",
+        "stupid boy",
+        "shut up",
+        "get lost",
+        "you'll pay",
+        "you will pay",
+        "you'll regret",
+        "you will regret",
+        "i'll kill you",
+        "i will kill you",
+        "i'm going to kill you",
+        "i hate you",
+        "pathetic",
+        "coward",
+        "filthy mudblood",
+        "filthy little",
+        "i'll hurt you",
+        "i will hurt you"
+      ],
+      "supportive": [
+        "don't worry",
+        "do not worry",
+        "don't be afraid",
+        "are you all right",
+        "are you alright",
+        "you all right",
+        "you're safe",
+        "you are safe",
+        "you'll be fine",
+        "you'll be all right",
+        "it'll be all right",
+        "it's all right",
+        "it's okay",
+        "i'll help",
+        "let me help",
+        "thank you",
+        "thanks",
+        "well done",
+        "i'm proud of you",
+        "i love you",
+        "you can trust me",
+        "i'm here for you",
+        "i'm sorry"
+      ]
+    },
+    "cue_exceptions": {
+      "thanks": "thanks(?! to(?: |$))",
+      "pathetic": "(?<!not )pathetic",
+      "shut up": "(?<!to )shut up"
+    },
+    "prior_words": 300,
+    "cue_totals": {
+      "hostile": 145,
+      "supportive": 576
+    },
+    "directive_openers": [
+      "do not",
+      "don't",
+      "you must",
+      "you need to",
+      "you have to",
+      "be careful",
+      "make sure",
+      "stop",
+      "go",
+      "come",
+      "get",
+      "give",
+      "tell",
+      "leave",
+      "stay",
+      "keep",
+      "take",
+      "put",
+      "move",
+      "stand",
+      "sit",
+      "run",
+      "follow",
+      "remember",
+      "watch",
+      "hold",
+      "turn"
+    ],
+    "attention_openers_for_sensitivity": [
+      "listen",
+      "look",
+      "wait",
+      "let"
+    ],
+    "prior_sensitivity_rank_agreement": {
+      "0": 0.89614779886467,
+      "150": 0.9945889845025293,
+      "600": 0.9935989641487869
+    },
+    "tone_extremity": {
+      "characters_with_larger_film_magnitude": 38,
+      "mean_absolute_score": {
+        "Books": 1.1279462426152267,
+        "Films": 1.6628596775826836
+      },
+      "mean_magnitude_gap": 0.5349134349674568,
+      "equal_length_draws": 5000,
+      "equal_length_mean_gap_quantiles": [
+        0.2635394430594332,
+        0.4491435534050051,
+        0.6246482801040746
+      ],
+      "equal_length_median_characters_with_larger_film_magnitude": 20.0
+    },
+    "directive_comparison": {
+      "total_questions": 9553,
+      "total_directives": 1526,
+      "corpus_share": 13.773806300207598,
+      "more_directive_in_films": 38,
+      "mean_percentage_point_shift": 4.469164270386256,
+      "median_percentage_point_shift": 4.674646466772774,
+      "broader_opener_rank_agreement": 0.9273700230647444,
+      "broader_opener_more_directive_in_films": 39,
+      "larger_prior_rank_agreement": 0.9949106593971401,
+      "larger_prior_more_directive_in_films": 38
+    },
+    "coordinates": [
+      {
+        "character": "Aberforth Dumbledore",
+        "medium": "Books",
+        "x": 0.32788305311715604,
+        "y": 13.788052240653785,
+        "words": 920,
+        "questions": 25,
+        "directives": 4,
+        "hits": {
+          "hostile": {
+            "stupid boy": 1
+          },
+          "supportive": {
+            "thank you": 1
+          }
+        }
+      },
+      {
+        "character": "Aberforth Dumbledore",
+        "medium": "Films",
+        "x": 0.7143166514338042,
+        "y": 11.35342918810297,
+        "words": 260,
+        "questions": 10,
+        "directives": 1,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Alastor Moody",
+        "medium": "Books",
+        "x": 0.4139613615620728,
+        "y": 19.767421241044687,
+        "words": 3082,
+        "questions": 74,
+        "directives": 19,
+        "hits": {
+          "hostile": {
+            "shut up": 1
+          },
+          "supportive": {
+            "it's all right": 1,
+            "you all right": 1
+          }
+        }
+      },
+      {
+        "character": "Alastor Moody",
+        "medium": "Films",
+        "x": 2.274259080135739,
+        "y": 29.88251835498095,
+        "words": 1195,
+        "questions": 32,
+        "directives": 16,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "don't worry": 1,
+            "are you alright": 1,
+            "i'm sorry": 1
+          }
+        }
+      },
+      {
+        "character": "Albus Dumbledore",
+        "medium": "Books",
+        "x": 1.1052969363534826,
+        "y": 13.245378129497125,
+        "words": 23585,
+        "questions": 341,
+        "directives": 52,
+        "hits": {
+          "hostile": {
+            "shut up": 1,
+            "you stupid": 1
+          },
+          "supportive": {
+            "thank you": 15,
+            "well done": 5,
+            "i'm sorry": 3,
+            "are you all right": 2,
+            "thanks": 2,
+            "don't worry": 1
+          }
+        }
+      },
+      {
+        "character": "Albus Dumbledore",
+        "medium": "Films",
+        "x": 1.8099569287082617,
+        "y": 27.604012258840545,
+        "words": 7656,
+        "questions": 105,
+        "directives": 42,
+        "hits": {
+          "hostile": {
+            "you will regret": 1
+          },
+          "supportive": {
+            "thank you": 5,
+            "well done": 3,
+            "are you all right": 2,
+            "it'll be all right": 1,
+            "thanks": 1,
+            "are you alright": 1,
+            "i'm sorry": 1,
+            "let me help": 1
+          }
+        }
+      },
+      {
+        "character": "Aragog",
+        "medium": "Books",
+        "x": 0.6757049405454905,
+        "y": 11.530986566828844,
+        "words": 292,
+        "questions": 2,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Aragog",
+        "medium": "Films",
+        "x": 0.9259660296364128,
+        "y": 9.916294173863093,
+        "words": 132,
+        "questions": 4,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Bartemius Crouch",
+        "medium": "Books",
+        "x": 2.0168212813470006,
+        "y": 16.18726181328974,
+        "words": 890,
+        "questions": 14,
+        "directives": 3,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "thank you": 2
+          }
+        }
+      },
+      {
+        "character": "Bartemius Crouch",
+        "medium": "Films",
+        "x": 3.6529944060927404,
+        "y": 23.263326746187232,
+        "words": 357,
+        "questions": 9,
+        "directives": 4,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "well done": 1,
+            "i'm sorry": 1
+          }
+        }
+      },
+      {
+        "character": "Bellatrix Lestrange",
+        "medium": "Books",
+        "x": -1.5814979776137892,
+        "y": 13.918812962873506,
+        "words": 1344,
+        "questions": 37,
+        "directives": 6,
+        "hits": {
+          "hostile": {
+            "how dare you": 3
+          },
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Bellatrix Lestrange",
+        "medium": "Films",
+        "x": -2.62890058159461,
+        "y": 27.056314960220288,
+        "words": 689,
+        "questions": 30,
+        "directives": 13,
+        "hits": {
+          "hostile": {
+            "how dare you": 3,
+            "coward": 1,
+            "shut up": 1
+          },
+          "supportive": {
+            "well done": 1,
+            "let me help": 1
+          }
+        }
+      },
+      {
+        "character": "Bill Weasley",
+        "medium": "Books",
+        "x": 0.3710735851604178,
+        "y": 7.746732936373907,
+        "words": 778,
+        "questions": 8,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Bill Weasley",
+        "medium": "Films",
+        "x": 0.9901418930765602,
+        "y": 12.553003397920886,
+        "words": 104,
+        "questions": 1,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Cedric Diggory",
+        "medium": "Books",
+        "x": 1.9021974521778946,
+        "y": 31.148442172816452,
+        "words": 436,
+        "questions": 23,
+        "directives": 13,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "you all right": 1
+          }
+        }
+      },
+      {
+        "character": "Cedric Diggory",
+        "medium": "Films",
+        "x": 0.8889273884509563,
+        "y": 26.222157465783003,
+        "words": 150,
+        "questions": 12,
+        "directives": 6,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Corban Yaxley",
+        "medium": "Books",
+        "x": 0.8247779892843925,
+        "y": 9.267431597528686,
+        "words": 185,
+        "questions": 5,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Corban Yaxley",
+        "medium": "Films",
+        "x": 1.000043312007326,
+        "y": 12.553003397920886,
+        "words": 100,
+        "questions": 1,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Cornelius Fudge",
+        "medium": "Books",
+        "x": 1.544407625413454,
+        "y": 7.267914741561814,
+        "words": 2549,
+        "questions": 73,
+        "directives": 5,
+        "hits": {
+          "hostile": {
+            "shut up": 1
+          },
+          "supportive": {
+            "i'm sorry": 2,
+            "thank you": 2,
+            "you're safe": 1
+          }
+        }
+      },
+      {
+        "character": "Cornelius Fudge",
+        "medium": "Films",
+        "x": 1.4373894505163554,
+        "y": 12.882060367297745,
+        "words": 674,
+        "questions": 21,
+        "directives": 3,
+        "hits": {
+          "hostile": {
+            "shut up": 1
+          },
+          "supportive": {
+            "you're safe": 1,
+            "thank you": 1
+          }
+        }
+      },
+      {
+        "character": "Dobby",
+        "medium": "Books",
+        "x": 0.4381350764544692,
+        "y": 16.843531023206012,
+        "words": 613,
+        "questions": 8,
+        "directives": 2,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Dobby",
+        "medium": "Films",
+        "x": 0.5012748431114415,
+        "y": 13.216420501733793,
+        "words": 498,
+        "questions": 7,
+        "directives": 1,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Dolores Umbridge",
+        "medium": "Books",
+        "x": 0.8840398660434037,
+        "y": 11.146126479802396,
+        "words": 3546,
+        "questions": 122,
+        "directives": 15,
+        "hits": {
+          "hostile": {
+            "shut up": 1
+          },
+          "supportive": {
+            "thank you": 3,
+            "i'm sorry": 1
+          }
+        }
+      },
+      {
+        "character": "Dolores Umbridge",
+        "medium": "Films",
+        "x": 1.1824470648673397,
+        "y": 11.242394592214056,
+        "words": 884,
+        "questions": 26,
+        "directives": 3,
+        "hits": {
+          "hostile": {
+            "shut up": 1
+          },
+          "supportive": {
+            "thank you": 1,
+            "i'm sorry": 1
+          }
+        }
+      },
+      {
+        "character": "Draco Malfoy",
+        "medium": "Books",
+        "x": -0.3904301305995779,
+        "y": 14.135660079948671,
+        "words": 3798,
+        "questions": 103,
+        "directives": 17,
+        "hits": {
+          "hostile": {
+            "filthy little": 1,
+            "you'll pay": 1,
+            "pathetic": 1,
+            "you stupid": 1
+          },
+          "supportive": {
+            "thanks": 2
+          }
+        }
+      },
+      {
+        "character": "Draco Malfoy",
+        "medium": "Films",
+        "x": -3.1615001204103574,
+        "y": 19.364611792544498,
+        "words": 1155,
+        "questions": 47,
+        "directives": 12,
+        "hits": {
+          "hostile": {
+            "filthy little": 2,
+            "pathetic": 2,
+            "how dare you": 1,
+            "don't you dare": 1
+          },
+          "supportive": {
+            "thank you": 1
+          }
+        }
+      },
+      {
+        "character": "Elphias Doge",
+        "medium": "Books",
+        "x": 1.936400172618161,
+        "y": 12.531013229316278,
+        "words": 423,
+        "questions": 8,
+        "directives": 1,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "i'm sorry": 1
+          }
+        }
+      },
+      {
+        "character": "Elphias Doge",
+        "medium": "Films",
+        "x": 2.7505251960764836,
+        "y": 12.553003397920886,
+        "words": 209,
+        "questions": 1,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "i'm sorry": 1
+          }
+        }
+      },
+      {
+        "character": "Firenze",
+        "medium": "Books",
+        "x": 2.5547761401513327,
+        "y": 7.746732936373907,
+        "words": 248,
+        "questions": 8,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "are you all right": 1
+          }
+        }
+      },
+      {
+        "character": "Firenze",
+        "medium": "Films",
+        "x": 3.3898724571499526,
+        "y": 11.530986566828844,
+        "words": 113,
+        "questions": 2,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "you're safe": 1
+          }
+        }
+      },
+      {
+        "character": "Fred Weasley",
+        "medium": "Books",
+        "x": 0.0865276497518776,
+        "y": 11.742839491765999,
+        "words": 4323,
+        "questions": 107,
+        "directives": 14,
+        "hits": {
+          "hostile": {
+            "shut up": 1
+          },
+          "supportive": {
+            "don't worry": 1
+          }
+        }
+      },
+      {
+        "character": "Fred Weasley",
+        "medium": "Films",
+        "x": 5.112808007222451,
+        "y": 18.968270082202906,
+        "words": 365,
+        "questions": 10,
+        "directives": 3,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "don't worry": 1,
+            "i love you": 1,
+            "thank you": 1
+          }
+        }
+      },
+      {
+        "character": "George Weasley",
+        "medium": "Books",
+        "x": 1.977425600004139,
+        "y": 17.717041264120404,
+        "words": 408,
+        "questions": 7,
+        "directives": 2,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "it's okay": 1
+          }
+        }
+      },
+      {
+        "character": "George Weasley",
+        "medium": "Films",
+        "x": 2.9046002589272413,
+        "y": 25.720173810641803,
+        "words": 182,
+        "questions": 1,
+        "directives": 2,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "don't worry": 1
+          }
+        }
+      },
+      {
+        "character": "Gilderoy Lockhart",
+        "medium": "Books",
+        "x": 1.049488249477459,
+        "y": 29.16837088491189,
+        "words": 1034,
+        "questions": 14,
+        "directives": 8,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "thank you": 1
+          }
+        }
+      },
+      {
+        "character": "Gilderoy Lockhart",
+        "medium": "Films",
+        "x": 0.3344626461562963,
+        "y": 10.582495726836465,
+        "words": 896,
+        "questions": 20,
+        "directives": 2,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Ginny Weasley",
+        "medium": "Books",
+        "x": 1.94620339141553,
+        "y": 15.620271483923945,
+        "words": 1447,
+        "questions": 42,
+        "directives": 8,
+        "hits": {
+          "hostile": {
+            "pathetic": 1
+          },
+          "supportive": {
+            "thanks": 1,
+            "don't worry": 1,
+            "it's all right": 1,
+            "are you all right": 1
+          }
+        }
+      },
+      {
+        "character": "Ginny Weasley",
+        "medium": "Films",
+        "x": 3.592840306591213,
+        "y": 12.171964205502192,
+        "words": 368,
+        "questions": 23,
+        "directives": 3,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "it's all right": 1,
+            "don't worry": 1
+          }
+        }
+      },
+      {
+        "character": "Griphook",
+        "medium": "Books",
+        "x": 2.2857307855266003,
+        "y": 12.079176123075738,
+        "words": 750,
+        "questions": 16,
+        "directives": 2,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "are you all right": 1,
+            "i'm sorry": 1
+          }
+        }
+      },
+      {
+        "character": "Griphook",
+        "medium": "Films",
+        "x": 2.447582735669459,
+        "y": 13.981145477406365,
+        "words": 272,
+        "questions": 6,
+        "directives": 1,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "well done": 1
+          }
+        }
+      },
+      {
+        "character": "Harry Potter",
+        "medium": "Books",
+        "x": 1.9712287943467044,
+        "y": 10.223980869058618,
+        "words": 74983,
+        "questions": 2752,
+        "directives": 313,
+        "hits": {
+          "hostile": {
+            "shut up": 21,
+            "coward": 4,
+            "how dare you": 2,
+            "you'll regret": 1,
+            "pathetic": 1,
+            "don't you dare": 1
+          },
+          "supportive": {
+            "thanks": 79,
+            "i'm sorry": 28,
+            "thank you": 16,
+            "don't worry": 13,
+            "it's okay": 13,
+            "well done": 9,
+            "it's all right": 8,
+            "are you all right": 7,
+            "you all right": 2,
+            "i'll help": 1,
+            "you'll be all right": 1,
+            "i love you": 1
+          }
+        }
+      },
+      {
+        "character": "Harry Potter",
+        "medium": "Films",
+        "x": 3.4598695422890406,
+        "y": 16.010931448232444,
+        "words": 13978,
+        "questions": 691,
+        "directives": 132,
+        "hits": {
+          "hostile": {
+            "shut up": 4,
+            "pathetic": 1,
+            "i'll kill you": 1,
+            "coward": 1,
+            "how dare you": 1
+          },
+          "supportive": {
+            "thanks": 18,
+            "thank you": 13,
+            "don't worry": 10,
+            "i'm sorry": 7,
+            "well done": 3,
+            "are you all right": 2,
+            "are you alright": 2,
+            "it's okay": 1,
+            "it's all right": 1
+          }
+        }
+      },
+      {
+        "character": "Hermione Granger",
+        "medium": "Books",
+        "x": 1.150855814536105,
+        "y": 10.982486598694555,
+        "words": 38280,
+        "questions": 1032,
+        "directives": 127,
+        "hits": {
+          "hostile": {
+            "shut up": 9,
+            "pathetic": 3,
+            "don't you dare": 2,
+            "coward": 1,
+            "i'll kill you": 1
+          },
+          "supportive": {
+            "i'm sorry": 14,
+            "thanks": 13,
+            "thank you": 11,
+            "are you all right": 7,
+            "well done": 4,
+            "it's okay": 3,
+            "it's all right": 3,
+            "don't worry": 2,
+            "you'll be all right": 1,
+            "you'll be fine": 1,
+            "it'll be all right": 1
+          }
+        }
+      },
+      {
+        "character": "Hermione Granger",
+        "medium": "Films",
+        "x": 1.5660542213694026,
+        "y": 22.067613871675004,
+        "words": 7618,
+        "questions": 261,
+        "directives": 75,
+        "hits": {
+          "hostile": {
+            "pathetic": 1,
+            "how dare you": 1,
+            "shut up": 1
+          },
+          "supportive": {
+            "thank you": 4,
+            "thanks": 3,
+            "i'm sorry": 3,
+            "are you all right": 2,
+            "are you alright": 2,
+            "you're safe": 1
+          }
+        }
+      },
+      {
+        "character": "Horace Slughorn",
+        "medium": "Books",
+        "x": 1.1325840522328217,
+        "y": 14.022537521025953,
+        "words": 2702,
+        "questions": 55,
+        "directives": 9,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "thanks": 1,
+            "well done": 1,
+            "i'm sorry": 1
+          }
+        }
+      },
+      {
+        "character": "Horace Slughorn",
+        "medium": "Films",
+        "x": 2.176548700041488,
+        "y": 16.724263276344715,
+        "words": 2181,
+        "questions": 43,
+        "directives": 9,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "thank you": 4,
+            "i'm sorry": 1
+          }
+        }
+      },
+      {
+        "character": "Igor Karkaroff",
+        "medium": "Books",
+        "x": 1.3820506661430705,
+        "y": 19.15066679442937,
+        "words": 713,
+        "questions": 14,
+        "directives": 4,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "thank you": 1
+          }
+        }
+      },
+      {
+        "character": "Igor Karkaroff",
+        "medium": "Films",
+        "x": 0.9281144426982142,
+        "y": 12.553003397920886,
+        "words": 131,
+        "questions": 1,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Lily Potter",
+        "medium": "Books",
+        "x": 0.738039344654853,
+        "y": 12.998353476603313,
+        "words": 242,
+        "questions": 14,
+        "directives": 2,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Lily Potter",
+        "medium": "Films",
+        "x": 0.9569792459400244,
+        "y": 13.773806300207601,
+        "words": 118,
+        "questions": 0,
+        "directives": 0,
+        "hits": {
+          "hostile": {
+            "shut up": 1
+          },
+          "supportive": {
+            "thank you": 1
+          }
+        }
+      },
+      {
+        "character": "Lucius Malfoy",
+        "medium": "Books",
+        "x": 0.9780374689558199,
+        "y": 9.267431597528686,
+        "words": 109,
+        "questions": 5,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Lucius Malfoy",
+        "medium": "Films",
+        "x": 0.7476959342110847,
+        "y": 25.55349179571928,
+        "words": 235,
+        "questions": 4,
+        "directives": 3,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Luna Lovegood",
+        "medium": "Books",
+        "x": 1.6699495701389642,
+        "y": 16.99716731042304,
+        "words": 1736,
+        "questions": 42,
+        "directives": 9,
+        "hits": {
+          "hostile": {
+            "filthy mudblood": 1
+          },
+          "supportive": {
+            "thank you": 2,
+            "don't worry": 1,
+            "thanks": 1
+          }
+        }
+      },
+      {
+        "character": "Luna Lovegood",
+        "medium": "Films",
+        "x": 2.810324736303197,
+        "y": 13.6801415865157,
+        "words": 554,
+        "questions": 19,
+        "directives": 3,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "it's okay": 1,
+            "thanks": 1
+          }
+        }
+      },
+      {
+        "character": "Minerva McGonagall",
+        "medium": "Books",
+        "x": 0.44297108246639555,
+        "y": 11.395630279773693,
+        "words": 5118,
+        "questions": 111,
+        "directives": 14,
+        "hits": {
+          "hostile": {
+            "stupid boy": 1,
+            "you fool": 1
+          },
+          "supportive": {
+            "thank you": 4
+          }
+        }
+      },
+      {
+        "character": "Minerva McGonagall",
+        "medium": "Films",
+        "x": 1.0563456535224165,
+        "y": 11.606373381863442,
+        "words": 1972,
+        "questions": 40,
+        "directives": 5,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "thank you": 1,
+            "i'm sorry": 1
+          }
+        }
+      },
+      {
+        "character": "Moaning Myrtle",
+        "medium": "Books",
+        "x": 0.735325964711269,
+        "y": 22.354227228191778,
+        "words": 244,
+        "questions": 3,
+        "directives": 2,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Moaning Myrtle",
+        "medium": "Films",
+        "x": 0.7273042269144189,
+        "y": 14.839802124824914,
+        "words": 250,
+        "questions": 5,
+        "directives": 1,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Molly Weasley",
+        "medium": "Books",
+        "x": 0.4860477822635848,
+        "y": 23.263326746187232,
+        "words": 523,
+        "questions": 9,
+        "directives": 4,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Molly Weasley",
+        "medium": "Films",
+        "x": 2.5134960947987977,
+        "y": 39.545500004651636,
+        "words": 257,
+        "questions": 4,
+        "directives": 7,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "don't be afraid": 1
+          }
+        }
+      },
+      {
+        "character": "Mundungus Fletcher",
+        "medium": "Books",
+        "x": 0.9569792459400246,
+        "y": 9.267431597528686,
+        "words": 118,
+        "questions": 5,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Mundungus Fletcher",
+        "medium": "Films",
+        "x": 0.9195800570182306,
+        "y": 8.698269238223137,
+        "words": 135,
+        "questions": 6,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Muriel",
+        "medium": "Books",
+        "x": 0.49263217340262355,
+        "y": 7.344985194512152,
+        "words": 512,
+        "questions": 9,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Muriel",
+        "medium": "Films",
+        "x": 0.8264820760391123,
+        "y": 10.662858037251526,
+        "words": 184,
+        "questions": 3,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Neville Longbottom",
+        "medium": "Books",
+        "x": 2.905997713506778,
+        "y": 25.287410597828917,
+        "words": 870,
+        "questions": 16,
+        "directives": 7,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "it's all right": 2,
+            "thanks": 1
+          }
+        }
+      },
+      {
+        "character": "Neville Longbottom",
+        "medium": "Films",
+        "x": 0.528424471338085,
+        "y": 19.15066679442937,
+        "words": 457,
+        "questions": 14,
+        "directives": 4,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Oliver Wood",
+        "medium": "Books",
+        "x": 0.5228984637946801,
+        "y": 29.625483197813452,
+        "words": 465,
+        "questions": 4,
+        "directives": 4,
+        "hits": {
+          "hostile": {
+            "shut up": 1
+          },
+          "supportive": {
+            "don't worry": 1
+          }
+        }
+      },
+      {
+        "character": "Oliver Wood",
+        "medium": "Films",
+        "x": 0.8403725310985932,
+        "y": 11.530986566828844,
+        "words": 176,
+        "questions": 2,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Ollivander",
+        "medium": "Books",
+        "x": 0.47171854339968206,
+        "y": 9.267431597528686,
+        "words": 548,
+        "questions": 5,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Ollivander",
+        "medium": "Films",
+        "x": 0.814699235851182,
+        "y": 13.773806300207601,
+        "words": 191,
+        "questions": 0,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Percy Weasley",
+        "medium": "Books",
+        "x": 0.7273042269144185,
+        "y": 14.67321341821858,
+        "words": 250,
+        "questions": 11,
+        "directives": 2,
+        "hits": {
+          "hostile": {
+            "shut up": 1
+          },
+          "supportive": {
+            "well done": 1
+          }
+        }
+      },
+      {
+        "character": "Percy Weasley",
+        "medium": "Films",
+        "x": 3.3097336283757217,
+        "y": 39.40593367123202,
+        "words": 123,
+        "questions": 1,
+        "directives": 5,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "thank you": 1
+          }
+        }
+      },
+      {
+        "character": "Peter Pettigrew",
+        "medium": "Books",
+        "x": 2.1467060150294555,
+        "y": 12.079176123075738,
+        "words": 818,
+        "questions": 16,
+        "directives": 2,
+        "hits": {
+          "hostile": {
+            "how dare you": 2
+          },
+          "supportive": {
+            "thank you": 4
+          }
+        }
+      },
+      {
+        "character": "Peter Pettigrew",
+        "medium": "Films",
+        "x": 0.9412172348304242,
+        "y": 18.68610806709368,
+        "words": 125,
+        "questions": 6,
+        "directives": 2,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Petunia Dursley",
+        "medium": "Books",
+        "x": 0.6644806059849342,
+        "y": 14.068944288982399,
+        "words": 302,
+        "questions": 12,
+        "directives": 2,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Petunia Dursley",
+        "medium": "Films",
+        "x": 4.137960904832639,
+        "y": 20.750786126952526,
+        "words": 280,
+        "questions": 8,
+        "directives": 3,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "it's all right": 2
+          }
+        }
+      },
+      {
+        "character": "Pomona Sprout",
+        "medium": "Books",
+        "x": 0.9925988208509438,
+        "y": 19.672598567517984,
+        "words": 103,
+        "questions": 1,
+        "directives": 1,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Pomona Sprout",
+        "medium": "Films",
+        "x": 0.8639683041100007,
+        "y": 10.662858037251526,
+        "words": 163,
+        "questions": 3,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Quirinus Quirrell",
+        "medium": "Books",
+        "x": -0.6585978871537539,
+        "y": 13.51247638346402,
+        "words": 611,
+        "questions": 13,
+        "directives": 2,
+        "hits": {
+          "hostile": {
+            "i'm going to kill you": 1
+          },
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Quirinus Quirrell",
+        "medium": "Films",
+        "x": 0.7143166514338042,
+        "y": 18.187122850236793,
+        "words": 260,
+        "questions": 11,
+        "directives": 3,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Remus Lupin",
+        "medium": "Books",
+        "x": 2.0815289570400304,
+        "y": 12.81766195086092,
+        "words": 6618,
+        "questions": 130,
+        "directives": 19,
+        "hits": {
+          "hostile": {
+            "how dare you": 4,
+            "you fool": 1
+          },
+          "supportive": {
+            "thank you": 7,
+            "i'm sorry": 4,
+            "thanks": 3,
+            "are you all right": 2,
+            "well done": 1,
+            "don't worry": 1,
+            "you're safe": 1
+          }
+        }
+      },
+      {
+        "character": "Remus Lupin",
+        "medium": "Films",
+        "x": 3.971639397069943,
+        "y": 30.54995766082472,
+        "words": 1815,
+        "questions": 33,
+        "directives": 17,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "it's all right": 2,
+            "i'm sorry": 2,
+            "well done": 2,
+            "thank you": 1,
+            "are you alright": 1
+          }
+        }
+      },
+      {
+        "character": "Rita Skeeter",
+        "medium": "Books",
+        "x": 2.127685903955821,
+        "y": 11.845485613230096,
+        "words": 358,
+        "questions": 24,
+        "directives": 3,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "don't worry": 1
+          }
+        }
+      },
+      {
+        "character": "Rita Skeeter",
+        "medium": "Films",
+        "x": 0.716876926170126,
+        "y": 7.344985194512152,
+        "words": 258,
+        "questions": 9,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Ron Weasley",
+        "medium": "Books",
+        "x": 0.48209580588958856,
+        "y": 9.842932363357061,
+        "words": 39941,
+        "questions": 1433,
+        "directives": 156,
+        "hits": {
+          "hostile": {
+            "shut up": 12,
+            "pathetic": 4,
+            "don't you dare": 2,
+            "you stupid": 2,
+            "how dare you": 2,
+            "get lost": 1,
+            "you idiot": 1,
+            "i'll kill you": 1
+          },
+          "supportive": {
+            "thanks": 13,
+            "i'm sorry": 8,
+            "don't worry": 5,
+            "it's okay": 5,
+            "it's all right": 3,
+            "thank you": 3,
+            "are you all right": 2,
+            "well done": 2,
+            "i'll help": 1,
+            "you all right": 1,
+            "i love you": 1
+          }
+        }
+      },
+      {
+        "character": "Ron Weasley",
+        "medium": "Films",
+        "x": 1.0266394734743243,
+        "y": 15.044791000667466,
+        "words": 6908,
+        "questions": 321,
+        "directives": 57,
+        "hits": {
+          "hostile": {
+            "shut up": 3,
+            "pathetic": 1,
+            "you'll pay": 1
+          },
+          "supportive": {
+            "thanks": 6,
+            "i'm sorry": 3,
+            "thank you": 1,
+            "you all right": 1,
+            "well done": 1
+          }
+        }
+      },
+      {
+        "character": "Rubeus Hagrid",
+        "medium": "Books",
+        "x": 0.954215897279897,
+        "y": 15.135314147719395,
+        "words": 11647,
+        "questions": 257,
+        "directives": 46,
+        "hits": {
+          "hostile": {
+            "coward": 1,
+            "how dare you": 1
+          },
+          "supportive": {
+            "i'm sorry": 4,
+            "it's okay": 4,
+            "you all right": 2,
+            "don't worry": 1,
+            "you are safe": 1,
+            "well done": 1
+          }
+        }
+      },
+      {
+        "character": "Rubeus Hagrid",
+        "medium": "Films",
+        "x": 4.59467053731263,
+        "y": 33.588403617955485,
+        "words": 3487,
+        "questions": 75,
+        "directives": 41,
+        "hits": {
+          "hostile": {
+            "coward": 1
+          },
+          "supportive": {
+            "well done": 12,
+            "thanks": 2,
+            "you all right": 2,
+            "you'll be all right": 1,
+            "thank you": 1
+          }
+        }
+      },
+      {
+        "character": "Rufus Scrimgeour",
+        "medium": "Books",
+        "x": 0.5228984637946802,
+        "y": 7.9791835658870385,
+        "words": 465,
+        "questions": 19,
+        "directives": 1,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Rufus Scrimgeour",
+        "medium": "Films",
+        "x": 0.6279706825791684,
+        "y": 20.98133501142669,
+        "words": 337,
+        "questions": 4,
+        "directives": 2,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Scabior",
+        "medium": "Books",
+        "x": 2.8283178278847076,
+        "y": 6.356098105499567,
+        "words": 195,
+        "questions": 12,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "i'm sorry": 1
+          }
+        }
+      },
+      {
+        "character": "Scabior",
+        "medium": "Films",
+        "x": 0.9546952859258481,
+        "y": 6.982852505925816,
+        "words": 119,
+        "questions": 10,
+        "directives": 0,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Severus Snape",
+        "medium": "Books",
+        "x": -0.17591893075283893,
+        "y": 16.5448975749068,
+        "words": 8795,
+        "questions": 195,
+        "directives": 39,
+        "hits": {
+          "hostile": {
+            "coward": 3,
+            "shut up": 2,
+            "you stupid": 1,
+            "you will pay": 1,
+            "pathetic": 1
+          },
+          "supportive": {
+            "thank you": 2,
+            "i'm sorry": 1,
+            "it's all right": 1,
+            "thanks": 1,
+            "don't worry": 1
+          }
+        }
+      },
+      {
+        "character": "Severus Snape",
+        "medium": "Films",
+        "x": 0.5214217224591919,
+        "y": 28.29806742547662,
+        "words": 2385,
+        "questions": 53,
+        "directives": 23,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "thank you": 1
+          }
+        }
+      },
+      {
+        "character": "Sirius Black",
+        "medium": "Books",
+        "x": 1.6979800080930147,
+        "y": 14.849863170494123,
+        "words": 5236,
+        "questions": 91,
+        "directives": 16,
+        "hits": {
+          "hostile": {
+            "coward": 1
+          },
+          "supportive": {
+            "don't worry": 5,
+            "thanks": 2,
+            "it's okay": 1,
+            "thank you": 1,
+            "are you all right": 1
+          }
+        }
+      },
+      {
+        "character": "Sirius Black",
+        "medium": "Films",
+        "x": 0.4504699603636604,
+        "y": 28.795151482839646,
+        "words": 588,
+        "questions": 7,
+        "directives": 5,
+        "hits": {
+          "hostile": {
+            "shut up": 1
+          },
+          "supportive": {
+            "you all right": 1
+          }
+        }
+      },
+      {
+        "character": "Stan Shunpike",
+        "medium": "Books",
+        "x": 0.48901873447790994,
+        "y": 8.696736943774326,
+        "words": 518,
+        "questions": 27,
+        "directives": 2,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Stan Shunpike",
+        "medium": "Films",
+        "x": 0.843918406757237,
+        "y": 27.183289351097983,
+        "words": 174,
+        "questions": 11,
+        "directives": 6,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Sybill Trelawney",
+        "medium": "Books",
+        "x": 0.36834007808741287,
+        "y": 9.557183832094996,
+        "words": 786,
+        "questions": 14,
+        "directives": 1,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Sybill Trelawney",
+        "medium": "Films",
+        "x": 0.5555796177818477,
+        "y": 24.30734080737163,
+        "words": 420,
+        "questions": 8,
+        "directives": 4,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Vernon Dursley",
+        "medium": "Books",
+        "x": -0.5249192258941993,
+        "y": 17.96472666099921,
+        "words": 843,
+        "questions": 25,
+        "directives": 6,
+        "hits": {
+          "hostile": {
+            "how dare you": 1
+          },
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Vernon Dursley",
+        "medium": "Films",
+        "x": 0.49323961134763294,
+        "y": 29.75790280145982,
+        "words": 511,
+        "questions": 11,
+        "directives": 7,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Voldemort",
+        "medium": "Books",
+        "x": 1.5099579014423234,
+        "y": 16.109374438148574,
+        "words": 2614,
+        "questions": 61,
+        "directives": 12,
+        "hits": {
+          "hostile": {},
+          "supportive": {
+            "thank you": 3,
+            "are you all right": 1
+          }
+        }
+      },
+      {
+        "character": "Voldemort",
+        "medium": "Films",
+        "x": 0.18895480623662275,
+        "y": 31.447097829026887,
+        "words": 1817,
+        "questions": 40,
+        "directives": 21,
+        "hits": {
+          "hostile": {
+            "i'm going to kill you": 1
+          },
+          "supportive": {
+            "well done": 1
+          }
+        }
+      },
+      {
+        "character": "Xenophilius Lovegood",
+        "medium": "Books",
+        "x": 0.4784896229700123,
+        "y": 12.521919300686994,
+        "words": 536,
+        "questions": 15,
+        "directives": 2,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      },
+      {
+        "character": "Xenophilius Lovegood",
+        "medium": "Films",
+        "x": 0.6451892335531134,
+        "y": 10.378156754234253,
+        "words": 320,
+        "questions": 12,
+        "directives": 1,
+        "hits": {
+          "hostile": {},
+          "supportive": {}
+        }
+      }
+    ],
+    "audit_records": [
+      {
+        "group": "directives",
+        "medium": "Books",
+        "character": "Hermione Granger",
+        "source": "Harry Potter and the Chamber of Secrets",
+        "record": 4251,
+        "matches": [
+          "don't"
+        ]
+      },
+      {
+        "group": "directives",
+        "medium": "Books",
+        "character": "Remus Lupin",
+        "source": "Harry Potter and the Prisoner of Azkaban",
+        "record": 8785,
+        "matches": [
+          "tell"
+        ]
+      },
+      {
+        "group": "directives",
+        "medium": "Books",
+        "character": "Harry Potter",
+        "source": "Harry Potter and the Goblet of Fire",
+        "record": 14003,
+        "matches": [
+          "stop"
+        ]
+      },
+      {
+        "group": "directives",
+        "medium": "Films",
+        "character": "Hermione Granger",
+        "source": "Harry Potter and the Deathly Hallows Part 1",
+        "record": 6109,
+        "matches": [
+          "stop"
+        ]
+      },
+      {
+        "group": "directives",
+        "medium": "Films",
+        "character": "Hermione Granger",
+        "source": "Harry Potter and the Prisoner of Azkaban",
+        "record": 2654,
+        "matches": [
+          "come"
+        ]
+      },
+      {
+        "group": "directives",
+        "medium": "Films",
+        "character": "Albus Dumbledore",
+        "source": "Harry Potter and the Prisoner of Azkaban",
+        "record": 2175,
+        "matches": [
+          "tell"
+        ]
+      },
+      {
+        "group": "hostile",
+        "medium": "Books",
+        "character": "Ron Weasley",
+        "source": "Harry Potter and the Half-Blood Prince",
+        "record": 26029,
+        "matches": [
+          "pathetic"
+        ]
+      },
+      {
+        "group": "hostile",
+        "medium": "Books",
+        "character": "Harry Potter",
+        "source": "Harry Potter and the Deathly Hallows",
+        "record": 33139,
+        "matches": [
+          "shut up"
+        ]
+      },
+      {
+        "group": "hostile",
+        "medium": "Books",
+        "character": "Ron Weasley",
+        "source": "Harry Potter and the Deathly Hallows",
+        "record": 30018,
+        "matches": [
+          "shut up"
+        ]
+      },
+      {
+        "group": "hostile",
+        "medium": "Films",
+        "character": "Harry Potter",
+        "source": "Harry Potter and the Goblet of Fire",
+        "record": 3062,
+        "matches": [
+          "pathetic"
+        ]
+      },
+      {
+        "group": "hostile",
+        "medium": "Films",
+        "character": "Lily Potter",
+        "source": "Harry Potter and the Deathly Hallows Part 1",
+        "record": 6051,
+        "matches": [
+          "shut up"
+        ]
+      },
+      {
+        "group": "hostile",
+        "medium": "Films",
+        "character": "Hermione Granger",
+        "source": "Harry Potter and the Half-Blood Prince",
+        "record": 5409,
+        "matches": [
+          "shut up"
+        ]
+      },
+      {
+        "group": "questions",
+        "medium": "Books",
+        "character": "Albus Dumbledore",
+        "source": "Harry Potter and the Half-Blood Prince",
+        "record": 28803,
+        "matches": [
+          "?"
+        ]
+      },
+      {
+        "group": "questions",
+        "medium": "Books",
+        "character": "Ron Weasley",
+        "source": "Harry Potter and the Prisoner of Azkaban",
+        "record": 6908,
+        "matches": [
+          "?"
+        ]
+      },
+      {
+        "group": "questions",
+        "medium": "Books",
+        "character": "Harry Potter",
+        "source": "Harry Potter and the Prisoner of Azkaban",
+        "record": 5348,
+        "matches": [
+          "?"
+        ]
+      },
+      {
+        "group": "questions",
+        "medium": "Films",
+        "character": "Albus Dumbledore",
+        "source": "Harry Potter and the Deathly Hallows Part 2",
+        "record": 7325,
+        "matches": [
+          "?"
+        ]
+      },
+      {
+        "group": "questions",
+        "medium": "Films",
+        "character": "Rubeus Hagrid",
+        "source": "Harry Potter and the Half-Blood Prince",
+        "record": 5479,
+        "matches": [
+          "?"
+        ]
+      },
+      {
+        "group": "questions",
+        "medium": "Films",
+        "character": "Harry Potter",
+        "source": "Harry Potter and the Deathly Hallows Part 1",
+        "record": 6574,
+        "matches": [
+          "?"
+        ]
+      },
+      {
+        "group": "supportive",
+        "medium": "Books",
+        "character": "Harry Potter",
+        "source": "Harry Potter and the Half-Blood Prince",
+        "record": 28862,
+        "matches": [
+          "well done",
+          "well done"
+        ]
+      },
+      {
+        "group": "supportive",
+        "medium": "Books",
+        "character": "Firenze",
+        "source": "Harry Potter and the Philosopher's Stone",
+        "record": 1880,
+        "matches": [
+          "are you all right"
+        ]
+      },
+      {
+        "group": "supportive",
+        "medium": "Books",
+        "character": "Minerva McGonagall",
+        "source": "Harry Potter and the Philosopher's Stone",
+        "record": 43,
+        "matches": [
+          "thank you"
+        ]
+      },
+      {
+        "group": "supportive",
+        "medium": "Films",
+        "character": "Harry Potter",
+        "source": "Harry Potter and the Prisoner of Azkaban",
+        "record": 2707,
+        "matches": [
+          "don't worry"
+        ]
+      },
+      {
+        "group": "supportive",
+        "medium": "Films",
+        "character": "Hermione Granger",
+        "source": "Harry Potter and the Prisoner of Azkaban",
+        "record": 2483,
+        "matches": [
+          "i'm sorry"
+        ]
+      },
+      {
+        "group": "supportive",
+        "medium": "Films",
+        "character": "Lily Potter",
+        "source": "Harry Potter and the Deathly Hallows Part 1",
+        "record": 6050,
+        "matches": [
+          "thank you"
+        ]
+      }
+    ]
+  },
+  "median_book_to_film_filtered_word_ratio": 2.8594871794871795,
+  "stories": [
+    {
+      "story": 1,
+      "title": "Philosopher’s Stone",
+      "characters": [
+        "Albus Dumbledore",
+        "Draco Malfoy",
+        "Firenze",
+        "Harry Potter",
+        "Hermione Granger",
+        "Minerva McGonagall",
+        "Neville Longbottom",
+        "Oliver Wood",
+        "Percy Weasley",
+        "Petunia Dursley",
+        "Quirinus Quirrell",
+        "Ron Weasley",
+        "Rubeus Hagrid",
+        "Severus Snape",
+        "Vernon Dursley"
+      ],
+      "pairs": 105,
+      "score": {
+        "Books": 0.3988065179734883,
+        "Films": 0.13351201680579974
+      },
+      "raw_spearman": {
+        "Books": 0.724379120845619,
+        "Films": 0.59766471826335
+      },
+      "observed_nonzero_edges": {
+        "Books": 46,
+        "Films": 46
+      }
+    },
+    {
+      "story": 2,
+      "title": "Chamber of Secrets",
+      "characters": [
+        "Albus Dumbledore",
+        "Aragog",
+        "Dobby",
+        "Draco Malfoy",
+        "Gilderoy Lockhart",
+        "Harry Potter",
+        "Hermione Granger",
+        "Minerva McGonagall",
+        "Moaning Myrtle",
+        "Molly Weasley",
+        "Pomona Sprout",
+        "Ron Weasley",
+        "Rubeus Hagrid",
+        "Severus Snape",
+        "Vernon Dursley"
+      ],
+      "pairs": 105,
+      "score": {
+        "Books": 0.40417731272941515,
+        "Films": 0.3478490988126919
+      },
+      "raw_spearman": {
+        "Books": 0.7391429230762915,
+        "Films": 0.6970153886566445
+      },
+      "observed_nonzero_edges": {
+        "Books": 42,
+        "Films": 46
+      }
+    },
+    {
+      "story": 3,
+      "title": "Prisoner of Azkaban",
+      "characters": [
+        "Albus Dumbledore",
+        "Cornelius Fudge",
+        "Draco Malfoy",
+        "Fred Weasley",
+        "George Weasley",
+        "Harry Potter",
+        "Hermione Granger",
+        "Minerva McGonagall",
+        "Peter Pettigrew",
+        "Remus Lupin",
+        "Ron Weasley",
+        "Rubeus Hagrid",
+        "Severus Snape",
+        "Stan Shunpike",
+        "Sybill Trelawney"
+      ],
+      "pairs": 105,
+      "score": {
+        "Books": 0.4030791766811855,
+        "Films": 0.36612961143833056
+      },
+      "raw_spearman": {
+        "Books": 0.7321779549353608,
+        "Films": 0.612817348436523
+      },
+      "observed_nonzero_edges": {
+        "Books": 56,
+        "Films": 44
+      }
+    },
+    {
+      "story": 4,
+      "title": "Goblet of Fire",
+      "characters": [
+        "Alastor Moody",
+        "Albus Dumbledore",
+        "Bartemius Crouch",
+        "Cedric Diggory",
+        "Fred Weasley",
+        "Harry Potter",
+        "Hermione Granger",
+        "Igor Karkaroff",
+        "Minerva McGonagall",
+        "Rita Skeeter",
+        "Ron Weasley",
+        "Rubeus Hagrid",
+        "Severus Snape",
+        "Sirius Black",
+        "Voldemort"
+      ],
+      "pairs": 105,
+      "score": {
+        "Books": 0.28362787967308395,
+        "Films": 0.24167178348873616
+      },
+      "raw_spearman": {
+        "Books": 0.645169684482971,
+        "Films": 0.635433492431194
+      },
+      "observed_nonzero_edges": {
+        "Books": 62,
+        "Films": 45
+      }
+    },
+    {
+      "story": 5,
+      "title": "Order of the Phoenix",
+      "characters": [
+        "Alastor Moody",
+        "Albus Dumbledore",
+        "Bellatrix Lestrange",
+        "Cornelius Fudge",
+        "Dolores Umbridge",
+        "Draco Malfoy",
+        "Fred Weasley",
+        "Harry Potter",
+        "Hermione Granger",
+        "Lucius Malfoy",
+        "Luna Lovegood",
+        "Minerva McGonagall",
+        "Remus Lupin",
+        "Ron Weasley",
+        "Rubeus Hagrid",
+        "Severus Snape",
+        "Sirius Black",
+        "Sybill Trelawney"
+      ],
+      "pairs": 153,
+      "score": {
+        "Books": 0.5698504646561587,
+        "Films": 0.22448885094481558
+      },
+      "raw_spearman": {
+        "Books": 0.7480084504967678,
+        "Films": 0.569736757544278
+      },
+      "observed_nonzero_edges": {
+        "Books": 74,
+        "Films": 46
+      }
+    },
+    {
+      "story": 6,
+      "title": "Half-Blood Prince",
+      "characters": [
+        "Albus Dumbledore",
+        "Bellatrix Lestrange",
+        "Draco Malfoy",
+        "Ginny Weasley",
+        "Harry Potter",
+        "Hermione Granger",
+        "Horace Slughorn",
+        "Luna Lovegood",
+        "Minerva McGonagall",
+        "Ron Weasley",
+        "Rubeus Hagrid",
+        "Severus Snape",
+        "Voldemort"
+      ],
+      "pairs": 78,
+      "score": {
+        "Books": 0.5056625449348666,
+        "Films": 0.22157229879486934
+      },
+      "raw_spearman": {
+        "Books": 0.7238451551678475,
+        "Films": 0.53827552698097
+      },
+      "observed_nonzero_edges": {
+        "Books": 46,
+        "Films": 45
+      }
+    },
+    {
+      "story": 7,
+      "title": "Deathly Hallows",
+      "characters": [
+        "Aberforth Dumbledore",
+        "Alastor Moody",
+        "Albus Dumbledore",
+        "Bellatrix Lestrange",
+        "Bill Weasley",
+        "Corban Yaxley",
+        "Elphias Doge",
+        "Ginny Weasley",
+        "Griphook",
+        "Harry Potter",
+        "Hermione Granger",
+        "Lily Potter",
+        "Luna Lovegood",
+        "Mundungus Fletcher",
+        "Muriel",
+        "Neville Longbottom",
+        "Ollivander",
+        "Remus Lupin",
+        "Ron Weasley",
+        "Rubeus Hagrid",
+        "Rufus Scrimgeour",
+        "Scabior",
+        "Severus Snape",
+        "Voldemort",
+        "Xenophilius Lovegood"
+      ],
+      "pairs": 300,
+      "score": {
+        "Books": 0.30881420906715906,
+        "Films": 0.1771022251311989
+      },
+      "raw_spearman": {
+        "Books": 0.6023479140863998,
+        "Films": 0.5602856164599929
+      },
+      "observed_nonzero_edges": {
+        "Books": 88,
+        "Films": 82
+      }
+    }
+  ],
+  "full_scores": {
+    "Books": 0.4105740151021939,
+    "Films": 0.2446179836309203
+  },
+  "raw_scores": {
+    "Books": 0.7021530290130367,
+    "Films": 0.6016041212532789
+  },
+  "full_gap": 0.16595603147127358,
+  "equal_length_draws": 1000,
+  "equal_length_median_gap": 0.03919558308218676,
+  "equal_length_middle_95_gap": [
+    -0.01309844467849149,
+    0.09313237990151675
+  ],
+  "equal_length_median_scores": {
+    "Books": 0.2844761273941698,
+    "Films": 0.24512844177611104
+  },
+  "fraction_gap_reduced": 0.763819472334325,
+  "block_shuffle_draws": 1999,
+  "block_shuffle_reference": {
+    "Books": [
+      0.29717022517738473,
+      0.3301324028164309,
+      0.36447229897119426
+    ],
+    "Films": [
+      0.15631185791987476,
+      0.19156069237844678,
+      0.22706091813922716
+    ],
+    "Books minus films": [
+      0.08995333511803334,
+      0.13731021008805452,
+      0.19011467086030165
+    ]
+  },
+  "relative_to_expected_switches_scores": {
+    "Books": 0.1529748653390937,
+    "Films": 0.10605997458856321
+  },
+  "sensitivity_scores": {
+    "60-word minimum": {
+      "Books": 0.38682910238297497,
+      "Films": 0.214221849086496
+    },
+    "150-word minimum": {
+      "Books": 0.4141202578377703,
+      "Films": 0.2788541861634441
+    },
+    "Two-row window": {
+      "Books": 0.4269104746856972,
+      "Films": 0.24702600591722543
+    },
+    "Five-row window": {
+      "Books": 0.4216765668140439,
+      "Films": 0.2333882072770557
+    },
+    "Unigrams from names retained": {
+      "Books": 0.4407862998051745,
+      "Films": 0.2672879417536111
+    },
+    "Harry omitted from the matched cast": {
+      "Books": 0.37884517791451183,
+      "Films": 0.24122016923247072
+    },
+    "Only switches between rows with at least four words": {
+      "Books": 0.3929494450355763,
+      "Films": 0.24288350389700805
+    },
+    "Omitting Goblet of Fire and Order of the Phoenix": {
+      "Books": 0.4041079522772229,
+      "Films": 0.2492330501965781,
+      "median_equal_length_gap": 0.04674304792292505
+    },
+    "Omitting adjacent identical lines credited to different speakers": {
+      "Books": 0.4018355634536476,
+      "Films": 0.21899937833488026,
+      "removed_rows": {
+        "Books": 8,
+        "Films": 35
+      }
+    }
+  }
+}

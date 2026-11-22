@@ -1,0 +1,3131 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="959.9976pt" height="540pt" viewBox="0 0 959.9976 540" xmlns="http://www.w3.org/2000/svg" version="1.1">
+ <metadata>
+  <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+   <cc:Work>
+    <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+    <dc:format>image/svg+xml</dc:format>
+    <dc:creator>
+     <cc:Agent>
+      <dc:title>Matplotlib v3.11.2, https://matplotlib.org/</dc:title>
+     </cc:Agent>
+    </dc:creator>
+   </cc:Work>
+  </rdf:RDF>
+ </metadata>
+ <defs>
+  <style type="text/css">*{stroke-linejoin: round; stroke-linecap: butt}</style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 540 
+L 959.9976 540 
+L 959.9976 0 
+L 0 0 
+z
+" style="fill: #181723"/>
+  </g>
+  <g id="patch_2">
+   <path d="M 693.118267 405.54 
+L 890.877773 405.54 
+Q 904.317739 405.54 904.317739 397.98 
+L 904.317739 160.92 
+Q 904.317739 153.36 890.877773 153.36 
+L 693.118267 153.36 
+Q 679.678301 153.36 679.678301 160.92 
+L 679.678301 397.98 
+Q 679.678301 405.54 693.118267 405.54 
+z
+" style="fill: #242134; stroke: #423d52; stroke-linejoin: miter"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_3">
+    <path d="M 106.559734 416.88 
+L 656.638358 416.88 
+L 656.638358 154.98 
+L 106.559734 154.98 
+L 106.559734 416.88 
+z
+" style="fill: none"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1"/>
+     <g id="text_1">
+      <!-- −0.05 -->
+      <g style="fill: #c1b8cc" transform="translate(130.602487 433.616328) scale(0.12 -0.12)">
+       <defs>
+        <path id="SegoeUI-ee" d="M 3663 1656 
+L 725 1656 
+L 725 2075 
+L 3663 2075 
+L 3663 1656 
+z
+" transform="scale(0.015625)"/>
+        <path id="SegoeUI-13" d="M 3188 2259 
+Q 3188 1697 3086 1262 
+Q 2984 828 2792 529 
+Q 2600 231 2320 76 
+Q 2041 -78 1684 -78 
+Q 1347 -78 1083 70 
+Q 819 219 637 503 
+Q 456 788 362 1202 
+Q 269 1616 269 2150 
+Q 269 2738 367 3188 
+Q 466 3638 656 3942 
+Q 847 4247 1130 4401 
+Q 1413 4556 1778 4556 
+Q 3188 4556 3188 2259 
+z
+M 2663 2209 
+Q 2663 4122 1753 4122 
+Q 794 4122 794 2175 
+Q 794 359 1734 359 
+Q 2663 359 2663 2209 
+z
+" transform="scale(0.015625)"/>
+        <path id="SegoeUI-11" d="M 697 -69 
+Q 553 -69 451 34 
+Q 350 138 350 281 
+Q 350 425 451 529 
+Q 553 634 697 634 
+Q 844 634 947 529 
+Q 1050 425 1050 281 
+Q 1050 138 947 34 
+Q 844 -69 697 -69 
+z
+" transform="scale(0.015625)"/>
+        <path id="SegoeUI-18" d="M 3028 1369 
+Q 3028 1041 2915 775 
+Q 2803 509 2595 318 
+Q 2388 128 2094 25 
+Q 1800 -78 1441 -78 
+Q 816 -78 513 109 
+L 513 653 
+Q 969 359 1447 359 
+Q 1691 359 1886 431 
+Q 2081 503 2218 631 
+Q 2356 759 2429 940 
+Q 2503 1122 2503 1338 
+Q 2503 1775 2209 2023 
+Q 1916 2272 1356 2272 
+Q 1266 2272 1166 2269 
+Q 1066 2266 966 2261 
+Q 866 2256 770 2250 
+Q 675 2244 597 2234 
+L 750 4481 
+L 2822 4481 
+L 2822 4019 
+L 1194 4019 
+L 1103 2703 
+Q 1203 2709 1315 2714 
+Q 1428 2719 1516 2719 
+Q 1872 2719 2153 2625 
+Q 2434 2531 2629 2357 
+Q 2825 2184 2926 1932 
+Q 3028 1681 3028 1369 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#SegoeUI-ee"/>
+       <use xlink:href="#SegoeUI-13" transform="translate(68.40625 0)"/>
+       <use xlink:href="#SegoeUI-11" transform="translate(122.3125 0)"/>
+       <use xlink:href="#SegoeUI-13" transform="translate(144 0)"/>
+       <use xlink:href="#SegoeUI-18" transform="translate(197.90625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2"/>
+     <g id="text_2">
+      <!-- 0 -->
+      <g style="fill: #c1b8cc" transform="translate(240.355621 433.616328) scale(0.12 -0.12)">
+       <use xlink:href="#SegoeUI-13"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3"/>
+     <g id="text_3">
+      <!-- +0.05 -->
+      <g style="fill: #c1b8cc" transform="translate(326.360005 433.616328) scale(0.12 -0.12)">
+       <defs>
+        <path id="SegoeUI-e" d="M 3663 1656 
+L 2400 1656 
+L 2400 397 
+L 1984 397 
+L 1984 1656 
+L 725 1656 
+L 725 2075 
+L 1984 2075 
+L 1984 3334 
+L 2400 3334 
+L 2400 2075 
+L 3663 2075 
+L 3663 1656 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#SegoeUI-e"/>
+       <use xlink:href="#SegoeUI-13" transform="translate(68.40625 0)"/>
+       <use xlink:href="#SegoeUI-11" transform="translate(122.3125 0)"/>
+       <use xlink:href="#SegoeUI-13" transform="translate(144 0)"/>
+       <use xlink:href="#SegoeUI-18" transform="translate(197.90625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4"/>
+     <g id="text_4">
+      <!-- +0.10 -->
+      <g style="fill: #c1b8cc" transform="translate(424.238764 433.616328) scale(0.12 -0.12)">
+       <defs>
+        <path id="SegoeUI-14" d="M 2263 0 
+L 1750 0 
+L 1750 3872 
+Q 1691 3813 1577 3736 
+Q 1463 3659 1320 3584 
+Q 1178 3509 1020 3443 
+Q 863 3378 713 3341 
+L 713 3859 
+Q 881 3906 1070 3986 
+Q 1259 4066 1442 4164 
+Q 1625 4263 1787 4370 
+Q 1950 4478 2069 4581 
+L 2263 4581 
+L 2263 0 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#SegoeUI-e"/>
+       <use xlink:href="#SegoeUI-13" transform="translate(68.40625 0)"/>
+       <use xlink:href="#SegoeUI-11" transform="translate(122.3125 0)"/>
+       <use xlink:href="#SegoeUI-14" transform="translate(144 0)"/>
+       <use xlink:href="#SegoeUI-13" transform="translate(197.90625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5"/>
+     <g id="text_5">
+      <!-- +0.15 -->
+      <g style="fill: #c1b8cc" transform="translate(522.117523 433.616328) scale(0.12 -0.12)">
+       <use xlink:href="#SegoeUI-e"/>
+       <use xlink:href="#SegoeUI-13" transform="translate(68.40625 0)"/>
+       <use xlink:href="#SegoeUI-11" transform="translate(122.3125 0)"/>
+       <use xlink:href="#SegoeUI-14" transform="translate(144 0)"/>
+       <use xlink:href="#SegoeUI-18" transform="translate(197.90625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6"/>
+     <g id="text_6">
+      <!-- +0.20 -->
+      <g style="fill: #c1b8cc" transform="translate(619.996281 433.616328) scale(0.12 -0.12)">
+       <defs>
+        <path id="SegoeUI-15" d="M 2413 3306 
+Q 2413 3513 2348 3666 
+Q 2284 3819 2173 3920 
+Q 2063 4022 1913 4072 
+Q 1763 4122 1588 4122 
+Q 1438 4122 1294 4081 
+Q 1150 4041 1014 3969 
+Q 878 3897 751 3797 
+Q 625 3697 516 3575 
+L 516 4125 
+Q 731 4334 998 4445 
+Q 1266 4556 1650 4556 
+Q 1925 4556 2159 4476 
+Q 2394 4397 2566 4244 
+Q 2738 4091 2836 3866 
+Q 2934 3641 2934 3350 
+Q 2934 3084 2873 2868 
+Q 2813 2653 2689 2462 
+Q 2566 2272 2378 2097 
+Q 2191 1922 1938 1741 
+Q 1622 1516 1417 1356 
+Q 1213 1197 1092 1058 
+Q 972 919 923 780 
+Q 875 641 875 459 
+L 3106 459 
+L 3106 0 
+L 341 0 
+L 341 222 
+Q 341 509 403 728 
+Q 466 947 609 1144 
+Q 753 1341 986 1537 
+Q 1219 1734 1556 1981 
+Q 1800 2156 1964 2315 
+Q 2128 2475 2228 2634 
+Q 2328 2794 2370 2958 
+Q 2413 3122 2413 3306 
+z
+" transform="scale(0.015625)"/>
+       </defs>
+       <use xlink:href="#SegoeUI-e"/>
+       <use xlink:href="#SegoeUI-13" transform="translate(68.40625 0)"/>
+       <use xlink:href="#SegoeUI-11" transform="translate(122.3125 0)"/>
+       <use xlink:href="#SegoeUI-15" transform="translate(144 0)"/>
+       <use xlink:href="#SegoeUI-13" transform="translate(197.90625 0)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_7">
+      <path d="M 106.559734 416.88 
+L 656.638358 416.88 
+" clip-path="url(#pd16843417e)" style="fill: none; stroke: #423d52; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_8"/>
+     <g id="text_7">
+      <!-- 0 -->
+      <g style="fill: #c1b8cc" transform="translate(92.090984 421.248164) scale(0.12 -0.12)">
+       <use xlink:href="#SegoeUI-13"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_9">
+      <path d="M 106.559734 341.125054 
+L 656.638358 341.125054 
+" clip-path="url(#pd16843417e)" style="fill: none; stroke: #423d52; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_10"/>
+     <g id="text_8">
+      <!-- 50 -->
+      <g style="fill: #c1b8cc" transform="translate(85.622234 345.493218) scale(0.12 -0.12)">
+       <use xlink:href="#SegoeUI-18"/>
+       <use xlink:href="#SegoeUI-13" transform="translate(53.90625 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_11">
+      <path d="M 106.559734 265.370108 
+L 656.638358 265.370108 
+" clip-path="url(#pd16843417e)" style="fill: none; stroke: #423d52; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_12"/>
+     <g id="text_9">
+      <!-- 100 -->
+      <g style="fill: #c1b8cc" transform="translate(79.153484 269.738272) scale(0.12 -0.12)">
+       <use xlink:href="#SegoeUI-14"/>
+       <use xlink:href="#SegoeUI-13" transform="translate(53.90625 0)"/>
+       <use xlink:href="#SegoeUI-13" transform="translate(107.8125 0)"/>
+      </g>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_13">
+      <path d="M 106.559734 189.615161 
+L 656.638358 189.615161 
+" clip-path="url(#pd16843417e)" style="fill: none; stroke: #423d52; stroke-width: 0.8; stroke-linecap: square"/>
+     </g>
+     <g id="line2d_14"/>
+     <g id="text_10">
+      <!-- 150 -->
+      <g style="fill: #c1b8cc" transform="translate(79.153484 193.983325) scale(0.12 -0.12)">
+       <use xlink:href="#SegoeUI-14"/>
+       <use xlink:href="#SegoeUI-18" transform="translate(53.90625 0)"/>
+       <use xlink:href="#SegoeUI-13" transform="translate(107.8125 0)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+   <g id="patch_4">
+    <path d="M 106.559734 416.88 
+L 126.135485 416.88 
+L 126.135485 416.88 
+L 106.559734 416.88 
+z
+" clip-path="url(#pd16843417e)" style="fill: #79749e; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 126.135485 416.88 
+L 145.711237 416.88 
+L 145.711237 415.364901 
+L 126.135485 415.364901 
+z
+" clip-path="url(#pd16843417e)" style="fill: #7a759e; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 145.711237 416.88 
+L 165.286989 416.88 
+L 165.286989 416.88 
+L 145.711237 416.88 
+z
+" clip-path="url(#pd16843417e)" style="fill: #79749e; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_7">
+    <path d="M 165.286989 416.88 
+L 184.862741 416.88 
+L 184.862741 413.849802 
+L 165.286989 413.849802 
+z
+" clip-path="url(#pd16843417e)" style="fill: #7a759f; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_8">
+    <path d="M 184.862741 416.88 
+L 204.438492 416.88 
+L 204.438492 397.183714 
+L 184.862741 397.183714 
+z
+" clip-path="url(#pd16843417e)" style="fill: #807aa5; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_9">
+    <path d="M 204.438492 416.88 
+L 224.014244 416.88 
+L 224.014244 389.608219 
+L 204.438492 389.608219 
+z
+" clip-path="url(#pd16843417e)" style="fill: #827ca7; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_10">
+    <path d="M 224.014244 416.88 
+L 243.589996 416.88 
+L 243.589996 356.276043 
+L 224.014244 356.276043 
+z
+" clip-path="url(#pd16843417e)" style="fill: #8f86ae; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_11">
+    <path d="M 243.589996 416.88 
+L 263.165748 416.88 
+L 263.165748 306.277779 
+L 243.589996 306.277779 
+z
+" clip-path="url(#pd16843417e)" style="fill: #ac99a7; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_12">
+    <path d="M 263.165748 416.88 
+L 282.7415 416.88 
+L 282.7415 257.794613 
+L 263.165748 257.794613 
+z
+" clip-path="url(#pd16843417e)" style="fill: #c7aba0; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_13">
+    <path d="M 282.7415 416.88 
+L 302.317251 416.88 
+L 302.317251 227.492635 
+L 282.7415 227.492635 
+z
+" clip-path="url(#pd16843417e)" style="fill: #d9b79c; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_14">
+    <path d="M 302.317251 416.88 
+L 321.893003 416.88 
+L 321.893003 213.856744 
+L 302.317251 213.856744 
+z
+" clip-path="url(#pd16843417e)" style="fill: #e0bc9a; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_15">
+    <path d="M 321.893003 416.88 
+L 341.468755 416.88 
+L 341.468755 221.432239 
+L 321.893003 221.432239 
+z
+" clip-path="url(#pd16843417e)" style="fill: #ddb99b; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_16">
+    <path d="M 341.468755 416.88 
+L 361.044507 416.88 
+L 361.044507 232.037931 
+L 341.468755 232.037931 
+z
+" clip-path="url(#pd16843417e)" style="fill: #d6b59d; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_17">
+    <path d="M 361.044507 416.88 
+L 380.620258 416.88 
+L 380.620258 259.309712 
+L 361.044507 259.309712 
+z
+" clip-path="url(#pd16843417e)" style="fill: #c7aba0; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_18">
+    <path d="M 380.620258 416.88 
+L 400.19601 416.88 
+L 400.19601 332.03446 
+L 380.620258 332.03446 
+z
+" clip-path="url(#pd16843417e)" style="fill: #9d8faa; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_19">
+    <path d="M 400.19601 416.88 
+L 419.771762 416.88 
+L 419.771762 351.730746 
+L 400.19601 351.730746 
+z
+" clip-path="url(#pd16843417e)" style="fill: #9288ad; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_20">
+    <path d="M 419.771762 416.88 
+L 439.347514 416.88 
+L 439.347514 388.09312 
+L 419.771762 388.09312 
+z
+" clip-path="url(#pd16843417e)" style="fill: #837ca8; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_21">
+    <path d="M 439.347514 416.88 
+L 458.923266 416.88 
+L 458.923266 401.729011 
+L 439.347514 401.729011 
+z
+" clip-path="url(#pd16843417e)" style="fill: #7e78a3; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_22">
+    <path d="M 458.923266 416.88 
+L 478.499017 416.88 
+L 478.499017 413.849802 
+L 458.923266 413.849802 
+z
+" clip-path="url(#pd16843417e)" style="fill: #7a759f; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_23">
+    <path d="M 478.499017 416.88 
+L 498.074769 416.88 
+L 498.074769 415.364901 
+L 478.499017 415.364901 
+z
+" clip-path="url(#pd16843417e)" style="fill: #7a759e; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_24">
+    <path d="M 498.074769 416.88 
+L 517.650521 416.88 
+L 517.650521 415.364901 
+L 498.074769 415.364901 
+z
+" clip-path="url(#pd16843417e)" style="fill: #7a759e; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_25">
+    <path d="M 517.650521 416.88 
+L 537.226273 416.88 
+L 537.226273 413.849802 
+L 517.650521 413.849802 
+z
+" clip-path="url(#pd16843417e)" style="fill: #7a759f; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_26">
+    <path d="M 537.226273 416.88 
+L 556.802024 416.88 
+L 556.802024 416.88 
+L 537.226273 416.88 
+z
+" clip-path="url(#pd16843417e)" style="fill: #79749e; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_27">
+    <path d="M 556.802024 416.88 
+L 576.377776 416.88 
+L 576.377776 416.88 
+L 556.802024 416.88 
+z
+" clip-path="url(#pd16843417e)" style="fill: #79749e; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_28">
+    <path d="M 576.377776 416.88 
+L 595.953528 416.88 
+L 595.953528 416.88 
+L 576.377776 416.88 
+z
+" clip-path="url(#pd16843417e)" style="fill: #79749e; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_29">
+    <path d="M 595.953528 416.88 
+L 615.52928 416.88 
+L 615.52928 416.88 
+L 595.953528 416.88 
+z
+" clip-path="url(#pd16843417e)" style="fill: #79749e; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_30">
+    <path d="M 615.52928 416.88 
+L 635.105031 416.88 
+L 635.105031 416.88 
+L 615.52928 416.88 
+z
+" clip-path="url(#pd16843417e)" style="fill: #79749e; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_31">
+    <path d="M 635.105031 416.88 
+L 654.680783 416.88 
+L 654.680783 416.88 
+L 635.105031 416.88 
+z
+" clip-path="url(#pd16843417e)" style="fill: #79749e; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="patch_32">
+    <path d="M 654.680783 416.88 
+L 674.256535 416.88 
+L 674.256535 416.88 
+L 654.680783 416.88 
+z
+" clip-path="url(#pd16843417e)" style="fill: #79749e; stroke: #181723; stroke-width: 1.4; stroke-linejoin: miter"/>
+   </g>
+   <g id="line2d_15">
+    <path d="M 243.589996 416.88 
+L 243.589996 154.98 
+" clip-path="url(#pd16843417e)" style="fill: none; stroke-dasharray: 3.7,1.6; stroke-dashoffset: 0; stroke: #c1b8cc; stroke-opacity: 0.62"/>
+   </g>
+   <g id="LineCollection_1">
+    <path d="M 320.318297 416.88 
+L 320.318297 211.826512 
+" clip-path="url(#pd16843417e)" style="fill: none; stroke: #ffd093; stroke-width: 2.2"/>
+   </g>
+   <g id="LineCollection_2">
+    <path d="M 568.461404 416.88 
+L 568.461404 211.826512 
+" clip-path="url(#pd16843417e)" style="fill: none; stroke: #80dfc9; stroke-width: 2.2"/>
+   </g>
+   <g id="text_11">
+    <!-- +0.04  Matched length -->
+    <g style="fill: #ffd093" transform="translate(258.822945 195.52325) scale(0.115 -0.115)">
+     <defs>
+      <path id="SegoeUI-Bold-e" d="M 3788 1516 
+L 2584 1516 
+L 2584 313 
+L 1953 313 
+L 1953 1516 
+L 744 1516 
+L 744 2150 
+L 1953 2150 
+L 1953 3359 
+L 2584 3359 
+L 2584 2150 
+L 3788 2150 
+L 3788 1516 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-13" d="M 1816 -78 
+Q 216 -78 216 2169 
+Q 216 3334 648 3945 
+Q 1081 4556 1903 4556 
+Q 3466 4556 3466 2272 
+Q 3466 1134 3039 528 
+Q 2613 -78 1816 -78 
+z
+M 1859 3803 
+Q 1219 3803 1219 2194 
+Q 1219 678 1847 678 
+Q 2459 678 2459 2241 
+Q 2459 3803 1859 3803 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-11" d="M 856 -78 
+Q 613 -78 450 72 
+Q 288 222 288 441 
+Q 288 666 455 809 
+Q 622 953 872 953 
+Q 1125 953 1286 808 
+Q 1447 663 1447 441 
+Q 1447 213 1283 67 
+Q 1119 -78 856 -78 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-17" d="M 2975 4481 
+L 2975 1656 
+L 3513 1656 
+L 3513 919 
+L 2975 919 
+L 2975 0 
+L 2075 0 
+L 2075 919 
+L 122 919 
+L 122 1691 
+Q 381 1981 659 2326 
+Q 938 2672 1197 3037 
+Q 1456 3403 1679 3773 
+Q 1903 4144 2059 4481 
+L 2975 4481 
+z
+M 1006 1656 
+L 2075 1656 
+L 2075 3222 
+Q 1966 3019 1837 2811 
+Q 1709 2603 1568 2401 
+Q 1428 2200 1284 2011 
+Q 1141 1822 1006 1656 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-3" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-30" d="M 5619 0 
+L 4622 0 
+L 4622 2681 
+Q 4622 3116 4659 3641 
+L 4634 3641 
+Q 4556 3228 4494 3047 
+L 3444 0 
+L 2619 0 
+L 1550 3016 
+Q 1506 3138 1409 3641 
+L 1381 3641 
+Q 1422 2978 1422 2478 
+L 1422 0 
+L 513 0 
+L 513 4481 
+L 1991 4481 
+L 2906 1825 
+Q 3016 1506 3066 1184 
+L 3084 1184 
+Q 3169 1556 3263 1831 
+L 4178 4481 
+L 5619 4481 
+L 5619 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-44" d="M 3078 0 
+L 2144 0 
+L 2144 459 
+L 2131 459 
+Q 1809 -78 1178 -78 
+Q 713 -78 445 186 
+Q 178 450 178 891 
+Q 178 1822 1281 1966 
+L 2150 2081 
+Q 2150 2606 1581 2606 
+Q 1009 2606 494 2266 
+L 494 3009 
+Q 700 3116 1058 3197 
+Q 1416 3278 1709 3278 
+Q 3078 3278 3078 1913 
+L 3078 0 
+z
+M 2150 1300 
+L 2150 1516 
+L 1569 1441 
+Q 1088 1378 1088 1006 
+Q 1088 838 1205 730 
+Q 1322 622 1522 622 
+Q 1800 622 1975 814 
+Q 2150 1006 2150 1300 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-57" d="M 2350 38 
+Q 2131 -78 1691 -78 
+Q 647 -78 647 1006 
+L 647 2472 
+L 128 2472 
+L 128 3200 
+L 647 3200 
+L 647 3891 
+L 1631 4172 
+L 1631 3200 
+L 2350 3200 
+L 2350 2472 
+L 1631 2472 
+L 1631 1178 
+Q 1631 678 2028 678 
+Q 2184 678 2350 769 
+L 2350 38 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-46" d="M 2841 116 
+Q 2506 -78 1875 -78 
+Q 1138 -78 681 369 
+Q 225 816 225 1522 
+Q 225 2338 714 2808 
+Q 1203 3278 2022 3278 
+Q 2588 3278 2841 3128 
+L 2841 2291 
+Q 2531 2522 2150 2522 
+Q 1725 2522 1476 2273 
+Q 1228 2025 1228 1588 
+Q 1228 1163 1465 920 
+Q 1703 678 2119 678 
+Q 2488 678 2841 909 
+L 2841 116 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-4b" d="M 3488 0 
+L 2503 0 
+L 2503 1819 
+Q 2503 2522 1991 2522 
+Q 1728 2522 1565 2325 
+Q 1403 2128 1403 1825 
+L 1403 0 
+L 416 0 
+L 416 4738 
+L 1403 4738 
+L 1403 2725 
+L 1416 2725 
+Q 1778 3278 2400 3278 
+Q 3488 3278 3488 1966 
+L 3488 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-48" d="M 3291 1319 
+L 1203 1319 
+Q 1253 622 2081 622 
+Q 2609 622 3009 872 
+L 3009 159 
+Q 2566 -78 1856 -78 
+Q 1081 -78 653 351 
+Q 225 781 225 1550 
+Q 225 2347 687 2812 
+Q 1150 3278 1825 3278 
+Q 2525 3278 2908 2862 
+Q 3291 2447 3291 1734 
+L 3291 1319 
+z
+M 2375 1925 
+Q 2375 2613 1819 2613 
+Q 1581 2613 1407 2416 
+Q 1234 2219 1197 1925 
+L 2375 1925 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-47" d="M 3547 0 
+L 2559 0 
+L 2559 441 
+L 2547 441 
+Q 2209 -78 1556 -78 
+Q 956 -78 590 345 
+Q 225 769 225 1528 
+Q 225 2322 628 2800 
+Q 1031 3278 1684 3278 
+Q 2303 3278 2547 2834 
+L 2559 2834 
+L 2559 4738 
+L 3547 4738 
+L 3547 0 
+z
+M 2578 1556 
+L 2578 1797 
+Q 2578 2109 2397 2315 
+Q 2216 2522 1925 2522 
+Q 1597 2522 1412 2264 
+Q 1228 2006 1228 1556 
+Q 1228 1134 1406 906 
+Q 1584 678 1900 678 
+Q 2200 678 2389 918 
+Q 2578 1159 2578 1556 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-4f" d="M 1403 0 
+L 416 0 
+L 416 4738 
+L 1403 4738 
+L 1403 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-51" d="M 3506 0 
+L 2522 0 
+L 2522 1778 
+Q 2522 2522 1991 2522 
+Q 1734 2522 1568 2325 
+Q 1403 2128 1403 1825 
+L 1403 0 
+L 416 0 
+L 416 3200 
+L 1403 3200 
+L 1403 2694 
+L 1416 2694 
+Q 1769 3278 2444 3278 
+Q 3506 3278 3506 1959 
+L 3506 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-4a" d="M 3553 366 
+Q 3553 -525 3037 -1014 
+Q 2522 -1503 1544 -1503 
+Q 897 -1503 519 -1319 
+L 519 -488 
+Q 1013 -775 1516 -775 
+Q 2016 -775 2291 -511 
+Q 2566 -247 2566 206 
+L 2566 459 
+L 2553 459 
+Q 2216 -78 1556 -78 
+Q 944 -78 584 353 
+Q 225 784 225 1509 
+Q 225 2322 625 2800 
+Q 1025 3278 1678 3278 
+Q 2263 3278 2553 2828 
+L 2566 2828 
+L 2566 3200 
+L 3553 3200 
+L 3553 366 
+z
+M 2578 1538 
+L 2578 1791 
+Q 2578 2094 2398 2308 
+Q 2219 2522 1931 2522 
+Q 1603 2522 1415 2265 
+Q 1228 2009 1228 1544 
+Q 1228 1144 1406 911 
+Q 1584 678 1894 678 
+Q 2200 678 2389 914 
+Q 2578 1150 2578 1538 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#SegoeUI-Bold-e"/>
+     <use xlink:href="#SegoeUI-Bold-13" transform="translate(70.703125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-11" transform="translate(128.21875 0)"/>
+     <use xlink:href="#SegoeUI-Bold-13" transform="translate(155.3125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-17" transform="translate(212.828125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-3" transform="translate(270.34375 0)"/>
+     <use xlink:href="#SegoeUI-Bold-3" transform="translate(297.9375 0)"/>
+     <use xlink:href="#SegoeUI-Bold-30" transform="translate(325.53125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-44" transform="translate(421.234375 0)"/>
+     <use xlink:href="#SegoeUI-Bold-57" transform="translate(475.046875 0)"/>
+     <use xlink:href="#SegoeUI-Bold-46" transform="translate(513.578125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-4b" transform="translate(561.578125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-48" transform="translate(621.78125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-47" transform="translate(675.890625 0)"/>
+     <use xlink:href="#SegoeUI-Bold-3" transform="translate(737.8125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-4f" transform="translate(765.40625 0)"/>
+     <use xlink:href="#SegoeUI-Bold-48" transform="translate(793.828125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-51" transform="translate(847.9375 0)"/>
+     <use xlink:href="#SegoeUI-Bold-4a" transform="translate(908.4375 0)"/>
+     <use xlink:href="#SegoeUI-Bold-57" transform="translate(970.359375 0)"/>
+     <use xlink:href="#SegoeUI-Bold-4b" transform="translate(1009.28125 0)"/>
+    </g>
+   </g>
+   <g id="text_12">
+    <!-- +0.17  Full dialogue -->
+    <g style="fill: #80dfc9" transform="translate(514.830076 195.52325) scale(0.115 -0.115)">
+     <defs>
+      <path id="SegoeUI-Bold-14" d="M 2600 4581 
+L 2600 0 
+L 1616 0 
+L 1616 3469 
+Q 1534 3397 1423 3333 
+Q 1313 3269 1188 3217 
+Q 1063 3166 928 3130 
+Q 794 3094 663 3078 
+L 663 3909 
+Q 1047 4022 1387 4197 
+Q 1728 4372 2003 4581 
+L 2600 4581 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-1a" d="M 3419 3913 
+Q 3119 3372 2881 2898 
+Q 2644 2425 2462 1964 
+Q 2281 1503 2153 1026 
+Q 2025 550 1944 0 
+L 913 0 
+Q 1000 522 1144 1006 
+Q 1288 1491 1477 1945 
+Q 1666 2400 1895 2831 
+Q 2125 3263 2381 3675 
+L 300 3675 
+L 300 4481 
+L 3419 4481 
+L 3419 3913 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-29" d="M 3103 3659 
+L 1522 3659 
+L 1522 2559 
+L 2975 2559 
+L 2975 1741 
+L 1522 1741 
+L 1522 0 
+L 513 0 
+L 513 4481 
+L 3103 4481 
+L 3103 3659 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-58" d="M 3456 0 
+L 2472 0 
+L 2472 488 
+L 2456 488 
+Q 2091 -78 1478 -78 
+Q 366 -78 366 1269 
+L 366 3200 
+L 1350 3200 
+L 1350 1356 
+Q 1350 678 1888 678 
+Q 2153 678 2312 864 
+Q 2472 1050 2472 1369 
+L 2472 3200 
+L 3456 3200 
+L 3456 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-4c" d="M 916 3706 
+Q 666 3706 506 3854 
+Q 347 4003 347 4219 
+Q 347 4441 506 4581 
+Q 666 4722 916 4722 
+Q 1169 4722 1326 4581 
+Q 1484 4441 1484 4219 
+Q 1484 3994 1326 3850 
+Q 1169 3706 916 3706 
+z
+M 1403 0 
+L 416 0 
+L 416 3200 
+L 1403 3200 
+L 1403 0 
+z
+" transform="scale(0.015625)"/>
+      <path id="SegoeUI-Bold-52" d="M 1941 -78 
+Q 1141 -78 683 370 
+Q 225 819 225 1588 
+Q 225 2381 700 2829 
+Q 1175 3278 1984 3278 
+Q 2781 3278 3234 2829 
+Q 3688 2381 3688 1644 
+Q 3688 847 3220 384 
+Q 2753 -78 1941 -78 
+z
+M 1966 2522 
+Q 1616 2522 1422 2281 
+Q 1228 2041 1228 1600 
+Q 1228 678 1972 678 
+Q 2681 678 2681 1625 
+Q 2681 2522 1966 2522 
+z
+" transform="scale(0.015625)"/>
+     </defs>
+     <use xlink:href="#SegoeUI-Bold-e"/>
+     <use xlink:href="#SegoeUI-Bold-13" transform="translate(70.703125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-11" transform="translate(128.21875 0)"/>
+     <use xlink:href="#SegoeUI-Bold-14" transform="translate(155.3125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-1a" transform="translate(212.828125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-3" transform="translate(270.34375 0)"/>
+     <use xlink:href="#SegoeUI-Bold-3" transform="translate(297.9375 0)"/>
+     <use xlink:href="#SegoeUI-Bold-29" transform="translate(325.53125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-58" transform="translate(377.53125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-4f" transform="translate(438.03125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-4f" transform="translate(466.453125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-3" transform="translate(494.875 0)"/>
+     <use xlink:href="#SegoeUI-Bold-47" transform="translate(522.46875 0)"/>
+     <use xlink:href="#SegoeUI-Bold-4c" transform="translate(584.390625 0)"/>
+     <use xlink:href="#SegoeUI-Bold-44" transform="translate(612.8125 0)"/>
+     <use xlink:href="#SegoeUI-Bold-4f" transform="translate(666.625 0)"/>
+     <use xlink:href="#SegoeUI-Bold-52" transform="translate(695.046875 0)"/>
+     <use xlink:href="#SegoeUI-Bold-4a" transform="translate(756.1875 0)"/>
+     <use xlink:href="#SegoeUI-Bold-58" transform="translate(818.109375 0)"/>
+     <use xlink:href="#SegoeUI-Bold-48" transform="translate(878.609375 0)"/>
+    </g>
+   </g>
+  </g>
+  <g id="line2d_16">
+   <path d="M 63.359842 493.56 
+L 896.637758 493.56 
+" style="fill: none; stroke: #423d52; stroke-linecap: square"/>
+  </g>
+  <g id="text_13">
+   <!-- Equal word counts shrink the gap -->
+   <g style="fill: #f9f3e9" transform="translate(61.439846 51.291035) scale(0.34 -0.34)">
+    <defs>
+     <path id="Georgia-Bold-28" d="M 4147 3303 
+L 3909 3303 
+Q 3819 3556 3597 3815 
+Q 3375 4075 3156 4122 
+Q 3063 4144 2895 4148 
+Q 2728 4153 2619 4153 
+L 1975 4153 
+L 1975 2441 
+L 2431 2441 
+Q 2603 2441 2743 2481 
+Q 2884 2522 3000 2638 
+Q 3072 2709 3145 2890 
+Q 3219 3072 3241 3206 
+L 3478 3206 
+L 3478 1356 
+L 3241 1356 
+Q 3222 1488 3145 1686 
+Q 3069 1884 3000 1959 
+Q 2897 2072 2756 2114 
+Q 2616 2156 2431 2156 
+L 1975 2156 
+L 1975 878 
+Q 1975 678 2004 561 
+Q 2034 444 2116 381 
+Q 2194 322 2330 303 
+Q 2466 284 2700 284 
+Q 2809 284 2962 287 
+Q 3116 291 3231 306 
+Q 3363 322 3477 353 
+Q 3591 384 3647 444 
+Q 3797 597 3984 911 
+Q 4172 1225 4231 1381 
+L 4459 1381 
+L 4375 0 
+L 216 0 
+L 216 244 
+Q 303 250 453 269 
+Q 603 288 666 313 
+Q 784 363 825 439 
+Q 866 516 866 634 
+L 866 3763 
+Q 866 3875 831 3948 
+Q 797 4022 666 4081 
+Q 584 4119 437 4150 
+Q 291 4181 216 4191 
+L 216 4434 
+L 4147 4434 
+L 4147 3303 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-54" d="M 4234 -1388 
+L 2047 -1388 
+L 2047 -1156 
+Q 2134 -1150 2257 -1136 
+Q 2381 -1122 2450 -1097 
+Q 2547 -1066 2587 -984 
+Q 2628 -903 2628 -791 
+L 2628 300 
+L 2603 306 
+Q 2550 256 2464 184 
+Q 2378 113 2256 56 
+Q 2122 -9 1998 -45 
+Q 1875 -81 1672 -81 
+Q 1022 -81 622 369 
+Q 222 819 222 1581 
+Q 222 2272 700 2728 
+Q 1178 3184 1909 3184 
+Q 2278 3184 2575 3101 
+Q 2872 3019 3128 2884 
+L 3534 3284 
+L 3706 3244 
+Q 3697 3047 3676 2730 
+Q 3656 2413 3656 2203 
+L 3656 -738 
+Q 3656 -853 3698 -936 
+Q 3741 -1019 3834 -1059 
+Q 3903 -1091 4022 -1119 
+Q 4141 -1147 4234 -1156 
+L 4234 -1388 
+z
+M 2628 622 
+L 2628 2388 
+Q 2606 2466 2567 2556 
+Q 2528 2647 2456 2731 
+Q 2388 2809 2286 2859 
+Q 2184 2909 2041 2909 
+Q 1728 2909 1536 2543 
+Q 1344 2178 1344 1534 
+Q 1344 1272 1384 1070 
+Q 1425 869 1506 719 
+Q 1600 553 1731 462 
+Q 1863 372 2081 372 
+Q 2281 372 2406 439 
+Q 2531 506 2628 622 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-58" d="M 4259 66 
+L 2769 -25 
+L 2722 19 
+L 2722 428 
+L 2703 428 
+Q 2597 331 2495 239 
+Q 2394 147 2253 72 
+Q 2094 -13 1951 -53 
+Q 1809 -94 1538 -94 
+Q 1066 -94 814 190 
+Q 563 475 563 994 
+L 563 2400 
+Q 563 2522 516 2598 
+Q 469 2675 391 2734 
+Q 328 2781 228 2801 
+Q 128 2822 47 2828 
+L 47 3056 
+L 1563 3138 
+L 1597 3091 
+L 1597 1013 
+Q 1597 691 1720 537 
+Q 1844 384 2059 384 
+Q 2281 384 2457 500 
+Q 2634 616 2716 747 
+L 2716 2431 
+Q 2716 2538 2675 2622 
+Q 2634 2706 2556 2759 
+Q 2500 2797 2395 2809 
+Q 2291 2822 2181 2828 
+L 2181 3056 
+L 3697 3138 
+L 3744 3091 
+L 3744 678 
+Q 3744 569 3787 492 
+Q 3831 416 3916 363 
+Q 3975 325 4070 311 
+Q 4166 297 4259 294 
+L 4259 66 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-44" d="M 3753 66 
+Q 3616 6 3428 -44 
+Q 3241 -94 3031 -94 
+Q 2647 -94 2465 20 
+Q 2284 134 2219 347 
+L 2200 347 
+Q 2094 241 1995 166 
+Q 1897 91 1784 38 
+Q 1638 -31 1502 -64 
+Q 1366 -97 1122 -97 
+Q 759 -97 503 117 
+Q 247 331 247 684 
+Q 247 888 303 1030 
+Q 359 1172 463 1281 
+Q 556 1381 679 1447 
+Q 803 1513 950 1569 
+Q 1231 1672 1625 1783 
+Q 2019 1894 2200 1981 
+L 2200 2281 
+Q 2200 2359 2187 2487 
+Q 2175 2616 2134 2703 
+Q 2091 2803 1997 2872 
+Q 1903 2941 1750 2941 
+Q 1613 2941 1520 2902 
+Q 1428 2863 1372 2822 
+Q 1381 2759 1425 2631 
+Q 1469 2503 1469 2384 
+Q 1469 2331 1441 2251 
+Q 1413 2172 1359 2125 
+Q 1288 2063 1198 2028 
+Q 1109 1994 925 1994 
+Q 663 1994 528 2120 
+Q 394 2247 394 2450 
+Q 394 2625 533 2764 
+Q 672 2903 872 2994 
+Q 1069 3088 1325 3139 
+Q 1581 3191 1800 3191 
+Q 2103 3191 2356 3155 
+Q 2609 3119 2813 3006 
+Q 3006 2897 3120 2689 
+Q 3234 2481 3234 2147 
+Q 3234 1794 3220 1309 
+Q 3206 825 3206 672 
+Q 3206 531 3248 450 
+Q 3291 369 3378 328 
+Q 3431 303 3545 298 
+Q 3659 294 3753 294 
+L 3753 66 
+z
+M 2200 1694 
+Q 2025 1634 1853 1557 
+Q 1681 1481 1572 1397 
+Q 1456 1309 1390 1173 
+Q 1325 1038 1325 853 
+Q 1325 609 1436 500 
+Q 1547 391 1709 391 
+Q 1881 391 1992 461 
+Q 2103 531 2188 634 
+L 2200 1694 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-4f" d="M 2084 0 
+L 125 0 
+L 125 228 
+Q 206 234 282 243 
+Q 359 253 419 275 
+Q 519 313 555 383 
+Q 591 453 591 569 
+L 591 4031 
+Q 591 4150 542 4251 
+Q 494 4353 413 4406 
+Q 350 4447 223 4484 
+Q 97 4522 0 4528 
+L 0 4756 
+L 1572 4838 
+L 1619 4788 
+L 1619 609 
+Q 1619 494 1659 422 
+Q 1700 350 1791 309 
+Q 1853 281 1922 259 
+Q 1991 238 2084 228 
+L 2084 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-3" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-5a" d="M 5569 2872 
+Q 5425 2850 5303 2776 
+Q 5181 2703 5097 2503 
+Q 4878 1969 4747 1641 
+Q 4616 1313 4378 694 
+Q 4328 566 4258 341 
+Q 4188 116 4147 -28 
+L 3538 -28 
+L 2750 2097 
+L 2013 -28 
+L 1409 -28 
+Q 1094 825 912 1295 
+Q 731 1766 428 2538 
+Q 372 2684 236 2768 
+Q 100 2853 -44 2872 
+L -44 3100 
+L 1875 3100 
+L 1875 2872 
+Q 1769 2863 1622 2822 
+Q 1475 2781 1475 2713 
+Q 1475 2681 1483 2657 
+Q 1491 2634 1509 2572 
+Q 1594 2328 1741 1942 
+Q 1888 1556 2084 1044 
+L 2778 3100 
+L 3397 3100 
+L 4188 975 
+Q 4369 1456 4467 1732 
+Q 4566 2009 4716 2447 
+Q 4738 2513 4742 2564 
+Q 4747 2616 4744 2631 
+Q 4744 2688 4687 2733 
+Q 4631 2778 4553 2806 
+Q 4475 2834 4401 2850 
+Q 4328 2866 4278 2872 
+L 4278 3100 
+L 5569 3100 
+L 5569 2872 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-52" d="M 3372 2731 
+Q 3603 2516 3725 2216 
+Q 3847 1916 3847 1566 
+Q 3847 1219 3726 911 
+Q 3606 603 3375 384 
+Q 3128 150 2786 25 
+Q 2444 -100 2003 -100 
+Q 1622 -100 1301 9 
+Q 981 119 734 338 
+Q 497 547 359 855 
+Q 222 1163 222 1544 
+Q 222 1919 342 2211 
+Q 463 2503 703 2731 
+Q 934 2950 1273 3070 
+Q 1613 3191 2031 3191 
+Q 2469 3191 2801 3070 
+Q 3134 2950 3372 2731 
+z
+M 2572 566 
+Q 2641 741 2673 991 
+Q 2706 1241 2706 1572 
+Q 2706 1791 2675 2072 
+Q 2644 2353 2581 2516 
+Q 2506 2713 2373 2825 
+Q 2241 2938 2038 2938 
+Q 1816 2938 1683 2816 
+Q 1550 2694 1478 2500 
+Q 1413 2322 1388 2083 
+Q 1363 1844 1363 1584 
+Q 1363 1244 1384 1020 
+Q 1406 797 1491 572 
+Q 1563 378 1697 265 
+Q 1831 153 2038 153 
+Q 2225 153 2359 258 
+Q 2494 363 2572 566 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-55" d="M 3294 2528 
+Q 3294 2291 3147 2111 
+Q 3000 1931 2759 1931 
+Q 2531 1931 2373 2047 
+Q 2216 2163 2216 2388 
+Q 2216 2497 2231 2558 
+Q 2247 2619 2259 2672 
+Q 2116 2666 1956 2572 
+Q 1797 2478 1675 2322 
+L 1675 606 
+Q 1675 497 1709 425 
+Q 1744 353 1825 313 
+Q 1894 278 2048 254 
+Q 2203 231 2272 228 
+L 2272 0 
+L 181 0 
+L 181 228 
+Q 259 234 339 245 
+Q 419 256 475 275 
+Q 575 309 612 381 
+Q 650 453 650 569 
+L 650 2388 
+Q 650 2500 597 2589 
+Q 544 2678 469 2731 
+Q 413 2769 327 2794 
+Q 241 2819 138 2828 
+L 138 3056 
+L 1628 3138 
+L 1675 3091 
+L 1675 2638 
+L 1688 2638 
+Q 1903 2888 2145 3030 
+Q 2388 3172 2650 3172 
+Q 2941 3172 3117 2992 
+Q 3294 2813 3294 2528 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-47" d="M 4222 66 
+L 2681 -25 
+L 2634 19 
+L 2634 306 
+L 2613 313 
+Q 2459 147 2198 23 
+Q 1938 -100 1672 -100 
+Q 1041 -100 631 369 
+Q 222 838 222 1581 
+Q 222 2241 680 2712 
+Q 1138 3184 1788 3184 
+Q 2044 3184 2269 3126 
+Q 2494 3069 2628 2991 
+L 2628 4013 
+Q 2628 4128 2581 4229 
+Q 2534 4331 2456 4388 
+Q 2359 4456 2214 4486 
+Q 2069 4516 1922 4528 
+L 1922 4756 
+L 3609 4838 
+L 3656 4788 
+L 3656 691 
+Q 3656 572 3695 490 
+Q 3734 409 3822 363 
+Q 3888 328 4014 312 
+Q 4141 297 4222 294 
+L 4222 66 
+z
+M 2628 622 
+L 2628 2388 
+Q 2606 2459 2567 2546 
+Q 2528 2634 2459 2713 
+Q 2397 2778 2292 2828 
+Q 2188 2878 2056 2878 
+Q 1744 2878 1544 2525 
+Q 1344 2172 1344 1528 
+Q 1344 1275 1380 1073 
+Q 1416 872 1506 706 
+Q 1597 541 1739 447 
+Q 1881 353 2081 353 
+Q 2272 353 2397 426 
+Q 2522 500 2628 622 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-46" d="M 1966 -100 
+Q 1531 -100 1198 26 
+Q 866 153 650 372 
+Q 434 594 328 897 
+Q 222 1200 222 1556 
+Q 222 1881 351 2175 
+Q 481 2469 703 2691 
+Q 931 2919 1270 3055 
+Q 1609 3191 2019 3191 
+Q 2594 3191 2928 2973 
+Q 3263 2756 3263 2388 
+Q 3263 2163 3144 2025 
+Q 3025 1888 2734 1888 
+Q 2500 1888 2342 2000 
+Q 2184 2113 2184 2294 
+Q 2184 2447 2234 2597 
+Q 2284 2747 2294 2825 
+Q 2259 2881 2206 2911 
+Q 2153 2941 2041 2941 
+Q 1900 2941 1784 2875 
+Q 1669 2809 1569 2644 
+Q 1472 2488 1414 2225 
+Q 1356 1963 1356 1594 
+Q 1356 1038 1617 697 
+Q 1878 356 2241 356 
+Q 2588 356 2792 511 
+Q 2997 666 3156 950 
+L 3391 788 
+Q 3294 597 3159 439 
+Q 3025 281 2838 159 
+Q 2641 31 2437 -34 
+Q 2234 -100 1966 -100 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-51" d="M 4306 0 
+L 2425 0 
+L 2425 228 
+Q 2484 234 2568 243 
+Q 2653 253 2697 275 
+Q 2763 309 2791 375 
+Q 2819 441 2819 569 
+L 2819 2031 
+Q 2819 2350 2701 2511 
+Q 2584 2672 2356 2672 
+Q 2231 2672 2123 2634 
+Q 2016 2597 1913 2525 
+Q 1822 2463 1767 2397 
+Q 1713 2331 1675 2281 
+L 1675 603 
+Q 1675 494 1706 420 
+Q 1738 347 1809 309 
+Q 1859 281 1934 259 
+Q 2009 238 2081 228 
+L 2081 0 
+L 181 0 
+L 181 228 
+Q 259 234 339 245 
+Q 419 256 475 275 
+Q 575 309 612 381 
+Q 650 453 650 569 
+L 650 2388 
+Q 650 2484 600 2578 
+Q 550 2672 469 2731 
+Q 413 2769 327 2794 
+Q 241 2819 138 2828 
+L 138 3056 
+L 1628 3138 
+L 1675 3091 
+L 1675 2638 
+L 1688 2638 
+Q 1775 2716 1900 2825 
+Q 2025 2934 2131 3003 
+Q 2247 3078 2434 3131 
+Q 2622 3184 2834 3184 
+Q 3344 3184 3598 2895 
+Q 3853 2606 3853 2128 
+L 3853 597 
+Q 3853 481 3887 412 
+Q 3922 344 4016 303 
+Q 4066 281 4139 259 
+Q 4213 238 4306 228 
+L 4306 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-57" d="M 2506 144 
+Q 2306 56 2078 -14 
+Q 1850 -84 1522 -84 
+Q 1034 -84 798 153 
+Q 563 391 563 831 
+L 563 2750 
+L 0 2750 
+L 0 3088 
+L 575 3088 
+L 575 4034 
+L 1591 4034 
+L 1591 3088 
+L 2466 3088 
+L 2466 2750 
+L 1597 2750 
+L 1597 1038 
+Q 1597 672 1698 519 
+Q 1800 366 2063 366 
+Q 2147 366 2297 378 
+Q 2447 391 2506 406 
+L 2506 144 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-56" d="M 1628 -106 
+Q 1325 -106 1036 -17 
+Q 747 72 588 172 
+L 494 -41 
+L 250 -41 
+L 209 1125 
+L 438 1125 
+Q 484 984 593 807 
+Q 703 631 844 491 
+Q 991 350 1180 253 
+Q 1369 156 1584 156 
+Q 1869 156 2008 267 
+Q 2147 378 2147 609 
+Q 2147 734 2084 815 
+Q 2022 897 1913 956 
+Q 1791 1019 1645 1062 
+Q 1500 1106 1288 1169 
+Q 1075 1231 923 1295 
+Q 772 1359 609 1497 
+Q 469 1619 384 1791 
+Q 300 1963 300 2200 
+Q 300 2641 670 2912 
+Q 1041 3184 1641 3184 
+Q 1925 3184 2164 3126 
+Q 2403 3069 2566 3000 
+L 2631 3184 
+L 2869 3184 
+L 2919 2119 
+L 2697 2119 
+Q 2588 2444 2322 2680 
+Q 2056 2916 1750 2916 
+Q 1509 2916 1371 2816 
+Q 1234 2716 1234 2538 
+Q 1234 2300 1436 2194 
+Q 1638 2088 2000 1994 
+Q 2559 1850 2818 1601 
+Q 3078 1353 3078 969 
+Q 3078 456 2676 175 
+Q 2275 -106 1628 -106 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-4b" d="M 4244 0 
+L 2363 0 
+L 2363 228 
+Q 2425 234 2509 243 
+Q 2594 253 2634 275 
+Q 2700 309 2726 375 
+Q 2753 441 2753 569 
+L 2753 2031 
+Q 2753 2353 2633 2512 
+Q 2513 2672 2291 2672 
+Q 2166 2672 2058 2634 
+Q 1950 2597 1847 2525 
+Q 1756 2463 1701 2397 
+Q 1647 2331 1609 2281 
+L 1609 603 
+Q 1609 488 1637 420 
+Q 1666 353 1744 309 
+Q 1791 281 1867 259 
+Q 1944 238 2016 228 
+L 2016 0 
+L 116 0 
+L 116 228 
+Q 197 234 273 243 
+Q 350 253 409 275 
+Q 509 313 545 383 
+Q 581 453 581 569 
+L 581 4053 
+Q 581 4153 534 4265 
+Q 488 4378 403 4434 
+Q 341 4475 222 4498 
+Q 103 4522 9 4528 
+L 9 4756 
+L 1563 4838 
+L 1609 4788 
+L 1609 2638 
+L 1622 2638 
+Q 1741 2744 1836 2830 
+Q 1931 2916 2069 3003 
+Q 2184 3078 2370 3131 
+Q 2556 3184 2772 3184 
+Q 3278 3184 3533 2893 
+Q 3788 2603 3788 2128 
+L 3788 597 
+Q 3788 481 3822 412 
+Q 3856 344 3950 303 
+Q 4006 278 4075 259 
+Q 4144 241 4244 228 
+L 4244 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-4c" d="M 2156 0 
+L 181 0 
+L 181 228 
+Q 263 234 341 243 
+Q 419 253 475 275 
+Q 575 313 615 383 
+Q 656 453 656 569 
+L 656 2388 
+Q 656 2497 606 2580 
+Q 556 2663 481 2713 
+Q 425 2750 311 2784 
+Q 197 2819 103 2828 
+L 103 3056 
+L 1634 3138 
+L 1681 3091 
+L 1681 609 
+Q 1681 500 1728 423 
+Q 1775 347 1863 309 
+Q 1925 281 2000 259 
+Q 2075 238 2156 228 
+L 2156 0 
+z
+M 1700 4263 
+Q 1700 4025 1517 3858 
+Q 1334 3691 1084 3691 
+Q 831 3691 648 3858 
+Q 466 4025 466 4263 
+Q 466 4500 648 4669 
+Q 831 4838 1084 4838 
+Q 1338 4838 1519 4669 
+Q 1700 4500 1700 4263 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-4e" d="M 4191 0 
+L 2719 0 
+Q 2447 478 2222 811 
+Q 1997 1144 1797 1428 
+L 1609 1269 
+L 1609 588 
+Q 1609 475 1642 403 
+Q 1675 331 1769 297 
+Q 1825 272 1900 253 
+Q 1975 234 2050 228 
+L 2050 0 
+L 116 0 
+L 116 228 
+Q 194 234 272 245 
+Q 350 256 409 275 
+Q 509 309 545 381 
+Q 581 453 581 569 
+L 581 4053 
+Q 581 4156 536 4267 
+Q 491 4378 403 4434 
+Q 344 4472 225 4497 
+Q 106 4522 9 4528 
+L 9 4756 
+L 1563 4838 
+L 1609 4788 
+L 1609 1563 
+Q 1841 1769 2130 2041 
+Q 2419 2313 2594 2491 
+Q 2697 2597 2708 2651 
+Q 2719 2706 2719 2719 
+Q 2719 2775 2620 2812 
+Q 2522 2850 2325 2878 
+L 2325 3100 
+L 3913 3100 
+L 3913 2884 
+Q 3600 2797 3436 2720 
+Q 3272 2644 3078 2516 
+Q 2950 2431 2829 2339 
+Q 2709 2247 2553 2109 
+Q 2859 1666 3118 1287 
+Q 3378 909 3663 488 
+Q 3759 341 3903 291 
+Q 4047 241 4191 228 
+L 4191 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-48" d="M 3541 747 
+Q 3431 569 3276 411 
+Q 3122 253 2925 141 
+Q 2716 22 2502 -39 
+Q 2288 -100 2009 -100 
+Q 1547 -100 1211 31 
+Q 875 163 656 384 
+Q 438 606 330 907 
+Q 222 1209 222 1563 
+Q 222 1881 339 2173 
+Q 456 2466 672 2694 
+Q 884 2916 1207 3053 
+Q 1531 3191 1931 3191 
+Q 2369 3191 2650 3084 
+Q 2931 2978 3116 2791 
+Q 3294 2613 3375 2370 
+Q 3456 2128 3456 1863 
+L 3456 1659 
+L 1344 1659 
+Q 1344 1019 1591 684 
+Q 1838 350 2375 350 
+Q 2669 350 2903 511 
+Q 3138 672 3303 919 
+L 3541 747 
+z
+M 2347 1934 
+Q 2347 2122 2328 2319 
+Q 2309 2516 2263 2641 
+Q 2209 2788 2117 2863 
+Q 2025 2938 1884 2938 
+Q 1644 2938 1500 2694 
+Q 1356 2450 1344 1922 
+L 2347 1934 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-4a" d="M 3681 2750 
+L 2994 2750 
+Q 3116 2613 3177 2459 
+Q 3238 2306 3238 2141 
+Q 3238 1925 3122 1736 
+Q 3006 1547 2819 1428 
+Q 2628 1306 2372 1237 
+Q 2116 1169 1816 1169 
+L 1306 1169 
+Q 1269 1141 1223 1080 
+Q 1178 1019 1178 963 
+Q 1178 825 1287 772 
+Q 1397 719 1684 713 
+Q 1969 706 2259 689 
+Q 2550 672 2675 669 
+Q 2856 659 3034 595 
+Q 3213 531 3344 428 
+Q 3488 319 3581 148 
+Q 3675 -22 3675 -244 
+Q 3675 -481 3561 -690 
+Q 3447 -900 3213 -1053 
+Q 2966 -1213 2620 -1300 
+Q 2275 -1388 1766 -1388 
+Q 944 -1388 516 -1188 
+Q 88 -988 88 -588 
+Q 88 -341 319 -181 
+Q 550 -22 1038 -6 
+L 1038 31 
+Q 750 128 589 289 
+Q 428 450 428 663 
+Q 428 794 492 884 
+Q 556 975 656 1044 
+Q 744 1103 869 1145 
+Q 994 1188 1078 1213 
+L 1078 1247 
+Q 656 1403 457 1628 
+Q 259 1853 259 2178 
+Q 259 2638 682 2913 
+Q 1106 3188 1756 3188 
+Q 1969 3188 2167 3152 
+Q 2366 3116 2469 3088 
+L 3681 3088 
+L 3681 2750 
+z
+M 2216 2153 
+Q 2216 2519 2100 2731 
+Q 1984 2944 1744 2944 
+Q 1622 2944 1531 2886 
+Q 1441 2828 1384 2719 
+Q 1331 2613 1312 2470 
+Q 1294 2328 1294 2178 
+Q 1294 1838 1412 1619 
+Q 1531 1400 1750 1400 
+Q 1975 1400 2095 1597 
+Q 2216 1794 2216 2153 
+z
+M 2741 -472 
+Q 2741 -366 2681 -261 
+Q 2622 -156 2416 -91 
+Q 2303 -72 2045 -65 
+Q 1788 -59 1338 -59 
+Q 1228 -153 1154 -281 
+Q 1081 -409 1081 -591 
+Q 1081 -669 1125 -762 
+Q 1169 -856 1263 -938 
+Q 1372 -1028 1506 -1079 
+Q 1641 -1131 1913 -1131 
+Q 2316 -1131 2528 -975 
+Q 2741 -819 2741 -472 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-53" d="M 3988 1522 
+Q 3988 863 3547 391 
+Q 3106 -81 2431 -81 
+Q 2131 -81 1943 -20 
+Q 1756 41 1634 128 
+L 1609 128 
+L 1609 -750 
+Q 1609 -859 1657 -940 
+Q 1706 -1022 1794 -1059 
+Q 1878 -1094 2033 -1122 
+Q 2188 -1150 2291 -1156 
+L 2291 -1388 
+L 34 -1388 
+L 34 -1156 
+Q 113 -1150 231 -1133 
+Q 350 -1116 409 -1097 
+Q 509 -1063 545 -980 
+Q 581 -897 581 -791 
+L 581 2406 
+Q 572 2509 533 2587 
+Q 494 2666 409 2725 
+Q 347 2766 244 2792 
+Q 141 2819 41 2828 
+L 41 3056 
+L 1563 3138 
+L 1609 3097 
+L 1609 2750 
+L 1634 2744 
+Q 1841 2953 2092 3068 
+Q 2344 3184 2591 3184 
+Q 3238 3184 3613 2726 
+Q 3988 2269 3988 1522 
+z
+M 2866 1509 
+Q 2866 1744 2831 1958 
+Q 2797 2172 2709 2341 
+Q 2625 2509 2486 2609 
+Q 2347 2709 2147 2709 
+Q 1944 2709 1822 2639 
+Q 1700 2569 1609 2456 
+L 1609 684 
+Q 1628 622 1681 523 
+Q 1734 425 1788 366 
+Q 1866 281 1966 240 
+Q 2066 200 2184 200 
+Q 2494 200 2680 533 
+Q 2866 866 2866 1509 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#Georgia-Bold-28"/>
+    <use xlink:href="#Georgia-Bold-54" transform="translate(72.125 0)"/>
+    <use xlink:href="#Georgia-Bold-58" transform="translate(136.96875 0)"/>
+    <use xlink:href="#Georgia-Bold-44" transform="translate(204.640625 0)"/>
+    <use xlink:href="#Georgia-Bold-4f" transform="translate(264.21875 0)"/>
+    <use xlink:href="#Georgia-Bold-3" transform="translate(298.640625 0)"/>
+    <use xlink:href="#Georgia-Bold-5a" transform="translate(324.03125 0)"/>
+    <use xlink:href="#Georgia-Bold-52" transform="translate(410.359375 0)"/>
+    <use xlink:href="#Georgia-Bold-55" transform="translate(473.9375 0)"/>
+    <use xlink:href="#Georgia-Bold-47" transform="translate(525.9375 0)"/>
+    <use xlink:href="#Georgia-Bold-3" transform="translate(592.25 0)"/>
+    <use xlink:href="#Georgia-Bold-46" transform="translate(617.640625 0)"/>
+    <use xlink:href="#Georgia-Bold-52" transform="translate(670.765625 0)"/>
+    <use xlink:href="#Georgia-Bold-58" transform="translate(734.34375 0)"/>
+    <use xlink:href="#Georgia-Bold-51" transform="translate(802.015625 0)"/>
+    <use xlink:href="#Georgia-Bold-57" transform="translate(871.015625 0)"/>
+    <use xlink:href="#Georgia-Bold-56" transform="translate(910.765625 0)"/>
+    <use xlink:href="#Georgia-Bold-3" transform="translate(962.03125 0)"/>
+    <use xlink:href="#Georgia-Bold-56" transform="translate(987.421875 0)"/>
+    <use xlink:href="#Georgia-Bold-4b" transform="translate(1038.6875 0)"/>
+    <use xlink:href="#Georgia-Bold-55" transform="translate(1106.65625 0)"/>
+    <use xlink:href="#Georgia-Bold-4c" transform="translate(1158.65625 0)"/>
+    <use xlink:href="#Georgia-Bold-51" transform="translate(1194.015625 0)"/>
+    <use xlink:href="#Georgia-Bold-4e" transform="translate(1263.015625 0)"/>
+    <use xlink:href="#Georgia-Bold-3" transform="translate(1326.203125 0)"/>
+    <use xlink:href="#Georgia-Bold-57" transform="translate(1351.59375 0)"/>
+    <use xlink:href="#Georgia-Bold-4b" transform="translate(1391.34375 0)"/>
+    <use xlink:href="#Georgia-Bold-48" transform="translate(1459.3125 0)"/>
+    <use xlink:href="#Georgia-Bold-3" transform="translate(1516.484375 0)"/>
+    <use xlink:href="#Georgia-Bold-4a" transform="translate(1541.875 0)"/>
+    <use xlink:href="#Georgia-Bold-44" transform="translate(1599.546875 0)"/>
+    <use xlink:href="#Georgia-Bold-53" transform="translate(1659.125 0)"/>
+   </g>
+  </g>
+  <g id="text_14">
+   <!-- We randomly trim the longer dialogue profile for each character to match the shorter one. -->
+   <g style="fill: #c1b8cc" transform="translate(63.359842 82.038281) scale(0.145 -0.145)">
+    <defs>
+     <path id="SegoeUI-3a" d="M 5900 4481 
+L 4634 0 
+L 4019 0 
+L 3097 3275 
+Q 3038 3484 3025 3731 
+L 3013 3731 
+Q 2994 3500 2931 3281 
+L 2003 0 
+L 1394 0 
+L 81 4481 
+L 659 4481 
+L 1613 1044 
+Q 1672 828 1688 594 
+L 1703 594 
+Q 1719 759 1800 1044 
+L 2791 4481 
+L 3294 4481 
+L 4244 1019 
+Q 4294 841 4319 600 
+L 4331 600 
+Q 4344 763 4416 1031 
+L 5331 4481 
+L 5900 4481 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-48" d="M 3091 1472 
+L 831 1472 
+Q 844 938 1119 647 
+Q 1394 356 1875 356 
+Q 2416 356 2869 713 
+L 2869 231 
+Q 2447 -75 1753 -75 
+Q 1075 -75 687 361 
+Q 300 797 300 1588 
+Q 300 2334 723 2804 
+Q 1147 3275 1775 3275 
+Q 2403 3275 2747 2869 
+Q 3091 2463 3091 1741 
+L 3091 1472 
+z
+M 2566 1906 
+Q 2563 2350 2352 2597 
+Q 2141 2844 1766 2844 
+Q 1403 2844 1150 2584 
+Q 897 2325 838 1906 
+L 2566 1906 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-3" transform="scale(0.015625)"/>
+     <path id="SegoeUI-55" d="M 2188 2681 
+Q 2053 2784 1800 2784 
+Q 1472 2784 1251 2475 
+Q 1031 2166 1031 1631 
+L 1031 0 
+L 519 0 
+L 519 3200 
+L 1031 3200 
+L 1031 2541 
+L 1044 2541 
+Q 1153 2878 1378 3067 
+Q 1603 3256 1881 3256 
+Q 2081 3256 2188 3213 
+L 2188 2681 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-44" d="M 2809 0 
+L 2297 0 
+L 2297 500 
+L 2284 500 
+Q 1950 -75 1300 -75 
+Q 822 -75 551 178 
+Q 281 431 281 850 
+Q 281 1747 1338 1894 
+L 2297 2028 
+Q 2297 2844 1638 2844 
+Q 1059 2844 594 2450 
+L 594 2975 
+Q 1066 3275 1681 3275 
+Q 2809 3275 2809 2081 
+L 2809 0 
+z
+M 2297 1619 
+L 1525 1513 
+Q 1169 1463 987 1336 
+Q 806 1209 806 888 
+Q 806 653 973 504 
+Q 1141 356 1419 356 
+Q 1800 356 2048 623 
+Q 2297 891 2297 1300 
+L 2297 1619 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-51" d="M 3175 0 
+L 2663 0 
+L 2663 1825 
+Q 2663 2844 1919 2844 
+Q 1534 2844 1282 2555 
+Q 1031 2266 1031 1825 
+L 1031 0 
+L 519 0 
+L 519 3200 
+L 1031 3200 
+L 1031 2669 
+L 1044 2669 
+Q 1406 3275 2094 3275 
+Q 2619 3275 2897 2936 
+Q 3175 2597 3175 1956 
+L 3175 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-47" d="M 3250 0 
+L 2738 0 
+L 2738 544 
+L 2725 544 
+Q 2369 -75 1625 -75 
+Q 1022 -75 661 354 
+Q 300 784 300 1525 
+Q 300 2319 700 2797 
+Q 1100 3275 1766 3275 
+Q 2425 3275 2725 2756 
+L 2738 2756 
+L 2738 4738 
+L 3250 4738 
+L 3250 0 
+z
+M 2738 1447 
+L 2738 1919 
+Q 2738 2306 2481 2575 
+Q 2225 2844 1831 2844 
+Q 1363 2844 1094 2500 
+Q 825 2156 825 1550 
+Q 825 997 1083 676 
+Q 1341 356 1775 356 
+Q 2203 356 2470 665 
+Q 2738 975 2738 1447 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-52" d="M 1856 -75 
+Q 1147 -75 723 373 
+Q 300 822 300 1563 
+Q 300 2369 740 2822 
+Q 1181 3275 1931 3275 
+Q 2647 3275 3048 2834 
+Q 3450 2394 3450 1613 
+Q 3450 847 3017 386 
+Q 2584 -75 1856 -75 
+z
+M 1894 2844 
+Q 1400 2844 1112 2508 
+Q 825 2172 825 1581 
+Q 825 1013 1115 684 
+Q 1406 356 1894 356 
+Q 2391 356 2658 678 
+Q 2925 1000 2925 1594 
+Q 2925 2194 2658 2519 
+Q 2391 2844 1894 2844 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-50" d="M 5063 0 
+L 4550 0 
+L 4550 1838 
+Q 4550 2369 4386 2606 
+Q 4222 2844 3834 2844 
+Q 3506 2844 3276 2544 
+Q 3047 2244 3047 1825 
+L 3047 0 
+L 2534 0 
+L 2534 1900 
+Q 2534 2844 1806 2844 
+Q 1469 2844 1250 2561 
+Q 1031 2278 1031 1825 
+L 1031 0 
+L 519 0 
+L 519 3200 
+L 1031 3200 
+L 1031 2694 
+L 1044 2694 
+Q 1384 3275 2038 3275 
+Q 2366 3275 2609 3092 
+Q 2853 2909 2944 2613 
+Q 3300 3275 4006 3275 
+Q 5063 3275 5063 1972 
+L 5063 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-4f" d="M 1031 0 
+L 519 0 
+L 519 4738 
+L 1031 4738 
+L 1031 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-5c" d="M 3066 3200 
+L 1594 -513 
+Q 1200 -1506 488 -1506 
+Q 288 -1506 153 -1466 
+L 153 -1006 
+Q 319 -1063 456 -1063 
+Q 844 -1063 1038 -600 
+L 1294 6 
+L 44 3200 
+L 613 3200 
+L 1478 738 
+Q 1494 691 1544 494 
+L 1563 494 
+Q 1578 569 1625 731 
+L 2534 3200 
+L 3066 3200 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-57" d="M 2003 31 
+Q 1822 -69 1525 -69 
+Q 684 -69 684 869 
+L 684 2763 
+L 134 2763 
+L 134 3200 
+L 684 3200 
+L 684 3981 
+L 1197 4147 
+L 1197 3200 
+L 2003 3200 
+L 2003 2763 
+L 1197 2763 
+L 1197 959 
+Q 1197 638 1306 500 
+Q 1416 363 1669 363 
+Q 1863 363 2003 469 
+L 2003 31 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-4c" d="M 781 4013 
+Q 644 4013 547 4106 
+Q 450 4200 450 4344 
+Q 450 4488 547 4583 
+Q 644 4678 781 4678 
+Q 922 4678 1020 4583 
+Q 1119 4488 1119 4344 
+Q 1119 4206 1020 4109 
+Q 922 4013 781 4013 
+z
+M 1031 0 
+L 519 0 
+L 519 3200 
+L 1031 3200 
+L 1031 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-4b" d="M 3175 0 
+L 2663 0 
+L 2663 1844 
+Q 2663 2844 1919 2844 
+Q 1544 2844 1287 2555 
+Q 1031 2266 1031 1813 
+L 1031 0 
+L 519 0 
+L 519 4738 
+L 1031 4738 
+L 1031 2669 
+L 1044 2669 
+Q 1413 3275 2094 3275 
+Q 3175 3275 3175 1972 
+L 3175 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-4a" d="M 3250 256 
+Q 3250 -1506 1563 -1506 
+Q 969 -1506 525 -1281 
+L 525 -769 
+Q 1066 -1069 1556 -1069 
+Q 2738 -1069 2738 188 
+L 2738 538 
+L 2725 538 
+Q 2359 -75 1625 -75 
+Q 1028 -75 664 351 
+Q 300 778 300 1497 
+Q 300 2313 692 2794 
+Q 1084 3275 1766 3275 
+Q 2413 3275 2725 2756 
+L 2738 2756 
+L 2738 3200 
+L 3250 3200 
+L 3250 256 
+z
+M 2738 1447 
+L 2738 1919 
+Q 2738 2300 2480 2572 
+Q 2222 2844 1838 2844 
+Q 1363 2844 1094 2498 
+Q 825 2153 825 1531 
+Q 825 997 1083 676 
+Q 1341 356 1766 356 
+Q 2197 356 2467 662 
+Q 2738 969 2738 1447 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-58" d="M 3106 0 
+L 2594 0 
+L 2594 506 
+L 2581 506 
+Q 2263 -75 1594 -75 
+Q 450 -75 450 1288 
+L 450 3200 
+L 959 3200 
+L 959 1369 
+Q 959 356 1734 356 
+Q 2109 356 2351 632 
+Q 2594 909 2594 1356 
+L 2594 3200 
+L 3106 3200 
+L 3106 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-53" d="M 1044 463 
+L 1031 463 
+L 1031 -1472 
+L 519 -1472 
+L 519 3200 
+L 1031 3200 
+L 1031 2638 
+L 1044 2638 
+Q 1422 3275 2150 3275 
+Q 2769 3275 3116 2845 
+Q 3463 2416 3463 1694 
+Q 3463 891 3072 408 
+Q 2681 -75 2003 -75 
+Q 1381 -75 1044 463 
+z
+M 1031 1753 
+L 1031 1306 
+Q 1031 909 1289 632 
+Q 1547 356 1944 356 
+Q 2409 356 2673 712 
+Q 2938 1069 2938 1703 
+Q 2938 2238 2691 2541 
+Q 2444 2844 2022 2844 
+Q 1575 2844 1303 2533 
+Q 1031 2222 1031 1753 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-49" d="M 2100 4288 
+Q 1950 4372 1759 4372 
+Q 1222 4372 1222 3694 
+L 1222 3200 
+L 1972 3200 
+L 1972 2763 
+L 1222 2763 
+L 1222 0 
+L 713 0 
+L 713 2763 
+L 166 2763 
+L 166 3200 
+L 713 3200 
+L 713 3719 
+Q 713 4222 1003 4514 
+Q 1294 4806 1728 4806 
+Q 1963 4806 2100 4750 
+L 2100 4288 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-46" d="M 2700 147 
+Q 2331 -75 1825 -75 
+Q 1141 -75 720 370 
+Q 300 816 300 1525 
+Q 300 2316 753 2795 
+Q 1206 3275 1963 3275 
+Q 2384 3275 2706 3119 
+L 2706 2594 
+Q 2350 2844 1944 2844 
+Q 1453 2844 1139 2492 
+Q 825 2141 825 1569 
+Q 825 1006 1120 681 
+Q 1416 356 1913 356 
+Q 2331 356 2700 634 
+L 2700 147 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-56" d="M 325 116 
+L 325 666 
+Q 744 356 1247 356 
+Q 1922 356 1922 806 
+Q 1922 934 1864 1023 
+Q 1806 1113 1707 1181 
+Q 1609 1250 1476 1304 
+Q 1344 1359 1191 1419 
+Q 978 1503 817 1589 
+Q 656 1675 548 1783 
+Q 441 1891 386 2028 
+Q 331 2166 331 2350 
+Q 331 2575 434 2748 
+Q 538 2922 709 3039 
+Q 881 3156 1101 3215 
+Q 1322 3275 1556 3275 
+Q 1972 3275 2300 3131 
+L 2300 2613 
+Q 1947 2844 1488 2844 
+Q 1344 2844 1228 2811 
+Q 1113 2778 1030 2718 
+Q 947 2659 901 2576 
+Q 856 2494 856 2394 
+Q 856 2269 901 2184 
+Q 947 2100 1034 2034 
+Q 1122 1969 1247 1916 
+Q 1372 1863 1531 1800 
+Q 1744 1719 1912 1633 
+Q 2081 1547 2200 1439 
+Q 2319 1331 2383 1190 
+Q 2447 1050 2447 856 
+Q 2447 619 2342 444 
+Q 2238 269 2063 153 
+Q 1888 38 1659 -18 
+Q 1431 -75 1181 -75 
+Q 688 -75 325 116 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#SegoeUI-3a"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(89.5 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(141.796875 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(169.1875 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(203.953125 0)"/>
+    <use xlink:href="#SegoeUI-51" transform="translate(254.828125 0)"/>
+    <use xlink:href="#SegoeUI-47" transform="translate(311.421875 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(370.3125 0)"/>
+    <use xlink:href="#SegoeUI-50" transform="translate(428.90625 0)"/>
+    <use xlink:href="#SegoeUI-4f" transform="translate(515.046875 0)"/>
+    <use xlink:href="#SegoeUI-5c" transform="translate(539.265625 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(587.65625 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(615.046875 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(648.9375 0)"/>
+    <use xlink:href="#SegoeUI-4c" transform="translate(683.703125 0)"/>
+    <use xlink:href="#SegoeUI-50" transform="translate(707.921875 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(794.0625 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(821.453125 0)"/>
+    <use xlink:href="#SegoeUI-4b" transform="translate(855.34375 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(911.9375 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(964.234375 0)"/>
+    <use xlink:href="#SegoeUI-4f" transform="translate(991.625 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(1015.84375 0)"/>
+    <use xlink:href="#SegoeUI-51" transform="translate(1074.4375 0)"/>
+    <use xlink:href="#SegoeUI-4a" transform="translate(1131.03125 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(1189.921875 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(1242.21875 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(1276.984375 0)"/>
+    <use xlink:href="#SegoeUI-47" transform="translate(1304.375 0)"/>
+    <use xlink:href="#SegoeUI-4c" transform="translate(1363.265625 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(1387.484375 0)"/>
+    <use xlink:href="#SegoeUI-4f" transform="translate(1438.359375 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(1462.578125 0)"/>
+    <use xlink:href="#SegoeUI-4a" transform="translate(1521.171875 0)"/>
+    <use xlink:href="#SegoeUI-58" transform="translate(1580.0625 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(1636.65625 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(1688.953125 0)"/>
+    <use xlink:href="#SegoeUI-53" transform="translate(1716.34375 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(1775.140625 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(1809.90625 0)"/>
+    <use xlink:href="#SegoeUI-49" transform="translate(1868.5 0)"/>
+    <use xlink:href="#SegoeUI-4c" transform="translate(1899.796875 0)"/>
+    <use xlink:href="#SegoeUI-4f" transform="translate(1924.015625 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(1948.234375 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(2000.53125 0)"/>
+    <use xlink:href="#SegoeUI-49" transform="translate(2027.921875 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(2059.21875 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(2117.8125 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(2152.578125 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(2179.96875 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(2232.265625 0)"/>
+    <use xlink:href="#SegoeUI-46" transform="translate(2283.140625 0)"/>
+    <use xlink:href="#SegoeUI-4b" transform="translate(2329.328125 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(2385.921875 0)"/>
+    <use xlink:href="#SegoeUI-46" transform="translate(2413.3125 0)"/>
+    <use xlink:href="#SegoeUI-4b" transform="translate(2459.5 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(2516.09375 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(2566.96875 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(2601.734375 0)"/>
+    <use xlink:href="#SegoeUI-46" transform="translate(2652.609375 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(2698.796875 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(2732.6875 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(2784.984375 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(2819.75 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(2847.140625 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(2881.03125 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(2939.625 0)"/>
+    <use xlink:href="#SegoeUI-50" transform="translate(2967.015625 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(3053.15625 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(3104.03125 0)"/>
+    <use xlink:href="#SegoeUI-46" transform="translate(3137.921875 0)"/>
+    <use xlink:href="#SegoeUI-4b" transform="translate(3184.109375 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(3240.703125 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(3268.09375 0)"/>
+    <use xlink:href="#SegoeUI-4b" transform="translate(3301.984375 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(3358.578125 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(3410.875 0)"/>
+    <use xlink:href="#SegoeUI-56" transform="translate(3438.265625 0)"/>
+    <use xlink:href="#SegoeUI-4b" transform="translate(3480.703125 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(3537.296875 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(3595.890625 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(3630.65625 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(3664.546875 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(3716.84375 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(3751.609375 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(3779 0)"/>
+    <use xlink:href="#SegoeUI-51" transform="translate(3837.59375 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(3894.1875 0)"/>
+    <use xlink:href="#SegoeUI-11" transform="translate(3946.484375 0)"/>
+   </g>
+  </g>
+  <g id="text_15">
+   <!-- Number of samples -->
+   <g style="fill: #c1b8cc" transform="translate(107.519731 141.365625) scale(0.12 -0.12)">
+    <defs>
+     <path id="SegoeUI-31" d="M 4200 0 
+L 3556 0 
+L 1250 3572 
+Q 1163 3706 1106 3853 
+L 1088 3853 
+Q 1113 3709 1113 3238 
+L 1113 0 
+L 588 0 
+L 588 4481 
+L 1269 4481 
+L 3513 966 
+Q 3653 747 3694 666 
+L 3706 666 
+Q 3675 859 3675 1325 
+L 3675 4481 
+L 4200 4481 
+L 4200 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-45" d="M 1044 463 
+L 1031 463 
+L 1031 0 
+L 519 0 
+L 519 4738 
+L 1031 4738 
+L 1031 2638 
+L 1044 2638 
+Q 1422 3275 2150 3275 
+Q 2766 3275 3114 2845 
+Q 3463 2416 3463 1694 
+Q 3463 891 3072 408 
+Q 2681 -75 2003 -75 
+Q 1369 -75 1044 463 
+z
+M 1031 1753 
+L 1031 1306 
+Q 1031 909 1289 632 
+Q 1547 356 1944 356 
+Q 2409 356 2673 712 
+Q 2938 1069 2938 1703 
+Q 2938 2238 2691 2541 
+Q 2444 2844 2022 2844 
+Q 1575 2844 1303 2533 
+Q 1031 2222 1031 1753 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#SegoeUI-31"/>
+    <use xlink:href="#SegoeUI-58" transform="translate(74.8125 0)"/>
+    <use xlink:href="#SegoeUI-50" transform="translate(131.40625 0)"/>
+    <use xlink:href="#SegoeUI-45" transform="translate(217.546875 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(276.34375 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(328.640625 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(363.40625 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(390.796875 0)"/>
+    <use xlink:href="#SegoeUI-49" transform="translate(449.390625 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(480.6875 0)"/>
+    <use xlink:href="#SegoeUI-56" transform="translate(508.078125 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(550.515625 0)"/>
+    <use xlink:href="#SegoeUI-50" transform="translate(601.390625 0)"/>
+    <use xlink:href="#SegoeUI-53" transform="translate(687.53125 0)"/>
+    <use xlink:href="#SegoeUI-4f" transform="translate(746.328125 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(770.546875 0)"/>
+    <use xlink:href="#SegoeUI-56" transform="translate(822.84375 0)"/>
+   </g>
+  </g>
+  <g id="text_16">
+   <!-- Difference in rank correlation (books minus films) -->
+   <g style="fill: #c1b8cc" transform="translate(241.27381 463.053174) scale(0.13 -0.13)">
+    <defs>
+     <path id="SegoeUI-27" d="M 588 0 
+L 588 4481 
+L 1825 4481 
+Q 4194 4481 4194 2297 
+Q 4194 1259 3536 629 
+Q 2878 0 1775 0 
+L 588 0 
+z
+M 1113 4006 
+L 1113 475 
+L 1781 475 
+Q 2663 475 3153 947 
+Q 3644 1419 3644 2284 
+Q 3644 4006 1813 4006 
+L 1113 4006 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-4e" d="M 3175 0 
+L 2456 0 
+L 1044 1538 
+L 1031 1538 
+L 1031 0 
+L 519 0 
+L 519 4738 
+L 1031 4738 
+L 1031 1734 
+L 1044 1734 
+L 2388 3200 
+L 3059 3200 
+L 1575 1656 
+L 3175 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-b" d="M 1863 -1019 
+L 1406 -1019 
+Q 438 88 438 1709 
+Q 438 3338 1406 4481 
+L 1869 4481 
+Q 888 3294 888 1716 
+Q 888 150 1863 -1019 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-c" d="M 531 -1019 
+L 75 -1019 
+Q 1050 150 1050 1716 
+Q 1050 3294 69 4481 
+L 531 4481 
+Q 1506 3338 1506 1709 
+Q 1506 88 531 -1019 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#SegoeUI-27"/>
+    <use xlink:href="#SegoeUI-4c" transform="translate(70.125 0)"/>
+    <use xlink:href="#SegoeUI-49" transform="translate(94.34375 0)"/>
+    <use xlink:href="#SegoeUI-49" transform="translate(125.640625 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(156.9375 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(209.234375 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(244 0)"/>
+    <use xlink:href="#SegoeUI-51" transform="translate(296.296875 0)"/>
+    <use xlink:href="#SegoeUI-46" transform="translate(352.890625 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(399.078125 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(451.375 0)"/>
+    <use xlink:href="#SegoeUI-4c" transform="translate(478.765625 0)"/>
+    <use xlink:href="#SegoeUI-51" transform="translate(502.984375 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(559.578125 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(586.96875 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(621.734375 0)"/>
+    <use xlink:href="#SegoeUI-51" transform="translate(672.609375 0)"/>
+    <use xlink:href="#SegoeUI-4e" transform="translate(729.203125 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(778.90625 0)"/>
+    <use xlink:href="#SegoeUI-46" transform="translate(806.296875 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(852.484375 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(911.078125 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(945.84375 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(980.609375 0)"/>
+    <use xlink:href="#SegoeUI-4f" transform="translate(1032.90625 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(1057.125 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(1108 0)"/>
+    <use xlink:href="#SegoeUI-4c" transform="translate(1141.890625 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(1166.109375 0)"/>
+    <use xlink:href="#SegoeUI-51" transform="translate(1224.703125 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(1281.296875 0)"/>
+    <use xlink:href="#SegoeUI-b" transform="translate(1308.6875 0)"/>
+    <use xlink:href="#SegoeUI-45" transform="translate(1338.859375 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(1397.65625 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(1456.25 0)"/>
+    <use xlink:href="#SegoeUI-4e" transform="translate(1514.84375 0)"/>
+    <use xlink:href="#SegoeUI-56" transform="translate(1564.546875 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(1606.984375 0)"/>
+    <use xlink:href="#SegoeUI-50" transform="translate(1634.375 0)"/>
+    <use xlink:href="#SegoeUI-4c" transform="translate(1720.515625 0)"/>
+    <use xlink:href="#SegoeUI-51" transform="translate(1744.734375 0)"/>
+    <use xlink:href="#SegoeUI-58" transform="translate(1801.328125 0)"/>
+    <use xlink:href="#SegoeUI-56" transform="translate(1857.921875 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(1900.359375 0)"/>
+    <use xlink:href="#SegoeUI-49" transform="translate(1927.75 0)"/>
+    <use xlink:href="#SegoeUI-4c" transform="translate(1959.046875 0)"/>
+    <use xlink:href="#SegoeUI-4f" transform="translate(1983.265625 0)"/>
+    <use xlink:href="#SegoeUI-50" transform="translate(2007.484375 0)"/>
+    <use xlink:href="#SegoeUI-56" transform="translate(2093.625 0)"/>
+    <use xlink:href="#SegoeUI-c" transform="translate(2136.0625 0)"/>
+   </g>
+  </g>
+  <g id="text_17">
+   <!-- 76% -->
+   <g style="fill: #ffd093" transform="translate(709.438226 244.337197) scale(0.57 -0.57)">
+    <defs>
+     <path id="Georgia-Bold-1a" d="M 3575 2994 
+L 1300 -1153 
+L 831 -1153 
+L 2938 2525 
+L 1506 2525 
+Q 1234 2525 1081 2522 
+Q 928 2519 800 2459 
+Q 697 2413 623 2242 
+Q 550 2072 506 1825 
+L 278 1825 
+L 278 3366 
+L 3575 3366 
+L 3575 2994 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-19" d="M 3884 1447 
+Q 3884 784 3386 337 
+Q 2888 -109 2113 -109 
+Q 1303 -109 812 398 
+Q 322 906 322 1763 
+Q 322 2906 1094 3653 
+Q 1866 4400 3191 4556 
+L 3263 4247 
+L 2931 4191 
+Q 2553 4088 2298 3908 
+Q 2044 3728 1878 3497 
+Q 1719 3275 1628 2995 
+Q 1538 2716 1491 2444 
+Q 1763 2688 2030 2772 
+Q 2297 2856 2603 2856 
+Q 3141 2856 3512 2464 
+Q 3884 2072 3884 1447 
+z
+M 2728 1363 
+Q 2728 1856 2554 2147 
+Q 2381 2438 2091 2438 
+Q 1897 2438 1755 2372 
+Q 1613 2306 1469 2097 
+Q 1469 2081 1467 2042 
+Q 1466 2003 1463 1941 
+Q 1459 1872 1457 1812 
+Q 1456 1753 1456 1713 
+Q 1456 963 1639 564 
+Q 1822 166 2109 166 
+Q 2388 166 2558 478 
+Q 2728 791 2728 1363 
+z
+" transform="scale(0.015625)"/>
+     <path id="Georgia-Bold-8" d="M 2719 3394 
+Q 2719 2872 2367 2548 
+Q 2016 2225 1503 2225 
+Q 984 2225 634 2548 
+Q 284 2872 284 3394 
+Q 284 3916 634 4239 
+Q 984 4563 1500 4563 
+Q 2016 4563 2367 4239 
+Q 2719 3916 2719 3394 
+z
+M 1891 3388 
+Q 1891 3819 1806 4076 
+Q 1722 4334 1497 4334 
+Q 1294 4334 1203 4092 
+Q 1113 3850 1113 3419 
+Q 1113 2969 1195 2711 
+Q 1278 2453 1509 2453 
+Q 1709 2453 1800 2695 
+Q 1891 2938 1891 3388 
+z
+M 5344 1059 
+Q 5344 538 4992 214 
+Q 4641 -109 4128 -109 
+Q 3609 -109 3259 214 
+Q 2909 538 2909 1059 
+Q 2909 1581 3259 1904 
+Q 3609 2228 4125 2228 
+Q 4641 2228 4992 1904 
+Q 5344 1581 5344 1059 
+z
+M 4516 1053 
+Q 4516 1484 4431 1742 
+Q 4347 2000 4122 2000 
+Q 3919 2000 3828 1758 
+Q 3738 1516 3738 1084 
+Q 3738 634 3820 376 
+Q 3903 119 4134 119 
+Q 4334 119 4425 361 
+Q 4516 603 4516 1053 
+z
+M 4919 4463 
+L 1222 0 
+L 713 0 
+L 4400 4463 
+L 4919 4463 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#Georgia-Bold-1a"/>
+    <use xlink:href="#Georgia-Bold-19" transform="translate(55.421875 0)"/>
+    <use xlink:href="#Georgia-Bold-8" transform="translate(120.21875 0)"/>
+   </g>
+  </g>
+  <g id="text_18">
+   <!-- smaller gap -->
+   <g style="fill: #f9f3e9" transform="translate(710.398224 297.194687) scale(0.2 -0.2)">
+    <defs>
+     <path id="SegoeUI-Bold-56" d="M 206 84 
+L 206 884 
+Q 450 738 692 666 
+Q 934 594 1150 594 
+Q 1413 594 1564 666 
+Q 1716 738 1716 884 
+Q 1716 978 1647 1040 
+Q 1578 1103 1470 1150 
+Q 1363 1197 1234 1234 
+Q 1106 1272 988 1319 
+Q 797 1391 651 1473 
+Q 506 1556 407 1665 
+Q 309 1775 257 1919 
+Q 206 2063 206 2259 
+Q 206 2528 323 2722 
+Q 441 2916 636 3039 
+Q 831 3163 1082 3220 
+Q 1334 3278 1606 3278 
+Q 1819 3278 2037 3245 
+Q 2256 3213 2469 3150 
+L 2469 2388 
+Q 2281 2497 2067 2551 
+Q 1853 2606 1647 2606 
+Q 1550 2606 1464 2589 
+Q 1378 2572 1312 2539 
+Q 1247 2506 1209 2454 
+Q 1172 2403 1172 2338 
+Q 1172 2250 1228 2187 
+Q 1284 2125 1375 2079 
+Q 1466 2034 1577 1998 
+Q 1688 1963 1797 1925 
+Q 1994 1856 2153 1775 
+Q 2313 1694 2427 1584 
+Q 2541 1475 2602 1328 
+Q 2663 1181 2663 978 
+Q 2663 694 2539 492 
+Q 2416 291 2211 164 
+Q 2006 38 1739 -20 
+Q 1472 -78 1184 -78 
+Q 656 -78 206 84 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-Bold-50" d="M 5497 0 
+L 4513 0 
+L 4513 1825 
+Q 4513 2522 4000 2522 
+Q 3756 2522 3603 2312 
+Q 3450 2103 3450 1791 
+L 3450 0 
+L 2463 0 
+L 2463 1844 
+Q 2463 2522 1959 2522 
+Q 1706 2522 1554 2322 
+Q 1403 2122 1403 1778 
+L 1403 0 
+L 416 0 
+L 416 3200 
+L 1403 3200 
+L 1403 2700 
+L 1416 2700 
+Q 1569 2956 1845 3117 
+Q 2122 3278 2450 3278 
+Q 3128 3278 3378 2681 
+Q 3744 3278 4453 3278 
+Q 5497 3278 5497 1991 
+L 5497 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-Bold-55" d="M 2503 2309 
+Q 2325 2406 2088 2406 
+Q 1766 2406 1584 2170 
+Q 1403 1934 1403 1528 
+L 1403 0 
+L 416 0 
+L 416 3200 
+L 1403 3200 
+L 1403 2606 
+L 1416 2606 
+Q 1650 3256 2259 3256 
+Q 2416 3256 2503 3219 
+L 2503 2309 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-Bold-53" d="M 1416 372 
+L 1403 372 
+L 1403 -1472 
+L 416 -1472 
+L 416 3200 
+L 1403 3200 
+L 1403 2719 
+L 1416 2719 
+Q 1781 3278 2444 3278 
+Q 3066 3278 3405 2851 
+Q 3744 2425 3744 1691 
+Q 3744 891 3348 406 
+Q 2953 -78 2297 -78 
+Q 1719 -78 1416 372 
+z
+M 1388 1684 
+L 1388 1428 
+Q 1388 1097 1563 887 
+Q 1738 678 2022 678 
+Q 2359 678 2545 939 
+Q 2731 1200 2731 1678 
+Q 2731 2522 2075 2522 
+Q 1772 2522 1580 2292 
+Q 1388 2063 1388 1684 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#SegoeUI-Bold-56"/>
+    <use xlink:href="#SegoeUI-Bold-50" transform="translate(44 0)"/>
+    <use xlink:href="#SegoeUI-Bold-44" transform="translate(135.609375 0)"/>
+    <use xlink:href="#SegoeUI-Bold-4f" transform="translate(189.421875 0)"/>
+    <use xlink:href="#SegoeUI-Bold-4f" transform="translate(217.84375 0)"/>
+    <use xlink:href="#SegoeUI-Bold-48" transform="translate(246.265625 0)"/>
+    <use xlink:href="#SegoeUI-Bold-55" transform="translate(300.375 0)"/>
+    <use xlink:href="#SegoeUI-Bold-3" transform="translate(340.171875 0)"/>
+    <use xlink:href="#SegoeUI-Bold-4a" transform="translate(367.765625 0)"/>
+    <use xlink:href="#SegoeUI-Bold-44" transform="translate(429.6875 0)"/>
+    <use xlink:href="#SegoeUI-Bold-53" transform="translate(483.5 0)"/>
+   </g>
+  </g>
+  <g id="text_19">
+   <!-- at the median of -->
+   <g style="fill: #c1b8cc" transform="translate(710.398224 336.693174) scale(0.13 -0.13)">
+    <use xlink:href="#SegoeUI-44"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(50.875 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(84.765625 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(112.15625 0)"/>
+    <use xlink:href="#SegoeUI-4b" transform="translate(146.046875 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(202.640625 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(254.9375 0)"/>
+    <use xlink:href="#SegoeUI-50" transform="translate(282.328125 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(368.46875 0)"/>
+    <use xlink:href="#SegoeUI-47" transform="translate(420.765625 0)"/>
+    <use xlink:href="#SegoeUI-4c" transform="translate(479.65625 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(503.875 0)"/>
+    <use xlink:href="#SegoeUI-51" transform="translate(554.75 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(611.34375 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(638.734375 0)"/>
+    <use xlink:href="#SegoeUI-49" transform="translate(697.328125 0)"/>
+   </g>
+  </g>
+  <g id="text_20">
+   <!-- 1,000 matched samples -->
+   <g style="fill: #c1b8cc" transform="translate(710.398224 359.717031) scale(0.13 -0.13)">
+    <defs>
+     <path id="SegoeUI-f" d="M 988 713 
+L 488 -825 
+L 122 -825 
+L 488 713 
+L 988 713 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#SegoeUI-14"/>
+    <use xlink:href="#SegoeUI-f" transform="translate(53.90625 0)"/>
+    <use xlink:href="#SegoeUI-13" transform="translate(75.59375 0)"/>
+    <use xlink:href="#SegoeUI-13" transform="translate(129.5 0)"/>
+    <use xlink:href="#SegoeUI-13" transform="translate(183.40625 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(237.3125 0)"/>
+    <use xlink:href="#SegoeUI-50" transform="translate(264.703125 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(350.84375 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(401.71875 0)"/>
+    <use xlink:href="#SegoeUI-46" transform="translate(435.609375 0)"/>
+    <use xlink:href="#SegoeUI-4b" transform="translate(481.796875 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(538.390625 0)"/>
+    <use xlink:href="#SegoeUI-47" transform="translate(590.6875 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(649.578125 0)"/>
+    <use xlink:href="#SegoeUI-56" transform="translate(676.96875 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(719.40625 0)"/>
+    <use xlink:href="#SegoeUI-50" transform="translate(770.28125 0)"/>
+    <use xlink:href="#SegoeUI-53" transform="translate(856.421875 0)"/>
+    <use xlink:href="#SegoeUI-4f" transform="translate(915.21875 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(939.4375 0)"/>
+    <use xlink:href="#SegoeUI-56" transform="translate(991.734375 0)"/>
+   </g>
+  </g>
+  <g id="text_21">
+   <!-- Interaction counts and IDF weights stay fixed. The middle 95% of sampled gaps runs from −0.01 to +0.09. -->
+   <g style="fill: #c1b8cc" transform="translate(63.359842 517.455938) scale(0.11 -0.11)">
+    <defs>
+     <path id="SegoeUI-2c" d="M 1113 0 
+L 588 0 
+L 588 4481 
+L 1113 4481 
+L 1113 0 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-29" d="M 2863 4006 
+L 1113 4006 
+L 1113 2456 
+L 2731 2456 
+L 2731 1984 
+L 1113 1984 
+L 1113 0 
+L 588 0 
+L 588 4481 
+L 2863 4481 
+L 2863 4006 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-5a" d="M 4550 3200 
+L 3591 0 
+L 3059 0 
+L 2400 2291 
+Q 2363 2422 2350 2588 
+L 2338 2588 
+Q 2328 2475 2272 2297 
+L 1556 0 
+L 1044 0 
+L 75 3200 
+L 613 3200 
+L 1275 794 
+Q 1306 684 1319 506 
+L 1344 506 
+Q 1353 644 1400 800 
+L 2138 3200 
+L 2606 3200 
+L 3269 788 
+Q 3300 672 3316 500 
+L 3341 500 
+Q 3347 622 3394 788 
+L 4044 3200 
+L 4550 3200 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-5b" d="M 2856 3200 
+L 1781 1581 
+L 2838 0 
+L 2241 0 
+L 1613 1038 
+Q 1553 1134 1472 1281 
+L 1459 1281 
+Q 1444 1253 1313 1038 
+L 672 0 
+L 81 0 
+L 1172 1569 
+L 128 3200 
+L 725 3200 
+L 1344 2106 
+Q 1413 1984 1478 1856 
+L 1491 1856 
+L 2291 3200 
+L 2856 3200 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-37" d="M 3238 4006 
+L 1944 4006 
+L 1944 0 
+L 1419 0 
+L 1419 4006 
+L 128 4006 
+L 128 4481 
+L 3238 4481 
+L 3238 4006 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-1c" d="M 3138 2509 
+Q 3138 1894 3016 1414 
+Q 2894 934 2659 601 
+Q 2425 269 2087 95 
+Q 1750 -78 1319 -78 
+Q 875 -78 538 78 
+L 538 569 
+Q 909 359 1331 359 
+Q 1634 359 1873 484 
+Q 2113 609 2278 848 
+Q 2444 1088 2531 1438 
+Q 2619 1788 2619 2241 
+L 2606 2241 
+Q 2319 1663 1606 1663 
+Q 1319 1663 1078 1764 
+Q 838 1866 663 2052 
+Q 488 2238 391 2494 
+Q 294 2750 294 3059 
+Q 294 3391 401 3666 
+Q 509 3941 701 4139 
+Q 894 4338 1158 4447 
+Q 1422 4556 1734 4556 
+Q 2072 4556 2333 4420 
+Q 2594 4284 2772 4023 
+Q 2950 3763 3044 3381 
+Q 3138 3000 3138 2509 
+z
+M 2584 2969 
+Q 2584 3228 2517 3440 
+Q 2450 3653 2331 3804 
+Q 2213 3956 2048 4039 
+Q 1884 4122 1691 4122 
+Q 1506 4122 1347 4048 
+Q 1188 3975 1070 3842 
+Q 953 3709 886 3526 
+Q 819 3344 819 3128 
+Q 819 2891 883 2703 
+Q 947 2516 1065 2386 
+Q 1184 2256 1351 2187 
+Q 1519 2119 1722 2119 
+Q 1900 2119 2058 2186 
+Q 2216 2253 2333 2367 
+Q 2450 2481 2517 2636 
+Q 2584 2791 2584 2969 
+z
+" transform="scale(0.015625)"/>
+     <path id="SegoeUI-8" d="M 1263 2234 
+Q 800 2234 525 2539 
+Q 250 2844 250 3353 
+Q 250 3909 540 4229 
+Q 831 4550 1325 4550 
+Q 1803 4550 2067 4253 
+Q 2331 3956 2331 3419 
+Q 2331 2881 2036 2557 
+Q 1741 2234 1263 2234 
+z
+M 1306 4206 
+Q 1009 4206 837 3986 
+Q 666 3766 666 3381 
+Q 666 3003 834 2792 
+Q 1003 2581 1294 2581 
+Q 1588 2581 1753 2800 
+Q 1919 3019 1919 3406 
+Q 1919 3784 1755 3995 
+Q 1591 4206 1306 4206 
+z
+M 4263 4481 
+L 1388 -31 
+L 941 -31 
+L 3813 4481 
+L 4263 4481 
+z
+M 3931 -69 
+Q 3469 -69 3194 237 
+Q 2919 544 2919 1050 
+Q 2919 1606 3212 1929 
+Q 3506 2253 3994 2253 
+Q 4469 2253 4734 1953 
+Q 5000 1653 5000 1113 
+Q 5000 578 4704 254 
+Q 4409 -69 3931 -69 
+z
+M 3975 1900 
+Q 3675 1900 3504 1681 
+Q 3334 1463 3334 1075 
+Q 3334 703 3503 492 
+Q 3672 281 3963 281 
+Q 4256 281 4422 501 
+Q 4588 722 4588 1106 
+Q 4588 1488 4423 1694 
+Q 4259 1900 3975 1900 
+z
+" transform="scale(0.015625)"/>
+    </defs>
+    <use xlink:href="#SegoeUI-2c"/>
+    <use xlink:href="#SegoeUI-51" transform="translate(26.609375 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(83.203125 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(117.09375 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(169.390625 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(204.15625 0)"/>
+    <use xlink:href="#SegoeUI-46" transform="translate(255.03125 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(301.21875 0)"/>
+    <use xlink:href="#SegoeUI-4c" transform="translate(335.109375 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(359.328125 0)"/>
+    <use xlink:href="#SegoeUI-51" transform="translate(417.921875 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(474.515625 0)"/>
+    <use xlink:href="#SegoeUI-46" transform="translate(501.90625 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(548.09375 0)"/>
+    <use xlink:href="#SegoeUI-58" transform="translate(606.6875 0)"/>
+    <use xlink:href="#SegoeUI-51" transform="translate(663.28125 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(719.875 0)"/>
+    <use xlink:href="#SegoeUI-56" transform="translate(753.765625 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(796.203125 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(823.59375 0)"/>
+    <use xlink:href="#SegoeUI-51" transform="translate(874.46875 0)"/>
+    <use xlink:href="#SegoeUI-47" transform="translate(931.0625 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(989.953125 0)"/>
+    <use xlink:href="#SegoeUI-2c" transform="translate(1017.34375 0)"/>
+    <use xlink:href="#SegoeUI-27" transform="translate(1043.953125 0)"/>
+    <use xlink:href="#SegoeUI-29" transform="translate(1114.078125 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(1162.90625 0)"/>
+    <use xlink:href="#SegoeUI-5a" transform="translate(1190.296875 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(1262.5625 0)"/>
+    <use xlink:href="#SegoeUI-4c" transform="translate(1314.859375 0)"/>
+    <use xlink:href="#SegoeUI-4a" transform="translate(1339.078125 0)"/>
+    <use xlink:href="#SegoeUI-4b" transform="translate(1397.96875 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(1454.5625 0)"/>
+    <use xlink:href="#SegoeUI-56" transform="translate(1488.453125 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(1530.890625 0)"/>
+    <use xlink:href="#SegoeUI-56" transform="translate(1558.28125 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(1600.71875 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(1634.609375 0)"/>
+    <use xlink:href="#SegoeUI-5c" transform="translate(1685.484375 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(1733.875 0)"/>
+    <use xlink:href="#SegoeUI-49" transform="translate(1761.265625 0)"/>
+    <use xlink:href="#SegoeUI-4c" transform="translate(1792.5625 0)"/>
+    <use xlink:href="#SegoeUI-5b" transform="translate(1816.78125 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(1862.6875 0)"/>
+    <use xlink:href="#SegoeUI-47" transform="translate(1914.984375 0)"/>
+    <use xlink:href="#SegoeUI-11" transform="translate(1973.875 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(1995.5625 0)"/>
+    <use xlink:href="#SegoeUI-37" transform="translate(2022.953125 0)"/>
+    <use xlink:href="#SegoeUI-4b" transform="translate(2075.34375 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(2131.9375 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(2184.234375 0)"/>
+    <use xlink:href="#SegoeUI-50" transform="translate(2211.625 0)"/>
+    <use xlink:href="#SegoeUI-4c" transform="translate(2297.765625 0)"/>
+    <use xlink:href="#SegoeUI-47" transform="translate(2321.984375 0)"/>
+    <use xlink:href="#SegoeUI-47" transform="translate(2380.875 0)"/>
+    <use xlink:href="#SegoeUI-4f" transform="translate(2439.765625 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(2463.984375 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(2516.28125 0)"/>
+    <use xlink:href="#SegoeUI-1c" transform="translate(2543.671875 0)"/>
+    <use xlink:href="#SegoeUI-18" transform="translate(2597.578125 0)"/>
+    <use xlink:href="#SegoeUI-8" transform="translate(2651.484375 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(2733.328125 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(2760.71875 0)"/>
+    <use xlink:href="#SegoeUI-49" transform="translate(2819.3125 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(2850.609375 0)"/>
+    <use xlink:href="#SegoeUI-56" transform="translate(2878 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(2920.4375 0)"/>
+    <use xlink:href="#SegoeUI-50" transform="translate(2971.3125 0)"/>
+    <use xlink:href="#SegoeUI-53" transform="translate(3057.453125 0)"/>
+    <use xlink:href="#SegoeUI-4f" transform="translate(3116.25 0)"/>
+    <use xlink:href="#SegoeUI-48" transform="translate(3140.46875 0)"/>
+    <use xlink:href="#SegoeUI-47" transform="translate(3192.765625 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(3251.65625 0)"/>
+    <use xlink:href="#SegoeUI-4a" transform="translate(3279.046875 0)"/>
+    <use xlink:href="#SegoeUI-44" transform="translate(3337.9375 0)"/>
+    <use xlink:href="#SegoeUI-53" transform="translate(3388.8125 0)"/>
+    <use xlink:href="#SegoeUI-56" transform="translate(3447.609375 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(3490.046875 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(3517.4375 0)"/>
+    <use xlink:href="#SegoeUI-58" transform="translate(3552.203125 0)"/>
+    <use xlink:href="#SegoeUI-51" transform="translate(3608.796875 0)"/>
+    <use xlink:href="#SegoeUI-56" transform="translate(3665.390625 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(3707.828125 0)"/>
+    <use xlink:href="#SegoeUI-49" transform="translate(3735.21875 0)"/>
+    <use xlink:href="#SegoeUI-55" transform="translate(3766.515625 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(3801.28125 0)"/>
+    <use xlink:href="#SegoeUI-50" transform="translate(3859.875 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(3946.015625 0)"/>
+    <use xlink:href="#SegoeUI-ee" transform="translate(3973.40625 0)"/>
+    <use xlink:href="#SegoeUI-13" transform="translate(4041.8125 0)"/>
+    <use xlink:href="#SegoeUI-11" transform="translate(4095.71875 0)"/>
+    <use xlink:href="#SegoeUI-13" transform="translate(4117.40625 0)"/>
+    <use xlink:href="#SegoeUI-14" transform="translate(4171.3125 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(4225.21875 0)"/>
+    <use xlink:href="#SegoeUI-57" transform="translate(4252.609375 0)"/>
+    <use xlink:href="#SegoeUI-52" transform="translate(4286.5 0)"/>
+    <use xlink:href="#SegoeUI-3" transform="translate(4345.09375 0)"/>
+    <use xlink:href="#SegoeUI-e" transform="translate(4372.484375 0)"/>
+    <use xlink:href="#SegoeUI-13" transform="translate(4440.890625 0)"/>
+    <use xlink:href="#SegoeUI-11" transform="translate(4494.796875 0)"/>
+    <use xlink:href="#SegoeUI-13" transform="translate(4516.484375 0)"/>
+    <use xlink:href="#SegoeUI-1c" transform="translate(4570.390625 0)"/>
+    <use xlink:href="#SegoeUI-11" transform="translate(4624.296875 0)"/>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pd16843417e">
+   <rect x="106.559734" y="154.98" width="550.078625" height="261.9"/>
+  </clipPath>
+ </defs>
+</svg>

@@ -1,0 +1,361 @@
+{
+  "story_comparison": [
+    {
+      "story": 1,
+      "title": "Philosopher’s Stone",
+      "characters": [
+        "Albus Dumbledore",
+        "Draco Malfoy",
+        "Firenze",
+        "Harry Potter",
+        "Hermione Granger",
+        "Minerva McGonagall",
+        "Neville Longbottom",
+        "Oliver Wood",
+        "Percy Weasley",
+        "Petunia Dursley",
+        "Quirinus Quirrell",
+        "Ron Weasley",
+        "Rubeus Hagrid",
+        "Severus Snape",
+        "Vernon Dursley"
+      ],
+      "pairs": 105,
+      "score": {
+        "Books": 0.3988065179734883,
+        "Films": 0.13351201680579974
+      },
+      "raw_spearman": {
+        "Books": 0.724379120845619,
+        "Films": 0.59766471826335
+      },
+      "observed_nonzero_edges": {
+        "Books": 46,
+        "Films": 46
+      }
+    },
+    {
+      "story": 2,
+      "title": "Chamber of Secrets",
+      "characters": [
+        "Albus Dumbledore",
+        "Aragog",
+        "Dobby",
+        "Draco Malfoy",
+        "Gilderoy Lockhart",
+        "Harry Potter",
+        "Hermione Granger",
+        "Minerva McGonagall",
+        "Moaning Myrtle",
+        "Molly Weasley",
+        "Pomona Sprout",
+        "Ron Weasley",
+        "Rubeus Hagrid",
+        "Severus Snape",
+        "Vernon Dursley"
+      ],
+      "pairs": 105,
+      "score": {
+        "Books": 0.40417731272941515,
+        "Films": 0.3478490988126919
+      },
+      "raw_spearman": {
+        "Books": 0.7391429230762915,
+        "Films": 0.6970153886566445
+      },
+      "observed_nonzero_edges": {
+        "Books": 42,
+        "Films": 46
+      }
+    },
+    {
+      "story": 3,
+      "title": "Prisoner of Azkaban",
+      "characters": [
+        "Albus Dumbledore",
+        "Cornelius Fudge",
+        "Draco Malfoy",
+        "Fred Weasley",
+        "George Weasley",
+        "Harry Potter",
+        "Hermione Granger",
+        "Minerva McGonagall",
+        "Peter Pettigrew",
+        "Remus Lupin",
+        "Ron Weasley",
+        "Rubeus Hagrid",
+        "Severus Snape",
+        "Stan Shunpike",
+        "Sybill Trelawney"
+      ],
+      "pairs": 105,
+      "score": {
+        "Books": 0.4030791766811855,
+        "Films": 0.36612961143833056
+      },
+      "raw_spearman": {
+        "Books": 0.7321779549353608,
+        "Films": 0.612817348436523
+      },
+      "observed_nonzero_edges": {
+        "Books": 56,
+        "Films": 44
+      }
+    },
+    {
+      "story": 4,
+      "title": "Goblet of Fire",
+      "characters": [
+        "Alastor Moody",
+        "Albus Dumbledore",
+        "Bartemius Crouch",
+        "Cedric Diggory",
+        "Fred Weasley",
+        "Harry Potter",
+        "Hermione Granger",
+        "Igor Karkaroff",
+        "Minerva McGonagall",
+        "Rita Skeeter",
+        "Ron Weasley",
+        "Rubeus Hagrid",
+        "Severus Snape",
+        "Sirius Black",
+        "Voldemort"
+      ],
+      "pairs": 105,
+      "score": {
+        "Books": 0.28362787967308395,
+        "Films": 0.24167178348873616
+      },
+      "raw_spearman": {
+        "Books": 0.645169684482971,
+        "Films": 0.635433492431194
+      },
+      "observed_nonzero_edges": {
+        "Books": 62,
+        "Films": 45
+      }
+    },
+    {
+      "story": 5,
+      "title": "Order of the Phoenix",
+      "characters": [
+        "Alastor Moody",
+        "Albus Dumbledore",
+        "Bellatrix Lestrange",
+        "Cornelius Fudge",
+        "Dolores Umbridge",
+        "Draco Malfoy",
+        "Fred Weasley",
+        "Harry Potter",
+        "Hermione Granger",
+        "Lucius Malfoy",
+        "Luna Lovegood",
+        "Minerva McGonagall",
+        "Remus Lupin",
+        "Ron Weasley",
+        "Rubeus Hagrid",
+        "Severus Snape",
+        "Sirius Black",
+        "Sybill Trelawney"
+      ],
+      "pairs": 153,
+      "score": {
+        "Books": 0.5698504646561587,
+        "Films": 0.22448885094481558
+      },
+      "raw_spearman": {
+        "Books": 0.7480084504967678,
+        "Films": 0.569736757544278
+      },
+      "observed_nonzero_edges": {
+        "Books": 74,
+        "Films": 46
+      }
+    },
+    {
+      "story": 6,
+      "title": "Half-Blood Prince",
+      "characters": [
+        "Albus Dumbledore",
+        "Bellatrix Lestrange",
+        "Draco Malfoy",
+        "Ginny Weasley",
+        "Harry Potter",
+        "Hermione Granger",
+        "Horace Slughorn",
+        "Luna Lovegood",
+        "Minerva McGonagall",
+        "Ron Weasley",
+        "Rubeus Hagrid",
+        "Severus Snape",
+        "Voldemort"
+      ],
+      "pairs": 78,
+      "score": {
+        "Books": 0.5056625449348666,
+        "Films": 0.22157229879486934
+      },
+      "raw_spearman": {
+        "Books": 0.7238451551678475,
+        "Films": 0.53827552698097
+      },
+      "observed_nonzero_edges": {
+        "Books": 46,
+        "Films": 45
+      }
+    },
+    {
+      "story": 7,
+      "title": "Deathly Hallows",
+      "characters": [
+        "Aberforth Dumbledore",
+        "Alastor Moody",
+        "Albus Dumbledore",
+        "Bellatrix Lestrange",
+        "Bill Weasley",
+        "Corban Yaxley",
+        "Elphias Doge",
+        "Ginny Weasley",
+        "Griphook",
+        "Harry Potter",
+        "Hermione Granger",
+        "Lily Potter",
+        "Luna Lovegood",
+        "Mundungus Fletcher",
+        "Muriel",
+        "Neville Longbottom",
+        "Ollivander",
+        "Remus Lupin",
+        "Ron Weasley",
+        "Rubeus Hagrid",
+        "Rufus Scrimgeour",
+        "Scabior",
+        "Severus Snape",
+        "Voldemort",
+        "Xenophilius Lovegood"
+      ],
+      "pairs": 300,
+      "score": {
+        "Books": 0.30881420906715906,
+        "Films": 0.1771022251311989
+      },
+      "raw_spearman": {
+        "Books": 0.6023479140863998,
+        "Films": 0.5602856164599929
+      },
+      "observed_nonzero_edges": {
+        "Books": 88,
+        "Films": 82
+      }
+    }
+  ],
+  "frequency_bands": {
+    "Books": [
+      {
+        "pairs": 537,
+        "quartiles": [
+          15.359477124183007,
+          31.904761904761905,
+          50.65359477124183
+        ]
+      },
+      {
+        "pairs": 106,
+        "quartiles": [
+          40.476190476190474,
+          61.74603174603175,
+          74.83578431372548
+        ]
+      },
+      {
+        "pairs": 99,
+        "quartiles": [
+          47.942810457516345,
+          64.74358974358974,
+          80.09678230266465
+        ]
+      },
+      {
+        "pairs": 102,
+        "quartiles": [
+          64.28571428571429,
+          76.73202614379085,
+          85.33333333333333
+        ]
+      },
+      {
+        "pairs": 107,
+        "quartiles": [
+          84.28571428571429,
+          92.5,
+          96.73076923076923
+        ]
+      }
+    ],
+    "Films": [
+      {
+        "pairs": 597,
+        "quartiles": [
+          17.166666666666668,
+          35.714285714285715,
+          56.5
+        ]
+      },
+      {
+        "pairs": 93,
+        "quartiles": [
+          39.523809523809526,
+          63.166666666666664,
+          75.49019607843137
+        ]
+      },
+      {
+        "pairs": 81,
+        "quartiles": [
+          40.38461538461539,
+          67.3076923076923,
+          81.41025641025641
+        ]
+      },
+      {
+        "pairs": 92,
+        "quartiles": [
+          59.58653846153846,
+          78.83974358974359,
+          87.88919413919413
+        ]
+      },
+      {
+        "pairs": 88,
+        "quartiles": [
+          81.42857142857143,
+          92.51190476190476,
+          96.88970588235294
+        ]
+      }
+    ]
+  },
+  "neighborhood_overlap": {
+    "character_story_profiles_per_medium": 116,
+    "shuffles": 1999,
+    "by_medium": {
+      "Books": {
+        "observed": 3.1795977011494245,
+        "shuffle_mean": 1.430458045114511,
+        "shuffle_interval": [
+          1.1334770114942527,
+          1.7385775862068964
+        ]
+      },
+      "Films": {
+        "observed": 2.853448275862069,
+        "shuffle_mean": 1.3419180854795214,
+        "shuffle_interval": [
+          1.1005028735632183,
+          1.6150862068965517
+        ]
+      }
+    }
+  }
+}
