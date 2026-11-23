@@ -1,5 +1,6 @@
-"""Render three alternatives for the second presentation slide."""
+"""Render three alternatives for the second presentation slide from saved results."""
 
+import argparse
 import csv
 import json
 from collections import defaultdict
@@ -257,12 +258,17 @@ def neighbors_plot(out, overlap, null_distributions):
 
 
 def main():
-    root = Path(__file__).resolve().parent
-    output = root / 'slide_2_options'
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--results-dir', type=Path,
+                        default=Path(__file__).resolve().parents[1] / 'results' / 'interaction_language',
+                        help='Directory containing the results written by analyse.py.')
+    args = parser.parse_args()
+    stats, stories = read_results(args.results_dir)
+
+    output = args.results_dir / 'slide_2_options'
     output.mkdir(exist_ok=True)
     plt.rcParams.update({'font.family': ['Segoe UI', 'DejaVu Sans'], 'svg.fonttype': 'path',
                          'svg.hashsalt': 'hp-slide-two-options'})
-    stats, stories = read_results(root)
     bands = frequency_bands(stories)
     overlap, null_distributions = neighborhood_overlap(stories)
     medium_comparison(output, stats)

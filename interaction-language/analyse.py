@@ -327,8 +327,10 @@ def save_results(out, primary, draws, sensitivity, counts, audit, axes):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('repo', type=Path)
-    parser.add_argument('--out', type=Path, default=Path(__file__).resolve().parent)
+    parser.add_argument('repo', type=Path, help='Repository containing the dialogue CSVs.')
+    parser.add_argument('--out', type=Path,
+                        default=Path(__file__).resolve().parents[1] / 'results' / 'interaction_language',
+                        help='Directory for analysis tables and figures.')
     args = parser.parse_args()
     args.out.mkdir(parents=True, exist_ok=True)
     blocks, counts, name_words, audit = read_project(args.repo.resolve())
