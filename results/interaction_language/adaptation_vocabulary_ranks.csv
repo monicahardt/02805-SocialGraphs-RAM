@@ -1,0 +1,117 @@
+story,title,character,book_words,film_words,film_candidates,own_film_rank,own_film_cosine,closest_film_characters,closest_film_cosine
+1,Philosopher’s Stone,Albus Dumbledore,1275,725,15,1.0,0.279619939299,Albus Dumbledore,0.279619939299
+1,Philosopher’s Stone,Draco Malfoy,290,202,15,5.0,0.04276029538,Harry Potter,0.092324222385
+1,Philosopher’s Stone,Firenze,248,113,15,1.0,0.565673003043,Firenze,0.565673003043
+1,Philosopher’s Stone,Harry Potter,5100,1733,15,1.0,0.360088114385,Harry Potter,0.360088114385
+1,Philosopher’s Stone,Hermione Granger,1619,972,15,1.0,0.204467154769,Hermione Granger,0.204467154769
+1,Philosopher’s Stone,Minerva McGonagall,702,524,15,2.0,0.126115301779,Harry Potter,0.126815794048
+1,Philosopher’s Stone,Neville Longbottom,179,110,15,1.0,0.102868116617,Neville Longbottom,0.102868116617
+1,Philosopher’s Stone,Oliver Wood,465,176,15,1.0,0.306485039752,Oliver Wood,0.306485039752
+1,Philosopher’s Stone,Percy Weasley,250,123,15,3.0,0.049037898792,Harry Potter,0.068343397983
+1,Philosopher’s Stone,Petunia Dursley,302,280,15,1.0,0.109481535685,Petunia Dursley,0.109481535685
+1,Philosopher’s Stone,Quirinus Quirrell,611,260,15,2.0,0.120264408535,Harry Potter,0.140993475108
+1,Philosopher’s Stone,Ron Weasley,3347,1076,15,2.0,0.253640002849,Harry Potter,0.270531839544
+1,Philosopher’s Stone,Rubeus Hagrid,3313,1449,15,2.0,0.15958290193,Harry Potter,0.160172582725
+1,Philosopher’s Stone,Severus Snape,312,347,15,1.0,0.242896672231,Severus Snape,0.242896672231
+1,Philosopher’s Stone,Vernon Dursley,579,209,15,1.0,0.165166783432,Vernon Dursley,0.165166783432
+2,Chamber of Secrets,Albus Dumbledore,1114,760,15,1.0,0.313448109219,Albus Dumbledore,0.313448109219
+2,Chamber of Secrets,Aragog,292,132,15,1.0,0.537712236078,Aragog,0.537712236078
+2,Chamber of Secrets,Dobby,613,498,15,1.0,0.556743068852,Dobby,0.556743068852
+2,Chamber of Secrets,Draco Malfoy,1043,329,15,1.0,0.260958970719,Draco Malfoy,0.260958970719
+2,Chamber of Secrets,Gilderoy Lockhart,1034,896,15,1.0,0.319659617813,Gilderoy Lockhart,0.319659617813
+2,Chamber of Secrets,Harry Potter,6498,2154,15,1.0,0.421162432446,Harry Potter,0.421162432446
+2,Chamber of Secrets,Hermione Granger,1684,731,15,1.0,0.281015903692,Hermione Granger,0.281015903692
+2,Chamber of Secrets,Minerva McGonagall,574,565,15,1.0,0.163411339167,Minerva McGonagall,0.163411339167
+2,Chamber of Secrets,Moaning Myrtle,244,250,15,1.0,0.268662852088,Moaning Myrtle,0.268662852088
+2,Chamber of Secrets,Molly Weasley,523,257,15,1.0,0.235734359995,Molly Weasley,0.235734359995
+2,Chamber of Secrets,Pomona Sprout,103,163,15,1.0,0.199396519669,Pomona Sprout,0.199396519669
+2,Chamber of Secrets,Ron Weasley,4579,892,15,2.0,0.283134366781,Harry Potter,0.314905990161
+2,Chamber of Secrets,Rubeus Hagrid,423,564,15,1.0,0.298541044823,Rubeus Hagrid,0.298541044823
+2,Chamber of Secrets,Severus Snape,436,219,15,1.0,0.266383649944,Severus Snape,0.266383649944
+2,Chamber of Secrets,Vernon Dursley,264,302,15,1.0,0.174521492764,Vernon Dursley,0.174521492764
+3,Prisoner of Azkaban,Albus Dumbledore,1202,639,15,1.0,0.194513515872,Albus Dumbledore,0.194513515872
+3,Prisoner of Azkaban,Cornelius Fudge,1079,394,15,2.0,0.091047749562,Remus Lupin,0.114449658682
+3,Prisoner of Azkaban,Draco Malfoy,407,239,15,3.0,0.087111987681,Harry Potter,0.117540038284
+3,Prisoner of Azkaban,Fred Weasley,642,141,15,12.0,0.023184265426,Ron Weasley,0.083384344808
+3,Prisoner of Azkaban,George Weasley,408,182,15,4.0,0.062398090503,Remus Lupin,0.096845110881
+3,Prisoner of Azkaban,Harry Potter,6853,1329,15,1.0,0.420680424038,Harry Potter,0.420680424038
+3,Prisoner of Azkaban,Hermione Granger,3558,1027,15,1.0,0.298114221604,Hermione Granger,0.298114221604
+3,Prisoner of Azkaban,Minerva McGonagall,704,190,15,2.0,0.074601997237,Remus Lupin,0.086831196644
+3,Prisoner of Azkaban,Peter Pettigrew,818,125,15,5.0,0.046961781761,Harry Potter,0.08890532578
+3,Prisoner of Azkaban,Remus Lupin,3789,1484,15,1.0,0.342746243731,Remus Lupin,0.342746243731
+3,Prisoner of Azkaban,Ron Weasley,4265,796,15,1.0,0.315479047826,Ron Weasley,0.315479047826
+3,Prisoner of Azkaban,Rubeus Hagrid,1150,579,15,1.0,0.083405901623,Rubeus Hagrid,0.083405901623
+3,Prisoner of Azkaban,Severus Snape,1620,439,15,1.0,0.1939721207,Severus Snape,0.1939721207
+3,Prisoner of Azkaban,Stan Shunpike,518,174,15,1.0,0.30565437224,Stan Shunpike,0.30565437224
+3,Prisoner of Azkaban,Sybill Trelawney,640,298,15,1.0,0.249473834851,Sybill Trelawney,0.249473834851
+4,Goblet of Fire,Alastor Moody,1953,843,15,1.0,0.169470442895,Alastor Moody,0.169470442895
+4,Goblet of Fire,Albus Dumbledore,3574,1421,15,1.0,0.168466895503,Albus Dumbledore,0.168466895503
+4,Goblet of Fire,Bartemius Crouch,890,357,15,6.0,0.0473483658,Igor Karkaroff,0.097546419652
+4,Goblet of Fire,Cedric Diggory,436,150,15,1.0,0.145746288126,Cedric Diggory,0.145746288126
+4,Goblet of Fire,Fred Weasley,1321,103,15,7.0,0.050803188018,Harry Potter,0.130963632654
+4,Goblet of Fire,Harry Potter,10888,1072,15,1.0,0.288438424489,Harry Potter,0.288438424489
+4,Goblet of Fire,Hermione Granger,6187,659,15,2.0,0.195188194169,Harry Potter,0.201288139209
+4,Goblet of Fire,Igor Karkaroff,713,131,15,1.0,0.194033122932,Igor Karkaroff,0.194033122932
+4,Goblet of Fire,Minerva McGonagall,531,314,15,1.0,0.16276613776,Minerva McGonagall,0.16276613776
+4,Goblet of Fire,Rita Skeeter,358,258,15,1.0,0.115943061494,Rita Skeeter,0.115943061494
+4,Goblet of Fire,Ron Weasley,6715,701,15,1.0,0.233328868234,Ron Weasley,0.233328868234
+4,Goblet of Fire,Rubeus Hagrid,1402,254,15,4.0,0.030799629206,Harry Potter,0.048388200072
+4,Goblet of Fire,Severus Snape,822,147,15,6.0,0.04287048055,Albus Dumbledore,0.091788414379
+4,Goblet of Fire,Sirius Black,1362,221,15,8.0,0.045615734327,Albus Dumbledore,0.106923800234
+4,Goblet of Fire,Voldemort,659,438,15,1.0,0.233688412068,Voldemort,0.233688412068
+5,Order of the Phoenix,Alastor Moody,790,119,18,4.0,0.086280188845,Sirius Black,0.156339242412
+5,Order of the Phoenix,Albus Dumbledore,4077,1425,18,1.0,0.266500877259,Albus Dumbledore,0.266500877259
+5,Order of the Phoenix,Bellatrix Lestrange,313,145,18,1.0,0.108718193367,Bellatrix Lestrange,0.108718193367
+5,Order of the Phoenix,Cornelius Fudge,1470,280,18,1.0,0.216380390217,Cornelius Fudge,0.216380390217
+5,Order of the Phoenix,Dolores Umbridge,3546,884,18,1.0,0.312542665251,Dolores Umbridge,0.312542665251
+5,Order of the Phoenix,Draco Malfoy,835,124,18,4.0,0.078370556313,Harry Potter,0.142982621574
+5,Order of the Phoenix,Fred Weasley,2360,121,18,4.0,0.115858277525,Harry Potter,0.191964715856
+5,Order of the Phoenix,Harry Potter,16144,1846,18,1.0,0.499009846131,Harry Potter,0.499009846131
+5,Order of the Phoenix,Hermione Granger,11637,800,18,2.0,0.301319706313,Harry Potter,0.352695407077
+5,Order of the Phoenix,Lucius Malfoy,109,235,18,1.0,0.100975355633,Lucius Malfoy,0.100975355633
+5,Order of the Phoenix,Luna Lovegood,840,178,18,1.0,0.154412219402,Luna Lovegood,0.154412219402
+5,Order of the Phoenix,Minerva McGonagall,1621,184,18,5.0,0.094883897324,Harry Potter,0.140354855036
+5,Order of the Phoenix,Remus Lupin,1454,165,18,3.0,0.117659975969,Harry Potter,0.16043337659
+5,Order of the Phoenix,Ron Weasley,7741,379,18,3.0,0.233151541725,Harry Potter,0.340685410559
+5,Order of the Phoenix,Rubeus Hagrid,3526,250,18,1.0,0.320378281166,Rubeus Hagrid,0.320378281166
+5,Order of the Phoenix,Severus Snape,1890,311,18,1.0,0.18054393652,Severus Snape,0.18054393652
+5,Order of the Phoenix,Sirius Black,3874,367,18,2.0,0.19666313041,Harry Potter,0.242322094222
+5,Order of the Phoenix,Sybill Trelawney,146,122,18,1.0,0.060639498366,Sybill Trelawney,0.060639498366
+6,Half-Blood Prince,Albus Dumbledore,10479,1956,13,1.0,0.285671152479,Albus Dumbledore,0.285671152479
+6,Half-Blood Prince,Bellatrix Lestrange,502,210,13,1.0,0.10959767297,Bellatrix Lestrange,0.10959767297
+6,Half-Blood Prince,Draco Malfoy,1223,261,13,5.0,0.108226817181,Harry Potter,0.161615562338
+6,Half-Blood Prince,Ginny Weasley,1133,265,13,7.0,0.041388863226,Ron Weasley,0.100853983824
+6,Half-Blood Prince,Harry Potter,14514,2057,13,1.0,0.48907036045,Harry Potter,0.48907036045
+6,Half-Blood Prince,Hermione Granger,5365,1079,13,1.0,0.225311921557,Hermione Granger,0.225311921557
+6,Half-Blood Prince,Horace Slughorn,2702,2181,13,1.0,0.380251427363,Horace Slughorn,0.380251427363
+6,Half-Blood Prince,Luna Lovegood,466,152,13,1.0,0.096255843015,Luna Lovegood,0.096255843015
+6,Half-Blood Prince,Minerva McGonagall,986,195,13,1.0,0.086718689618,Minerva McGonagall,0.086718689618
+6,Half-Blood Prince,Ron Weasley,4995,826,13,2.0,0.192696342567,Harry Potter,0.230236220425
+6,Half-Blood Prince,Rubeus Hagrid,1253,233,13,1.0,0.387996262209,Rubeus Hagrid,0.387996262209
+6,Half-Blood Prince,Severus Snape,2011,373,13,1.0,0.131808889167,Severus Snape,0.131808889167
+6,Half-Blood Prince,Voldemort,532,372,13,11.0,0.010579089739,Albus Dumbledore,0.070656025206
+7,Deathly Hallows,Aberforth Dumbledore,920,260,25,5.0,0.104576922276,Ron Weasley,0.164236438828
+7,Deathly Hallows,Alastor Moody,339,233,25,1.0,0.131668373352,Alastor Moody,0.131668373352
+7,Deathly Hallows,Albus Dumbledore,1864,730,25,1.0,0.307979775797,Albus Dumbledore,0.307979775797
+7,Deathly Hallows,Bellatrix Lestrange,529,334,25,1.0,0.246763660068,Bellatrix Lestrange,0.246763660068
+7,Deathly Hallows,Bill Weasley,778,104,25,1.0,0.175039889788,Bill Weasley,0.175039889788
+7,Deathly Hallows,Corban Yaxley,185,100,25,1.0,0.301918152393,Corban Yaxley,0.301918152393
+7,Deathly Hallows,Elphias Doge,423,209,25,4.0,0.076859725911,Muriel,0.117497589448
+7,Deathly Hallows,Ginny Weasley,314,103,25,8.0,0.05926601055,Harry Potter,0.159021895428
+7,Deathly Hallows,Griphook,750,272,25,1.0,0.262059750361,Griphook,0.262059750361
+7,Deathly Hallows,Harry Potter,14986,3787,25,1.0,0.471828293845,Harry Potter,0.471828293845
+7,Deathly Hallows,Hermione Granger,8230,2350,25,1.0,0.423558464646,Hermione Granger,0.423558464646
+7,Deathly Hallows,Lily Potter,242,118,25,7.0,0.045089719491,Hermione Granger,0.10580360605
+7,Deathly Hallows,Luna Lovegood,430,224,25,6.0,0.069052876498,Harry Potter,0.131299372838
+7,Deathly Hallows,Mundungus Fletcher,118,135,25,1.0,0.307876104505,Mundungus Fletcher,0.307876104505
+7,Deathly Hallows,Muriel,512,184,25,1.0,0.131852612304,Muriel,0.131852612304
+7,Deathly Hallows,Neville Longbottom,691,347,25,1.0,0.230478374417,Neville Longbottom,0.230478374417
+7,Deathly Hallows,Ollivander,548,191,25,1.0,0.380878051767,Ollivander,0.380878051767
+7,Deathly Hallows,Remus Lupin,1375,166,25,6.0,0.084507788329,Harry Potter,0.167192374704
+7,Deathly Hallows,Ron Weasley,8299,2238,25,1.0,0.468123709701,Ron Weasley,0.468123709701
+7,Deathly Hallows,Rubeus Hagrid,580,158,25,1.0,0.499179321934,Rubeus Hagrid,0.499179321934
+7,Deathly Hallows,Rufus Scrimgeour,465,337,25,1.0,0.217618758506,Rufus Scrimgeour,0.217618758506
+7,Deathly Hallows,Scabior,195,119,25,1.0,0.095092762984,Scabior,0.095092762984
+7,Deathly Hallows,Severus Snape,1704,549,25,1.0,0.205263484152,Severus Snape,0.205263484152
+7,Deathly Hallows,Voldemort,1423,1007,25,1.0,0.195733774983,Voldemort,0.195733774983
+7,Deathly Hallows,Xenophilius Lovegood,536,320,25,1.0,0.372865870525,Xenophilius Lovegood,0.372865870525

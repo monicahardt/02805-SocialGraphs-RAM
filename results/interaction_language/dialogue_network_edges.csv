@@ -1,0 +1,459 @@
+medium,character_a,character_b,exchanges,share_of_medium_exchanges,featured,shown
+Books,Harry Potter,Ron Weasley,2587,0.18518253400143164,True,True
+Books,Harry Potter,Hermione Granger,2035,0.14566929133858267,True,True
+Books,Hermione Granger,Ron Weasley,1730,0.12383679312813171,True,True
+Books,Albus Dumbledore,Harry Potter,1075,0.07695060844667144,True,True
+Books,Harry Potter,Rubeus Hagrid,502,0.03593414459556192,True,True
+Books,Harry Potter,Remus Lupin,331,0.023693629205440228,False,True
+Books,Harry Potter,Severus Snape,284,0.02032927702219041,False,True
+Books,Harry Potter,Sirius Black,229,0.01639226914817466,False,True
+Books,Hermione Granger,Rubeus Hagrid,218,0.01560486757337151,False,False
+Books,Ron Weasley,Rubeus Hagrid,173,0.012383679312813171,False,False
+Books,Harry Potter,Minerva McGonagall,172,0.01231209735146743,False,True
+Books,Draco Malfoy,Harry Potter,129,0.009234073013600573,False,True
+Books,Alastor Moody,Harry Potter,126,0.00901932712956335,False,True
+Books,Albus Dumbledore,Severus Snape,123,0.008804581245526128,False,False
+Books,Harry Potter,Horace Slughorn,119,0.008518253400143163,False,True
+Books,Fred Weasley,Harry Potter,113,0.008088761632068718,False,True
+Books,Ginny Weasley,Harry Potter,91,0.006513958482462419,False,True
+Books,Dolores Umbridge,Harry Potter,90,0.006442376521116679,False,True
+Books,Fred Weasley,Ron Weasley,90,0.006442376521116679,False,False
+Books,Harry Potter,Luna Lovegood,88,0.006299212598425197,False,True
+Books,Harry Potter,Voldemort,78,0.005583392984967788,False,True
+Books,Albus Dumbledore,Cornelius Fudge,77,0.005511811023622047,False,True
+Books,Albus Dumbledore,Minerva McGonagall,76,0.005440229062276306,False,False
+Books,Draco Malfoy,Ron Weasley,76,0.005440229062276306,False,False
+Books,Fred Weasley,Hermione Granger,75,0.005368647100930566,False,False
+Books,Cedric Diggory,Harry Potter,74,0.005297065139584825,False,True
+Books,Remus Lupin,Ron Weasley,71,0.005082319255547602,False,False
+Books,Albus Dumbledore,Draco Malfoy,67,0.004795991410164639,False,False
+Books,Dolores Umbridge,Hermione Granger,67,0.004795991410164639,False,False
+Books,Dobby,Harry Potter,62,0.004438081603435934,False,True
+Books,Minerva McGonagall,Ron Weasley,62,0.004438081603435934,False,False
+Books,Dolores Umbridge,Minerva McGonagall,61,0.004366499642090193,False,False
+Books,Dolores Umbridge,Rubeus Hagrid,57,0.00408017179670723,False,False
+Books,Cornelius Fudge,Harry Potter,56,0.004008589835361489,False,False
+Books,Gilderoy Lockhart,Harry Potter,51,0.0036506800286327844,False,True
+Books,Harry Potter,Neville Longbottom,50,0.0035790980672870437,False,True
+Books,Hermione Granger,Remus Lupin,50,0.0035790980672870437,False,False
+Books,Hermione Granger,Sirius Black,49,0.0035075161059413026,False,False
+Books,Ron Weasley,Severus Snape,49,0.0035075161059413026,False,False
+Books,Albus Dumbledore,Ron Weasley,46,0.00329277022190408,False,False
+Books,Harry Potter,Stan Shunpike,43,0.0030780243378668577,False,True
+Books,Lily Potter,Severus Snape,42,0.0030064423765211166,False,True
+Books,Albus Dumbledore,Horace Slughorn,41,0.002934860415175376,False,False
+Books,Ginny Weasley,Ron Weasley,41,0.002934860415175376,False,False
+Books,Harry Potter,Sybill Trelawney,41,0.002934860415175376,False,True
+Books,Luna Lovegood,Ron Weasley,40,0.002863278453829635,False,False
+Books,Peter Pettigrew,Remus Lupin,40,0.002863278453829635,False,True
+Books,Draco Malfoy,Hermione Granger,39,0.002791696492483894,False,False
+Books,Draco Malfoy,Severus Snape,39,0.002791696492483894,False,False
+Books,Remus Lupin,Severus Snape,39,0.002791696492483894,False,False
+Books,Neville Longbottom,Ron Weasley,38,0.002720114531138153,False,False
+Books,Remus Lupin,Sirius Black,38,0.002720114531138153,False,False
+Books,Bellatrix Lestrange,Severus Snape,37,0.0026485325697924124,False,True
+Books,Harry Potter,Ollivander,37,0.0026485325697924124,False,True
+Books,Hermione Granger,Luna Lovegood,37,0.0026485325697924124,False,False
+Books,Severus Snape,Voldemort,37,0.0026485325697924124,False,False
+Books,Albus Dumbledore,Hermione Granger,36,0.0025769506084466712,False,False
+Books,Bill Weasley,Harry Potter,35,0.0025053686471009306,False,True
+Books,Griphook,Harry Potter,34,0.00243378668575519,False,True
+Books,Harry Potter,Vernon Dursley,34,0.00243378668575519,False,True
+Books,Aberforth Dumbledore,Harry Potter,33,0.002362204724409449,False,True
+Books,Albus Dumbledore,Voldemort,33,0.002362204724409449,False,False
+Books,Harry Potter,Quirinus Quirrell,33,0.002362204724409449,False,True
+Books,Hermione Granger,Severus Snape,32,0.002290622763063708,False,False
+Books,Harry Potter,Rita Skeeter,30,0.0021474588403722263,False,True
+Books,Hermione Granger,Xenophilius Lovegood,30,0.0021474588403722263,False,True
+Books,Elphias Doge,Muriel,29,0.0020758768790264852,False,True
+Books,Ron Weasley,Sirius Black,29,0.0020758768790264852,False,False
+Books,Bartemius Crouch,Harry Potter,28,0.0020042949176807445,False,True
+Books,Albus Dumbledore,Rubeus Hagrid,27,0.0019327129563350037,False,False
+Books,Bellatrix Lestrange,Harry Potter,27,0.0019327129563350037,False,False
+Books,Harry Potter,Rufus Scrimgeour,27,0.0019327129563350037,False,True
+Books,Percy Weasley,Ron Weasley,27,0.0019327129563350037,False,True
+Books,Severus Snape,Sirius Black,27,0.0019327129563350037,False,False
+Books,Dolores Umbridge,Severus Snape,26,0.0018611309949892628,False,False
+Books,Draco Malfoy,Rubeus Hagrid,26,0.0018611309949892628,False,False
+Books,Gilderoy Lockhart,Ron Weasley,26,0.0018611309949892628,False,False
+Books,Fred Weasley,George Weasley,25,0.0017895490336435219,False,True
+Books,Alastor Moody,Remus Lupin,24,0.001717967072297781,False,False
+Books,Alastor Moody,Ron Weasley,24,0.001717967072297781,False,False
+Books,Dolores Umbridge,Ron Weasley,24,0.001717967072297781,False,False
+Books,Harry Potter,Oliver Wood,24,0.001717967072297781,False,True
+Books,Hermione Granger,Minerva McGonagall,24,0.001717967072297781,False,False
+Books,Petunia Dursley,Vernon Dursley,24,0.001717967072297781,False,True
+Books,Horace Slughorn,Rubeus Hagrid,23,0.00164638511095204,False,False
+Books,Aberforth Dumbledore,Hermione Granger,22,0.0015748031496062992,False,False
+Books,Elphias Doge,Harry Potter,21,0.0015032211882605583,False,False
+Books,Ginny Weasley,Hermione Granger,21,0.0015032211882605583,False,False
+Books,Harry Potter,Molly Weasley,21,0.0015032211882605583,False,True
+Books,Hermione Granger,Rufus Scrimgeour,20,0.0014316392269148174,False,False
+Books,Rubeus Hagrid,Vernon Dursley,19,0.0013600572655690765,False,False
+Books,Alastor Moody,Igor Karkaroff,18,0.0012884753042233356,False,True
+Books,Alastor Moody,Hermione Granger,17,0.001216893342877595,False,False
+Books,Bellatrix Lestrange,Griphook,17,0.001216893342877595,False,False
+Books,Hermione Granger,Horace Slughorn,17,0.001216893342877595,False,False
+Books,Alastor Moody,Severus Snape,16,0.001145311381531854,False,False
+Books,Aragog,Harry Potter,16,0.001145311381531854,False,True
+Books,Cornelius Fudge,Stan Shunpike,16,0.001145311381531854,False,False
+Books,Hermione Granger,Moaning Myrtle,16,0.001145311381531854,False,True
+Books,Ron Weasley,Scabior,16,0.001145311381531854,False,True
+Books,Harry Potter,Xenophilius Lovegood,15,0.0010737294201861132,False,False
+Books,Cornelius Fudge,Dolores Umbridge,14,0.0010021474588403723,False,False
+Books,Harry Potter,Moaning Myrtle,14,0.0010021474588403723,False,False
+Books,Albus Dumbledore,Bartemius Crouch,13,0.0009305654974946314,False,False
+Books,Cornelius Fudge,Minerva McGonagall,13,0.0009305654974946314,False,False
+Books,Dolores Umbridge,Sybill Trelawney,13,0.0009305654974946314,False,False
+Books,Harry Potter,Lucius Malfoy,13,0.0009305654974946314,False,True
+Books,Minerva McGonagall,Rubeus Hagrid,13,0.0009305654974946314,False,False
+Books,Minerva McGonagall,Severus Snape,13,0.0009305654974946314,False,False
+Books,Molly Weasley,Ron Weasley,13,0.0009305654974946314,False,False
+Books,Ron Weasley,Xenophilius Lovegood,13,0.0009305654974946314,False,False
+Books,Griphook,Ron Weasley,12,0.0008589835361488905,False,False
+Books,Albus Dumbledore,Dolores Umbridge,11,0.0007874015748031496,False,False
+Books,Bartemius Crouch,Igor Karkaroff,11,0.0007874015748031496,False,False
+Books,Bellatrix Lestrange,Ron Weasley,11,0.0007874015748031496,False,False
+Books,Harry Potter,Peter Pettigrew,11,0.0007874015748031496,False,False
+Books,Albus Dumbledore,Sirius Black,10,0.0007158196134574087,False,False
+Books,Firenze,Harry Potter,10,0.0007158196134574087,False,True
+Books,Hermione Granger,Peter Pettigrew,10,0.0007158196134574087,False,False
+Books,Rita Skeeter,Rubeus Hagrid,10,0.0007158196134574087,False,False
+Books,Ron Weasley,Rufus Scrimgeour,10,0.0007158196134574087,False,False
+Books,Fred Weasley,Sirius Black,9,0.0006442376521116678,False,False
+Books,Harry Potter,Petunia Dursley,9,0.0006442376521116678,False,False
+Books,Igor Karkaroff,Minerva McGonagall,9,0.0006442376521116678,False,False
+Books,Moaning Myrtle,Ron Weasley,9,0.0006442376521116678,False,False
+Books,Ron Weasley,Sybill Trelawney,9,0.0006442376521116678,False,False
+Books,Alastor Moody,Minerva McGonagall,8,0.000572655690765927,False,False
+Books,Alastor Moody,Mundungus Fletcher,8,0.000572655690765927,False,True
+Books,Albus Dumbledore,Fred Weasley,8,0.000572655690765927,False,False
+Books,Bill Weasley,Remus Lupin,8,0.000572655690765927,False,False
+Books,Corban Yaxley,Severus Snape,8,0.000572655690765927,False,True
+Books,Cornelius Fudge,Draco Malfoy,8,0.000572655690765927,False,False
+Books,George Weasley,Harry Potter,8,0.000572655690765927,False,False
+Books,George Weasley,Ron Weasley,8,0.000572655690765927,False,False
+Books,Griphook,Hermione Granger,8,0.000572655690765927,False,False
+Books,Harry Potter,Scabior,8,0.000572655690765927,False,False
+Books,Hermione Granger,Voldemort,8,0.000572655690765927,False,False
+Books,Alastor Moody,Albus Dumbledore,7,0.0005010737294201861,False,False
+Books,Bartemius Crouch,Hermione Granger,7,0.0005010737294201861,False,False
+Books,Cornelius Fudge,Hermione Granger,7,0.0005010737294201861,False,False
+Books,Dolores Umbridge,Draco Malfoy,7,0.0005010737294201861,False,False
+Books,Firenze,Rubeus Hagrid,7,0.0005010737294201861,False,False
+Books,Gilderoy Lockhart,Severus Snape,7,0.0005010737294201861,False,False
+Books,Horace Slughorn,Ron Weasley,7,0.0005010737294201861,False,False
+Books,Igor Karkaroff,Severus Snape,7,0.0005010737294201861,False,False
+Books,Quirinus Quirrell,Rubeus Hagrid,7,0.0005010737294201861,False,False
+Books,Ron Weasley,Voldemort,7,0.0005010737294201861,False,False
+Books,Albus Dumbledore,Rita Skeeter,6,0.00042949176807444524,False,False
+Books,George Weasley,Hermione Granger,6,0.00042949176807444524,False,False
+Books,Harry Potter,Mundungus Fletcher,6,0.00042949176807444524,False,False
+Books,Hermione Granger,Neville Longbottom,6,0.00042949176807444524,False,False
+Books,Minerva McGonagall,Oliver Wood,6,0.00042949176807444524,False,False
+Books,Neville Longbottom,Voldemort,6,0.00042949176807444524,False,False
+Books,Remus Lupin,Rubeus Hagrid,6,0.00042949176807444524,False,False
+Books,Cornelius Fudge,Ron Weasley,5,0.00035790980672870435,False,False
+Books,Gilderoy Lockhart,Pomona Sprout,5,0.00035790980672870435,False,True
+Books,Hermione Granger,Pomona Sprout,5,0.00035790980672870435,False,True
+Books,Horace Slughorn,Severus Snape,5,0.00035790980672870435,False,False
+Books,Ollivander,Ron Weasley,5,0.00035790980672870435,False,False
+Books,Aberforth Dumbledore,Ron Weasley,4,0.0002863278453829635,False,False
+Books,Alastor Moody,Rubeus Hagrid,4,0.0002863278453829635,False,False
+Books,Albus Dumbledore,Gilderoy Lockhart,4,0.0002863278453829635,False,False
+Books,Albus Dumbledore,Igor Karkaroff,4,0.0002863278453829635,False,False
+Books,Bellatrix Lestrange,Hermione Granger,4,0.0002863278453829635,False,False
+Books,Corban Yaxley,Ron Weasley,4,0.0002863278453829635,False,False
+Books,Draco Malfoy,Lucius Malfoy,4,0.0002863278453829635,False,False
+Books,Gilderoy Lockhart,Hermione Granger,4,0.0002863278453829635,False,False
+Books,Hermione Granger,Ollivander,4,0.0002863278453829635,False,False
+Books,Horace Slughorn,Luna Lovegood,4,0.0002863278453829635,False,False
+Books,Neville Longbottom,Rubeus Hagrid,4,0.0002863278453829635,False,False
+Books,Oliver Wood,Rubeus Hagrid,4,0.0002863278453829635,False,False
+Books,Aberforth Dumbledore,Neville Longbottom,3,0.00021474588403722262,False,False
+Books,Albus Dumbledore,Sybill Trelawney,3,0.00021474588403722262,False,False
+Books,Bellatrix Lestrange,Voldemort,3,0.00021474588403722262,False,False
+Books,Bill Weasley,Ginny Weasley,3,0.00021474588403722262,False,False
+Books,Ginny Weasley,Minerva McGonagall,3,0.00021474588403722262,False,False
+Books,Harry Potter,Igor Karkaroff,3,0.00021474588403722262,False,False
+Books,Minerva McGonagall,Petunia Dursley,3,0.00021474588403722262,False,False
+Books,Minerva McGonagall,Sybill Trelawney,3,0.00021474588403722262,False,False
+Books,Mundungus Fletcher,Ron Weasley,3,0.00021474588403722262,False,False
+Books,Rita Skeeter,Ron Weasley,3,0.00021474588403722262,False,False
+Books,Rubeus Hagrid,Severus Snape,3,0.00021474588403722262,False,False
+Books,Rubeus Hagrid,Voldemort,3,0.00021474588403722262,False,False
+Books,Alastor Moody,Bartemius Crouch,2,0.00014316392269148176,False,False
+Books,Alastor Moody,Bill Weasley,2,0.00014316392269148176,False,False
+Books,Albus Dumbledore,Percy Weasley,2,0.00014316392269148176,False,False
+Books,Albus Dumbledore,Vernon Dursley,2,0.00014316392269148176,False,False
+Books,Bartemius Crouch,Fred Weasley,2,0.00014316392269148176,False,False
+Books,Bartemius Crouch,Severus Snape,2,0.00014316392269148176,False,False
+Books,Bellatrix Lestrange,Lucius Malfoy,2,0.00014316392269148176,False,False
+Books,Cedric Diggory,Ron Weasley,2,0.00014316392269148176,False,False
+Books,Cornelius Fudge,Rubeus Hagrid,2,0.00014316392269148176,False,False
+Books,Dobby,Ron Weasley,2,0.00014316392269148176,False,False
+Books,Dolores Umbridge,Fred Weasley,2,0.00014316392269148176,False,False
+Books,Draco Malfoy,Horace Slughorn,2,0.00014316392269148176,False,False
+Books,Fred Weasley,Remus Lupin,2,0.00014316392269148176,False,False
+Books,Harry Potter,Muriel,2,0.00014316392269148176,False,False
+Books,Harry Potter,Percy Weasley,2,0.00014316392269148176,False,False
+Books,Hermione Granger,Mundungus Fletcher,2,0.00014316392269148176,False,False
+Books,Hermione Granger,Rita Skeeter,2,0.00014316392269148176,False,False
+Books,Horace Slughorn,Minerva McGonagall,2,0.00014316392269148176,False,False
+Books,Igor Karkaroff,Rubeus Hagrid,2,0.00014316392269148176,False,False
+Books,Luna Lovegood,Minerva McGonagall,2,0.00014316392269148176,False,False
+Books,Luna Lovegood,Neville Longbottom,2,0.00014316392269148176,False,False
+Books,Mundungus Fletcher,Severus Snape,2,0.00014316392269148176,False,False
+Books,Aberforth Dumbledore,Ginny Weasley,1,7.158196134574088e-05,False,False
+Books,Alastor Moody,Fred Weasley,1,7.158196134574088e-05,False,False
+Books,Albus Dumbledore,Cedric Diggory,1,7.158196134574088e-05,False,False
+Books,Albus Dumbledore,Neville Longbottom,1,7.158196134574088e-05,False,False
+Books,Albus Dumbledore,Petunia Dursley,1,7.158196134574088e-05,False,False
+Books,Albus Dumbledore,Remus Lupin,1,7.158196134574088e-05,False,False
+Books,Albus Dumbledore,Rufus Scrimgeour,1,7.158196134574088e-05,False,False
+Books,Bellatrix Lestrange,Draco Malfoy,1,7.158196134574088e-05,False,False
+Books,Bill Weasley,Griphook,1,7.158196134574088e-05,False,False
+Books,Bill Weasley,Hermione Granger,1,7.158196134574088e-05,False,False
+Books,Bill Weasley,Ron Weasley,1,7.158196134574088e-05,False,False
+Books,Cedric Diggory,Hermione Granger,1,7.158196134574088e-05,False,False
+Books,Cedric Diggory,Voldemort,1,7.158196134574088e-05,False,False
+Books,Corban Yaxley,Voldemort,1,7.158196134574088e-05,False,False
+Books,Cornelius Fudge,Severus Snape,1,7.158196134574088e-05,False,False
+Books,Dobby,Draco Malfoy,1,7.158196134574088e-05,False,False
+Books,Dobby,Hermione Granger,1,7.158196134574088e-05,False,False
+Books,Dolores Umbridge,Sirius Black,1,7.158196134574088e-05,False,False
+Books,Draco Malfoy,Luna Lovegood,1,7.158196134574088e-05,False,False
+Books,Fred Weasley,Minerva McGonagall,1,7.158196134574088e-05,False,False
+Books,Fred Weasley,Rubeus Hagrid,1,7.158196134574088e-05,False,False
+Books,George Weasley,Remus Lupin,1,7.158196134574088e-05,False,False
+Books,Ginny Weasley,Horace Slughorn,1,7.158196134574088e-05,False,False
+Books,Ginny Weasley,Remus Lupin,1,7.158196134574088e-05,False,False
+Books,Ginny Weasley,Rubeus Hagrid,1,7.158196134574088e-05,False,False
+Books,Ginny Weasley,Severus Snape,1,7.158196134574088e-05,False,False
+Books,Griphook,Ollivander,1,7.158196134574088e-05,False,False
+Books,Harry Potter,Lily Potter,1,7.158196134574088e-05,False,False
+Books,Hermione Granger,Muriel,1,7.158196134574088e-05,False,False
+Books,Hermione Granger,Scabior,1,7.158196134574088e-05,False,False
+Books,Hermione Granger,Sybill Trelawney,1,7.158196134574088e-05,False,False
+Books,Igor Karkaroff,Ron Weasley,1,7.158196134574088e-05,False,False
+Books,Luna Lovegood,Ollivander,1,7.158196134574088e-05,False,False
+Books,Minerva McGonagall,Remus Lupin,1,7.158196134574088e-05,False,False
+Books,Mundungus Fletcher,Rubeus Hagrid,1,7.158196134574088e-05,False,False
+Books,Oliver Wood,Ron Weasley,1,7.158196134574088e-05,False,False
+Books,Ron Weasley,Vernon Dursley,1,7.158196134574088e-05,False,False
+Films,Harry Potter,Hermione Granger,651,0.14955203308063406,True,True
+Films,Harry Potter,Ron Weasley,627,0.14403859407305306,True,True
+Films,Hermione Granger,Ron Weasley,437,0.10039053526303698,True,True
+Films,Albus Dumbledore,Harry Potter,265,0.06087755570870664,True,True
+Films,Harry Potter,Rubeus Hagrid,164,0.037675166551803356,True,True
+Films,Harry Potter,Remus Lupin,90,0.02067539627842867,False,True
+Films,Harry Potter,Severus Snape,81,0.018607856650585803,False,True
+Films,Harry Potter,Horace Slughorn,71,0.016310590397427063,False,True
+Films,Dobby,Harry Potter,60,0.013783597518952447,False,True
+Films,Albus Dumbledore,Severus Snape,57,0.013094417643004824,False,False
+Films,Harry Potter,Minerva McGonagall,51,0.01171605789110958,False,True
+Films,Albus Dumbledore,Cornelius Fudge,47,0.010797151389846084,False,True
+Films,Harry Potter,Luna Lovegood,47,0.010797151389846084,False,True
+Films,Harry Potter,Sirius Black,47,0.010797151389846084,False,True
+Films,Alastor Moody,Harry Potter,40,0.009189065012634964,False,True
+Films,Hermione Granger,Rubeus Hagrid,39,0.00895933838731909,False,False
+Films,Harry Potter,Vernon Dursley,35,0.008040431886055594,False,True
+Films,Ron Weasley,Rubeus Hagrid,34,0.00781070526073972,False,False
+Films,Horace Slughorn,Voldemort,33,0.007580978635423846,False,True
+Films,Cedric Diggory,Harry Potter,31,0.007121525384792098,False,True
+Films,Draco Malfoy,Harry Potter,30,0.006891798759476223,False,True
+Films,Gilderoy Lockhart,Harry Potter,29,0.006662072134160349,False,True
+Films,Albus Dumbledore,Minerva McGonagall,28,0.006432345508844475,False,False
+Films,Fred Weasley,George Weasley,28,0.006432345508844475,False,True
+Films,Minerva McGonagall,Ron Weasley,26,0.005972892258212727,False,False
+Films,Dolores Umbridge,Harry Potter,24,0.005513439007580979,False,True
+Films,Bellatrix Lestrange,Harry Potter,23,0.005283712382265104,False,True
+Films,Cornelius Fudge,Harry Potter,23,0.005283712382265104,False,False
+Films,Griphook,Harry Potter,23,0.005283712382265104,False,True
+Films,Albus Dumbledore,Horace Slughorn,21,0.004824259131633356,False,False
+Films,Albus Dumbledore,Rubeus Hagrid,21,0.004824259131633356,False,False
+Films,Harry Potter,Lucius Malfoy,21,0.004824259131633356,False,True
+Films,Aberforth Dumbledore,Harry Potter,20,0.004594532506317482,False,True
+Films,Gilderoy Lockhart,Ron Weasley,20,0.004594532506317482,False,False
+Films,Albus Dumbledore,Hermione Granger,19,0.004364805881001608,False,False
+Films,Albus Dumbledore,Ron Weasley,19,0.004364805881001608,False,False
+Films,Albus Dumbledore,Voldemort,19,0.004364805881001608,False,False
+Films,Bartemius Crouch,Igor Karkaroff,19,0.004364805881001608,False,True
+Films,Harry Potter,Neville Longbottom,19,0.004364805881001608,False,True
+Films,Draco Malfoy,Hermione Granger,18,0.004135079255685734,False,False
+Films,Draco Malfoy,Ron Weasley,18,0.004135079255685734,False,False
+Films,Fred Weasley,Harry Potter,18,0.004135079255685734,False,False
+Films,Harry Potter,Moaning Myrtle,18,0.004135079255685734,False,True
+Films,Harry Potter,Xenophilius Lovegood,18,0.004135079255685734,False,True
+Films,Dolores Umbridge,Hermione Granger,17,0.00390535263036986,False,False
+Films,Ginny Weasley,Harry Potter,17,0.00390535263036986,False,True
+Films,Hermione Granger,Horace Slughorn,17,0.00390535263036986,False,False
+Films,Horace Slughorn,Rubeus Hagrid,17,0.00390535263036986,False,False
+Films,Albus Dumbledore,Draco Malfoy,16,0.003675626005053986,False,False
+Films,Harry Potter,Rita Skeeter,16,0.003675626005053986,False,True
+Films,Harry Potter,Voldemort,16,0.003675626005053986,False,False
+Films,Hermione Granger,Minerva McGonagall,16,0.003675626005053986,False,False
+Films,Draco Malfoy,Rubeus Hagrid,15,0.0034458993797381117,False,False
+Films,Harry Potter,Ollivander,15,0.0034458993797381117,False,True
+Films,Harry Potter,Stan Shunpike,15,0.0034458993797381117,False,True
+Films,Alastor Moody,Albus Dumbledore,14,0.0032161727544222376,False,False
+Films,Albus Dumbledore,Dolores Umbridge,14,0.0032161727544222376,False,False
+Films,Bellatrix Lestrange,Severus Snape,14,0.0032161727544222376,False,False
+Films,Elphias Doge,Harry Potter,14,0.0032161727544222376,False,True
+Films,Griphook,Ron Weasley,14,0.0032161727544222376,False,False
+Films,Harry Potter,Oliver Wood,14,0.0032161727544222376,False,True
+Films,Severus Snape,Voldemort,14,0.0032161727544222376,False,False
+Films,Aragog,Harry Potter,13,0.0029864461291063634,False,True
+Films,Harry Potter,Rufus Scrimgeour,12,0.0027567195037904893,False,True
+Films,Hermione Granger,Xenophilius Lovegood,12,0.0027567195037904893,False,False
+Films,Alastor Moody,Hermione Granger,11,0.002526992878474615,False,False
+Films,Gilderoy Lockhart,Severus Snape,11,0.002526992878474615,False,False
+Films,Petunia Dursley,Vernon Dursley,11,0.002526992878474615,False,True
+Films,Bartemius Crouch,Harry Potter,10,0.002297266253158741,False,False
+Films,Draco Malfoy,Severus Snape,10,0.002297266253158741,False,False
+Films,George Weasley,Harry Potter,10,0.002297266253158741,False,False
+Films,Harry Potter,Quirinus Quirrell,10,0.002297266253158741,False,True
+Films,Horace Slughorn,Ron Weasley,10,0.002297266253158741,False,False
+Films,Ron Weasley,Severus Snape,10,0.002297266253158741,False,False
+Films,Cornelius Fudge,Rubeus Hagrid,9,0.002067539627842867,False,False
+Films,Dolores Umbridge,Sybill Trelawney,9,0.002067539627842867,False,True
+Films,Harry Potter,Muriel,9,0.002067539627842867,False,True
+Films,Harry Potter,Petunia Dursley,9,0.002067539627842867,False,False
+Films,Hermione Granger,Neville Longbottom,9,0.002067539627842867,False,False
+Films,Hermione Granger,Severus Snape,9,0.002067539627842867,False,False
+Films,Ron Weasley,Voldemort,9,0.002067539627842867,False,False
+Films,Ron Weasley,Xenophilius Lovegood,9,0.002067539627842867,False,False
+Films,Aberforth Dumbledore,Hermione Granger,8,0.001837813002526993,False,False
+Films,Alastor Moody,Minerva McGonagall,8,0.001837813002526993,False,False
+Films,Bellatrix Lestrange,Ron Weasley,8,0.001837813002526993,False,False
+Films,Fred Weasley,Hermione Granger,8,0.001837813002526993,False,False
+Films,Harry Potter,Molly Weasley,8,0.001837813002526993,False,True
+Films,Hermione Granger,Remus Lupin,8,0.001837813002526993,False,False
+Films,Luna Lovegood,Ron Weasley,8,0.001837813002526993,False,False
+Films,Neville Longbottom,Ron Weasley,8,0.001837813002526993,False,False
+Films,Remus Lupin,Severus Snape,8,0.001837813002526993,False,False
+Films,Cornelius Fudge,Minerva McGonagall,7,0.0016080863772111188,False,False
+Films,Firenze,Harry Potter,7,0.0016080863772111188,False,True
+Films,Ginny Weasley,Neville Longbottom,7,0.0016080863772111188,False,False
+Films,Ginny Weasley,Ron Weasley,7,0.0016080863772111188,False,False
+Films,Harry Potter,Sybill Trelawney,7,0.0016080863772111188,False,False
+Films,Minerva McGonagall,Quirinus Quirrell,7,0.0016080863772111188,False,False
+Films,Minerva McGonagall,Severus Snape,7,0.0016080863772111188,False,False
+Films,Molly Weasley,Ron Weasley,7,0.0016080863772111188,False,False
+Films,Neville Longbottom,Voldemort,7,0.0016080863772111188,False,False
+Films,Ron Weasley,Scabior,7,0.0016080863772111188,False,True
+Films,Rubeus Hagrid,Vernon Dursley,7,0.0016080863772111188,False,False
+Films,Alastor Moody,Remus Lupin,6,0.0013783597518952446,False,False
+Films,Alastor Moody,Ron Weasley,6,0.0013783597518952446,False,False
+Films,Albus Dumbledore,Bellatrix Lestrange,6,0.0013783597518952446,False,False
+Films,Corban Yaxley,Ron Weasley,6,0.0013783597518952446,False,True
+Films,Fred Weasley,Ron Weasley,6,0.0013783597518952446,False,False
+Films,Ginny Weasley,Hermione Granger,6,0.0013783597518952446,False,False
+Films,Ron Weasley,Rufus Scrimgeour,6,0.0013783597518952446,False,False
+Films,Albus Dumbledore,Bartemius Crouch,5,0.0011486331265793705,False,False
+Films,Bellatrix Lestrange,Griphook,5,0.0011486331265793705,False,False
+Films,Bellatrix Lestrange,Lucius Malfoy,5,0.0011486331265793705,False,False
+Films,Bellatrix Lestrange,Voldemort,5,0.0011486331265793705,False,False
+Films,Cornelius Fudge,Hermione Granger,5,0.0011486331265793705,False,False
+Films,Griphook,Hermione Granger,5,0.0011486331265793705,False,False
+Films,Harry Potter,Lily Potter,5,0.0011486331265793705,False,True
+Films,Harry Potter,Scabior,5,0.0011486331265793705,False,False
+Films,Hermione Granger,Rufus Scrimgeour,5,0.0011486331265793705,False,False
+Films,Moaning Myrtle,Ron Weasley,5,0.0011486331265793705,False,False
+Films,Ollivander,Voldemort,5,0.0011486331265793705,False,False
+Films,Ron Weasley,Sybill Trelawney,5,0.0011486331265793705,False,False
+Films,Alastor Moody,Igor Karkaroff,4,0.0009189065012634965,False,False
+Films,Alastor Moody,Rubeus Hagrid,4,0.0009189065012634965,False,False
+Films,Albus Dumbledore,Igor Karkaroff,4,0.0009189065012634965,False,False
+Films,Bill Weasley,Harry Potter,4,0.0009189065012634965,False,True
+Films,Cornelius Fudge,Dolores Umbridge,4,0.0009189065012634965,False,False
+Films,Dobby,Vernon Dursley,4,0.0009189065012634965,False,False
+Films,Dolores Umbridge,Fred Weasley,4,0.0009189065012634965,False,False
+Films,Dolores Umbridge,Severus Snape,4,0.0009189065012634965,False,False
+Films,Draco Malfoy,Gilderoy Lockhart,4,0.0009189065012634965,False,False
+Films,Elphias Doge,Muriel,4,0.0009189065012634965,False,False
+Films,Harry Potter,Percy Weasley,4,0.0009189065012634965,False,True
+Films,Hermione Granger,Luna Lovegood,4,0.0009189065012634965,False,False
+Films,Hermione Granger,Moaning Myrtle,4,0.0009189065012634965,False,False
+Films,Hermione Granger,Sybill Trelawney,4,0.0009189065012634965,False,False
+Films,Remus Lupin,Sirius Black,4,0.0009189065012634965,False,False
+Films,Albus Dumbledore,Fred Weasley,3,0.0006891798759476223,False,False
+Films,Aragog,Ron Weasley,3,0.0006891798759476223,False,False
+Films,Bellatrix Lestrange,Hermione Granger,3,0.0006891798759476223,False,False
+Films,Bill Weasley,Luna Lovegood,3,0.0006891798759476223,False,False
+Films,Dolores Umbridge,Minerva McGonagall,3,0.0006891798759476223,False,False
+Films,Draco Malfoy,Minerva McGonagall,3,0.0006891798759476223,False,False
+Films,Gilderoy Lockhart,Hermione Granger,3,0.0006891798759476223,False,False
+Films,Ginny Weasley,Horace Slughorn,3,0.0006891798759476223,False,False
+Films,Harry Potter,Mundungus Fletcher,3,0.0006891798759476223,False,True
+Films,Harry Potter,Peter Pettigrew,3,0.0006891798759476223,False,True
+Films,Hermione Granger,Scabior,3,0.0006891798759476223,False,False
+Films,Hermione Granger,Voldemort,3,0.0006891798759476223,False,False
+Films,Minerva McGonagall,Rubeus Hagrid,3,0.0006891798759476223,False,False
+Films,Mundungus Fletcher,Ron Weasley,3,0.0006891798759476223,False,True
+Films,Peter Pettigrew,Remus Lupin,3,0.0006891798759476223,False,True
+Films,Quirinus Quirrell,Severus Snape,3,0.0006891798759476223,False,False
+Films,Remus Lupin,Ron Weasley,3,0.0006891798759476223,False,False
+Films,Alastor Moody,Mundungus Fletcher,2,0.00045945325063174823,False,False
+Films,Albus Dumbledore,Gilderoy Lockhart,2,0.00045945325063174823,False,False
+Films,Corban Yaxley,Severus Snape,2,0.00045945325063174823,False,False
+Films,Corban Yaxley,Voldemort,2,0.00045945325063174823,False,False
+Films,Draco Malfoy,Luna Lovegood,2,0.00045945325063174823,False,False
+Films,Fred Weasley,Minerva McGonagall,2,0.00045945325063174823,False,False
+Films,Gilderoy Lockhart,Minerva McGonagall,2,0.00045945325063174823,False,False
+Films,Gilderoy Lockhart,Rubeus Hagrid,2,0.00045945325063174823,False,False
+Films,Ginny Weasley,Luna Lovegood,2,0.00045945325063174823,False,False
+Films,Ginny Weasley,Remus Lupin,2,0.00045945325063174823,False,False
+Films,Hermione Granger,Lucius Malfoy,2,0.00045945325063174823,False,False
+Films,Hermione Granger,Mundungus Fletcher,2,0.00045945325063174823,False,False
+Films,Hermione Granger,Pomona Sprout,2,0.00045945325063174823,False,True
+Films,Lily Potter,Severus Snape,2,0.00045945325063174823,False,False
+Films,Luna Lovegood,Neville Longbottom,2,0.00045945325063174823,False,False
+Films,Luna Lovegood,Xenophilius Lovegood,2,0.00045945325063174823,False,False
+Films,Minerva McGonagall,Neville Longbottom,2,0.00045945325063174823,False,False
+Films,Percy Weasley,Ron Weasley,2,0.00045945325063174823,False,False
+Films,Petunia Dursley,Rubeus Hagrid,2,0.00045945325063174823,False,False
+Films,Quirinus Quirrell,Rubeus Hagrid,2,0.00045945325063174823,False,False
+Films,Remus Lupin,Rubeus Hagrid,2,0.00045945325063174823,False,False
+Films,Ron Weasley,Vernon Dursley,2,0.00045945325063174823,False,False
+Films,Aberforth Dumbledore,Ron Weasley,1,0.00022972662531587412,False,False
+Films,Alastor Moody,Bartemius Crouch,1,0.00022972662531587412,False,False
+Films,Albus Dumbledore,Ginny Weasley,1,0.00022972662531587412,False,False
+Films,Albus Dumbledore,Quirinus Quirrell,1,0.00022972662531587412,False,False
+Films,Albus Dumbledore,Rita Skeeter,1,0.00022972662531587412,False,False
+Films,Albus Dumbledore,Sybill Trelawney,1,0.00022972662531587412,False,False
+Films,Bellatrix Lestrange,Luna Lovegood,1,0.00022972662531587412,False,False
+Films,Bill Weasley,Hermione Granger,1,0.00022972662531587412,False,False
+Films,Bill Weasley,Remus Lupin,1,0.00022972662531587412,False,False
+Films,Cedric Diggory,Hermione Granger,1,0.00022972662531587412,False,False
+Films,Cedric Diggory,Voldemort,1,0.00022972662531587412,False,False
+Films,Corban Yaxley,Harry Potter,1,0.00022972662531587412,False,False
+Films,Corban Yaxley,Hermione Granger,1,0.00022972662531587412,False,False
+Films,Cornelius Fudge,Lucius Malfoy,1,0.00022972662531587412,False,False
+Films,Cornelius Fudge,Ron Weasley,1,0.00022972662531587412,False,False
+Films,Dolores Umbridge,Ron Weasley,1,0.00022972662531587412,False,False
+Films,Draco Malfoy,Firenze,1,0.00022972662531587412,False,False
+Films,Draco Malfoy,Ginny Weasley,1,0.00022972662531587412,False,False
+Films,Draco Malfoy,Molly Weasley,1,0.00022972662531587412,False,False
+Films,Draco Malfoy,Remus Lupin,1,0.00022972662531587412,False,False
+Films,Elphias Doge,Hermione Granger,1,0.00022972662531587412,False,False
+Films,Firenze,Rubeus Hagrid,1,0.00022972662531587412,False,False
+Films,George Weasley,Ron Weasley,1,0.00022972662531587412,False,False
+Films,Gilderoy Lockhart,Molly Weasley,1,0.00022972662531587412,False,False
+Films,Ginny Weasley,Rubeus Hagrid,1,0.00022972662531587412,False,False
+Films,Ginny Weasley,Voldemort,1,0.00022972662531587412,False,False
+Films,Hermione Granger,Lily Potter,1,0.00022972662531587412,False,False
+Films,Hermione Granger,Ollivander,1,0.00022972662531587412,False,False
+Films,Horace Slughorn,Luna Lovegood,1,0.00022972662531587412,False,False
+Films,Horace Slughorn,Minerva McGonagall,1,0.00022972662531587412,False,False
+Films,Igor Karkaroff,Ron Weasley,1,0.00022972662531587412,False,False
+Films,Igor Karkaroff,Severus Snape,1,0.00022972662531587412,False,False
+Films,Lucius Malfoy,Sirius Black,1,0.00022972662531587412,False,False
+Films,Luna Lovegood,Remus Lupin,1,0.00022972662531587412,False,False
+Films,Neville Longbottom,Percy Weasley,1,0.00022972662531587412,False,False
+Films,Neville Longbottom,Quirinus Quirrell,1,0.00022972662531587412,False,False
+Films,Ollivander,Remus Lupin,1,0.00022972662531587412,False,False
+Films,Ollivander,Ron Weasley,1,0.00022972662531587412,False,False
+Films,Peter Pettigrew,Ron Weasley,1,0.00022972662531587412,False,False
+Films,Ron Weasley,Sirius Black,1,0.00022972662531587412,False,False
+Films,Severus Snape,Sirius Black,1,0.00022972662531587412,False,False
