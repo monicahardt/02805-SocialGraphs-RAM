@@ -1,0 +1,1097 @@
+installment,medium,character_a,character_b,all_turns,school,quidditch,spells,ministry,dark,hallows
+1,books,Albus Dumbledore,Harry Potter,42,1,0,0,0,0,0
+1,books,Albus Dumbledore,Minerva McGonagall,30,0,0,0,0,7,0
+1,books,Albus Dumbledore,Ron Weasley,9,0,0,0,0,0,0
+1,books,Albus Dumbledore,Rubeus Hagrid,2,0,0,0,0,0,0
+1,books,Albus Dumbledore,Vernon Dursley,1,0,0,0,0,1,0
+1,books,Argus Filch,Harry Potter,1,0,0,0,0,0,0
+1,books,Argus Filch,Rubeus Hagrid,1,0,0,0,0,0,0
+1,books,Bloody Baron,Harry Potter,4,0,0,0,0,0,0
+1,books,Draco Malfoy,Harry Potter,9,0,1,0,0,0,0
+1,books,Draco Malfoy,Hermione Granger,9,0,0,0,0,0,0
+1,books,Draco Malfoy,Ron Weasley,15,0,0,0,0,0,0
+1,books,Draco Malfoy,Rubeus Hagrid,3,0,0,0,0,0,0
+1,books,Dudley Dursley,Harry Potter,9,0,0,0,0,0,0
+1,books,Dudley Dursley,Petunia Dursley,9,0,0,0,0,0,0
+1,books,Dudley Dursley,Vernon Dursley,13,0,0,0,0,0,0
+1,books,Filius Flitwick,Harry Potter,3,0,1,0,0,0,0
+1,books,Firenze,Harry Potter,8,0,0,0,0,0,0
+1,books,Firenze,Rubeus Hagrid,5,0,0,0,0,0,0
+1,books,Fred Weasley,George Weasley,4,0,1,0,0,0,0
+1,books,Fred Weasley,Hermione Granger,2,0,0,0,0,0,0
+1,books,George Weasley,Ron Weasley,4,0,0,0,0,0,0
+1,books,Griphook,Harry Potter,2,0,0,0,0,0,0
+1,books,Harry Potter,Hermione Granger,60,2,0,0,2,2,1
+1,books,Harry Potter,Minerva McGonagall,4,0,0,0,0,0,0
+1,books,Harry Potter,Nearly Headless Nick,2,0,0,0,0,0,0
+1,books,Harry Potter,Neville Longbottom,7,0,0,0,0,0,0
+1,books,Harry Potter,Oliver Wood,22,1,11,0,0,0,0
+1,books,Harry Potter,Ollivander,3,0,0,1,0,0,0
+1,books,Harry Potter,Petunia Dursley,5,0,0,0,0,0,0
+1,books,Harry Potter,Quirinus Quirrell,30,0,1,0,0,2,0
+1,books,Harry Potter,Ron Weasley,236,2,6,5,0,6,1
+1,books,Harry Potter,Rubeus Hagrid,157,13,6,5,3,4,0
+1,books,Harry Potter,Severus Snape,15,0,0,0,0,0,0
+1,books,Harry Potter,Vernon Dursley,10,1,0,1,0,0,0
+1,books,Harry Potter,Voldemort,5,0,0,0,0,0,0
+1,books,Hermione Granger,Minerva McGonagall,1,0,0,0,0,0,0
+1,books,Hermione Granger,Neville Longbottom,3,0,0,0,0,0,0
+1,books,Hermione Granger,Ron Weasley,48,2,0,2,0,0,0
+1,books,Hermione Granger,Rubeus Hagrid,24,1,0,0,0,0,0
+1,books,Madam Hooch,Neville Longbottom,4,1,1,0,0,0,0
+1,books,Minerva McGonagall,Oliver Wood,5,0,3,0,0,0,0
+1,books,Minerva McGonagall,Petunia Dursley,2,0,0,0,0,0,0
+1,books,Minerva McGonagall,Ron Weasley,4,0,0,0,0,0,0
+1,books,Minerva McGonagall,Rubeus Hagrid,3,0,0,0,0,0,0
+1,books,Molly Weasley,Vernon Dursley,1,0,0,0,0,0,0
+1,books,Neville Longbottom,Ron Weasley,3,0,0,0,0,0,0
+1,books,Neville Longbottom,Rubeus Hagrid,1,0,0,0,0,0,0
+1,books,Oliver Wood,Rubeus Hagrid,3,0,1,0,0,0,0
+1,books,Percy Weasley,Ron Weasley,23,1,0,0,0,1,0
+1,books,Petunia Dursley,Vernon Dursley,19,0,0,0,0,0,0
+1,books,Quirinus Quirrell,Rubeus Hagrid,6,0,0,0,0,0,0
+1,books,Ron Weasley,Rubeus Hagrid,16,1,0,0,0,2,0
+1,books,Ron Weasley,Severus Snape,3,0,0,0,0,0,0
+1,books,Rubeus Hagrid,Vernon Dursley,14,0,0,0,0,1,0
+1,films,Albus Dumbledore,Harry Potter,15,0,0,0,0,1,0
+1,films,Albus Dumbledore,Hermione Granger,1,0,0,0,0,0,0
+1,films,Albus Dumbledore,Minerva McGonagall,8,0,0,0,0,0,0
+1,films,Albus Dumbledore,Rubeus Hagrid,2,0,0,0,0,0,0
+1,films,Argus Filch,Draco Malfoy,1,0,0,0,0,0,0
+1,films,Argus Filch,Hermione Granger,1,0,0,0,0,0,0
+1,films,Draco Malfoy,Harry Potter,4,0,0,0,0,0,0
+1,films,Draco Malfoy,Minerva McGonagall,1,0,0,0,0,0,0
+1,films,Draco Malfoy,Rubeus Hagrid,2,0,0,0,0,0,0
+1,films,Dudley Dursley,Harry Potter,3,0,0,0,0,0,0
+1,films,Dudley Dursley,Petunia Dursley,3,0,0,0,0,0,0
+1,films,Dudley Dursley,Rubeus Hagrid,1,0,0,0,0,0,0
+1,films,Dudley Dursley,Vernon Dursley,8,0,0,0,0,0,0
+1,films,Firenze,Harry Potter,6,0,0,0,0,1,0
+1,films,Fred Weasley,George Weasley,1,0,0,0,0,0,0
+1,films,Fred Weasley,Molly Weasley,1,0,0,0,0,0,0
+1,films,Griphook,Rubeus Hagrid,2,0,0,0,0,0,0
+1,films,Harry Potter,Hermione Granger,25,1,0,0,0,0,0
+1,films,Harry Potter,Minerva McGonagall,6,0,0,0,1,0,0
+1,films,Harry Potter,Molly Weasley,1,0,0,0,0,0,0
+1,films,Harry Potter,Neville Longbottom,2,0,0,0,0,0,0
+1,films,Harry Potter,Oliver Wood,12,0,3,0,0,0,0
+1,films,Harry Potter,Ollivander,4,0,0,3,0,0,0
+1,films,Harry Potter,Percy Weasley,2,0,0,0,0,0,0
+1,films,Harry Potter,Petunia Dursley,3,0,0,0,0,0,0
+1,films,Harry Potter,Quirinus Quirrell,6,0,1,0,0,0,0
+1,films,Harry Potter,Ron Weasley,85,0,4,3,0,0,1
+1,films,Harry Potter,Rubeus Hagrid,65,3,0,2,0,5,0
+1,films,Harry Potter,Severus Snape,6,0,1,0,0,0,0
+1,films,Harry Potter,Vernon Dursley,7,0,0,0,0,0,0
+1,films,Harry Potter,Voldemort,4,0,0,0,0,1,0
+1,films,Hermione Granger,Minerva McGonagall,2,0,0,0,0,0,0
+1,films,Hermione Granger,Nearly Headless Nick,1,0,0,0,0,0,0
+1,films,Hermione Granger,Neville Longbottom,1,0,0,0,0,0,0
+1,films,Hermione Granger,Ron Weasley,47,1,0,6,0,0,0
+1,films,Hermione Granger,Rubeus Hagrid,1,0,0,0,0,0,0
+1,films,Hermione Granger,Severus Snape,3,0,0,0,0,0,0
+1,films,Madam Hooch,Neville Longbottom,7,0,0,0,0,0,0
+1,films,Minerva McGonagall,Neville Longbottom,1,0,0,0,0,0,0
+1,films,Minerva McGonagall,Quirinus Quirrell,5,0,0,0,0,0,0
+1,films,Nearly Headless Nick,Ron Weasley,1,0,0,0,0,0,0
+1,films,Petunia Dursley,Rubeus Hagrid,1,0,0,0,0,0,0
+1,films,Petunia Dursley,Vernon Dursley,4,0,0,0,0,0,0
+1,films,Quirinus Quirrell,Severus Snape,2,0,0,0,0,0,0
+1,films,Quirinus Quirrell,Voldemort,5,0,0,0,0,0,0
+1,films,Ron Weasley,Rubeus Hagrid,3,0,0,0,0,0,0
+1,films,Rubeus Hagrid,Vernon Dursley,4,0,0,0,0,0,0
+2,books,Albus Dumbledore,Argus Filch,3,0,0,0,0,0,0
+2,books,Albus Dumbledore,Cornelius Fudge,2,0,0,0,1,0,0
+2,books,Albus Dumbledore,Draco Malfoy,3,0,0,0,0,0,0
+2,books,Albus Dumbledore,Gilderoy Lockhart,1,0,0,0,0,0,0
+2,books,Albus Dumbledore,Ginny Weasley,1,0,0,0,0,1,0
+2,books,Albus Dumbledore,Harry Potter,33,5,0,0,1,6,0
+2,books,Albus Dumbledore,Madam Pomfrey,1,0,0,0,0,0,0
+2,books,Albus Dumbledore,Minerva McGonagall,7,0,0,0,0,0,0
+2,books,Albus Dumbledore,Rubeus Hagrid,1,0,0,0,0,0,0
+2,books,Albus Dumbledore,Severus Snape,4,0,0,0,0,0,0
+2,books,Aragog,Harry Potter,15,0,0,0,1,0,0
+2,books,Argus Filch,Harry Potter,2,0,0,0,0,0,0
+2,books,Argus Filch,Ron Weasley,1,0,0,0,0,0,0
+2,books,Colin Creevey,Harry Potter,17,1,7,0,0,1,0
+2,books,Cornelius Fudge,Draco Malfoy,7,0,0,0,0,0,0
+2,books,Cornelius Fudge,Rubeus Hagrid,4,0,0,0,1,0,0
+2,books,Dean Thomas,Gilderoy Lockhart,1,0,0,0,0,0,0
+2,books,Dean Thomas,Hermione Granger,1,0,0,0,0,0,0
+2,books,Dobby,Harry Potter,54,5,1,0,0,7,0
+2,books,Draco Malfoy,Fred Weasley,1,0,0,0,0,0,0
+2,books,Draco Malfoy,Ginny Weasley,1,0,0,0,0,0,0
+2,books,Draco Malfoy,Harry Potter,26,1,0,1,2,0,0
+2,books,Draco Malfoy,Hermione Granger,1,0,0,0,0,0,0
+2,books,Draco Malfoy,Percy Weasley,3,0,0,0,0,0,0
+2,books,Draco Malfoy,Ron Weasley,25,0,0,0,1,0,0
+2,books,Draco Malfoy,Rubeus Hagrid,2,0,0,0,0,0,0
+2,books,Draco Malfoy,Severus Snape,3,0,0,0,0,0,0
+2,books,Dudley Dursley,Harry Potter,8,0,0,1,0,0,0
+2,books,Dudley Dursley,Vernon Dursley,1,0,0,0,0,0,0
+2,books,Fred Weasley,George Weasley,10,0,0,0,0,1,0
+2,books,Fred Weasley,Harry Potter,5,1,0,0,0,0,0
+2,books,Fred Weasley,Marcus Flint,2,0,0,0,0,0,0
+2,books,Fred Weasley,Molly Weasley,4,0,0,0,0,0,0
+2,books,Fred Weasley,Ron Weasley,7,0,0,0,0,0,0
+2,books,George Weasley,Harry Potter,8,0,0,0,0,0,0
+2,books,George Weasley,Marcus Flint,1,0,0,0,0,0,0
+2,books,George Weasley,Molly Weasley,7,0,0,0,0,0,0
+2,books,George Weasley,Oliver Wood,5,0,1,0,0,0,0
+2,books,George Weasley,Ron Weasley,8,0,1,0,0,0,0
+2,books,Gilderoy Lockhart,Harry Potter,39,0,0,3,0,0,0
+2,books,Gilderoy Lockhart,Hermione Granger,1,0,0,0,0,0,0
+2,books,Gilderoy Lockhart,Pomona Sprout,4,1,0,0,0,0,0
+2,books,Gilderoy Lockhart,Ron Weasley,17,2,0,0,0,0,0
+2,books,Gilderoy Lockhart,Severus Snape,4,0,0,3,0,0,0
+2,books,Ginny Weasley,Harry Potter,7,0,0,1,0,0,0
+2,books,Ginny Weasley,Molly Weasley,2,0,0,0,0,0,0
+2,books,Harry Potter,Hermione Granger,25,2,0,0,0,0,0
+2,books,Harry Potter,Minerva McGonagall,5,1,0,0,0,0,0
+2,books,Harry Potter,Moaning Myrtle,9,0,0,0,0,0,0
+2,books,Harry Potter,Molly Weasley,14,0,0,0,0,0,0
+2,books,Harry Potter,Nearly Headless Nick,31,1,1,0,0,0,0
+2,books,Harry Potter,Neville Longbottom,1,0,0,0,0,0,0
+2,books,Harry Potter,Oliver Wood,4,0,1,0,0,0,0
+2,books,Harry Potter,Percy Weasley,4,0,0,0,0,0,0
+2,books,Harry Potter,Petunia Dursley,3,0,0,0,0,0,0
+2,books,Harry Potter,Ron Weasley,247,13,2,8,3,0,1
+2,books,Harry Potter,Rubeus Hagrid,20,1,0,0,0,0,0
+2,books,Harry Potter,Severus Snape,4,0,0,0,0,0,0
+2,books,Harry Potter,Sorting Hat,1,0,0,0,0,0,0
+2,books,Harry Potter,Vernon Dursley,12,0,0,0,0,0,0
+2,books,Hermione Granger,Moaning Myrtle,13,0,0,0,0,0,0
+2,books,Hermione Granger,Neville Longbottom,7,0,0,0,0,0,0
+2,books,Hermione Granger,Pomona Sprout,4,0,0,0,0,0,0
+2,books,Hermione Granger,Ron Weasley,66,3,0,1,0,0,0
+2,books,Hermione Granger,Rubeus Hagrid,2,0,0,0,0,0,0
+2,books,Madam Pomfrey,Minerva McGonagall,3,0,0,0,0,0,0
+2,books,Marcus Flint,Oliver Wood,1,0,1,0,0,0,0
+2,books,Minerva McGonagall,Ron Weasley,4,0,0,0,0,0,0
+2,books,Minerva McGonagall,Severus Snape,2,0,1,0,0,0,0
+2,books,Moaning Myrtle,Ron Weasley,5,0,0,0,0,0,0
+2,books,Molly Weasley,Ron Weasley,7,0,0,0,0,0,0
+2,books,Neville Longbottom,Ron Weasley,1,0,0,0,0,0,0
+2,books,Percy Weasley,Ron Weasley,21,2,0,0,0,0,0
+2,books,Petunia Dursley,Vernon Dursley,9,0,0,0,0,0,0
+2,books,Ron Weasley,Rubeus Hagrid,7,0,0,1,0,0,0
+2,books,Ron Weasley,Severus Snape,8,0,0,0,0,0,0
+2,films,Albus Dumbledore,Argus Filch,1,0,0,0,0,0,0
+2,films,Albus Dumbledore,Gilderoy Lockhart,1,0,0,0,0,0,0
+2,films,Albus Dumbledore,Harry Potter,13,2,0,0,0,5,0
+2,films,Albus Dumbledore,Lucius Malfoy,15,1,0,0,0,2,0
+2,films,Albus Dumbledore,Minerva McGonagall,3,0,0,0,0,0,0
+2,films,Albus Dumbledore,Ron Weasley,2,0,0,0,0,0,0
+2,films,Albus Dumbledore,Rubeus Hagrid,6,0,0,0,1,0,0
+2,films,Albus Dumbledore,Voldemort,8,1,0,0,0,0,0
+2,films,Aragog,Harry Potter,10,0,0,0,0,0,0
+2,films,Argus Filch,Harry Potter,2,0,0,0,0,0,0
+2,films,Colin Creevey,Harry Potter,1,0,0,0,0,0,0
+2,films,Cornelius Fudge,Rubeus Hagrid,2,0,0,0,1,0,0
+2,films,Dobby,Harry Potter,52,3,2,0,0,1,0
+2,films,Dobby,Lucius Malfoy,6,0,0,0,0,0,0
+2,films,Draco Malfoy,Ginny Weasley,1,0,0,0,0,0,0
+2,films,Draco Malfoy,Harry Potter,8,0,0,0,0,0,0
+2,films,Draco Malfoy,Hermione Granger,2,0,0,0,0,0,0
+2,films,Draco Malfoy,Percy Weasley,1,0,0,0,0,0,0
+2,films,Draco Malfoy,Ron Weasley,1,0,0,0,0,0,0
+2,films,Dudley Dursley,George Weasley,1,0,0,0,0,0,0
+2,films,Dudley Dursley,Vernon Dursley,1,0,0,0,0,0,0
+2,films,Fred Weasley,Molly Weasley,1,0,0,1,0,0,0
+2,films,Fred Weasley,Ron Weasley,1,0,0,0,0,0,0
+2,films,George Weasley,Ron Weasley,1,0,0,0,0,0,0
+2,films,Gilderoy Lockhart,Harry Potter,15,0,0,0,0,0,0
+2,films,Gilderoy Lockhart,Ron Weasley,12,1,0,2,0,0,0
+2,films,Gilderoy Lockhart,Severus Snape,6,0,0,3,0,0,0
+2,films,Ginny Weasley,Harry Potter,1,0,0,0,0,0,0
+2,films,Ginny Weasley,Molly Weasley,1,0,0,0,0,0,0
+2,films,Harry Potter,Hermione Granger,18,0,0,1,0,0,0
+2,films,Harry Potter,Lucius Malfoy,6,0,0,0,0,1,0
+2,films,Harry Potter,Madam Pomfrey,2,0,0,0,0,0,0
+2,films,Harry Potter,Minerva McGonagall,5,1,0,0,0,0,0
+2,films,Harry Potter,Moaning Myrtle,13,0,0,0,0,0,0
+2,films,Harry Potter,Molly Weasley,1,0,0,0,0,0,0
+2,films,Harry Potter,Ron Weasley,79,1,0,1,1,0,0
+2,films,Harry Potter,Rubeus Hagrid,14,1,0,0,0,1,0
+2,films,Harry Potter,Sorting Hat,4,0,0,0,0,0,0
+2,films,Harry Potter,Vernon Dursley,11,0,0,0,0,0,0
+2,films,Harry Potter,Voldemort,30,0,0,1,0,5,0
+2,films,Hermione Granger,Lee Jordan,1,0,1,0,0,0,0
+2,films,Hermione Granger,Lucius Malfoy,1,0,0,0,0,0,0
+2,films,Hermione Granger,Madam Pomfrey,1,0,0,0,0,0,0
+2,films,Hermione Granger,Minerva McGonagall,4,0,0,0,0,0,0
+2,films,Hermione Granger,Moaning Myrtle,1,0,0,0,0,0,0
+2,films,Hermione Granger,Pomona Sprout,1,0,0,0,0,0,0
+2,films,Hermione Granger,Ron Weasley,21,0,1,0,0,0,0
+2,films,Hermione Granger,Rubeus Hagrid,2,0,0,0,0,0,0
+2,films,Lucius Malfoy,Rubeus Hagrid,2,0,0,0,0,0,0
+2,films,Marcus Flint,Oliver Wood,2,0,1,0,0,0,0
+2,films,Minerva McGonagall,Oliver Wood,2,0,1,0,0,0,0
+2,films,Minerva McGonagall,Ron Weasley,4,0,0,0,0,0,0
+2,films,Moaning Myrtle,Ron Weasley,2,0,0,0,0,0,0
+2,films,Molly Weasley,Ron Weasley,2,0,0,0,0,0,0
+2,films,Neville Longbottom,Pomona Sprout,1,0,0,0,0,0,0
+2,films,Percy Weasley,Ron Weasley,4,0,0,0,0,0,0
+2,films,Petunia Dursley,Vernon Dursley,3,0,0,0,0,0,0
+2,films,Ron Weasley,Severus Snape,1,0,0,0,0,0,0
+2,films,Rubeus Hagrid,Voldemort,11,1,0,1,0,0,0
+3,books,Albus Dumbledore,Cornelius Fudge,8,0,0,0,1,0,0
+3,books,Albus Dumbledore,Draco Malfoy,7,0,0,0,0,0,0
+3,books,Albus Dumbledore,Harry Potter,32,3,1,1,3,4,0
+3,books,Albus Dumbledore,Hermione Granger,5,0,0,0,1,0,0
+3,books,Albus Dumbledore,Minerva McGonagall,4,0,0,0,0,0,0
+3,books,Albus Dumbledore,Percy Weasley,8,0,0,0,2,0,0
+3,books,Albus Dumbledore,Rubeus Hagrid,4,0,0,0,0,0,0
+3,books,Albus Dumbledore,Severus Snape,10,0,0,0,0,0,0
+3,books,Albus Dumbledore,Sybill Trelawney,2,0,0,0,0,0,0
+3,books,Argus Filch,Harry Potter,4,1,0,0,0,0,0
+3,books,Argus Filch,Remus Lupin,2,0,0,1,0,0,0
+3,books,Cornelius Fudge,Harry Potter,17,2,0,0,4,0,0
+3,books,Cornelius Fudge,Hermione Granger,4,0,0,0,0,0,0
+3,books,Cornelius Fudge,Minerva McGonagall,5,0,0,1,0,0,0
+3,books,Cornelius Fudge,Ron Weasley,1,0,0,0,0,0,0
+3,books,Cornelius Fudge,Rosmerta,14,1,0,1,1,4,0
+3,books,Cornelius Fudge,Stan Shunpike,13,2,0,0,1,0,0
+3,books,Dean Thomas,Harry Potter,7,0,0,0,0,0,0
+3,books,Dean Thomas,Hermione Granger,1,0,0,0,0,0,0
+3,books,Dean Thomas,Pansy Parkinson,1,0,0,0,0,0,0
+3,books,Dean Thomas,Ron Weasley,2,0,0,0,0,0,0
+3,books,Dean Thomas,Severus Snape,1,1,0,0,0,0,0
+3,books,Draco Malfoy,Ginny Weasley,1,0,0,0,0,0,0
+3,books,Draco Malfoy,Harry Potter,10,0,0,0,2,0,0
+3,books,Draco Malfoy,Ron Weasley,17,0,0,0,2,0,0
+3,books,Draco Malfoy,Rubeus Hagrid,5,0,0,0,0,0,0
+3,books,Draco Malfoy,Severus Snape,9,0,0,0,0,0,0
+3,books,Filius Flitwick,Hermione Granger,1,0,0,0,0,0,0
+3,books,Filius Flitwick,Ron Weasley,1,0,0,1,0,0,0
+3,books,Fred Weasley,George Weasley,16,0,1,0,1,0,0
+3,books,Fred Weasley,Harry Potter,14,1,0,0,0,0,0
+3,books,Fred Weasley,Molly Weasley,3,0,0,0,0,0,0
+3,books,Fred Weasley,Percy Weasley,2,0,0,0,1,0,0
+3,books,Fred Weasley,Ron Weasley,1,0,0,0,0,0,0
+3,books,George Weasley,Harry Potter,1,0,0,0,0,0,0
+3,books,George Weasley,Hermione Granger,5,1,0,0,0,0,0
+3,books,George Weasley,Molly Weasley,1,0,0,0,0,0,0
+3,books,George Weasley,Ron Weasley,4,2,0,0,0,0,0
+3,books,Ginny Weasley,Ron Weasley,1,0,0,0,0,0,0
+3,books,Harry Potter,Hermione Granger,179,4,0,9,7,1,1
+3,books,Harry Potter,Minerva McGonagall,12,2,0,0,0,0,0
+3,books,Harry Potter,Molly Weasley,15,2,0,1,3,0,0
+3,books,Harry Potter,Neville Longbottom,9,0,0,0,0,0,0
+3,books,Harry Potter,Percy Weasley,6,0,0,0,0,0,0
+3,books,Harry Potter,Peter Pettigrew,9,0,0,0,0,0,0
+3,books,Harry Potter,Petunia Dursley,4,0,0,0,0,0,0
+3,books,Harry Potter,Remus Lupin,158,9,4,12,21,4,1
+3,books,Harry Potter,Ron Weasley,148,3,4,2,3,3,2
+3,books,Harry Potter,Rubeus Hagrid,17,0,0,0,1,0,0
+3,books,Harry Potter,Severus Snape,39,2,2,0,2,0,0
+3,books,Harry Potter,Stan Shunpike,37,0,0,2,2,2,0
+3,books,Harry Potter,Sybill Trelawney,32,2,0,0,2,4,0
+3,books,Harry Potter,Vernon Dursley,37,0,0,0,0,0,0
+3,books,Harry Potter,Vincent Crabbe,1,0,0,0,0,0,0
+3,books,Hermione Granger,Parvati Patil,4,1,0,0,0,0,0
+3,books,Hermione Granger,Percy Weasley,1,0,0,0,0,0,0
+3,books,Hermione Granger,Peter Pettigrew,8,1,0,0,2,1,0
+3,books,Hermione Granger,Remus Lupin,26,0,0,0,2,0,1
+3,books,Hermione Granger,Ron Weasley,129,6,2,0,2,0,0
+3,books,Hermione Granger,Rubeus Hagrid,13,1,0,0,1,0,0
+3,books,Hermione Granger,Severus Snape,10,3,0,0,0,0,0
+3,books,Minerva McGonagall,Ron Weasley,12,2,0,0,0,0,0
+3,books,Minerva McGonagall,Rosmerta,9,1,0,0,0,1,0
+3,books,Minerva McGonagall,Rubeus Hagrid,2,0,0,0,0,0,0
+3,books,Minerva McGonagall,Sybill Trelawney,2,0,0,0,0,0,0
+3,books,Molly Weasley,Percy Weasley,3,0,0,0,0,0,0
+3,books,Neville Longbottom,Remus Lupin,9,0,0,0,0,0,0
+3,books,Neville Longbottom,Ron Weasley,2,0,0,0,0,0,0
+3,books,Neville Longbottom,Sybill Trelawney,4,1,0,0,0,0,0
+3,books,Percy Weasley,Ron Weasley,11,0,0,0,0,0,0
+3,books,Peter Pettigrew,Remus Lupin,35,0,0,0,3,6,0
+3,books,Petunia Dursley,Vernon Dursley,6,0,0,0,0,0,0
+3,books,Remus Lupin,Ron Weasley,36,1,0,2,0,0,0
+3,books,Remus Lupin,Severus Snape,34,1,0,0,4,0,0
+3,books,Ron Weasley,Rubeus Hagrid,24,0,2,0,0,0,0
+3,books,Ron Weasley,Severus Snape,2,1,0,0,0,0,0
+3,books,Ron Weasley,Sybill Trelawney,4,1,0,0,0,0,0
+3,books,Ron Weasley,Vernon Dursley,4,0,0,0,0,0,0
+3,films,Albus Dumbledore,Argus Filch,1,0,0,0,0,0,0
+3,films,Albus Dumbledore,Cornelius Fudge,12,0,0,0,0,0,0
+3,films,Albus Dumbledore,Filius Flitwick,1,0,0,0,0,0,0
+3,films,Albus Dumbledore,Harry Potter,1,0,0,0,0,0,0
+3,films,Albus Dumbledore,Hermione Granger,1,0,0,0,0,0,0
+3,films,Albus Dumbledore,Percy Weasley,4,0,0,0,0,0,0
+3,films,Albus Dumbledore,Ron Weasley,1,0,0,0,0,0,0
+3,films,Albus Dumbledore,Severus Snape,9,1,0,0,0,0,0
+3,films,Cornelius Fudge,Harry Potter,10,1,0,0,1,0,0
+3,films,Cornelius Fudge,Hermione Granger,1,0,0,0,0,0,0
+3,films,Cornelius Fudge,Minerva McGonagall,3,0,0,0,0,0,0
+3,films,Cornelius Fudge,Rosmerta,6,0,0,0,1,0,0
+3,films,Cornelius Fudge,Rubeus Hagrid,4,0,0,0,0,0,0
+3,films,Dean Thomas,Remus Lupin,1,0,0,0,0,0,0
+3,films,Draco Malfoy,Harry Potter,1,0,0,0,0,0,0
+3,films,Draco Malfoy,Hermione Granger,1,0,0,0,0,0,0
+3,films,Draco Malfoy,Ron Weasley,2,0,0,0,0,0,0
+3,films,Draco Malfoy,Rubeus Hagrid,6,1,0,0,0,0,0
+3,films,Fred Weasley,George Weasley,17,0,0,0,0,0,0
+3,films,Fred Weasley,Harry Potter,2,0,0,0,0,0,0
+3,films,George Weasley,Harry Potter,2,0,0,0,0,0,0
+3,films,Harry Potter,Hermione Granger,53,1,0,4,4,0,0
+3,films,Harry Potter,Minerva McGonagall,1,0,0,0,0,0,0
+3,films,Harry Potter,Molly Weasley,10,0,0,0,0,0,0
+3,films,Harry Potter,Peter Pettigrew,1,0,0,0,0,0,0
+3,films,Harry Potter,Remus Lupin,55,0,0,5,8,2,0
+3,films,Harry Potter,Ron Weasley,13,0,0,0,1,0,0
+3,films,Harry Potter,Rubeus Hagrid,7,0,0,0,0,0,0
+3,films,Harry Potter,Severus Snape,13,0,1,1,0,0,0
+3,films,Harry Potter,Stan Shunpike,11,0,0,0,1,1,0
+3,films,Harry Potter,Sybill Trelawney,3,0,0,0,0,0,0
+3,films,Harry Potter,Vernon Dursley,7,0,0,0,0,0,0
+3,films,Hermione Granger,Remus Lupin,3,0,0,0,0,0,0
+3,films,Hermione Granger,Ron Weasley,39,3,0,0,0,0,1
+3,films,Hermione Granger,Rubeus Hagrid,4,0,0,0,0,0,0
+3,films,Hermione Granger,Severus Snape,1,0,0,0,0,0,0
+3,films,Hermione Granger,Sybill Trelawney,1,0,0,0,0,0,0
+3,films,Minerva McGonagall,Rosmerta,4,0,0,0,1,0,0
+3,films,Neville Longbottom,Remus Lupin,9,0,0,2,0,0,0
+3,films,Neville Longbottom,Ron Weasley,1,0,0,0,0,0,0
+3,films,Neville Longbottom,Sybill Trelawney,1,0,0,0,0,0,0
+3,films,Parvati Patil,Remus Lupin,1,0,0,1,0,0,0
+3,films,Petunia Dursley,Vernon Dursley,1,0,0,0,0,0,0
+3,films,Remus Lupin,Ron Weasley,1,0,0,1,0,0,0
+3,films,Remus Lupin,Severus Snape,5,0,0,0,0,0,0
+3,films,Ron Weasley,Rubeus Hagrid,3,0,0,0,0,0,0
+3,films,Ron Weasley,Severus Snape,2,0,0,0,0,0,0
+3,films,Ron Weasley,Sybill Trelawney,3,0,0,0,0,0,0
+4,books,Alastor Moody,Albus Dumbledore,3,0,0,0,1,0,0
+4,books,Alastor Moody,Cornelius Fudge,3,0,0,0,0,0,0
+4,books,Alastor Moody,Dean Thomas,1,1,0,0,0,0,0
+4,books,Alastor Moody,Draco Malfoy,1,0,0,0,0,0,0
+4,books,Alastor Moody,Harry Potter,72,2,2,2,3,8,0
+4,books,Alastor Moody,Hermione Granger,6,0,0,3,0,2,0
+4,books,Alastor Moody,Igor Karkaroff,13,1,0,0,0,2,0
+4,books,Alastor Moody,Minerva McGonagall,7,2,0,0,0,0,0
+4,books,Alastor Moody,Neville Longbottom,1,0,0,1,0,1,0
+4,books,Alastor Moody,Olympe Maxime,1,0,0,0,0,0,0
+4,books,Alastor Moody,Parvati Patil,2,0,0,0,0,0,0
+4,books,Alastor Moody,Ron Weasley,10,0,0,2,1,2,0
+4,books,Alastor Moody,Severus Snape,13,0,0,0,1,0,0
+4,books,Alastor Moody,Viktor Krum,1,0,0,0,0,0,0
+4,books,Albus Dumbledore,Bartemius Crouch,9,0,1,2,0,1,2
+4,books,Albus Dumbledore,Cornelius Fudge,24,0,0,0,4,7,0
+4,books,Albus Dumbledore,Harry Potter,99,5,0,6,3,12,0
+4,books,Albus Dumbledore,Hermione Granger,4,0,0,0,0,0,0
+4,books,Albus Dumbledore,Igor Karkaroff,1,0,0,0,0,0,0
+4,books,Albus Dumbledore,Minerva McGonagall,3,0,0,0,0,0,0
+4,books,Albus Dumbledore,Olympe Maxime,7,0,0,0,0,0,0
+4,books,Albus Dumbledore,Rita Skeeter,5,0,0,1,0,0,0
+4,books,Albus Dumbledore,Ron Weasley,2,0,0,0,0,0,0
+4,books,Albus Dumbledore,Rubeus Hagrid,7,0,0,0,0,0,0
+4,books,Albus Dumbledore,Severus Snape,2,0,0,0,0,0,0
+4,books,Albus Dumbledore,Sirius Black,4,0,0,1,0,0,0
+4,books,Albus Dumbledore,Viktor Krum,1,0,0,0,0,0,0
+4,books,Amos Diggory,Bartemius Crouch,19,0,0,1,0,0,0
+4,books,Amos Diggory,Harry Potter,12,0,0,0,0,0,0
+4,books,Bartemius Crouch,Fred Weasley,1,1,0,0,0,0,0
+4,books,Bartemius Crouch,Harry Potter,23,0,1,0,4,1,0
+4,books,Bartemius Crouch,Hermione Granger,6,0,0,1,0,0,0
+4,books,Bartemius Crouch,Igor Karkaroff,8,0,0,1,2,1,0
+4,books,Cedric Diggory,Fleur Delacour,8,0,0,1,0,0,0
+4,books,Cedric Diggory,Harry Potter,60,2,1,4,0,0,0
+4,books,Cedric Diggory,Viktor Krum,2,0,0,0,0,0,0
+4,books,Cho Chang,Harry Potter,16,0,0,0,0,0,0
+4,books,Cornelius Fudge,Harry Potter,10,1,1,0,1,0,0
+4,books,Cornelius Fudge,Minerva McGonagall,1,0,0,0,0,0,0
+4,books,Cornelius Fudge,Severus Snape,2,0,0,0,1,0,0
+4,books,Dean Thomas,Harry Potter,3,0,0,0,0,0,0
+4,books,Dean Thomas,Ron Weasley,4,0,0,0,0,0,0
+4,books,Draco Malfoy,Harry Potter,10,1,0,0,0,0,0
+4,books,Draco Malfoy,Hermione Granger,9,0,0,0,0,0,0
+4,books,Draco Malfoy,Ron Weasley,8,0,0,0,0,0,0
+4,books,Draco Malfoy,Severus Snape,1,0,0,0,0,0,0
+4,books,Fleur Delacour,Harry Potter,19,1,0,0,0,0,0
+4,books,Fleur Delacour,Rita Skeeter,6,0,0,1,0,0,0
+4,books,Fleur Delacour,Ron Weasley,5,0,0,0,0,0,0
+4,books,Fleur Delacour,Rubeus Hagrid,1,0,0,0,0,0,0
+4,books,Fleur Delacour,Viktor Krum,2,0,0,0,0,0,0
+4,books,Fred Weasley,George Weasley,11,0,0,0,0,0,0
+4,books,Fred Weasley,Harry Potter,18,0,0,1,0,0,0
+4,books,Fred Weasley,Hermione Granger,11,0,0,0,0,0,0
+4,books,Fred Weasley,Ron Weasley,19,0,0,0,0,0,0
+4,books,George Weasley,Ginny Weasley,1,0,0,0,0,0,0
+4,books,George Weasley,Harry Potter,15,0,1,0,0,0,0
+4,books,George Weasley,Hermione Granger,1,0,0,0,0,0,0
+4,books,George Weasley,Igor Karkaroff,1,0,0,0,0,0,0
+4,books,George Weasley,Ron Weasley,5,0,0,0,0,0,0
+4,books,Ginny Weasley,Harry Potter,2,0,0,0,0,0,0
+4,books,Ginny Weasley,Ron Weasley,12,1,0,0,0,0,0
+4,books,Harry Potter,Hermione Granger,139,5,4,6,0,4,0
+4,books,Harry Potter,Minerva McGonagall,11,0,0,0,0,0,0
+4,books,Harry Potter,Moaning Myrtle,26,0,0,0,1,0,0
+4,books,Harry Potter,Parvati Patil,6,0,0,0,0,0,0
+4,books,Harry Potter,Rita Skeeter,28,1,0,0,0,0,0
+4,books,Harry Potter,Ron Weasley,243,6,2,8,3,8,2
+4,books,Harry Potter,Rubeus Hagrid,35,0,0,0,0,1,0
+4,books,Harry Potter,Severus Snape,20,1,0,0,0,0,0
+4,books,Harry Potter,Sirius Black,54,3,1,1,9,6,0
+4,books,Harry Potter,Viktor Krum,22,0,0,0,0,1,0
+4,books,Harry Potter,Voldemort,8,0,0,1,0,1,0
+4,books,Hermione Granger,Minerva McGonagall,2,0,0,0,0,0,0
+4,books,Hermione Granger,Parvati Patil,2,1,0,0,0,0,0
+4,books,Hermione Granger,Ron Weasley,289,13,10,7,4,7,1
+4,books,Hermione Granger,Rubeus Hagrid,6,0,0,0,0,0,0
+4,books,Hermione Granger,Severus Snape,2,1,0,0,0,0,0
+4,books,Hermione Granger,Sirius Black,5,0,0,1,0,1,0
+4,books,Hermione Granger,Viktor Krum,1,0,0,0,0,0,0
+4,books,Igor Karkaroff,Minerva McGonagall,8,0,0,0,0,0,0
+4,books,Igor Karkaroff,Olympe Maxime,1,0,0,0,0,0,0
+4,books,Igor Karkaroff,Rubeus Hagrid,1,0,0,0,0,0,0
+4,books,Igor Karkaroff,Severus Snape,3,1,0,0,0,0,0
+4,books,Minerva McGonagall,Olympe Maxime,1,0,0,0,0,0,0
+4,books,Minerva McGonagall,Ron Weasley,5,0,0,0,0,0,0
+4,books,Minerva McGonagall,Severus Snape,2,0,0,0,0,0,0
+4,books,Neville Longbottom,Ron Weasley,3,0,0,0,0,0,0
+4,books,Olympe Maxime,Ron Weasley,2,0,0,0,0,0,0
+4,books,Olympe Maxime,Rubeus Hagrid,9,0,0,0,0,0,0
+4,books,Padma Patil,Ron Weasley,6,0,0,0,0,0,0
+4,books,Parvati Patil,Ron Weasley,4,0,0,0,0,0,0
+4,books,Rita Skeeter,Rubeus Hagrid,8,0,0,0,0,0,0
+4,books,Ron Weasley,Rubeus Hagrid,20,0,0,0,0,0,0
+4,books,Ron Weasley,Severus Snape,4,1,0,0,0,0,0
+4,books,Ron Weasley,Sirius Black,10,1,1,0,0,1,0
+4,films,Alastor Moody,Albus Dumbledore,8,0,0,0,0,1,0
+4,films,Alastor Moody,Cornelius Fudge,1,0,0,0,0,0,0
+4,films,Alastor Moody,Draco Malfoy,1,0,0,0,0,0,0
+4,films,Alastor Moody,Harry Potter,16,0,0,0,0,1,0
+4,films,Alastor Moody,Hermione Granger,6,0,0,0,0,0,0
+4,films,Alastor Moody,Igor Karkaroff,2,0,0,0,0,0,0
+4,films,Alastor Moody,Minerva McGonagall,6,0,0,0,0,0,0
+4,films,Alastor Moody,Neville Longbottom,1,0,0,1,0,1,0
+4,films,Alastor Moody,Ron Weasley,3,0,0,1,0,0,0
+4,films,Albus Dumbledore,Bartemius Crouch,1,0,0,0,0,0,0
+4,films,Albus Dumbledore,Cornelius Fudge,4,0,0,0,0,0,0
+4,films,Albus Dumbledore,Fred Weasley,1,0,0,0,0,0,0
+4,films,Albus Dumbledore,Harry Potter,12,0,0,1,1,3,0
+4,films,Albus Dumbledore,Hermione Granger,1,0,0,0,0,0,0
+4,films,Albus Dumbledore,Igor Karkaroff,1,0,0,0,0,1,0
+4,films,Albus Dumbledore,Minerva McGonagall,3,0,0,0,0,0,0
+4,films,Albus Dumbledore,Olympe Maxime,2,0,0,0,0,0,0
+4,films,Albus Dumbledore,Rubeus Hagrid,1,0,0,0,0,0,0
+4,films,Amos Diggory,Harry Potter,3,0,0,0,0,0,0
+4,films,Bartemius Crouch,Harry Potter,5,0,0,0,0,0,0
+4,films,Bartemius Crouch,Igor Karkaroff,16,0,0,1,2,2,0
+4,films,Cedric Diggory,Harry Potter,27,0,0,0,0,0,0
+4,films,Cho Chang,Harry Potter,11,0,0,0,0,0,0
+4,films,Fred Weasley,George Weasley,8,0,0,0,0,0,0
+4,films,Fred Weasley,Hermione Granger,4,0,0,0,0,0,0
+4,films,Fred Weasley,Minerva McGonagall,1,0,0,0,0,0,0
+4,films,George Weasley,Ron Weasley,1,0,0,0,0,0,0
+4,films,Ginny Weasley,Ron Weasley,1,0,0,0,0,0,0
+4,films,Harry Potter,Hermione Granger,26,0,0,0,0,0,0
+4,films,Harry Potter,Minerva McGonagall,3,0,0,0,0,0,0
+4,films,Harry Potter,Moaning Myrtle,4,0,0,0,0,0,0
+4,films,Harry Potter,Neville Longbottom,13,0,0,0,0,0,0
+4,films,Harry Potter,Parvati Patil,1,0,0,0,0,0,0
+4,films,Harry Potter,Rita Skeeter,13,0,0,1,0,0,0
+4,films,Harry Potter,Ron Weasley,31,0,0,0,0,0,0
+4,films,Harry Potter,Rubeus Hagrid,6,0,0,0,0,0,0
+4,films,Harry Potter,Severus Snape,5,0,0,0,0,1,0
+4,films,Harry Potter,Sirius Black,16,1,1,0,1,2,0
+4,films,Harry Potter,Voldemort,4,0,0,1,0,0,0
+4,films,Hermione Granger,Ron Weasley,23,0,0,1,0,0,0
+4,films,Minerva McGonagall,Ron Weasley,3,0,0,0,0,0,0
+4,films,Minerva McGonagall,Severus Snape,1,0,0,0,0,0,0
+4,films,Olympe Maxime,Rubeus Hagrid,6,0,0,0,0,0,0
+4,films,Padma Patil,Ron Weasley,1,0,0,0,0,0,0
+4,films,Peter Pettigrew,Voldemort,5,0,0,1,0,1,0
+4,films,Rita Skeeter,Viktor Krum,1,0,0,0,0,0,0
+4,films,Ron Weasley,Rubeus Hagrid,1,0,0,0,0,0,0
+5,books,Alastor Moody,Harry Potter,20,0,0,0,0,0,0
+5,books,Alastor Moody,Hermione Granger,1,0,0,0,0,0,0
+5,books,Alastor Moody,Molly Weasley,3,0,0,0,0,0,0
+5,books,Alastor Moody,Nymphadora Tonks,9,0,0,0,0,0,0
+5,books,Alastor Moody,Remus Lupin,15,0,0,3,0,2,1
+5,books,Alastor Moody,Ron Weasley,1,0,0,0,0,0,0
+5,books,Albus Dumbledore,Cornelius Fudge,52,4,0,2,18,1,0
+5,books,Albus Dumbledore,Dolores Umbridge,6,0,0,0,1,0,0
+5,books,Albus Dumbledore,Fred Weasley,6,0,0,0,0,0,0
+5,books,Albus Dumbledore,Ginny Weasley,1,0,0,0,0,0,0
+5,books,Albus Dumbledore,Harry Potter,105,4,0,0,3,17,0
+5,books,Albus Dumbledore,Hermione Granger,1,0,0,0,0,0,0
+5,books,Albus Dumbledore,Minerva McGonagall,12,0,0,1,0,0,0
+5,books,Albus Dumbledore,Ron Weasley,2,0,0,0,0,0,0
+5,books,Albus Dumbledore,Severus Snape,4,0,0,0,0,2,0
+5,books,Albus Dumbledore,Sirius Black,1,0,0,0,0,0,0
+5,books,Albus Dumbledore,Voldemort,2,0,0,0,0,0,0
+5,books,Angelina Johnson,Draco Malfoy,3,0,0,0,0,0,0
+5,books,Angelina Johnson,Fred Weasley,5,0,0,0,0,0,0
+5,books,Angelina Johnson,Harry Potter,13,1,5,1,0,2,0
+5,books,Angelina Johnson,Hermione Granger,2,0,0,0,0,0,0
+5,books,Angelina Johnson,Lee Jordan,3,0,1,0,0,0,0
+5,books,Angelina Johnson,Ron Weasley,4,0,0,0,0,0,0
+5,books,Arabella Figg,Cornelius Fudge,6,0,0,0,1,0,0
+5,books,Arabella Figg,Harry Potter,26,0,0,2,7,0,0
+5,books,Argus Filch,Dolores Umbridge,2,0,0,0,0,0,0
+5,books,Argus Filch,Harry Potter,6,0,0,0,1,0,0
+5,books,Bane,Magorian,1,0,0,0,0,0,0
+5,books,Bane,Rubeus Hagrid,1,0,0,0,0,0,0
+5,books,Bellatrix Lestrange,Harry Potter,15,0,0,1,0,3,0
+5,books,Bellatrix Lestrange,Neville Longbottom,5,0,0,1,0,0,0
+5,books,Bellatrix Lestrange,Ron Weasley,4,0,0,1,0,0,0
+5,books,Bellatrix Lestrange,Voldemort,4,0,0,0,1,1,0
+5,books,Cho Chang,George Weasley,2,0,0,0,0,0,0
+5,books,Cho Chang,Harry Potter,75,1,1,0,4,1,0
+5,books,Cho Chang,Hermione Granger,1,0,0,0,0,0,0
+5,books,Cho Chang,Neville Longbottom,1,0,0,0,0,0,0
+5,books,Cho Chang,Ron Weasley,14,0,1,0,0,0,0
+5,books,Cho Chang,Rubeus Hagrid,2,0,0,0,0,0,0
+5,books,Cho Chang,Severus Snape,4,0,0,1,0,0,0
+5,books,Cornelius Fudge,Dolores Umbridge,10,1,0,0,0,0,0
+5,books,Cornelius Fudge,Draco Malfoy,7,0,0,0,0,0,0
+5,books,Cornelius Fudge,Dudley Dursley,1,0,0,0,1,0,0
+5,books,Cornelius Fudge,Harry Potter,28,0,0,4,4,0,0
+5,books,Cornelius Fudge,Minerva McGonagall,2,0,0,0,0,0,0
+5,books,Cornelius Fudge,Percy Weasley,4,0,0,0,1,0,0
+5,books,Cornelius Fudge,Ron Weasley,2,0,0,0,0,0,0
+5,books,Dean Thomas,Dolores Umbridge,6,2,0,0,0,0,0
+5,books,Dean Thomas,Harry Potter,4,0,0,0,0,0,0
+5,books,Dean Thomas,Hermione Granger,7,0,0,0,0,0,0
+5,books,Dean Thomas,Minerva McGonagall,1,0,0,0,0,0,0
+5,books,Dean Thomas,Ron Weasley,3,1,0,0,1,0,0
+5,books,Dobby,Harry Potter,21,2,1,0,0,0,0
+5,books,Dolores Umbridge,Draco Malfoy,5,0,0,0,1,0,0
+5,books,Dolores Umbridge,George Weasley,1,0,0,0,0,0,0
+5,books,Dolores Umbridge,Griselda Marchbanks,1,1,0,1,0,0,0
+5,books,Dolores Umbridge,Harry Potter,67,4,1,1,0,2,0
+5,books,Dolores Umbridge,Hermione Granger,47,4,2,5,3,0,0
+5,books,Dolores Umbridge,Kingsley Shacklebolt,1,0,0,0,0,0,0
+5,books,Dolores Umbridge,Magorian,3,0,0,0,1,0,0
+5,books,Dolores Umbridge,Minerva McGonagall,52,11,0,1,9,0,0
+5,books,Dolores Umbridge,Neville Longbottom,2,0,0,0,0,0,0
+5,books,Dolores Umbridge,Ron Weasley,16,2,0,2,1,0,0
+5,books,Dolores Umbridge,Rubeus Hagrid,55,4,1,0,4,0,0
+5,books,Dolores Umbridge,Severus Snape,24,2,0,0,2,0,0
+5,books,Dolores Umbridge,Sybill Trelawney,12,0,0,0,0,0,0
+5,books,Dolores Umbridge,Zacharias Smith,2,0,0,0,0,0,0
+5,books,Draco Malfoy,Harry Potter,35,0,0,4,2,5,0
+5,books,Draco Malfoy,Hermione Granger,11,0,0,0,1,1,0
+5,books,Draco Malfoy,Lucius Malfoy,1,0,0,0,0,0,0
+5,books,Draco Malfoy,Madam Hooch,1,0,0,0,0,0,0
+5,books,Draco Malfoy,Neville Longbottom,2,0,0,0,0,0,0
+5,books,Draco Malfoy,Rubeus Hagrid,3,1,0,0,0,0,0
+5,books,Draco Malfoy,Severus Snape,4,1,0,0,0,0,0
+5,books,Dudley Dursley,Harry Potter,47,0,0,3,0,0,0
+5,books,Dudley Dursley,Vernon Dursley,9,0,0,0,0,0,0
+5,books,Ernie Macmillan,Harry Potter,1,0,0,0,0,0,0
+5,books,Ernie Macmillan,Hermione Granger,7,2,0,0,1,0,0
+5,books,Ernie Macmillan,Ron Weasley,2,0,0,0,0,0,0
+5,books,Fred Weasley,George Weasley,46,4,0,0,1,1,0
+5,books,Fred Weasley,Ginny Weasley,2,0,0,0,0,0,0
+5,books,Fred Weasley,Harry Potter,20,0,0,0,1,0,0
+5,books,Fred Weasley,Hermione Granger,21,2,4,0,0,1,0
+5,books,Fred Weasley,Lee Jordan,6,0,0,0,0,0,0
+5,books,Fred Weasley,Molly Weasley,23,0,0,0,1,1,0
+5,books,Fred Weasley,Ron Weasley,20,2,0,0,0,0,0
+5,books,Fred Weasley,Sirius Black,3,0,0,0,0,0,0
+5,books,George Weasley,Ginny Weasley,1,0,0,0,0,0,0
+5,books,George Weasley,Harry Potter,14,0,0,0,0,0,0
+5,books,George Weasley,Hermione Granger,14,2,0,1,0,0,0
+5,books,George Weasley,Lee Jordan,1,0,0,0,0,0,0
+5,books,George Weasley,Molly Weasley,6,0,0,0,0,1,0
+5,books,George Weasley,Ron Weasley,5,0,0,0,0,0,0
+5,books,George Weasley,Sirius Black,1,0,0,0,0,0,0
+5,books,Ginny Weasley,Harry Potter,32,0,0,0,0,2,0
+5,books,Ginny Weasley,Hermione Granger,13,0,0,0,1,0,1
+5,books,Ginny Weasley,Luna Lovegood,1,0,0,0,0,0,0
+5,books,Ginny Weasley,Molly Weasley,5,0,0,0,0,0,0
+5,books,Ginny Weasley,Nymphadora Tonks,3,0,0,0,0,0,0
+5,books,Ginny Weasley,Remus Lupin,1,0,0,0,0,0,0
+5,books,Ginny Weasley,Ron Weasley,4,0,0,0,0,0,0
+5,books,Ginny Weasley,Sirius Black,2,0,0,0,0,0,0
+5,books,Harry Potter,Hermione Granger,363,8,3,13,14,13,2
+5,books,Harry Potter,Lavender Brown,1,0,0,0,0,0,0
+5,books,Harry Potter,Lee Jordan,1,0,0,0,0,0,0
+5,books,Harry Potter,Lucius Malfoy,10,0,0,0,0,0,0
+5,books,Harry Potter,Luna Lovegood,31,0,0,1,0,0,0
+5,books,Harry Potter,Minerva McGonagall,58,12,1,0,4,2,0
+5,books,Harry Potter,Molly Weasley,16,0,0,0,0,0,0
+5,books,Harry Potter,Nearly Headless Nick,32,1,0,0,0,0,0
+5,books,Harry Potter,Neville Longbottom,67,2,0,1,1,4,0
+5,books,Harry Potter,Nymphadora Tonks,38,0,1,3,3,0,0
+5,books,Harry Potter,Percy Weasley,1,0,0,0,0,0,0
+5,books,Harry Potter,Petunia Dursley,23,0,0,0,0,0,0
+5,books,Harry Potter,Remus Lupin,50,0,0,2,3,1,0
+5,books,Harry Potter,Ron Weasley,287,6,6,5,10,18,0
+5,books,Harry Potter,Rubeus Hagrid,53,0,0,0,0,1,0
+5,books,Harry Potter,Severus Snape,110,8,0,9,5,10,0
+5,books,Harry Potter,Sirius Black,111,2,1,1,5,8,0
+5,books,Harry Potter,Susan Bones,1,0,0,0,1,0,0
+5,books,Harry Potter,Vernon Dursley,65,0,0,3,5,1,0
+5,books,Harry Potter,Voldemort,1,0,0,0,0,0,0
+5,books,Harry Potter,Zacharias Smith,8,2,0,1,0,2,0
+5,books,Hermione Granger,Lavender Brown,3,0,0,0,0,0,0
+5,books,Hermione Granger,Lee Jordan,5,1,0,0,0,0,0
+5,books,Hermione Granger,Luna Lovegood,14,0,0,0,1,0,0
+5,books,Hermione Granger,Magorian,3,0,0,0,0,0,0
+5,books,Hermione Granger,Michael Corner,5,1,0,0,0,2,0
+5,books,Hermione Granger,Minerva McGonagall,7,0,0,0,0,0,0
+5,books,Hermione Granger,Molly Weasley,5,0,0,0,0,0,0
+5,books,Hermione Granger,Nearly Headless Nick,5,0,0,0,0,0,0
+5,books,Hermione Granger,Neville Longbottom,9,0,0,2,0,0,0
+5,books,Hermione Granger,Ron Weasley,225,18,2,3,8,7,1
+5,books,Hermione Granger,Rubeus Hagrid,80,4,0,2,2,1,0
+5,books,Hermione Granger,Severus Snape,2,1,0,0,0,0,0
+5,books,Hermione Granger,Sirius Black,25,0,1,1,0,0,0
+5,books,James Potter,Lily Potter,8,0,0,2,0,0,0
+5,books,James Potter,Remus Lupin,8,0,0,0,0,0,0
+5,books,James Potter,Severus Snape,1,0,0,1,0,0,0
+5,books,James Potter,Sirius Black,10,0,0,1,0,0,0
+5,books,Kingsley Shacklebolt,Remus Lupin,1,0,0,0,0,0,0
+5,books,Kreacher,Sirius Black,7,0,0,0,1,0,0
+5,books,Lily Potter,Severus Snape,2,0,0,0,0,0,0
+5,books,Lily Potter,Sirius Black,1,0,0,0,0,0,0
+5,books,Lucius Malfoy,Neville Longbottom,1,0,0,0,0,0,0
+5,books,Luna Lovegood,Neville Longbottom,1,0,0,0,0,0,0
+5,books,Luna Lovegood,Ron Weasley,8,0,2,0,0,0,0
+5,books,Madam Hooch,Minerva McGonagall,1,0,1,0,0,0,0
+5,books,Magorian,Rubeus Hagrid,5,0,0,0,0,0,0
+5,books,Minerva McGonagall,Ron Weasley,7,0,0,1,0,0,0
+5,books,Minerva McGonagall,Severus Snape,4,0,0,0,0,1,0
+5,books,Molly Weasley,Nymphadora Tonks,5,0,0,0,0,0,0
+5,books,Molly Weasley,Remus Lupin,6,0,0,0,0,0,0
+5,books,Molly Weasley,Ron Weasley,8,0,0,2,0,0,0
+5,books,Molly Weasley,Severus Snape,1,1,0,0,0,0,0
+5,books,Molly Weasley,Sirius Black,29,0,0,0,0,2,0
+5,books,Nearly Headless Nick,Ron Weasley,6,0,0,0,0,0,0
+5,books,Neville Longbottom,Remus Lupin,4,0,0,1,0,0,0
+5,books,Neville Longbottom,Ron Weasley,8,0,0,0,0,0,0
+5,books,Neville Longbottom,Sirius Black,4,0,0,1,0,0,0
+5,books,Nymphadora Tonks,Remus Lupin,2,0,0,0,0,0,0
+5,books,Nymphadora Tonks,Ron Weasley,2,0,0,0,0,0,0
+5,books,Percy Weasley,Ron Weasley,5,0,0,0,0,0,0
+5,books,Petunia Dursley,Vernon Dursley,9,0,0,0,1,0,0
+5,books,Remus Lupin,Sirius Black,19,1,0,0,1,0,0
+5,books,Ron Weasley,Rubeus Hagrid,37,0,0,0,1,3,0
+5,books,Ron Weasley,Sirius Black,7,1,0,0,0,0,1
+5,books,Ron Weasley,Zacharias Smith,3,0,0,0,0,0,0
+5,books,Severus Snape,Sirius Black,22,3,0,0,0,0,0
+5,films,Alastor Moody,Harry Potter,1,0,0,0,0,0,0
+5,films,Alastor Moody,Nymphadora Tonks,2,0,0,0,0,0,0
+5,films,Alastor Moody,Remus Lupin,1,0,0,0,0,0,0
+5,films,Albus Dumbledore,Cornelius Fudge,18,0,0,1,4,2,0
+5,films,Albus Dumbledore,Dolores Umbridge,11,0,0,0,1,0,0
+5,films,Albus Dumbledore,Harry Potter,54,3,0,1,3,9,0
+5,films,Albus Dumbledore,Minerva McGonagall,3,0,0,0,0,0,0
+5,films,Albus Dumbledore,Voldemort,3,0,0,1,0,1,0
+5,films,Angelina Johnson,Harry Potter,6,1,0,0,1,0,0
+5,films,Arabella Figg,Cornelius Fudge,2,0,0,0,0,0,0
+5,films,Arabella Figg,Susan Bones,3,0,0,0,1,0,0
+5,films,Argus Filch,Fred Weasley,1,0,0,0,0,0,0
+5,films,Bane,Rubeus Hagrid,4,0,0,0,0,0,0
+5,films,Bellatrix Lestrange,Harry Potter,11,0,0,2,0,2,0
+5,films,Bellatrix Lestrange,Lucius Malfoy,2,0,0,0,1,0,0
+5,films,Bellatrix Lestrange,Neville Longbottom,3,0,0,0,0,0,0
+5,films,Cornelius Fudge,Dolores Umbridge,1,0,0,0,1,0,0
+5,films,Cornelius Fudge,Harry Potter,3,0,0,0,0,0,0
+5,films,Cornelius Fudge,Susan Bones,2,0,0,0,1,0,0
+5,films,Dobby,Harry Potter,8,1,0,0,0,0,0
+5,films,Dolores Umbridge,Fred Weasley,3,1,0,0,0,0,0
+5,films,Dolores Umbridge,Harry Potter,14,3,0,0,1,0,0
+5,films,Dolores Umbridge,Hermione Granger,11,2,0,1,1,0,0
+5,films,Dolores Umbridge,Minerva McGonagall,2,1,0,0,0,0,0
+5,films,Dolores Umbridge,Severus Snape,2,0,0,0,0,0,0
+5,films,Dolores Umbridge,Sybill Trelawney,6,0,0,0,0,0,0
+5,films,Draco Malfoy,Hermione Granger,1,0,0,0,0,0,0
+5,films,Draco Malfoy,Ron Weasley,2,0,0,0,0,0,0
+5,films,Dudley Dursley,Harry Potter,8,0,0,0,0,0,0
+5,films,Ernie Macmillan,Hermione Granger,1,0,0,0,0,0,0
+5,films,Fred Weasley,George Weasley,8,0,0,2,0,0,0
+5,films,Fred Weasley,Hermione Granger,1,0,0,0,0,0,0
+5,films,Ginny Weasley,Harry Potter,5,0,0,0,1,1,0
+5,films,Ginny Weasley,Hermione Granger,1,0,0,0,0,0,0
+5,films,Harry Potter,Hermione Granger,33,1,0,2,2,2,0
+5,films,Harry Potter,Kreacher,2,0,0,0,0,0,0
+5,films,Harry Potter,Lucius Malfoy,15,0,0,1,0,2,0
+5,films,Harry Potter,Luna Lovegood,11,0,0,0,0,0,0
+5,films,Harry Potter,Minerva McGonagall,9,1,0,0,0,0,0
+5,films,Harry Potter,Molly Weasley,3,0,0,0,0,0,0
+5,films,Harry Potter,Nearly Headless Nick,9,0,0,0,0,0,0
+5,films,Harry Potter,Neville Longbottom,11,0,0,2,0,0,0
+5,films,Harry Potter,Remus Lupin,9,0,0,0,1,1,0
+5,films,Harry Potter,Ron Weasley,15,0,0,0,1,0,0
+5,films,Harry Potter,Rubeus Hagrid,2,0,0,0,0,0,0
+5,films,Harry Potter,Severus Snape,22,0,0,1,2,2,0
+5,films,Harry Potter,Sirius Black,20,0,0,0,1,5,0
+5,films,Harry Potter,Susan Bones,3,0,0,1,0,0,0
+5,films,Harry Potter,Sybill Trelawney,1,0,0,0,0,0,0
+5,films,Harry Potter,Vernon Dursley,8,0,0,0,1,0,0
+5,films,Hermione Granger,Lucius Malfoy,1,0,0,0,0,0,0
+5,films,Hermione Granger,Ron Weasley,11,0,0,0,3,0,0
+5,films,Hermione Granger,Rubeus Hagrid,5,0,0,0,0,0,0
+5,films,James Potter,Lily Potter,10,0,0,0,0,0,0
+5,films,James Potter,Severus Snape,3,0,0,0,0,0,0
+5,films,James Potter,Sirius Black,1,0,0,1,0,0,0
+5,films,Lily Potter,Sirius Black,1,0,0,1,0,0,0
+5,films,Luna Lovegood,Ron Weasley,1,0,0,0,0,0,0
+5,films,Molly Weasley,Sirius Black,7,0,0,0,0,0,0
+5,films,Petunia Dursley,Vernon Dursley,1,0,0,0,0,0,0
+5,films,Ron Weasley,Rubeus Hagrid,2,0,0,0,0,0,0
+5,films,Sirius Black,Voldemort,1,0,0,0,0,0,0
+6,books,Albus Dumbledore,Draco Malfoy,48,2,0,2,1,3,0
+6,books,Albus Dumbledore,Fenrir Greyback,19,1,0,1,0,1,0
+6,books,Albus Dumbledore,Harry Potter,566,34,3,10,17,68,26
+6,books,Albus Dumbledore,Hermione Granger,1,0,0,0,0,0,0
+6,books,Albus Dumbledore,Horace Slughorn,35,2,0,0,1,2,0
+6,books,Albus Dumbledore,Molly Weasley,3,0,0,0,0,0,0
+6,books,Albus Dumbledore,Nymphadora Tonks,2,1,0,0,0,0,0
+6,books,Albus Dumbledore,Ron Weasley,1,0,0,0,0,0,0
+6,books,Albus Dumbledore,Severus Snape,1,0,0,0,0,0,0
+6,books,Albus Dumbledore,Voldemort,31,2,0,0,2,2,0
+6,books,Argus Filch,Hermione Granger,5,0,0,0,0,0,0
+6,books,Argus Filch,Minerva McGonagall,2,0,0,0,0,0,0
+6,books,Argus Filch,Rubeus Hagrid,1,0,0,0,0,0,0
+6,books,Bellatrix Lestrange,Narcissa Malfoy,7,0,0,0,0,2,0
+6,books,Bellatrix Lestrange,Severus Snape,32,2,0,0,4,11,0
+6,books,Dean Thomas,Ginny Weasley,1,1,0,0,0,0,0
+6,books,Dean Thomas,Harry Potter,1,0,0,0,0,0,0
+6,books,Dean Thomas,Hermione Granger,1,0,0,0,0,0,0
+6,books,Draco Malfoy,Harry Potter,1,0,0,0,0,0,0
+6,books,Draco Malfoy,Hermione Granger,4,0,0,0,0,0,0
+6,books,Draco Malfoy,Narcissa Malfoy,2,0,0,0,0,0,0
+6,books,Draco Malfoy,Pansy Parkinson,9,2,0,1,0,1,0
+6,books,Draco Malfoy,Rubeus Hagrid,2,0,0,0,0,0,0
+6,books,Draco Malfoy,Severus Snape,16,2,0,0,0,0,0
+6,books,Eldred Worple,Harry Potter,5,0,0,0,0,0,0
+6,books,Filius Flitwick,Minerva McGonagall,3,1,0,0,0,0,0
+6,books,Filius Flitwick,Ron Weasley,1,0,0,0,0,0,0
+6,books,Fred Weasley,George Weasley,6,1,0,1,2,0,0
+6,books,Fred Weasley,Ginny Weasley,4,0,0,0,0,1,0
+6,books,Fred Weasley,Harry Potter,8,0,0,0,0,0,0
+6,books,Fred Weasley,Hermione Granger,3,0,1,0,0,0,0
+6,books,Fred Weasley,Molly Weasley,3,0,0,0,1,0,0
+6,books,Fred Weasley,Ron Weasley,11,0,0,1,0,0,0
+6,books,George Weasley,Ginny Weasley,4,0,0,0,0,0,0
+6,books,George Weasley,Harry Potter,6,1,0,0,0,2,0
+6,books,George Weasley,Hermione Granger,1,0,0,0,0,0,0
+6,books,George Weasley,Ron Weasley,4,0,0,0,0,0,0
+6,books,Ginny Weasley,Harry Potter,43,2,1,2,1,2,0
+6,books,Ginny Weasley,Hermione Granger,12,0,0,2,0,1,0
+6,books,Ginny Weasley,Minerva McGonagall,1,0,0,0,0,0,0
+6,books,Ginny Weasley,Molly Weasley,7,0,0,0,0,0,0
+6,books,Ginny Weasley,Ron Weasley,17,0,0,0,0,1,0
+6,books,Harry Potter,Hermione Granger,233,4,4,12,4,15,1
+6,books,Harry Potter,Horace Slughorn,95,7,1,1,0,6,8
+6,books,Harry Potter,Lavender Brown,5,0,0,0,0,0,0
+6,books,Harry Potter,Luna Lovegood,16,1,0,0,2,0,0
+6,books,Harry Potter,Minerva McGonagall,36,1,0,1,2,1,0
+6,books,Harry Potter,Molly Weasley,74,1,0,1,4,6,1
+6,books,Harry Potter,Neville Longbottom,9,0,0,0,1,0,0
+6,books,Harry Potter,Nymphadora Tonks,28,0,0,2,1,0,0
+6,books,Harry Potter,Remus Lupin,37,4,0,3,0,3,0
+6,books,Harry Potter,Ron Weasley,278,7,3,4,2,3,1
+6,books,Harry Potter,Rubeus Hagrid,57,2,1,2,0,2,0
+6,books,Harry Potter,Severus Snape,41,4,1,5,1,1,0
+6,books,Harry Potter,Voldemort,13,0,0,0,0,0,0
+6,books,Hermione Granger,Horace Slughorn,10,0,0,0,0,0,0
+6,books,Hermione Granger,Katie Bell,2,0,0,0,0,0,0
+6,books,Hermione Granger,Luna Lovegood,1,0,0,0,0,0,0
+6,books,Hermione Granger,Minerva McGonagall,2,0,0,0,0,0,0
+6,books,Hermione Granger,Narcissa Malfoy,1,0,0,0,0,0,0
+6,books,Hermione Granger,Nymphadora Tonks,1,0,0,0,0,0,0
+6,books,Hermione Granger,Remus Lupin,4,0,0,0,0,1,0
+6,books,Hermione Granger,Ron Weasley,119,6,3,9,5,5,0
+6,books,Hermione Granger,Rubeus Hagrid,11,1,0,0,0,0,0
+6,books,Hermione Granger,Severus Snape,1,1,0,0,0,0,0
+6,books,Horace Slughorn,Luna Lovegood,2,0,0,0,1,0,0
+6,books,Horace Slughorn,Marcus Belby,7,0,0,0,0,0,0
+6,books,Horace Slughorn,Ron Weasley,4,0,0,0,1,0,0
+6,books,Horace Slughorn,Rubeus Hagrid,20,0,0,0,0,0,0
+6,books,Horace Slughorn,Severus Snape,3,1,0,0,0,0,0
+6,books,Lavender Brown,Ron Weasley,1,0,0,0,0,0,0
+6,books,Leanne,Rubeus Hagrid,3,0,0,0,0,0,0
+6,books,Luna Lovegood,Neville Longbottom,7,0,0,0,1,0,0
+6,books,Luna Lovegood,Ron Weasley,6,0,0,0,0,0,0
+6,books,Minerva McGonagall,Molly Weasley,1,0,0,0,0,0,0
+6,books,Minerva McGonagall,Neville Longbottom,3,2,0,0,2,0,0
+6,books,Minerva McGonagall,Nymphadora Tonks,1,0,0,0,0,0,0
+6,books,Minerva McGonagall,Remus Lupin,4,0,0,0,0,0,0
+6,books,Minerva McGonagall,Ron Weasley,6,1,0,0,0,0,0
+6,books,Minerva McGonagall,Rubeus Hagrid,2,1,0,0,0,0,0
+6,books,Molly Weasley,Remus Lupin,5,0,0,0,0,0,0
+6,books,Molly Weasley,Ron Weasley,5,1,0,0,0,0,0
+6,books,Molly Weasley,Rubeus Hagrid,3,0,0,0,0,0,0
+6,books,Molly Weasley,Severus Snape,1,0,0,1,0,0,0
+6,books,Narcissa Malfoy,Severus Snape,24,1,0,1,0,8,0
+6,books,Nymphadora Tonks,Remus Lupin,1,0,0,0,0,0,0
+6,books,Nymphadora Tonks,Ron Weasley,1,0,0,0,0,1,0
+6,books,Remus Lupin,Ron Weasley,1,0,0,0,0,0,0
+6,books,Ron Weasley,Rubeus Hagrid,1,0,0,0,0,0,0
+6,books,Ron Weasley,Severus Snape,9,1,0,1,1,1,0
+6,films,Albus Dumbledore,Bellatrix Lestrange,3,1,0,0,0,0,0
+6,films,Albus Dumbledore,Draco Malfoy,15,0,0,0,0,1,0
+6,films,Albus Dumbledore,Harry Potter,93,4,0,2,0,5,5
+6,films,Albus Dumbledore,Horace Slughorn,16,1,0,0,0,2,0
+6,films,Albus Dumbledore,Voldemort,16,2,0,0,0,0,0
+6,films,Argus Filch,Draco Malfoy,1,0,0,0,0,0,0
+6,films,Bellatrix Lestrange,Fenrir Greyback,1,0,0,0,0,0,0
+6,films,Bellatrix Lestrange,Narcissa Malfoy,5,0,0,0,0,2,0
+6,films,Bellatrix Lestrange,Severus Snape,8,0,0,1,0,3,0
+6,films,Draco Malfoy,Harry Potter,1,0,0,1,0,0,0
+6,films,Draco Malfoy,Pansy Parkinson,2,1,0,0,0,0,0
+6,films,Draco Malfoy,Severus Snape,7,0,0,0,0,0,0
+6,films,Filius Flitwick,Harry Potter,1,0,0,0,0,0,0
+6,films,Filius Flitwick,Luna Lovegood,1,0,0,0,0,0,0
+6,films,Fred Weasley,George Weasley,7,0,0,0,0,0,0
+6,films,Fred Weasley,Ginny Weasley,2,0,0,0,0,0,0
+6,films,Fred Weasley,Ron Weasley,2,0,0,0,0,0,0
+6,films,Ginny Weasley,Harry Potter,6,0,0,0,0,0,0
+6,films,Ginny Weasley,Hermione Granger,2,0,0,0,0,0,0
+6,films,Ginny Weasley,Horace Slughorn,1,0,0,0,0,0,0
+6,films,Ginny Weasley,Luna Lovegood,1,0,0,0,0,0,0
+6,films,Ginny Weasley,Molly Weasley,6,0,0,0,0,0,0
+6,films,Ginny Weasley,Ron Weasley,2,0,0,0,0,0,0
+6,films,Harry Potter,Hermione Granger,65,0,0,4,1,2,3
+6,films,Harry Potter,Horace Slughorn,57,1,1,0,0,5,0
+6,films,Harry Potter,Luna Lovegood,11,0,0,1,0,0,0
+6,films,Harry Potter,Minerva McGonagall,9,1,0,0,1,0,0
+6,films,Harry Potter,Molly Weasley,1,0,0,0,0,0,0
+6,films,Harry Potter,Neville Longbottom,1,0,0,0,0,0,0
+6,films,Harry Potter,Remus Lupin,6,0,0,0,0,1,0
+6,films,Harry Potter,Ron Weasley,56,1,0,1,0,0,0
+6,films,Harry Potter,Rubeus Hagrid,4,0,0,0,0,0,0
+6,films,Harry Potter,Severus Snape,10,1,0,3,0,1,0
+6,films,Hermione Granger,Horace Slughorn,6,0,0,0,0,0,0
+6,films,Hermione Granger,Lavender Brown,5,0,0,0,0,0,0
+6,films,Hermione Granger,Leanne,1,0,0,0,0,0,0
+6,films,Hermione Granger,Ron Weasley,20,1,0,0,0,1,0
+6,films,Hermione Granger,Rubeus Hagrid,3,0,0,0,0,0,0
+6,films,Horace Slughorn,Katie Bell,2,0,0,0,0,0,0
+6,films,Horace Slughorn,Marcus Belby,1,0,0,0,0,0,0
+6,films,Horace Slughorn,Ron Weasley,4,0,0,0,0,0,0
+6,films,Horace Slughorn,Rubeus Hagrid,13,0,0,1,0,0,0
+6,films,Horace Slughorn,Voldemort,31,2,0,0,0,0,3
+6,films,Lavender Brown,Ron Weasley,1,0,0,0,0,0,0
+6,films,Leanne,Minerva McGonagall,1,0,0,0,0,0,0
+6,films,Minerva McGonagall,Ron Weasley,1,0,0,0,0,0,0
+6,films,Molly Weasley,Nymphadora Tonks,2,0,0,0,0,0,0
+6,films,Narcissa Malfoy,Severus Snape,3,0,0,0,0,1,0
+6,films,Ron Weasley,Rubeus Hagrid,2,0,0,0,0,0,0
+7,books,Aberforth Dumbledore,Harry Potter,28,1,0,1,0,2,0
+7,books,Aberforth Dumbledore,Hermione Granger,18,1,0,1,0,1,0
+7,books,Aberforth Dumbledore,Neville Longbottom,2,0,0,0,0,0,0
+7,books,Aberforth Dumbledore,Ron Weasley,1,0,0,0,0,0,0
+7,books,Alastor Moody,Bill Weasley,1,0,0,0,0,0,0
+7,books,Alastor Moody,Harry Potter,5,0,1,0,0,2,0
+7,books,Alastor Moody,Hermione Granger,3,0,0,0,0,0,0
+7,books,Alastor Moody,Mundungus Fletcher,6,0,0,1,0,1,0
+7,books,Alastor Moody,Nymphadora Tonks,1,0,0,0,0,0,0
+7,books,Alastor Moody,Ron Weasley,1,0,0,0,0,0,0
+7,books,Alastor Moody,Rubeus Hagrid,3,0,0,0,0,0,0
+7,books,Albus Dumbledore,Harry Potter,69,0,0,4,0,6,8
+7,books,Albus Dumbledore,Hermione Granger,4,0,1,0,0,0,0
+7,books,Albus Dumbledore,Ron Weasley,4,0,0,2,0,0,1
+7,books,Albus Dumbledore,Severus Snape,86,3,0,1,1,19,0
+7,books,Bathilda Bagshot,Harry Potter,3,0,0,0,0,1,0
+7,books,Bathilda Bagshot,Hermione Granger,7,0,0,0,0,0,0
+7,books,Bellatrix Lestrange,Fenrir Greyback,5,0,0,0,0,0,0
+7,books,Bellatrix Lestrange,Griphook,15,0,0,3,0,1,0
+7,books,Bellatrix Lestrange,Harry Potter,5,0,0,2,0,0,0
+7,books,Bellatrix Lestrange,Hermione Granger,2,0,0,0,0,0,0
+7,books,Bellatrix Lestrange,Lucius Malfoy,12,0,0,1,0,2,0
+7,books,Bellatrix Lestrange,Narcissa Malfoy,5,0,0,0,0,1,0
+7,books,Bellatrix Lestrange,Ron Weasley,4,0,0,0,0,0,0
+7,books,Bellatrix Lestrange,Voldemort,2,0,0,0,0,0,0
+7,books,Bill Weasley,Fleur Delacour,5,0,0,0,0,0,1
+7,books,Bill Weasley,Ginny Weasley,2,0,0,0,0,0,0
+7,books,Bill Weasley,Harry Potter,24,0,0,0,1,2,0
+7,books,Bill Weasley,Remus Lupin,5,1,0,0,0,0,0
+7,books,Cho Chang,Harry Potter,1,0,0,0,0,0,0
+7,books,Corban Yaxley,Ron Weasley,3,0,0,0,1,0,0
+7,books,Corban Yaxley,Severus Snape,5,0,0,0,1,0,0
+7,books,Dean Thomas,Griphook,3,0,0,0,0,0,0
+7,books,Dean Thomas,Lucius Malfoy,1,0,0,0,0,0,0
+7,books,Dean Thomas,Luna Lovegood,6,0,0,0,0,1,0
+7,books,Dean Thomas,Neville Longbottom,3,0,0,1,0,0,0
+7,books,Dobby,Harry Potter,1,0,0,0,0,0,0
+7,books,Dolores Umbridge,Harry Potter,8,0,0,3,0,0,0
+7,books,Dolores Umbridge,Hermione Granger,3,0,0,0,0,0,0
+7,books,Draco Malfoy,Gregory Goyle,3,0,0,0,0,0,0
+7,books,Draco Malfoy,Hermione Granger,3,0,0,1,0,0,0
+7,books,Draco Malfoy,Ron Weasley,3,0,0,0,0,0,0
+7,books,Draco Malfoy,Severus Snape,2,0,0,0,0,0,0
+7,books,Draco Malfoy,Voldemort,4,0,0,1,0,0,0
+7,books,Dudley Dursley,Harry Potter,25,0,0,0,0,0,0
+7,books,Dudley Dursley,Petunia Dursley,1,0,0,0,0,0,0
+7,books,Dudley Dursley,Vernon Dursley,10,0,0,0,0,0,0
+7,books,Elphias Doge,Harry Potter,18,0,0,0,0,0,0
+7,books,Elphias Doge,Muriel,25,2,0,0,0,0,0
+7,books,Fenrir Greyback,Harry Potter,18,0,0,0,1,0,0
+7,books,Fenrir Greyback,Hermione Granger,2,0,0,0,0,0,0
+7,books,Fenrir Greyback,Lucius Malfoy,8,0,0,0,0,0,0
+7,books,Fenrir Greyback,Narcissa Malfoy,1,0,0,0,0,0,0
+7,books,Fenrir Greyback,Scabior,9,0,0,1,0,2,0
+7,books,Filius Flitwick,Harry Potter,4,0,0,1,0,0,0
+7,books,Fleur Delacour,Harry Potter,6,0,0,0,0,0,0
+7,books,Fleur Delacour,Molly Weasley,4,0,0,0,0,0,0
+7,books,Fleur Delacour,Ollivander,1,0,0,0,0,0,0
+7,books,Fred Weasley,George Weasley,2,0,0,0,0,0,0
+7,books,Fred Weasley,Harry Potter,6,0,0,0,0,0,0
+7,books,Fred Weasley,Hermione Granger,1,0,0,0,0,0,0
+7,books,Fred Weasley,Kingsley Shacklebolt,1,0,0,0,0,0,0
+7,books,Fred Weasley,Molly Weasley,1,0,0,0,0,0,0
+7,books,Fred Weasley,Neville Longbottom,1,0,0,0,0,0,0
+7,books,Fred Weasley,Percy Weasley,1,0,0,0,0,0,0
+7,books,Fred Weasley,Remus Lupin,9,0,0,0,1,0,0
+7,books,Gellert Grindelwald,Ron Weasley,5,0,0,0,0,0,0
+7,books,George Weasley,Harry Potter,2,0,0,0,0,0,0
+7,books,George Weasley,Hermione Granger,1,0,0,0,0,0,0
+7,books,George Weasley,Molly Weasley,1,0,0,0,0,0,0
+7,books,George Weasley,Percy Weasley,3,1,0,0,1,0,0
+7,books,George Weasley,Rubeus Hagrid,2,0,0,0,0,0,0
+7,books,Ginny Weasley,Harry Potter,20,2,0,0,0,1,0
+7,books,Ginny Weasley,James Potter,13,2,0,0,0,0,0
+7,books,Ginny Weasley,Nymphadora Tonks,1,0,0,0,0,0,0
+7,books,Ginny Weasley,Ron Weasley,3,0,0,0,0,0,0
+7,books,Griphook,Harry Potter,25,0,0,4,0,0,0
+7,books,Griphook,Hermione Granger,3,0,0,1,0,0,0
+7,books,Griphook,Ron Weasley,11,0,0,0,0,0,0
+7,books,Harry Potter,Helena Ravenclaw,6,1,0,0,0,1,0
+7,books,Harry Potter,Hermione Granger,408,5,4,29,7,17,16
+7,books,Harry Potter,James Potter,7,0,0,0,0,0,0
+7,books,Harry Potter,Kreacher,23,1,0,0,0,5,0
+7,books,Harry Potter,Luna Lovegood,7,0,0,0,0,0,0
+7,books,Harry Potter,Molly Weasley,32,0,0,0,0,1,0
+7,books,Harry Potter,Mundungus Fletcher,4,0,0,0,1,0,0
+7,books,Harry Potter,Muriel,1,0,0,0,0,0,0
+7,books,Harry Potter,Neville Longbottom,29,1,0,0,0,2,0
+7,books,Harry Potter,Nymphadora Tonks,2,0,0,0,0,0,0
+7,books,Harry Potter,Ollivander,33,0,0,18,0,4,3
+7,books,Harry Potter,Petunia Dursley,1,0,0,0,0,0,0
+7,books,Harry Potter,Pius Thicknesse,2,0,0,0,0,0,0
+7,books,Harry Potter,Remus Lupin,50,0,0,3,3,12,0
+7,books,Harry Potter,Ron Weasley,393,11,3,29,6,12,17
+7,books,Harry Potter,Rubeus Hagrid,26,1,0,1,0,1,0
+7,books,Harry Potter,Rufus Scrimgeour,23,0,6,0,2,1,0
+7,books,Harry Potter,Scabior,6,1,0,0,1,0,0
+7,books,Harry Potter,Sirius Black,1,0,0,0,0,0,0
+7,books,Harry Potter,Vernon Dursley,23,0,0,0,1,1,0
+7,books,Harry Potter,Voldemort,48,0,0,14,0,1,7
+7,books,Harry Potter,Xenophilius Lovegood,8,0,0,2,0,0,2
+7,books,Hermione Granger,Nymphadora Tonks,3,0,0,0,0,0,0
+7,books,Hermione Granger,Ollivander,3,0,0,1,0,0,0
+7,books,Hermione Granger,Remus Lupin,9,0,0,0,2,1,0
+7,books,Hermione Granger,Ron Weasley,266,0,1,8,5,15,15
+7,books,Hermione Granger,Rubeus Hagrid,7,0,0,0,0,0,0
+7,books,Hermione Granger,Rufus Scrimgeour,16,2,1,0,3,0,0
+7,books,Hermione Granger,Voldemort,6,0,0,0,0,0,0
+7,books,Hermione Granger,Xenophilius Lovegood,20,0,0,1,0,0,10
+7,books,Kingsley Shacklebolt,Remus Lupin,11,0,0,0,0,1,0
+7,books,Kreacher,Ron Weasley,4,0,0,0,0,0,0
+7,books,Lily Potter,Petunia Dursley,12,1,0,0,0,0,0
+7,books,Lily Potter,Severus Snape,38,0,0,0,2,0,0
+7,books,Lucius Malfoy,Narcissa Malfoy,1,0,0,0,0,1,0
+7,books,Lucius Malfoy,Voldemort,5,0,0,0,0,0,0
+7,books,Luna Lovegood,Ron Weasley,9,0,0,0,0,0,0
+7,books,Molly Weasley,Remus Lupin,2,0,0,0,0,0,0
+7,books,Molly Weasley,Ron Weasley,4,0,0,0,0,0,0
+7,books,Mundungus Fletcher,Ron Weasley,2,0,0,0,0,0,0
+7,books,Mundungus Fletcher,Severus Snape,1,0,0,0,0,0,0
+7,books,Neville Longbottom,Ron Weasley,22,2,0,0,0,0,0
+7,books,Neville Longbottom,Voldemort,4,1,0,0,0,1,0
+7,books,Nymphadora Tonks,Remus Lupin,4,0,0,0,0,0,0
+7,books,Nymphadora Tonks,Ron Weasley,1,0,0,0,0,0,0
+7,books,Ollivander,Ron Weasley,1,0,0,0,0,0,0
+7,books,Percy Weasley,Remus Lupin,1,0,0,0,0,0,0
+7,books,Peter Pettigrew,Ron Weasley,3,0,0,0,0,0,0
+7,books,Petunia Dursley,Severus Snape,2,0,0,0,0,0,0
+7,books,Remus Lupin,Ron Weasley,16,1,0,0,0,2,0
+7,books,Remus Lupin,Rubeus Hagrid,2,0,0,0,0,1,0
+7,books,Ron Weasley,Rufus Scrimgeour,7,0,0,0,0,0,0
+7,books,Ron Weasley,Scabior,13,0,0,0,0,1,0
+7,books,Ron Weasley,Sybill Trelawney,5,0,0,0,0,0,0
+7,books,Ron Weasley,Voldemort,3,0,0,0,0,0,0
+7,books,Ron Weasley,Xenophilius Lovegood,5,0,0,1,0,0,2
+7,books,Rubeus Hagrid,Voldemort,2,0,0,0,0,0,0
+7,books,Severus Snape,Sorting Hat,1,0,0,0,0,0,0
+7,books,Severus Snape,Voldemort,30,1,0,6,3,1,0
+7,films,Aberforth Dumbledore,Harry Potter,18,2,0,0,0,0,2
+7,films,Aberforth Dumbledore,Hermione Granger,5,0,0,0,0,0,0
+7,films,Alastor Moody,George Weasley,1,0,0,0,0,0,0
+7,films,Alastor Moody,Harry Potter,9,0,0,0,1,0,0
+7,films,Alastor Moody,Mundungus Fletcher,1,0,0,0,0,0,0
+7,films,Alastor Moody,Rubeus Hagrid,1,0,0,0,0,0,0
+7,films,Albus Dumbledore,Harry Potter,39,1,0,3,0,2,5
+7,films,Albus Dumbledore,Severus Snape,40,0,0,1,0,8,0
+7,films,Bathilda Bagshot,Harry Potter,2,0,0,0,0,0,0
+7,films,Bellatrix Lestrange,Dobby,2,0,0,1,0,0,0
+7,films,Bellatrix Lestrange,Draco Malfoy,1,0,0,0,0,0,0
+7,films,Bellatrix Lestrange,Griphook,3,0,0,0,0,0,0
+7,films,Bellatrix Lestrange,Harry Potter,2,0,0,2,0,1,0
+7,films,Bellatrix Lestrange,Hermione Granger,1,0,0,0,0,0,0
+7,films,Bellatrix Lestrange,Molly Weasley,1,0,0,0,0,0,0
+7,films,Bellatrix Lestrange,Ron Weasley,2,0,0,0,0,0,0
+7,films,Bellatrix Lestrange,Voldemort,2,0,0,0,0,0,0
+7,films,Bill Weasley,Harry Potter,3,0,0,0,0,0,0
+7,films,Bill Weasley,Luna Lovegood,1,0,0,0,0,0,0
+7,films,Cho Chang,Ron Weasley,1,0,0,0,0,0,0
+7,films,Corban Yaxley,Ron Weasley,4,0,0,0,1,0,0
+7,films,Corban Yaxley,Severus Snape,1,0,0,0,1,0,0
+7,films,Dean Thomas,Harry Potter,1,0,0,0,0,0,0
+7,films,Dean Thomas,Kingsley Shacklebolt,1,0,0,0,0,0,0
+7,films,Dobby,Harry Potter,5,0,0,0,0,0,0
+7,films,Dobby,Mundungus Fletcher,2,0,0,0,0,0,0
+7,films,Dobby,Peter Pettigrew,1,0,0,0,0,0,0
+7,films,Dobby,Ron Weasley,1,0,0,0,0,0,0
+7,films,Draco Malfoy,Harry Potter,6,0,0,1,0,0,0
+7,films,Dudley Dursley,Vernon Dursley,5,0,0,0,0,0,0
+7,films,Elphias Doge,Harry Potter,12,0,0,0,0,0,0
+7,films,Elphias Doge,Muriel,3,0,0,0,0,0,0
+7,films,Fred Weasley,George Weasley,4,0,0,0,0,0,0
+7,films,Gellert Grindelwald,Voldemort,3,0,0,0,0,0,0
+7,films,Ginny Weasley,Harry Potter,4,1,0,0,0,0,0
+7,films,Ginny Weasley,Neville Longbottom,3,0,0,0,0,0,0
+7,films,Gregory Goyle,Harry Potter,1,0,0,1,0,1,0
+7,films,Griphook,Harry Potter,17,0,0,0,0,0,0
+7,films,Griphook,Ron Weasley,6,0,0,0,0,0,0
+7,films,Harry Potter,Helena Ravenclaw,17,0,0,0,0,1,0
+7,films,Harry Potter,Hermione Granger,172,1,1,11,1,9,9
+7,films,Harry Potter,James Potter,1,0,0,0,0,0,0
+7,films,Harry Potter,Kreacher,9,0,0,0,0,0,0
+7,films,Harry Potter,Lily Potter,2,0,0,0,0,0,0
+7,films,Harry Potter,Luna Lovegood,8,1,0,0,0,0,0
+7,films,Harry Potter,Mundungus Fletcher,1,0,0,0,0,0,0
+7,films,Harry Potter,Muriel,8,1,0,0,0,0,0
+7,films,Harry Potter,Neville Longbottom,6,0,0,0,0,1,0
+7,films,Harry Potter,Ollivander,14,0,0,5,0,0,4
+7,films,Harry Potter,Petunia Dursley,4,0,0,0,0,0,0
+7,films,Harry Potter,Remus Lupin,7,0,0,0,0,1,0
+7,films,Harry Potter,Ron Weasley,86,0,0,3,2,2,8
+7,films,Harry Potter,Rubeus Hagrid,3,0,0,0,0,0,0
+7,films,Harry Potter,Rufus Scrimgeour,8,0,0,0,0,0,0
+7,films,Harry Potter,Scabior,2,0,0,0,1,0,0
+7,films,Harry Potter,Severus Snape,1,0,0,0,0,0,0
+7,films,Harry Potter,Sirius Black,1,0,0,0,0,0,0
+7,films,Harry Potter,Vernon Dursley,1,0,0,0,0,0,0
+7,films,Harry Potter,Voldemort,2,0,0,0,0,0,0
+7,films,Harry Potter,Xenophilius Lovegood,12,0,0,0,0,0,1
+7,films,Hermione Granger,Kreacher,2,0,0,0,0,1,0
+7,films,Hermione Granger,Neville Longbottom,2,0,0,0,0,0,0
+7,films,Hermione Granger,Ron Weasley,53,1,0,5,1,1,3
+7,films,Hermione Granger,Rufus Scrimgeour,2,0,0,0,0,0,0
+7,films,Hermione Granger,Scabior,1,0,0,0,0,0,0
+7,films,Hermione Granger,Xenophilius Lovegood,5,0,0,0,0,0,2
+7,films,Kingsley Shacklebolt,Remus Lupin,3,0,0,0,0,0,0
+7,films,Lily Potter,Severus Snape,1,0,0,0,0,0,0
+7,films,Lucius Malfoy,Scabior,1,0,0,0,0,0,0
+7,films,Lucius Malfoy,Voldemort,9,0,0,1,0,0,0
+7,films,Molly Weasley,Rubeus Hagrid,1,0,0,0,0,0,0
+7,films,Narcissa Malfoy,Voldemort,1,0,0,0,0,0,0
+7,films,Neville Longbottom,Ron Weasley,1,0,0,0,0,0,0
+7,films,Neville Longbottom,Voldemort,3,0,0,0,0,0,0
+7,films,Ollivander,Voldemort,4,0,0,0,0,0,0
+7,films,Peter Pettigrew,Voldemort,1,0,0,0,0,0,0
+7,films,Petunia Dursley,Severus Snape,1,0,0,0,0,0,0
+7,films,Pius Thicknesse,Voldemort,1,0,0,0,0,0,0
+7,films,Ron Weasley,Rufus Scrimgeour,4,0,0,0,0,0,0
+7,films,Ron Weasley,Scabior,5,0,0,0,0,0,0
+7,films,Ron Weasley,Voldemort,3,0,0,0,0,0,0
+7,films,Ron Weasley,Xenophilius Lovegood,4,0,0,0,0,0,0
+7,films,Severus Snape,Voldemort,11,0,0,5,0,0,1

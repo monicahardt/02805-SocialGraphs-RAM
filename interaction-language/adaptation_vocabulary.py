@@ -1,17 +1,18 @@
 """Compare each character's book dialogue with the cast of its film adaptation."""
 
 import argparse
+from collections import defaultdict
+from itertools import pairwise
 from pathlib import Path
 
 import numpy as np
 from matplotlib.patches import FancyBboxPatch
-from matplotlib.patheffects import withStroke
 from matplotlib.ticker import FormatStrFormatter
 from scipy.stats import rankdata
 from sklearn.preprocessing import normalize
 
-from analyse import MIN_WORDS, SHORT_TITLES, read_project, settings_result, write_rows
-from figures import MAP_GRID, MAP_INK, MAP_MUTED, MEDIA_STYLE, SERIF, axis, plt, save, text
+from analyse import SHORT_TITLES, read_project, settings_result, write_rows
+from figures import MAP_GRID, MAP_INK, MAP_MUTED, MEDIA_STYLE, axis, plt, save, text
 from slide_2_options import card, slide
 
 
@@ -30,11 +31,14 @@ LOWER = '#f7e9d8'
 MISSING = '#f1f3f5'
 FIGURE_NAME = '04_vocabulary_across_adaptations'
 SIMILARITY_FIGURE_NAME = '04_adaptation_vocabulary_similarity'
-TRACKED_CHARACTERS = {
-    'Harry Potter': ('Harry', '#08786f', 'o', -.13),
-    'Hermione Granger': ('Hermione', '#6946a4', 'D', 0),
-    'Ron Weasley': ('Ron', '#af551f', 's', .13),
-    'Voldemort': ('Voldemort', '#a63d56', '^', -.13),
+SIMILARITY_CHARACTERS = {
+    'Harry Potter': ('#08786f', 'o'),
+    'Ron Weasley': ('#af551f', 's'),
+    'Hermione Granger': ('#6946a4', 'D'),
+    'Dobby': ('#28598d', 'P'),
+    'Voldemort': ('#a63d56', '^'),
+    'Severus Snape': ('#46566a', 'X'),
+    'Bellatrix Lestrange': ('#56722a', 'v'),
 }
 STORY_TICKS = ('Philosopher’s\nStone', 'Chamber of\nSecrets', 'Prisoner of\nAzkaban',
                'Goblet of\nFire', 'Order of the\nPhoenix', 'Half-Blood\nPrince', 'Deathly\nHallows')
@@ -136,14 +140,10 @@ def render(out, rows):
 def spread_points(ax, story_rows):
     """Separate close dots horizontally, keeping their exact cosine values."""
     gap = 7.5 * ax.figure.dpi / 72
-    positions = {row['character']: (row['story'] + TRACKED_CHARACTERS[row['character']][3],
-                                    row['own_film_cosine'])
-                 for row in story_rows if row['character'] in TRACKED_CHARACTERS}
-    placed = [ax.transData.transform(position) for position in positions.values()]
+    positions = {}
+    placed = []
     offsets = [0] + [offset for step in range(1, len(story_rows)) for offset in (step, -step)]
-    for row in sorted(story_rows, key=lambda r: r['own_film_cosine']):
-        if row['character'] in TRACKED_CHARACTERS:
-            continue
+    for row in sorted(story_rows, key=lambda r: (r['own_film_cosine'], r['character'])):
         story, cosine = row['story'], row['own_film_cosine']
         center, y = ax.transData.transform((story, cosine))
         x = next(center + gap * offset for offset in offsets
@@ -154,27 +154,18 @@ def spread_points(ax, story_rows):
     return positions
 
 
-def render_similarity(out, rows):
+def render_similarity(out, rows, *, figure_name=SIMILARITY_FIGURE_NAME,
+                      ylabel='Book-to-film vocabulary similarity', limits=None):
+    rows = [row for row in rows if row['character'] in SIMILARITY_CHARACTERS]
     paper, ink, muted = '#fcfaf5', MAP_INK, MAP_MUTED
-    gray = '#7890a7'
-    by_character = {(row['story'], row['character']): row for row in rows}
     stories = range(1, len(SHORT_TITLES) + 1)
-    first = sum(row['own_film_rank'] == 1 for row in rows)
-    fig = plt.figure(figsize=(13.3333, 7.5), facecolor=paper)
-    text(fig, .071, .923, 'Whose words carry over to film?', 34, ink, fontfamily=SERIF, weight='bold')
-    text(fig, .073, .851, 'Each dot compares the same character’s dialogue in a book and its film adaptation.', 13.5, muted)
-    text(fig, .939, .920, f'{first} of {len(rows)}', 30, ink, ha='right', weight='bold')
-    text(fig, .939, .855, 'closest match is the same character', 11, muted, ha='right')
-
-    text(fig, .073, .760, 'Book-to-film vocabulary similarity', 13.5, ink, weight='bold')
-    fig.add_artist(plt.Line2D([.818], [.760], marker='o', markersize=5.5, transform=fig.transFigure,
-                             linestyle='none', markeredgecolor='none', markerfacecolor=gray, alpha=.43))
-    text(fig, .831, .760, 'Other characters', 11, muted)
-
-    ax = axis(fig, [.102, .225, .809, .497])
-    top = max(.62, max(row['own_film_cosine'] for row in rows) + .045)
-    ax.set(xlim=(.54, 7.46), ylim=(0, top), yticks=np.arange(0, top, .1))
+    fig = plt.figure(figsize=(13.3333, 5.6), facecolor=paper)
+    ax = axis(fig, [.090, .170, .715, .785])
+    if limits is None:
+        limits = (0, max(.62, max(row['own_film_cosine'] for row in rows) + .045))
+    ax.set(xlim=(.54, 7.46), ylim=limits, yticks=np.arange(limits[0], limits[1] + 1e-9, .1))
     ax.set_xticks(list(stories), STORY_TICKS)
+    ax.set_ylabel(ylabel, fontsize=12, color=ink, labelpad=12)
     ax.yaxis.set_major_formatter(FormatStrFormatter('%.1f'))
     ax.tick_params(axis='y', labelsize=11.5, colors=muted, pad=7)
     ax.tick_params(axis='x', labelsize=11.5, colors=ink, pad=11)
@@ -184,43 +175,30 @@ def render_similarity(out, rows):
         ax.axvspan(story - .5, story + .5, color='#f5f3ed' if story % 2 else '#fffdf9', lw=0, zorder=-1)
     ax.grid(axis='y', color=MAP_GRID, linewidth=.7)
 
-    locations = {}
+    by_character = defaultdict(dict)
     for story in stories:
         story_rows = [row for row in rows if row['story'] == story]
-        positions = spread_points(ax, story_rows)
-        locations.update({(story, name): location for name, location in positions.items()})
+        for name, point in spread_points(ax, story_rows).items():
+            by_character[name][story] = point
 
-    background = np.array([point for (_, name), point in locations.items() if name not in TRACKED_CHARACTERS])
-    if background.size:
-        ax.scatter(*background.T, s=29, c=gray, alpha=.38, linewidths=0, zorder=2)
-
-    label_offsets = {'Harry Potter': .038, 'Ron Weasley': -.002, 'Hermione Granger': -.026, 'Voldemort': 0}
-    for name, (label, color, marker, _) in TRACKED_CHARACTERS.items():
-        points = np.array([locations.get((story, name), (np.nan, np.nan)) for story in stories])
-        valid = points[np.isfinite(points[:, 0])]
-        if not len(valid):
+    for name, (color, marker) in SIMILARITY_CHARACTERS.items():
+        locations = by_character.get(name)
+        if not locations:
             continue
-        if name != 'Voldemort':
-            ax.plot(*points.T, color=color, linewidth=2.3, zorder=3,
-                    path_effects=[withStroke(linewidth=4.6, foreground=paper)])
-        ax.scatter(*points.T, c=color, s=83, marker=marker, edgecolors=paper, linewidths=1.15, zorder=4)
-        x, y = valid[-1]
-        ax.annotate(label, xy=(x, y), xytext=(7.49, y + label_offsets[name]), color=color,
-                    va='center', fontsize=12, weight='bold', zorder=5,
-                    arrowprops={'arrowstyle': '-', 'color': color, 'lw': .95, 'shrinkA': 5, 'shrinkB': 5})
+        points = np.array([locations.get(story, (np.nan, np.nan)) for story in stories])
+        ax.plot(*points.T, color=color, marker=marker, linewidth=1.8, markersize=7,
+                linestyle='-' if len(locations) > 1 else 'none', markeredgecolor=paper,
+                markeredgewidth=.75, label=name, zorder=3)
+        for start, end in pairwise(locations):
+            if end - start > 1:
+                # A dashed segment skips installments without a comparison.
+                ax.plot(*zip(locations[start], locations[end]), color=color,
+                        linestyle='--', linewidth=1.1, alpha=.75, zorder=2)
 
-    voldemort = by_character.get((6, 'Voldemort'))
-    if voldemort:
-        x, y = locations[6, 'Voldemort']
-        ax.annotate(f'Rank {voldemort["own_film_rank"]:g} of {voldemort["film_candidates"]}',
-                    xy=(x, y), xytext=(x + .16, y + .036), color=TRACKED_CHARACTERS['Voldemort'][1],
-                    va='center', fontsize=10.5, weight='bold', zorder=5,
-                    arrowprops={'arrowstyle': '-', 'color': TRACKED_CHARACTERS['Voldemort'][1],
-                                'lw': .8, 'shrinkA': 4, 'shrinkB': 5})
+    ax.legend(loc='center left', bbox_to_anchor=(1.02, .5), frameon=False, borderaxespad=0,
+              fontsize=11, labelcolor=ink, handlelength=2.5, labelspacing=.55)
 
-    fig.add_artist(plt.Line2D([.073, .939], [.115, .115], transform=fig.transFigure, color=MAP_GRID, linewidth=1))
-    text(fig, .073, .070, 'Similarity uses TF–IDF and cosine. Deathly Hallows combines both films.', 11, muted)
-    save(fig, out, SIMILARITY_FIGURE_NAME)
+    save(fig, out, figure_name)
 
 
 def main():

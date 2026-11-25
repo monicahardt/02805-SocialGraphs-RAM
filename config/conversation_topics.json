@@ -1,0 +1,33 @@
+[
+  {
+    "id": "school",
+    "label": "Hogwarts & classes",
+    "cues": ["Hogwarts", "class", "classes", "lesson", "lessons", "homework", "detention", "detentions", "exam", "exams", "O W L", "O W Ls", "N E W T", "N E W Ts", "house points", "points from Gryffindor", "sorting hat", "common room", "transfiguration", "divination", "herbology", "potions class", "defence against the dark arts", "defense against the dark arts"]
+  },
+  {
+    "id": "quidditch",
+    "label": "Quidditch",
+    "cues": ["Quidditch", "Snitch", "Quaffle", "Bludger", "Bludgers", "Seeker", "Chaser", "Chasers", "Beater", "Beaters", "Firebolt", "Nimbus Two Thousand", "Nimbus Two Thousand and One", "Nimbus 2000", "Nimbus 2001", "broomstick", "broomsticks", "Quidditch pitch", "Quidditch Cup", "World Cup"]
+  },
+  {
+    "id": "spells",
+    "label": "Spells & spellcasting",
+    "cues": ["wand", "wands", "spell", "spells", "incantation", "incantations", "counter spell", "counterspell", "disarming charm", "patronus", "summoning charm", "shield charm", "levitation charm", "memory charm", "unforgivable curse", "unforgivable curses"],
+    "include_spell_inventory": true
+  },
+  {
+    "id": "ministry",
+    "label": "Ministry & wizarding law",
+    "cues": ["Ministry", "Minister for Magic", "Minister of Magic", "Wizengamot", "Auror", "Aurors", "Azkaban", "Dementor", "Dementors", "wizarding law", "disciplinary hearing", "Educational Decree", "Educational Decrees", "High Inquisitor", "underage magic", "Statute of Secrecy", "Department of Mysteries", "Magical Law Enforcement", "Muggle Born Registration Commission"]
+  },
+  {
+    "id": "dark",
+    "label": "Voldemort & Death Eaters",
+    "cues": ["Voldemort", "Dark Lord", "You Know Who", "He Who Must Not Be Named", "Tom Riddle", "Tom Marvolo Riddle", "Death Eater", "Death Eaters", "Dark Mark", "Order of the Phoenix", "Unforgivable Curse", "Unforgivable Curses", "Killing Curse", "Avada Kedavra", "Cruciatus Curse", "Imperius Curse"]
+  },
+  {
+    "id": "hallows",
+    "label": "Horcruxes & Hallows",
+    "cues": ["Horcrux", "Horcruxes", "Deathly Hallows", "Hallows", "Elder Wand", "Resurrection Stone", "Cloak of Invisibility", "Invisibility Cloak", "Sword of Gryffindor", "Gryffindor's sword", "Slytherin's locket", "Hufflepuff's cup", "Ravenclaw's diadem", "lost diadem", "Tale of the Three Brothers"]
+  }
+]

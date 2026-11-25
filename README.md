@@ -32,6 +32,20 @@ On macOS or Linux, use `python3` to create the environment and `.venv/bin/python
 | [Vocabulary similarity by dialogue frequency](results/interaction_language/slide_2_options/02b_frequency_and_vocabulary.svg) | How similarity ranks change across frequency groups |
 | [Dialogue partners and vocabulary matches](results/interaction_language/slide_2_options/02c_dialogue_and_vocabulary_neighbors.svg) | Overlap between the two top-five lists compared with a shuffled baseline |
 
+## Conversation topics in the books and films
+
+| Static figure | What it shows | Files |
+| --- | --- | --- |
+| Who talks about spells with whom? | Side-by-side book and film networks with the same character positions and edge scale | [PNG](results/topic_conversations/01_spell_conversations.png) · [SVG](results/topic_conversations/01_spell_conversations.svg) |
+| What changes from book to film? | The share of conversation turns tagged with each of six topics in all seven stories | [PNG](results/topic_conversations/02_topics_by_story.png) · [SVG](results/topic_conversations/02_topics_by_story.svg) |
+| Who leads each conversation topic? | The two highest-ranked character pairs per topic and their shares in each medium | [PNG](results/topic_conversations/03_leading_pairs_by_topic.png) · [SVG](results/topic_conversations/03_leading_pairs_by_topic.svg) |
+
+Harry and Hermione account for 16.7% of spell-tagged turns in the books and 19.0% in the films. Harry and Ron account for 14.7% and 6.9%, respectively. Hogwarts and Quidditch tags each account for a smaller share of eligible turns in all seven film adaptations. Story numbers follow series order from *Philosopher’s Stone* through *Deathly Hallows*, with both final films grouped as story 7.
+
+For an A–B–A sequence of consecutive turns, the analysis counts B’s turn and infers A as the partner. Both characters must have attributed dialogue in both versions of that story. Topic tags come from explicit words and phrases and can overlap. Speaker attribution in the books and partner inference in both media are approximate. The pair figures divide each pair’s tagged turns by all turns tagged with that topic in the medium. The story figure divides tagged turns by all eligible conversation turns for that story and medium. [Topic cue lists](config/conversation_topics.json) · [Spell inventory](config/spells.json)
+
+Run `python -m code.topic_conversations` from the repository root with Matplotlib installed to rebuild the 16:9 figures and their [pair-level counts](results/topic_conversations/topic_conversation_pairs.csv).
+
 ## Repository layout
 
 | Location | Contents |

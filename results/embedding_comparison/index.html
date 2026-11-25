@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harry Potter dialogue embeddings</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #202939;
+      --muted: #536075;
+      --hairline: #d9dee7;
+      --grid: #e8ebf1;
+      --paper: #f7f7f5;
+      --white: #fff;
+      --accent: #34547a;
+      --sans: "Segoe UI", system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.55 var(--sans); }
+    main { max-width: 1200px; margin-inline: auto; padding: 44px 32px 30px; }
+    h1, h2, p { margin: 0; }
+    h1 { font-size: clamp(1.9rem, 4vw, 3.15rem); line-height: 1.12; letter-spacing: -.045em; }
+    header p { margin-top: 10px; max-width: 650px; color: var(--muted); }
+    h2 { font-size: 1rem; line-height: 1.3; letter-spacing: -.01em; }
+    .controls { display: flex; align-items: end; gap: 16px 24px; flex-wrap: wrap; margin: 27px 0 16px; }
+    fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+    legend, .control-label { display: block; padding: 0; margin-bottom: 5px; font-size: .83rem; font-weight: 600; }
+    .method-options { display: flex; padding: 3px; border: 1px solid var(--hairline); border-radius: 8px; background: var(--white); }
+    button, select { font: inherit; color: inherit; }
+    button { cursor: pointer; }
+    .method-options button { min-height: 36px; border: 0; padding: 4px 14px; border-radius: 5px; background: var(--white); }
+    .method-options button:hover { background: #eef2f7; }
+    .method-options button[aria-pressed="true"] { background: var(--accent); color: var(--white); }
+    select { min-height: 43px; padding: 4px 28px 4px 10px; border: 1px solid var(--hairline); border-radius: 7px; background: var(--white); }
+    button:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid #456b9e; outline-offset: 3px; }
+    .workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(210px, 245px); gap: 15px; align-items: start; }
+    .map { min-width: 0; background: var(--white); border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; }
+    .legend { display: flex; align-items: center; justify-content: space-between; gap: 10px 22px; flex-wrap: wrap; padding: 14px 17px 3px; }
+    .legend-points, .legend-point { display: flex; align-items: center; gap: 10px; }
+    .legend-points { gap: 20px; }
+    .legend-point { font-size: .83rem; }
+    .legend-shape { display: inline-block; flex: 0 0 9px; height: 9px; width: 9px; background: var(--accent); border-radius: 50%; }
+    .legend-shape.film { border-radius: 0; transform: rotate(45deg); }
+    .color-key { display: grid; grid-template-columns: 140px; gap: 2px; font-size: .76rem; }
+    .color-ramp { height: 6px; border-radius: 5px; }
+    .color-values { display: flex; justify-content: space-between; color: var(--muted); font-variant-numeric: tabular-nums; }
+    .chart { position: relative; }
+    #projection { display: block; width: 100%; height: clamp(370px, 47vw, 520px); }
+    #projection.orbit-view { cursor: grab; touch-action: none; }
+    #projection.orbit-view.dragging, #projection.orbit-view.dragging .mark { cursor: grabbing; }
+    .orbit-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 5px 7px; padding: 6px 16px 0; color: var(--muted); font-size: .8rem; }
+    .orbit-controls[hidden] { display: none; }
+    .orbit-controls button { border: 1px solid var(--hairline); background: var(--white); border-radius: 5px; min-width: 32px; min-height: 31px; padding: 2px 8px; }
+    .orbit-controls button:hover { background: #eef2f7; }
+    #projection .grid { stroke: var(--grid); stroke-width: 1; }
+    #projection .zero { stroke: #c9d2df; }
+    #projection .tick { fill: #57667a; font-size: 11px; }
+    #projection .axis { fill: var(--muted); font-size: 12px; }
+    #projection .pair { stroke: #435879; stroke-width: 1.5; stroke-dasharray: 4 4; pointer-events: none; }
+    #projection .mark { stroke: var(--white); stroke-width: 1.25; cursor: pointer; }
+    #projection .mark:hover { stroke: var(--ink); stroke-width: 2; opacity: 1; }
+    #projection .halo { fill: none; stroke: var(--ink); stroke-width: 1.25; pointer-events: none; }
+    #projection .point-label { fill: var(--ink); stroke: var(--white); stroke-width: 3; stroke-linejoin: round; paint-order: stroke; font-size: 11px; font-weight: 600; pointer-events: none; }
+    #projection .label-leader { stroke: #8793a7; stroke-width: .75; pointer-events: none; }
+    .tooltip { position: absolute; z-index: 2; max-width: calc(100% - 18px); padding: 7px 10px; border: 1px solid var(--hairline); border-radius: 6px; background: var(--white); box-shadow: 0 4px 16px #20334a1a; font-size: .82rem; pointer-events: none; }
+    .tooltip strong { display: block; }
+    .projection-info { border-top: 1px solid var(--grid); color: var(--muted); font-size: .82rem; padding: 10px 15px; }
+    .selection { padding: 16px; background: var(--white); border: 1px solid var(--hairline); border-radius: 10px; }
+    #character-select { width: 100%; max-width: 100%; }
+    .selection h2 { margin-top: 17px; }
+    .selection-hint { color: var(--muted); font-size: .85rem; margin-top: 13px; }
+    .stats { margin: 10px 0 0; }
+    .stats > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 7px; padding: 9px 0; border-top: 1px solid var(--grid); }
+    .stats dt { display: flex; align-items: center; gap: 8px; }
+    .stats dd { margin: 0; font-weight: 650; font-variant-numeric: tabular-nums; }
+    .stats small { grid-column: 1 / -1; color: var(--muted); font-size: .8rem; }
+    .installments { color: var(--muted); font-size: .83rem; margin-top: 4px; }
+    .method-info { border-top: 1px solid var(--hairline); margin-top: 16px; padding-top: 14px; }
+    .selection .method-info h2 { margin-top: 0; }
+    .method-info p { color: var(--muted); font-size: .85rem; margin-top: 7px; }
+    .method-info code { overflow-wrap: anywhere; }
+    details { margin-top: 17px; }
+    summary { width: fit-content; cursor: pointer; color: var(--accent); font-size: .87rem; font-weight: 600; }
+    details p { color: var(--muted); font-size: .87rem; margin-top: 8px; max-width: 850px; }
+    @media (max-width: 780px) {
+      main { padding: 24px 16px; }
+      .workspace { grid-template-columns: minmax(0, 1fr); }
+      #projection { height: 430px; }
+    }
+    @media (max-width: 450px) {
+      main { padding-inline: 12px; }
+      .controls { margin-top: 20px; gap: 11px 12px; }
+      .method-options button { padding-inline: 10px; font-size: .88rem; }
+      #projection { height: 350px; }
+      .legend { padding-inline: 12px; }
+      .legend-points { gap: 11px; }
+      .color-key { grid-template-columns: 112px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Harry Potter dialogue embeddings</h1>
+      <p>Compare how the same characters’ book and film dialogue group under three methods. Color shows betweenness in each medium’s dialogue network.</p>
+    </header>
+    <div class="controls">
+      <fieldset>
+        <legend>Embedding method</legend>
+        <div class="method-options">
+          <button type="button" data-method="bert" aria-pressed="false">BERT</button>
+          <button type="button" data-method="word2vec" aria-pressed="false">Word2Vec</button>
+          <button type="button" data-method="tfidf" aria-pressed="true">TF-IDF</button>
+        </div>
+      </fieldset>
+      <div>
+        <label for="medium-select" class="control-label">Medium</label>
+        <select id="medium-select">
+          <option value="both">Books and films</option>
+          <option value="books">Books</option>
+          <option value="movies">Films</option>
+        </select>
+      </div>
+      <div>
+        <label for="view-select" class="control-label">Projection</label>
+        <select id="view-select">
+          <option value="2d">2D</option>
+          <option value="3d">3D</option>
+        </select>
+      </div>
+    </div>
+    <div class="workspace">
+      <section class="map" aria-label="Embedding map and legend">
+        <div class="legend">
+          <div class="legend-points">
+            <span class="legend-point"><span class="legend-shape" aria-hidden="true"></span>Book</span>
+            <span class="legend-point"><span class="legend-shape film" aria-hidden="true"></span>Film</span>
+          </div>
+          <div class="color-key" aria-label="Betweenness centrality color scale">
+            <span>Betweenness centrality</span>
+            <span class="color-ramp" id="color-ramp" aria-hidden="true"></span>
+            <span class="color-values"><span>0</span><span id="max-centrality"></span></span>
+          </div>
+        </div>
+        <div class="orbit-controls" id="orbit-controls" aria-label="3D rotation controls" hidden>
+          <span>Drag to rotate</span>
+          <button type="button" data-orbit="left" aria-label="Rotate left">←</button>
+          <button type="button" data-orbit="right" aria-label="Rotate right">→</button>
+          <button type="button" data-orbit="up" aria-label="Tilt up">↑</button>
+          <button type="button" data-orbit="down" aria-label="Tilt down">↓</button>
+          <button type="button" data-orbit="reset">Reset view</button>
+        </div>
+        <div class="chart">
+          <svg id="projection" role="group" aria-labelledby="plot-title">
+            <title id="plot-title">Character dialogue projected into two dimensions</title>
+            <g id="plot"></g>
+          </svg>
+          <div class="tooltip" id="tooltip" aria-hidden="true" hidden><strong></strong><span></span></div>
+        </div>
+        <p class="projection-info" id="projection-info" aria-live="polite"></p>
+      </section>
+      <aside class="selection">
+        <label for="character-select" class="control-label">Character</label>
+        <select id="character-select">
+          <option value="">All characters</option>
+        </select>
+        <div id="character-info" aria-live="polite"></div>
+        <section class="method-info" aria-live="polite" aria-atomic="true">
+          <h2 id="method-heading"></h2>
+          <p id="method-description"></p>
+          <p id="checkpoint-note" hidden>Checkpoint <code id="model-name"></code></p>
+        </section>
+      </aside>
+    </div>
+    <details>
+      <summary>How the map was computed</summary>
+      <p>Each point pools a character’s dialogue from installments where they speak in both media. The two final films are grouped as one installment. The roster requires at least 100 words on each side.</p>
+      <p>Each method fits its own PCA to unit-normalized book and film profiles together. The 2D views show the first two components. The 3D views for TF-IDF and BERT add the third.</p>
+      <p id="centrality-method"></p>
+    </details>
+  </main>
+  <noscript>Enable JavaScript to switch projections and select characters.</noscript>
+  <script id="embedding-data" type="application/json">{"profiles": [{"name": "Aberforth Dumbledore", "medium": "books", "words": 920, "installments": [7], "centrality": 1.4366e-05}, {"name": "Aberforth Dumbledore", "medium": "movies", "words": 260, "installments": [7], "centrality": 0.0}, {"name": "Alastor Moody", "medium": "books", "words": 3082, "installments": [4, 5, 7], "centrality": 0.005161812}, {"name": "Alastor Moody", "medium": "movies", "words": 1195, "installments": [4, 5, 7], "centrality": 0.006745475}, {"name": "Albus Dumbledore", "medium": "books", "words": 23585, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.040858183}, {"name": "Albus Dumbledore", "medium": "movies", "words": 7656, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.08258875}, {"name": "Aragog", "medium": "books", "words": 292, "installments": [2], "centrality": 0.0}, {"name": "Aragog", "medium": "movies", "words": 132, "installments": [2], "centrality": 0.0}, {"name": "Argus Filch", "medium": "books", "words": 540, "installments": [1, 2, 3, 5, 6, 7], "centrality": 0.000592306}, {"name": "Argus Filch", "medium": "movies", "words": 340, "installments": [1, 2, 3, 5, 6, 7], "centrality": 0.001304617}, {"name": "Bartemius Crouch", "medium": "books", "words": 890, "installments": [4], "centrality": 0.000630203}, {"name": "Bartemius Crouch", "medium": "movies", "words": 357, "installments": [4], "centrality": 0.002116268}, {"name": "Bellatrix Lestrange", "medium": "books", "words": 1344, "installments": [5, 6, 7], "centrality": 0.000563146}, {"name": "Bellatrix Lestrange", "medium": "movies", "words": 689, "installments": [5, 6, 7], "centrality": 0.00415851}, {"name": "Bill Weasley", "medium": "books", "words": 778, "installments": [7], "centrality": 0.001008802}, {"name": "Bill Weasley", "medium": "movies", "words": 104, "installments": [7], "centrality": 0.000411047}, {"name": "Cedric Diggory", "medium": "books", "words": 436, "installments": [4], "centrality": 0.000910647}, {"name": "Cedric Diggory", "medium": "movies", "words": 150, "installments": [4], "centrality": 0.000829978}, {"name": "Corban Yaxley", "medium": "books", "words": 185, "installments": [7], "centrality": 0.0}, {"name": "Corban Yaxley", "medium": "movies", "words": 100, "installments": [7], "centrality": 0.0}, {"name": "Cornelius Fudge", "medium": "books", "words": 3299, "installments": [2, 3, 4, 5], "centrality": 0.009744632}, {"name": "Cornelius Fudge", "medium": "movies", "words": 795, "installments": [2, 3, 4, 5], "centrality": 0.007721843}, {"name": "Dobby", "medium": "books", "words": 825, "installments": [2, 5, 7], "centrality": 0.000116207}, {"name": "Dobby", "medium": "movies", "words": 738, "installments": [2, 5, 7], "centrality": 0.000983133}, {"name": "Dolores Umbridge", "medium": "books", "words": 3670, "installments": [5, 7], "centrality": 0.012315526}, {"name": "Dolores Umbridge", "medium": "movies", "words": 968, "installments": [5, 7], "centrality": 0.006922384}, {"name": "Draco Malfoy", "medium": "books", "words": 4558, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.019449884}, {"name": "Draco Malfoy", "medium": "movies", "words": 1282, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.022057197}, {"name": "Dudley Dursley", "medium": "books", "words": 741, "installments": [1, 2, 5, 7], "centrality": 0.017108923}, {"name": "Dudley Dursley", "medium": "movies", "words": 194, "installments": [1, 2, 5, 7], "centrality": 0.000548182}, {"name": "Elphias Doge", "medium": "books", "words": 423, "installments": [7], "centrality": 0.0}, {"name": "Elphias Doge", "medium": "movies", "words": 209, "installments": [7], "centrality": 0.000424885}, {"name": "Filius Flitwick", "medium": "books", "words": 166, "installments": [1, 3, 4, 6, 7], "centrality": 0.000170348}, {"name": "Filius Flitwick", "medium": "movies", "words": 115, "installments": [1, 3, 4, 6, 7], "centrality": 0.001757956}, {"name": "Firenze", "medium": "books", "words": 248, "installments": [1], "centrality": 0.000757168}, {"name": "Firenze", "medium": "movies", "words": 113, "installments": [1], "centrality": 0.0}, {"name": "Fred Weasley", "medium": "books", "words": 5919, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.01537453}, {"name": "Fred Weasley", "medium": "movies", "words": 600, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.00489265}, {"name": "George Weasley", "medium": "books", "words": 3848, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.00853921}, {"name": "George Weasley", "medium": "movies", "words": 485, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.005959299}, {"name": "Gilderoy Lockhart", "medium": "books", "words": 1034, "installments": [2], "centrality": 0.000319937}, {"name": "Gilderoy Lockhart", "medium": "movies", "words": 896, "installments": [2], "centrality": 0.003483789}, {"name": "Ginny Weasley", "medium": "books", "words": 2889, "installments": [2, 3, 4, 5, 6, 7], "centrality": 0.005255804}, {"name": "Ginny Weasley", "medium": "movies", "words": 504, "installments": [2, 3, 4, 5, 6, 7], "centrality": 0.024708591}, {"name": "Griphook", "medium": "books", "words": 791, "installments": [1, 7], "centrality": 0.0003143}, {"name": "Griphook", "medium": "movies", "words": 280, "installments": [1, 7], "centrality": 0.000269892}, {"name": "Harry Potter", "medium": "books", "words": 74983, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.367461479}, {"name": "Harry Potter", "medium": "movies", "words": 13978, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.412311868}, {"name": "Hermione Granger", "medium": "books", "words": 38280, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.131639096}, {"name": "Hermione Granger", "medium": "movies", "words": 7618, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.168329434}, {"name": "Horace Slughorn", "medium": "books", "words": 2702, "installments": [6], "centrality": 0.01937657}, {"name": "Horace Slughorn", "medium": "movies", "words": 2181, "installments": [6], "centrality": 0.024729016}, {"name": "Igor Karkaroff", "medium": "books", "words": 713, "installments": [4], "centrality": 0.000273913}, {"name": "Igor Karkaroff", "medium": "movies", "words": 131, "installments": [4], "centrality": 0.000901466}, {"name": "Kreacher", "medium": "books", "words": 294, "installments": [5, 7], "centrality": 7.1113e-05}, {"name": "Kreacher", "medium": "movies", "words": 140, "installments": [5, 7], "centrality": 7.957e-05}, {"name": "Lily Potter", "medium": "books", "words": 314, "installments": [5, 7], "centrality": 0.000118521}, {"name": "Lily Potter", "medium": "movies", "words": 180, "installments": [5, 7], "centrality": 0.000323271}, {"name": "Lucius Malfoy", "medium": "books", "words": 405, "installments": [2, 5, 7], "centrality": 0.000499818}, {"name": "Lucius Malfoy", "medium": "movies", "words": 700, "installments": [2, 5, 7], "centrality": 0.003420773}, {"name": "Luna Lovegood", "medium": "books", "words": 1736, "installments": [5, 6, 7], "centrality": 0.002487288}, {"name": "Luna Lovegood", "medium": "movies", "words": 554, "installments": [5, 6, 7], "centrality": 0.003194886}, {"name": "Madam Hooch", "medium": "books", "words": 170, "installments": [1, 5], "centrality": 0.000749488}, {"name": "Madam Hooch", "medium": "movies", "words": 220, "installments": [1, 5], "centrality": 4.3164e-05}, {"name": "Minerva McGonagall", "medium": "books", "words": 5118, "installments": [1, 2, 3, 4, 5, 6], "centrality": 0.015313155}, {"name": "Minerva McGonagall", "medium": "movies", "words": 1972, "installments": [1, 2, 3, 4, 5, 6], "centrality": 0.012949408}, {"name": "Moaning Myrtle", "medium": "books", "words": 538, "installments": [2, 4], "centrality": 0.0}, {"name": "Moaning Myrtle", "medium": "movies", "words": 326, "installments": [2, 4], "centrality": 0.0}, {"name": "Molly Weasley", "medium": "books", "words": 4292, "installments": [1, 2, 3, 5, 6, 7], "centrality": 0.00475558}, {"name": "Molly Weasley", "medium": "movies", "words": 540, "installments": [1, 2, 3, 5, 6, 7], "centrality": 0.001035527}, {"name": "Mundungus Fletcher", "medium": "books", "words": 118, "installments": [7], "centrality": 0.001071768}, {"name": "Mundungus Fletcher", "medium": "movies", "words": 135, "installments": [7], "centrality": 2.5806e-05}, {"name": "Muriel", "medium": "books", "words": 512, "installments": [7], "centrality": 0.000198732}, {"name": "Muriel", "medium": "movies", "words": 184, "installments": [7], "centrality": 0.0}, {"name": "Nearly Headless Nick", "medium": "books", "words": 740, "installments": [1, 2, 5], "centrality": 0.0}, {"name": "Nearly Headless Nick", "medium": "movies", "words": 108, "installments": [1, 2, 5], "centrality": 0.016012903}, {"name": "Neville Longbottom", "medium": "books", "words": 2330, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.010786254}, {"name": "Neville Longbottom", "medium": "movies", "words": 768, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.01771736}, {"name": "Oliver Wood", "medium": "books", "words": 780, "installments": [1, 2, 7], "centrality": 0.003545488}, {"name": "Oliver Wood", "medium": "movies", "words": 270, "installments": [1, 2, 7], "centrality": 0.001000201}, {"name": "Ollivander", "medium": "books", "words": 617, "installments": [1, 7], "centrality": 0.000118259}, {"name": "Ollivander", "medium": "movies", "words": 335, "installments": [1, 7], "centrality": 0.0001604}, {"name": "Percy Weasley", "medium": "books", "words": 1101, "installments": [1, 2, 3, 5, 7], "centrality": 0.001464902}, {"name": "Percy Weasley", "medium": "movies", "words": 247, "installments": [1, 2, 3, 5, 7], "centrality": 0.002091924}, {"name": "Peter Pettigrew", "medium": "books", "words": 1036, "installments": [3, 4, 7], "centrality": 1.5803e-05}, {"name": "Peter Pettigrew", "medium": "movies", "words": 198, "installments": [3, 4, 7], "centrality": 0.000193935}, {"name": "Petunia Dursley", "medium": "books", "words": 939, "installments": [1, 2, 3, 5, 7], "centrality": 0.000855711}, {"name": "Petunia Dursley", "medium": "movies", "words": 394, "installments": [1, 2, 3, 5, 7], "centrality": 0.000655504}, {"name": "Pomona Sprout", "medium": "books", "words": 152, "installments": [2, 7], "centrality": 0.00110851}, {"name": "Pomona Sprout", "medium": "movies", "words": 171, "installments": [2, 7], "centrality": 1.6129e-05}, {"name": "Quirinus Quirrell", "medium": "books", "words": 611, "installments": [1], "centrality": 0.0}, {"name": "Quirinus Quirrell", "medium": "movies", "words": 260, "installments": [1], "centrality": 0.000119757}, {"name": "Remus Lupin", "medium": "books", "words": 7670, "installments": [3, 5, 6, 7], "centrality": 0.003736323}, {"name": "Remus Lupin", "medium": "movies", "words": 1907, "installments": [3, 5, 6, 7], "centrality": 0.008173091}, {"name": "Rita Skeeter", "medium": "books", "words": 358, "installments": [4], "centrality": 0.000106009}, {"name": "Rita Skeeter", "medium": "movies", "words": 258, "installments": [4], "centrality": 0.000763399}, {"name": "Ron Weasley", "medium": "books", "words": 39941, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.164779504}, {"name": "Ron Weasley", "medium": "movies", "words": 6908, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.147120135}, {"name": "Rubeus Hagrid", "medium": "books", "words": 11647, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.048606566}, {"name": "Rubeus Hagrid", "medium": "movies", "words": 3487, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.035075239}, {"name": "Rufus Scrimgeour", "medium": "books", "words": 465, "installments": [7], "centrality": 7.0046e-05}, {"name": "Rufus Scrimgeour", "medium": "movies", "words": 337, "installments": [7], "centrality": 0.00353661}, {"name": "Scabior", "medium": "books", "words": 195, "installments": [7], "centrality": 0.0}, {"name": "Scabior", "medium": "movies", "words": 119, "installments": [7], "centrality": 0.000522488}, {"name": "Severus Snape", "medium": "books", "words": 8795, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.023971008}, {"name": "Severus Snape", "medium": "movies", "words": 2385, "installments": [1, 2, 3, 4, 5, 6, 7], "centrality": 0.017435993}, {"name": "Sirius Black", "medium": "books", "words": 5255, "installments": [4, 5, 7], "centrality": 0.002237776}, {"name": "Sirius Black", "medium": "movies", "words": 597, "installments": [4, 5, 7], "centrality": 0.003497327}, {"name": "Stan Shunpike", "medium": "books", "words": 518, "installments": [3], "centrality": 5.3303e-05}, {"name": "Stan Shunpike", "medium": "movies", "words": 174, "installments": [3], "centrality": 0.0}, {"name": "Sybill Trelawney", "medium": "books", "words": 806, "installments": [3, 5, 7], "centrality": 0.000100308}, {"name": "Sybill Trelawney", "medium": "movies", "words": 442, "installments": [3, 5, 7], "centrality": 0.00010775}, {"name": "Vernon Dursley", "medium": "books", "words": 2188, "installments": [1, 2, 3, 5, 7], "centrality": 0.020012113}, {"name": "Vernon Dursley", "medium": "movies", "words": 683, "installments": [1, 2, 3, 5, 7], "centrality": 0.0009}, {"name": "Voldemort", "medium": "books", "words": 2752, "installments": [1, 2, 4, 5, 6, 7], "centrality": 0.004411655}, {"name": "Voldemort", "medium": "movies", "words": 2742, "installments": [1, 2, 4, 5, 6, 7], "centrality": 0.058374626}, {"name": "Xenophilius Lovegood", "medium": "books", "words": 536, "installments": [7], "centrality": 0.0}, {"name": "Xenophilius Lovegood", "medium": "movies", "words": 320, "installments": [7], "centrality": 0.0}], "projections": {"tfidf": {"positions": [[0.057079, -0.047734], [-0.074508, -0.033575], [0.240248, 0.074688], [0.038696, 0.052073], [0.357849, 0.385011], [0.219255, 0.345237], [-0.158822, 0.067868], [-0.193512, 0.050961], [-0.040822, -0.023662], [-0.051302, -0.03985], [-0.044771, 0.080881], [-0.183946, 0.058982], [-0.019026, 0.339903], [-0.05267, 0.250824], [-0.075214, -0.0106], [-0.164302, -0.036141], [-0.008919, -0.114164], [-0.121844, -0.137644], [-0.18954, 0.055719], [-0.199136, 0.050461], [0.17081, 0.171397], [-0.001137, 0.098481], [-0.136096, -0.039163], [-0.174867, -0.051671], [0.120147, 0.211401], [-0.01698, 0.175811], [0.341624, 0.093138], [0.099969, 0.008751], [0.009367, -0.193541], [-0.065603, -0.248247], [-0.203341, -0.037309], [-0.200556, 0.005], [-0.131816, -0.063068], [-0.207499, -0.075503], [-0.196336, 0.015815], [-0.24148, 0.007329], [0.411509, -0.248526], [0.027442, -0.245917], [0.382629, -0.257054], [0.070159, -0.26874], [0.036785, 0.011632], [-0.018633, 0.008179], [0.326579, -0.224303], [0.068655, -0.171915], [-0.108646, 0.064723], [-0.186422, 0.019555], [0.633519, -0.030539], [0.425743, -0.095035], [0.606053, -0.053386], [0.43419, -0.054759], [0.153393, 0.12238], [0.034714, 0.111527], [-0.06779, 0.146963], [-0.144907, 0.143804], [-0.200371, 0.080077], [-0.215811, 0.038549], [-0.046265, -0.006726], [-0.112016, -0.048564], [-0.059741, 0.244242], [-0.06501, 0.24042], [0.167528, -0.11994], [-0.016046, -0.132247], [-0.207983, -0.099106], [-0.181332, -0.051816], [0.268919, 0.197615], [0.063545, 0.184056], [-0.061038, -0.114982], [-0.150283, -0.134141], [0.290715, -0.135065], [0.074946, -0.15914], [-0.193156, -0.139999], [-0.227842, -0.111663], [-0.164736, -0.046324], [-0.194973, -0.058758], [-0.067289, -0.023543], [-0.069869, -0.128016], [0.243893, -0.111354], [0.093042, -0.177089], [-0.071896, -0.113415], [-0.134693, -0.114807], [-0.165102, 0.162737], [-0.16062, 0.127098], [0.092044, -0.14949], [-0.108205, -0.045971], [0.019926, 0.158103], [-0.092497, 0.145572], [-0.019253, -0.14659], [-0.084115, -0.190556], [-0.215094, -0.045251], [-0.218277, -0.057541], [0.008577, 0.08608], [-0.138815, -0.026267], [0.386887, 0.115614], [0.178299, 0.123657], [-0.097511, -0.049796], [-0.145311, -0.013156], [0.611209, -0.178177], [0.360493, -0.255662], [0.011411, -0.126366], [0.172821, -0.122908], [-0.122705, 0.048595], [-0.152834, 0.083682], [-0.134699, -0.121425], [-0.15717, -0.107021], [0.273454, 0.411715], [0.052573, 0.298536], [0.338423, 0.068422], [0.05231, 0.038637], [-0.190349, -0.119927], [-0.197194, -0.101074], [-0.11489, 0.117789], [-0.164979, 0.070408], [0.042876, -0.131748], [-0.068063, -0.185338], [0.050633, 0.403034], [0.093296, 0.26647], [-0.182031, 0.040975], [-0.163729, 0.022428]], "variance": [4.3, 2.4]}, "word2vec": {"positions": [[-0.044484, 0.003371], [0.014138, 0.070307], [-0.016469, -0.009145], [-0.018973, -0.03942], [0.085993, -0.031854], [0.081965, -0.058052], [0.043577, -0.048211], [0.054113, -0.040201], [-0.027128, -0.037401], [-0.077515, 0.022506], [0.078774, -0.008506], [0.090265, -0.148847], [0.121162, 0.025222], [0.054057, 0.030029], [0.036074, -0.055506], [0.022067, -0.003585], [-0.105911, 0.021281], [-0.092371, 0.077774], [0.085671, -0.126943], [0.07849, -0.130137], [0.024165, -0.048341], [0.036383, -0.038075], [0.258494, 0.277506], [0.272539, 0.345954], [0.038457, -0.090553], [0.049393, -0.118959], [-0.027099, 0.033358], [-0.04657, 0.034984], [-0.082028, 0.084907], [-0.144643, 0.1688], [0.083669, 0.026072], [0.099185, -0.054407], [-0.08488, -0.038569], [-0.012772, -0.093734], [0.054945, -0.065215], [0.081791, -0.134477], [-0.10738, 0.01092], [-0.130672, -0.004363], [-0.120516, 0.025141], [-0.1529, 0.031307], [-0.020159, -0.031758], [0.000659, -0.058333], [-0.111279, 0.067503], [-0.098797, 0.097422], [0.065124, -0.101745], [0.02948, -0.097432], [-0.048125, 0.057151], [-0.038249, 0.108751], [-0.055615, 0.03771], [-0.037546, 0.041133], [0.025848, -0.027611], [0.039446, -0.047428], [0.082134, -0.080365], [0.194944, 0.041386], [0.287606, 0.122108], [0.340508, 0.151654], [-0.003339, 0.040556], [-0.033328, 0.124503], [0.120995, 0.069578], [0.122501, 0.020931], [-0.055493, 0.018014], [-0.092111, 0.048738], [-0.169764, -0.124703], [-0.15801, -0.083044], [-0.001181, -0.039086], [0.036338, -0.101689], [-0.085035, 0.059317], [-0.042581, 0.022289], [-0.103073, 0.043835], [-0.15711, 0.128416], [-0.083898, 0.037025], [-0.040615, 0.008648], [0.060414, 0.011678], [0.045005, 0.027202], [0.000106, -0.016982], [-0.083807, 0.129768], [-0.076374, 0.063967], [-0.114701, 0.075435], [-0.169995, -0.115354], [-0.162093, -0.100606], [0.184854, -0.126102], [0.149032, -0.016978], [-0.087694, 0.028979], [-0.058996, -0.007467], [0.082669, 0.040495], [0.141216, 0.115709], [-0.083614, 0.012036], [-0.091276, 0.060991], [-0.007792, -0.139949], [-0.08778, -0.133437], [0.010243, 0.023528], [0.038946, 0.056184], [-0.004876, 0.009587], [0.023258, 0.024515], [-0.003195, -0.030276], [0.064619, -0.088966], [-0.093318, 0.050671], [-0.112075, 0.084765], [-0.239758, 0.064384], [-0.131521, 0.064877], [0.055425, -0.085014], [0.107653, -0.084103], [-0.062202, 0.012302], [-0.061718, 0.013763], [0.061114, -0.046398], [0.083275, -0.082816], [0.000104, 0.017753], [0.030895, 0.036337], [-0.119065, 0.00166], [-0.06936, -0.019025], [0.058744, -0.081364], [0.087967, -0.136163], [-0.105626, 0.022553], [-0.116765, 0.019584], [0.130232, -0.024182], [0.083547, -0.009104], [0.113615, -0.110295], [0.067337, -0.032555]], "variance": [32.6, 20.8]}, "bert": {"positions": [[0.059604, -0.01523], [0.061195, -0.018333], [-0.011327, -0.189681], [0.052977, -0.135058], [0.098081, -0.232004], [0.097951, -0.22126], [0.396085, 0.219752], [0.37275, 0.267433], [-0.122695, 0.034618], [-0.111984, 0.068474], [-0.029067, -0.015437], [0.189476, -0.006806], [0.118262, -0.160147], [0.085113, -0.093235], [0.178436, 0.04939], [0.10912, 0.228035], [-0.282462, 0.066706], [-0.187558, 0.207532], [-0.063648, 0.151572], [-0.003667, 0.048537], [0.032441, -0.186247], [0.060101, -0.125481], [0.134333, 0.012459], [0.130383, 0.051923], [-0.005279, -0.194964], [0.005016, -0.184783], [-0.116637, -0.11789], [-0.033872, -0.101387], [-0.278783, 0.0369], [-0.296229, 0.179989], [0.290112, 0.025912], [0.30302, 0.007372], [-0.062285, -0.017029], [-0.051643, 0.169701], [0.31108, 0.1105], [0.311827, 0.219259], [-0.20594, -0.048197], [-0.274493, 0.07501], [-0.224241, -0.030368], [-0.287815, 0.082799], [-0.159416, -0.100113], [-0.051485, -0.139544], [-0.217662, -0.048794], [-0.118476, -0.003959], [0.179925, 0.009195], [0.11444, 0.077539], [-0.123286, -0.113614], [-0.107015, -0.034607], [-0.107061, -0.130565], [-0.050653, -0.117369], [-0.005015, -0.101192], [-0.002359, -0.039307], [0.011716, -0.188967], [0.226617, 0.098629], [0.34011, 0.203083], [0.320298, 0.177914], [-0.152229, -0.046853], [0.175559, -0.082163], [0.052391, -0.098922], [0.078585, -0.22176], [-0.17899, -0.035389], [-0.112037, 0.089648], [-0.154798, 0.250457], [-0.145262, 0.323756], [-0.023823, -0.198936], [0.039569, -0.186345], [-0.170156, 0.257648], [-0.15663, 0.24016], [-0.178318, -0.087027], [-0.239486, -0.044114], [0.059416, 0.267442], [0.122957, 0.273394], [0.333415, 0.070473], [0.346324, 0.041133], [-0.127517, -0.072226], [-0.128517, -0.019072], [-0.200971, -0.060666], [-0.174723, -0.039348], [-0.264494, 0.120222], [-0.086905, 0.095651], [0.384045, 0.253858], [0.330954, 0.125882], [-0.236754, -0.046689], [-0.151862, 0.041302], [0.110996, -0.142783], [0.082288, -0.047397], [-0.336027, 0.120659], [-0.152573, 0.075529], [-0.158493, 0.202023], [0.043871, 0.316297], [0.095146, -0.07931], [0.101297, -0.052467], [0.014369, -0.203399], [0.091037, -0.195792], [-0.070292, -0.032378], [0.092363, 0.025999], [-0.182565, -0.063463], [-0.158684, -0.015587], [-0.129161, -0.00077], [-0.071926, -0.09716], [0.156929, -0.087529], [0.295105, -0.168507], [-0.127439, 0.060834], [-0.126683, 0.150978], [0.033022, -0.235332], [0.124622, -0.196788], [0.043882, -0.174922], [0.070202, -0.165881], [-0.107776, 0.10836], [-0.056259, 0.179358], [0.028541, -0.014392], [0.162192, 0.021841], [-0.290521, 0.030123], [-0.322216, 0.120794], [0.120438, -0.176779], [0.133825, -0.174757], [0.265785, 0.029537], [0.186551, -0.097122]], "variance": [9.8, 6.0]}}, "graphSizes": {"books": [114, 737], "movies": [126, 583]}, "bertModel": "sentence-transformers/all-MiniLM-L6-v2", "projections3d": {"tfidf": {"positions": [[0.057079, -0.047734, -0.068081], [-0.074508, -0.033575, -0.022954], [0.240248, 0.074688, -0.06491], [0.038696, 0.052073, -0.051399], [0.357849, 0.385011, -0.043001], [0.219255, 0.345237, -0.06481], [-0.158822, 0.067868, -0.055107], [-0.193512, 0.050961, -0.047486], [-0.040822, -0.023662, -0.061055], [-0.051302, -0.03985, 0.037583], [-0.044771, 0.080881, 0.030221], [-0.183946, 0.058982, -0.058677], [-0.019026, 0.339903, 0.196218], [-0.05267, 0.250824, 0.090392], [-0.075214, -0.0106, -0.013886], [-0.164302, -0.036141, 0.00366], [-0.008919, -0.114164, -0.023174], [-0.121844, -0.137644, 0.093013], [-0.18954, 0.055719, -0.045553], [-0.199136, 0.050461, -0.040381], [0.17081, 0.171397, -0.12785], [-0.001137, 0.098481, -0.099003], [-0.136096, -0.039163, 0.869976], [-0.174867, -0.051671, 0.843949], [0.120147, 0.211401, -0.115962], [-0.01698, 0.175811, -0.087521], [0.341624, 0.093138, 0.104257], [0.099969, 0.008751, 0.006825], [0.009367, -0.193541, -0.014079], [-0.065603, -0.248247, 0.042283], [-0.203341, -0.037309, -0.123702], [-0.200556, 0.005, -0.061374], [-0.131816, -0.063068, -0.045028], [-0.207499, -0.075503, 0.026265], [-0.196336, 0.015815, -0.044901], [-0.24148, 0.007329, -0.045998], [0.411509, -0.248526, -0.045233], [0.027442, -0.245917, -0.070451], [0.382629, -0.257054, -0.047953], [0.070159, -0.26874, -0.052474], [0.036785, 0.011632, -0.076702], [-0.018633, 0.008179, -0.055742], [0.326579, -0.224303, -0.036414], [0.068655, -0.171915, -0.033736], [-0.108646, 0.064723, 0.064177], [-0.186422, 0.019555, 0.018414], [0.633519, -0.030539, 0.147975], [0.425743, -0.095035, 0.379467], [0.606053, -0.053386, 0.003291], [0.43419, -0.054759, 0.023453], [0.153393, 0.12238, -0.050154], [0.034714, 0.111527, -0.081776], [-0.06779, 0.146963, -0.054207], [-0.144907, 0.143804, 0.11035], [-0.200371, 0.080077, 0.058692], [-0.215811, 0.038549, 0.050533], [-0.046265, -0.006726, -0.045767], [-0.112016, -0.048564, -0.082272], [-0.059741, 0.244242, 0.047347], [-0.06501, 0.24042, 0.297624], [0.167528, -0.11994, 0.028013], [-0.016046, -0.132247, 0.017414], [-0.207983, -0.099106, -0.049434], [-0.181332, -0.051816, -0.045742], [0.268919, 0.197615, -0.100569], [0.063545, 0.184056, -0.087253], [-0.061038, -0.114982, -0.031164], [-0.150283, -0.134141, 0.001286], [0.290715, -0.135065, -0.107436], [0.074946, -0.15914, -0.080542], [-0.193156, -0.139999, -0.03631], [-0.227842, -0.111663, -0.019158], [-0.164736, -0.046324, -0.125347], [-0.194973, -0.058758, -0.09932], [-0.067289, -0.023543, 0.015493], [-0.069869, -0.128016, 0.06912], [0.243893, -0.111354, 0.096438], [0.093042, -0.177089, 0.044592], [-0.071896, -0.113415, -0.065326], [-0.134693, -0.114807, -0.043379], [-0.165102, 0.162737, 0.023619], [-0.16062, 0.127098, 0.027881], [0.092044, -0.14949, 0.070324], [-0.108205, -0.045971, 0.055205], [0.019926, 0.158103, -0.043292], [-0.092497, 0.145572, 0.013814], [-0.019253, -0.14659, -0.047215], [-0.084115, -0.190556, -0.050453], [-0.215094, -0.045251, -0.052459], [-0.218277, -0.057541, -0.054505], [0.008577, 0.08608, -0.024161], [-0.138815, -0.026267, 0.012661], [0.386887, 0.115614, -0.077851], [0.178299, 0.123657, -0.057108], [-0.097511, -0.049796, -0.090443], [-0.145311, -0.013156, -0.067764], [0.611209, -0.178177, 0.010472], [0.360493, -0.255662, 0.042122], [0.011411, -0.126366, -0.036587], [0.172821, -0.122908, -0.012503], [-0.122705, 0.048595, -0.059967], [-0.152834, 0.083682, -0.05153], [-0.134699, -0.121425, -0.015978], [-0.15717, -0.107021, -0.037942], [0.273454, 0.411715, -0.035762], [0.052573, 0.298536, -0.034985], [0.338423, 0.068422, -0.046866], [0.05231, 0.038637, -0.046869], [-0.190349, -0.119927, -0.068588], [-0.197194, -0.101074, -0.069016], [-0.11489, 0.117789, -0.052516], [-0.164979, 0.070408, -0.059352], [0.042876, -0.131748, -0.050502], [-0.068063, -0.185338, 0.065407], [0.050633, 0.403034, 0.029183], [0.093296, 0.26647, 0.109876], [-0.182031, 0.040975, 0.010389], [-0.163729, 0.022428, 0.004689]], "variance": [4.3, 2.4, 2.0]}, "bert": {"positions": [[0.059604, -0.01523, 0.175041], [0.061195, -0.018333, -0.039862], [-0.011327, -0.189681, 0.035016], [0.052977, -0.135058, -0.120073], [0.098081, -0.232004, -0.009668], [0.097951, -0.22126, -0.094754], [0.396085, 0.219752, 0.025021], [0.37275, 0.267433, -0.002029], [-0.122695, 0.034618, -0.024239], [-0.111984, 0.068474, -0.022022], [-0.029067, -0.015437, 0.046681], [0.189476, -0.006806, -0.127997], [0.118262, -0.160147, -0.041517], [0.085113, -0.093235, -0.159386], [0.178436, 0.04939, 0.055426], [0.10912, 0.228035, -0.012149], [-0.282462, 0.066706, -0.025425], [-0.187558, 0.207532, -0.086749], [-0.063648, 0.151572, -0.002094], [-0.003667, 0.048537, -0.008931], [0.032441, -0.186247, 0.109466], [0.060101, -0.125481, 0.045248], [0.134333, 0.012459, 0.213764], [0.130383, 0.051923, 0.243381], [-0.005279, -0.194964, -0.075573], [0.005016, -0.184783, -0.133786], [-0.116637, -0.11789, -0.002433], [-0.033872, -0.101387, -0.008218], [-0.278783, 0.0369, 0.009164], [-0.296229, 0.179989, 0.016099], [0.290112, 0.025912, 0.418362], [0.30302, 0.007372, 0.266786], [-0.062285, -0.017029, -0.122292], [-0.051643, 0.169701, -0.206987], [0.31108, 0.110499, -0.159336], [0.311827, 0.219259, -0.206737], [-0.20594, -0.048197, 0.072058], [-0.274493, 0.07501, -0.021338], [-0.224241, -0.030368, 0.116581], [-0.287815, 0.082799, -0.100689], [-0.159416, -0.100113, -0.112342], [-0.051485, -0.139545, -0.124289], [-0.217662, -0.048794, 0.141076], [-0.118476, -0.003959, 0.070934], [0.179925, 0.009195, -0.042285], [0.11444, 0.077539, -0.175389], [-0.123286, -0.113614, 0.059284], [-0.107015, -0.034607, 0.020472], [-0.107061, -0.130565, 0.076819], [-0.050653, -0.117369, -0.015611], [-0.005015, -0.101192, -0.122591], [-0.002359, -0.039307, -0.130645], [0.011716, -0.188967, 0.078803], [0.226617, 0.098629, 0.211011], [0.34011, 0.203083, 0.209302], [0.320298, 0.177914, 0.219537], [-0.152229, -0.046853, 0.11243], [0.175559, -0.082163, 0.208799], [0.052391, -0.098922, 0.041124], [0.078585, -0.22176, -0.098708], [-0.17899, -0.035389, 0.065825], [-0.112037, 0.089648, 0.036765], [-0.154798, 0.250457, 0.056653], [-0.145262, 0.323756, -0.195478], [-0.023823, -0.198935, 0.038858], [0.039569, -0.186345, 0.021752], [-0.170156, 0.257648, 0.042253], [-0.15663, 0.24016, 0.0679], [-0.178318, -0.087027, 0.05421], [-0.239486, -0.044114, -0.066274], [0.059416, 0.267442, -0.042601], [0.122957, 0.273394, -0.075728], [0.333415, 0.070473, 0.455326], [0.346324, 0.041133, 0.423694], [-0.127517, -0.072226, -0.031984], [-0.128517, -0.019072, 0.009752], [-0.200971, -0.060666, 0.024004], [-0.174723, -0.039348, -0.031697], [-0.264494, 0.120222, -0.015882], [-0.086905, 0.095651, -0.091516], [0.384045, 0.253858, -0.367394], [0.330954, 0.125882, -0.333818], [-0.236754, -0.046689, 0.050125], [-0.151862, 0.041302, -0.045144], [0.110996, -0.142783, -0.014786], [0.082288, -0.047397, -0.144844], [-0.336027, 0.12066, 0.140534], [-0.152573, 0.075529, 0.020125], [-0.158493, 0.202023, -0.043799], [0.043871, 0.316297, -0.090212], [0.095146, -0.07931, -0.027008], [0.101297, -0.052467, -0.059716], [0.014369, -0.203399, 0.074885], [0.091037, -0.195792, -0.111462], [-0.070292, -0.032378, -0.055062], [0.092363, 0.025999, -0.063543], [-0.182565, -0.063463, 0.084947], [-0.158684, -0.015587, 0.027921], [-0.129161, -0.00077, 0.091328], [-0.071926, -0.09716, -0.004879], [0.156929, -0.087529, 0.010656], [0.295105, -0.168507, -0.076403], [-0.127439, 0.060834, 0.138889], [-0.126683, 0.150978, 0.115056], [0.033022, -0.235332, -0.052974], [0.124622, -0.196788, -0.165176], [0.043882, -0.174922, 0.226651], [0.070202, -0.165881, 0.073626], [-0.107776, 0.10836, 0.101514], [-0.056259, 0.179358, 0.05667], [0.028541, -0.014392, -0.231618], [0.162192, 0.021841, -0.256636], [-0.290521, 0.030123, 0.053704], [-0.322216, 0.120794, -0.007459], [0.120438, -0.176779, -0.156234], [0.133825, -0.174757, -0.1492], [0.265785, 0.029537, -0.128712], [0.186551, -0.097122, -0.087928]], "variance": [9.8, 6.0, 5.6]}}}</script>
+  <script>
+    "use strict";
+    const data = JSON.parse(document.getElementById("embedding-data").textContent);
+    const {profiles, projections, projections3d} = data;
+    const mediumNames = {books: "Book", movies: "Film"};
+    const methods = {bert: "BERT", word2vec: "Word2Vec", tfidf: "TF-IDF"};
+    const methodNotes = {
+      tfidf: "A shared vocabulary is fitted across the book and film dialogue profiles. Each profile gives more weight to words that occur often in its dialogue and are rare across the other profiles.",
+      word2vec: "One skip-gram model is trained on book and film dialogue together. It learns to predict nearby words within a dialogue line using negative sampling. A character’s profile is a TF-IDF-weighted average of their word vectors.",
+      bert: "Following the BERT notebook, pretrained MiniLM embeds each dialogue line and splits long lines at word boundaries. The passage vectors are normalized, averaged with token-count weights, and normalized again for each book or film profile.",
+    };
+    const ramp = ["#440154", "#3b528b", "#21918c", "#5ec962", "#fde725"];
+    const maxCentrality = Math.max(...profiles.map(profile => profile.centrality));
+    const number = new Intl.NumberFormat();
+    const svg = document.getElementById("projection");
+    const plot = document.getElementById("plot");
+    const tooltip = document.getElementById("tooltip");
+    const characterSelect = document.getElementById("character-select");
+    const mediumSelect = document.getElementById("medium-select");
+    const viewSelect = document.getElementById("view-select");
+    const orbitControls = document.getElementById("orbit-controls");
+    const info = document.getElementById("character-info");
+    const projectionInfo = document.getElementById("projection-info");
+    const methodHeading = document.getElementById("method-heading");
+    const methodDescription = document.getElementById("method-description");
+    const checkpointNote = document.getElementById("checkpoint-note");
+    const buttons = [...document.querySelectorAll("[data-method]")];
+    const params = new URLSearchParams(location.search);
+    const requestedMethod = params.get("method");
+    let method = Object.hasOwn(methods, requestedMethod) ? requestedMethod : "tfidf";
+    let selected = "Harry Potter";
+    let medium = "both";
+    let view = params.get("view") === "3d" ? "3d" : "2d";
+    const initialOrbit = {yaw:-.62, pitch:.36};
+    let orbit = {...initialOrbit};
+    let gesture = null;
+    let suppressClick = false;
+    let pendingDraw = false;
+
+    function color(value) {
+      const position = Math.sqrt(maxCentrality ? value / maxCentrality : 0) * (ramp.length - 1);
+      const i = Math.min(Math.floor(position), ramp.length - 2);
+      const mix = position - i;
+      const channels = hex => hex.slice(1).match(/../g).map(pair => parseInt(pair, 16));
+      const a = channels(ramp[i]), b = channels(ramp[i + 1]);
+      return "rgb(" + a.map((n, j) => Math.round(n + mix * (b[j] - n))).join(",") + ")";
+    }
+
+    function svgElement(tag, attributes, content) {
+      const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
+      for (const [key, value] of Object.entries(attributes)) node.setAttribute(key, value);
+      if (content !== undefined) node.textContent = content;
+      return node;
+    }
+
+    function htmlElement(tag, content, className) {
+      const node = document.createElement(tag);
+      if (content !== undefined) node.textContent = content;
+      if (className) node.className = className;
+      return node;
+    }
+
+    function renderDetails() {
+      const matches = profiles.filter(profile => profile.name === selected);
+      info.replaceChildren();
+      if (!matches.length) {
+        info.append(htmlElement("p", "Pick a point or a name to compare its book and film profiles.", "selection-hint"));
+        return;
+      }
+      const list = htmlElement("dl", undefined, "stats");
+      for (const profile of matches) {
+        const row = htmlElement("div");
+        const label = htmlElement("dt");
+        const chip = htmlElement("span", undefined, "legend-shape" + (profile.medium === "movies" ? " film" : ""));
+        chip.style.backgroundColor = color(profile.centrality);
+        chip.setAttribute("aria-hidden", "true");
+        label.append(chip, mediumNames[profile.medium]);
+        const value = htmlElement("dd", profile.centrality.toFixed(4));
+        value.title = "Normalized betweenness centrality";
+        const support = htmlElement("small", number.format(profile.words) + " dialogue words");
+        row.append(label, value, support);
+        list.append(row);
+      }
+      const scope = matches[0].installments;
+      info.append(
+        htmlElement("h2", "Betweenness centrality"), list,
+        htmlElement("p", (scope.length === 1 ? "Matched installment " : "Matched installments ") + scope.join(", "), "installments")
+      );
+    }
+
+    function renderMethodInfo() {
+      methodHeading.textContent = "How " + methods[method] + " was built";
+      methodDescription.textContent = methodNotes[method];
+      checkpointNote.hidden = method !== "bert";
+    }
+
+    function selectCharacter(name) {
+      selected = name;
+      characterSelect.value = name;
+      renderDetails();
+      draw();
+    }
+
+    function tickValues(limit, steps) {
+      const target = 2 * limit / steps;
+      const magnitude = 10 ** Math.floor(Math.log10(target));
+      const step = [1, 2, 2.5, 5, 10].find(value => value * magnitude >= target) * magnitude;
+      const range = Math.floor(limit / step);
+      return Array.from({length: 2 * range + 1}, (_, i) => (i - range) * step);
+    }
+
+    function showTooltip(profile, x, y) {
+      tooltip.firstElementChild.textContent = profile.name + " · " + mediumNames[profile.medium];
+      tooltip.lastElementChild.textContent = "Betweenness " + profile.centrality.toFixed(4);
+      tooltip.hidden = false;
+      tooltip.style.left = Math.max(5, Math.min(x + 10, svg.clientWidth - tooltip.offsetWidth - 6)) + "px";
+      tooltip.style.top = Math.max(3, y - tooltip.offsetHeight - 10) + "px";
+    }
+
+    function drawTopLabels(visible, positions, bounds) {
+      const ranked = [...visible].sort((a, b) => profiles[b].centrality - profiles[a].centrality);
+      const names = new Set();
+      const placed = [...plot.querySelectorAll(".orbit-axis-label")].map(label => {
+        const {x, y, width, height} = label.getBBox();
+        return {left:x, right:x+width, top:y, bottom:y+height};
+      });
+      const points = visible.map(i => positions[i]);
+      const offsets = [0, -14, 14, -28, 28, -42, 42, -56, 56, -70, 70, -84, 84];
+      const clamp = (value, min, max) => Math.max(min, Math.min(value, max));
+      const near = (value, min, max, margin) => value > min - margin && value < max + margin;
+
+      for (const i of ranked) {
+        const name = profiles[i].name;
+        if (names.has(name)) continue;
+        names.add(name);
+        const [x, y] = positions[i];
+        const label = svgElement("text", {class:"point-label", "aria-hidden":"true"}, name);
+        plot.append(label);
+        const measured = label.getBBox();
+        const {width, height} = measured;
+
+        let best;
+        for (const offset of offsets) {
+          for (const start of [x + 11, x - width - 11]) {
+            const left = clamp(start, bounds.left, bounds.right - width);
+            const top = clamp(y - height / 2 + offset, bounds.top, bounds.bottom - height);
+            const right = left + width, bottom = top + height;
+            const overlaps = placed.filter(box =>
+              left < box.right + 5 && right > box.left - 5 &&
+              top < box.bottom + 4 && bottom > box.top - 4
+            ).length;
+            const covered = points.filter(([px, py]) => near(px, left, right, 4) && near(py, top, bottom, 4)).length;
+            const anchorX = clamp(x, left, right), anchorY = clamp(y, top, bottom);
+            const distance = Math.hypot(x - anchorX, y - anchorY);
+            const score = 1000 * overlaps + 12 * covered + distance + Math.abs(start - left);
+            if (!best || score < best.score) best = {left, top, right, bottom, anchorX, anchorY, distance, score};
+          }
+        }
+        if (best.distance > 16) {
+          const {anchorX:x2, anchorY:y2} = best;
+          plot.insertBefore(svgElement("line", {x1:x, y1:y, x2, y2, class:"label-leader"}), label);
+        }
+        label.setAttribute("x", best.left - measured.x);
+        label.setAttribute("y", best.top - measured.y);
+        placed.push(best);
+        if (names.size === 10) break;
+      }
+    }
+
+    function drawFlatAxes(positions, variance, width, height, pad) {
+      const plotWidth = width - pad.left - pad.right;
+      const plotHeight = height - pad.top - pad.bottom;
+      const maxX = Math.max(...positions.map(([x]) => Math.abs(x))) * 1.12;
+      const maxY = Math.max(...positions.map(([, y]) => Math.abs(y))) * 1.13;
+      const scale = Math.min(plotWidth / (2 * maxX), plotHeight / (2 * maxY));
+      const xAt = value => pad.left + plotWidth / 2 + value * scale;
+      const yAt = value => pad.top + plotHeight / 2 - value * scale;
+      for (const t of tickValues(plotWidth / (2 * scale), width < 480 ? 4 : 7)) {
+        const x = xAt(t);
+        plot.append(
+          svgElement("line", {x1:x, x2:x, y1:pad.top, y2:height-pad.bottom, class:t === 0 ? "grid zero" : "grid"}),
+          svgElement("text", {x, y:height-pad.bottom+17, "text-anchor":"middle", class:"tick"}, +t.toFixed(4))
+        );
+      }
+      for (const t of tickValues(plotHeight / (2 * scale), 6)) {
+        const y = yAt(t);
+        plot.append(
+          svgElement("line", {x1:pad.left, x2:width-pad.right, y1:y, y2:y, class:t === 0 ? "grid zero" : "grid"}),
+          svgElement("text", {x:pad.left-7, y:y+4, "text-anchor":"end", class:"tick"}, +t.toFixed(4))
+        );
+      }
+      plot.append(
+        svgElement("text", {x:xAt(0), y:height-10, "text-anchor":"middle", class:"axis"}, "PC 1 · " + variance[0] + "%"),
+        svgElement("text", {x:14, y:yAt(0), "text-anchor":"middle", transform:"rotate(-90 14 " + yAt(0) + ")", class:"axis"}, "PC 2 · " + variance[1] + "%")
+      );
+      return positions.map(([x, y]) => [xAt(x), yAt(y)]);
+    }
+
+    function drawOrbitAxes(positions, variance, width, height) {
+      const limits = variance.map((_, i) => 1.08 * Math.max(...positions.map(point => Math.abs(point[i]))));
+      const cy = Math.cos(orbit.yaw), sy = Math.sin(orbit.yaw);
+      const cp = Math.cos(orbit.pitch), sp = Math.sin(orbit.pitch);
+      const rotate = ([x, y, z]) => {
+        const lateral = cy*x + sy*z;
+        const distance = cy*z - sy*x;
+        return [lateral, cp*y - sp*distance, sp*y + cp*distance];
+      };
+      const rotatedCorners = Array.from({length:8}, (_, corner) =>
+        rotate(limits.map((limit, i) => corner & (1 << i) ? limit : -limit)));
+      const maxX = Math.max(...rotatedCorners.map(([x]) => Math.abs(x)));
+      const maxY = Math.max(...rotatedCorners.map(([, y]) => Math.abs(y)));
+      const scale = Math.min((width-78)/(2*maxX), (height-74)/(2*maxY));
+      const toScreen = ([x,y,z]) => [width/2+x*scale, height/2-y*scale, z];
+      const line = ([x1, y1], [x2, y2], classification) =>
+        svgElement("line", {x1, y1, x2, y2, class:classification});
+      const corners = rotatedCorners.map(toScreen);
+      for (let corner = 0; corner < corners.length; corner++) {
+        for (const axis of [1, 2, 4]) {
+          if (!(corner & axis)) plot.append(line(corners[corner], corners[corner | axis], "grid"));
+        }
+      }
+      const start = corners[0];
+      variance.forEach((value, i) => {
+        const end = corners[1 << i];
+        const middle = [(start[0]+end[0])/2, (start[1]+end[1])/2];
+        const dx = middle[0]-width/2, dy = middle[1]-height/2;
+        const distance = Math.max(1, Math.hypot(dx,dy));
+        plot.append(
+          line(start, end, "grid zero"),
+          svgElement("text", {
+            x:Math.max(44, Math.min(width-44, middle[0]+20*dx/distance)),
+            y:Math.max(12, Math.min(height-12, middle[1]+20*dy/distance)),
+            "text-anchor":"middle", "dominant-baseline":"middle", class:"axis orbit-axis-label",
+          }, "PC " + (i+1) + " · " + value + "%")
+        );
+      });
+      return positions.map(point => toScreen(rotate(point)));
+    }
+
+    function draw() {
+      tooltip.hidden = true;
+      const width = svg.clientWidth, height = svg.clientHeight;
+      if (!width || !height) return;
+
+      const in3d = view === "3d";
+      const {positions, variance} = in3d ? projections3d[method] : projections[method];
+      const pad = in3d
+        ? {top:16, right:16, bottom:16, left:16}
+        : {top:16, right:21, bottom:48, left:57};
+      const visible = profiles.map((profile, i) => i).filter(i => medium === "both" || profiles[i].medium === medium);
+      svg.setAttribute("viewBox", "0 0 " + width + " " + height);
+      document.getElementById("plot-title").textContent =
+        methods[method] + " " + view.toUpperCase() + " dialogue projection colored by betweenness centrality";
+      plot.replaceChildren();
+      const markPositions = in3d
+        ? drawOrbitAxes(positions, variance, width, height)
+        : drawFlatAxes(positions, variance, width, height, pad);
+
+      const selection = visible.filter(i => profiles[i].name === selected);
+      if (selection.length === 2) {
+        const [[x1, y1], [x2, y2]] = selection.map(i => markPositions[i]);
+        plot.append(svgElement("line", {x1, y1, x2, y2, class:"pair"}));
+      }
+      const others = visible.filter(i => profiles[i].name !== selected);
+      if (in3d) others.sort((a, b) => markPositions[a][2] - markPositions[b][2]);
+      const indices = [...others, ...selection];
+      for (const i of indices) {
+        const profile = profiles[i];
+        const [x, y] = markPositions[i];
+        const active = profile.name === selected;
+        const size = active ? 7 : 5.5;
+        const attributes = {
+          fill: color(profile.centrality), opacity: active ? 1 : .78, class: "mark",
+          "data-profile": profile.name, "data-medium": profile.medium,
+          "aria-label": profile.name + ", " + mediumNames[profile.medium] + ", betweenness " + profile.centrality.toFixed(4),
+        };
+        const mark = profile.medium === "books"
+          ? svgElement("circle", {...attributes, cx:x, cy:y, r:size})
+          : svgElement("polygon", {...attributes, points:[[x,y-size*1.22],[x+size*1.22,y],[x,y+size*1.22],[x-size*1.22,y]].join(" ")});
+        if (active) plot.append(svgElement("circle", {cx:x, cy:y, r:10, class:"halo"}));
+        mark.addEventListener("pointerenter", () => showTooltip(profile, x, y));
+        mark.addEventListener("pointerleave", () => { tooltip.hidden = true; });
+        mark.addEventListener("click", () => selectCharacter(profile.name));
+        plot.append(mark);
+      }
+      if (!gesture?.moved) {
+        drawTopLabels(visible, markPositions, {left:pad.left, top:pad.top, right:width-pad.right, bottom:height-pad.bottom});
+      }
+      const captured = variance.reduce((total, value) => total + value, 0).toFixed(1);
+      const caption = methods[method] + " · " + visible.length + " profiles · " + captured + "% variance in " + view.toUpperCase();
+      if (projectionInfo.textContent !== caption) projectionInfo.textContent = caption;
+    }
+
+    function syncView() {
+      const supports3d = Object.hasOwn(projections3d, method);
+      viewSelect.querySelector('option[value="3d"]').disabled = !supports3d;
+      if (!supports3d) view = "2d";
+      viewSelect.value = view;
+      orbitControls.hidden = view !== "3d";
+      svg.classList.toggle("orbit-view", view === "3d");
+      for (const button of buttons) button.setAttribute("aria-pressed", button.dataset.method === method);
+      renderMethodInfo();
+      draw();
+    }
+
+    function setOrbit(yaw, pitch) {
+      orbit = {yaw, pitch:Math.max(-1.48, Math.min(pitch, 1.48))};
+      if (pendingDraw) return;
+      pendingDraw = true;
+      requestAnimationFrame(() => {
+        pendingDraw = false;
+        draw();
+      });
+    }
+
+    const names = [...new Set(profiles.map(profile => profile.name))].sort((a, b) => a.localeCompare(b));
+    for (const name of names) characterSelect.add(new Option(name, name));
+    characterSelect.value = selected;
+    characterSelect.addEventListener("change", () => selectCharacter(characterSelect.value));
+    mediumSelect.addEventListener("change", () => { medium = mediumSelect.value; draw(); });
+    viewSelect.addEventListener("change", () => {
+      view = viewSelect.value;
+      syncView();
+    });
+    for (const button of buttons) {
+      button.addEventListener("click", () => {
+        method = button.dataset.method;
+        syncView();
+      });
+    }
+    const nudge = {left:[-.23,0], right:[.23,0], up:[0,.20], down:[0,-.20]};
+    for (const button of orbitControls.querySelectorAll("button")) {
+      button.addEventListener("click", () => {
+        const delta = nudge[button.dataset.orbit];
+        if (delta) setOrbit(orbit.yaw + delta[0], orbit.pitch + delta[1]);
+        else setOrbit(initialOrbit.yaw, initialOrbit.pitch);
+      });
+    }
+    svg.addEventListener("pointerdown", event => {
+      if (view !== "3d" || event.button !== 0 || !event.isPrimary) return;
+      suppressClick = false;
+      gesture = {id:event.pointerId, x:event.clientX, y:event.clientY, ...orbit, moved:false};
+    });
+    svg.addEventListener("pointermove", event => {
+      if (gesture?.id !== event.pointerId) return;
+      const dx = event.clientX - gesture.x, dy = event.clientY - gesture.y;
+      if (!gesture.moved && Math.hypot(dx, dy) < 4) return;
+      if (!gesture.moved) {
+        gesture.moved = true;
+        svg.setPointerCapture(event.pointerId);
+        svg.classList.add("dragging");
+      }
+      setOrbit(gesture.yaw + dx*.011, gesture.pitch + dy*.011);
+    });
+    function endOrbit(event) {
+      if (gesture?.id !== event.pointerId) return;
+      suppressClick = gesture.moved && event.type === "pointerup";
+      gesture = null;
+      svg.classList.remove("dragging");
+      if (suppressClick) setOrbit(orbit.yaw, orbit.pitch);
+      else if (event.type === "pointercancel") draw();
+    }
+    svg.addEventListener("pointerup", endOrbit);
+    svg.addEventListener("pointercancel", endOrbit);
+    svg.addEventListener("pointerleave", event => {
+      if (gesture?.id === event.pointerId && !gesture.moved) gesture = null;
+    });
+    svg.addEventListener("click", event => {
+      if (suppressClick) {
+        suppressClick = false;
+        event.stopPropagation();
+      }
+    }, true);
+    document.getElementById("color-ramp").style.background = "linear-gradient(to right," + ramp.join(",") + ")";
+    document.getElementById("max-centrality").textContent = maxCentrality.toFixed(3);
+    document.getElementById("model-name").textContent = data.bertModel;
+    const [bookNodes, bookEdges] = data.graphSizes.books;
+    const [filmNodes, filmEdges] = data.graphSizes.movies;
+    document.getElementById("centrality-method").textContent =
+      "Betweenness is normalized and computed separately on full named-speaker graphs. An undirected edge joins speakers found on consecutive lines in the same source segment. The book graph has " +
+      number.format(bookNodes) + " nodes and " + number.format(bookEdges) + " edges. The film graph has " +
+      number.format(filmNodes) + " nodes and " + number.format(filmEdges) + " edges. The color scale uses a square-root stretch and stays fixed across methods and medium filters.";
+    renderDetails();
+    syncView();
+    new ResizeObserver(draw).observe(svg);
+  </script>
+</body>
+</html>

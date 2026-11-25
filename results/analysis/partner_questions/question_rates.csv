@@ -1,0 +1,71 @@
+medium,installment,rule,speaker,candidate_partner,turns,words,question_turns,question_marks,question_turn_percentage
+Book,1,Next speaker,Harry Potter,Hermione Granger,39,687,14,21,35.8974358974359
+Book,1,Next speaker,Harry Potter,Ron Weasley,140,1478,45,55,32.142857142857146
+Book,1,Same speaker before and after,Harry Potter,Hermione Granger,30,554,11,18,36.666666666666664
+Book,1,Same speaker before and after,Harry Potter,Ron Weasley,121,1256,37,45,30.578512396694215
+Book,1,"Same speaker before and after, named tags",Harry Potter,Hermione Granger,3,155,3,8,100.0
+Book,1,"Same speaker before and after, named tags",Harry Potter,Ron Weasley,13,200,8,12,61.53846153846154
+Book,2,Next speaker,Harry Potter,Hermione Granger,28,292,15,17,53.57142857142857
+Book,2,Next speaker,Harry Potter,Ron Weasley,160,1785,60,73,37.5
+Book,2,Same speaker before and after,Harry Potter,Hermione Granger,15,164,7,8,46.666666666666664
+Book,2,Same speaker before and after,Harry Potter,Ron Weasley,126,1320,51,62,40.476190476190474
+Book,2,"Same speaker before and after, named tags",Harry Potter,Hermione Granger,5,14,4,4,80.0
+Book,2,"Same speaker before and after, named tags",Harry Potter,Ron Weasley,28,249,13,16,46.42857142857143
+Book,3,Next speaker,Harry Potter,Hermione Granger,117,1230,33,35,28.205128205128204
+Book,3,Next speaker,Harry Potter,Ron Weasley,112,1273,42,51,37.5
+Book,3,Same speaker before and after,Harry Potter,Hermione Granger,88,912,24,24,27.272727272727273
+Book,3,Same speaker before and after,Harry Potter,Ron Weasley,76,823,32,41,42.10526315789474
+Book,3,"Same speaker before and after, named tags",Harry Potter,Hermione Granger,15,134,5,5,33.333333333333336
+Book,3,"Same speaker before and after, named tags",Harry Potter,Ron Weasley,15,197,8,12,53.333333333333336
+Book,4,Next speaker,Harry Potter,Hermione Granger,121,1511,42,52,34.710743801652896
+Book,4,Next speaker,Harry Potter,Ron Weasley,194,2470,68,88,35.05154639175258
+Book,4,Same speaker before and after,Harry Potter,Hermione Granger,71,962,23,30,32.394366197183096
+Book,4,Same speaker before and after,Harry Potter,Ron Weasley,121,1628,44,62,36.36363636363637
+Book,4,"Same speaker before and after, named tags",Harry Potter,Hermione Granger,25,581,8,14,32.0
+Book,4,"Same speaker before and after, named tags",Harry Potter,Ron Weasley,26,273,9,11,34.61538461538461
+Book,5,Next speaker,Harry Potter,Hermione Granger,278,3191,112,150,40.28776978417266
+Book,5,Next speaker,Harry Potter,Ron Weasley,212,2188,61,68,28.77358490566038
+Book,5,Same speaker before and after,Harry Potter,Hermione Granger,184,2049,72,97,39.130434782608695
+Book,5,Same speaker before and after,Harry Potter,Ron Weasley,141,1522,44,48,31.20567375886525
+Book,5,"Same speaker before and after, named tags",Harry Potter,Hermione Granger,48,505,16,17,33.333333333333336
+Book,5,"Same speaker before and after, named tags",Harry Potter,Ron Weasley,29,384,10,11,34.48275862068966
+Book,6,Next speaker,Harry Potter,Hermione Granger,170,2411,56,64,32.94117647058823
+Book,6,Next speaker,Harry Potter,Ron Weasley,194,2459,75,91,38.65979381443299
+Book,6,Same speaker before and after,Harry Potter,Hermione Granger,118,1652,42,48,35.59322033898305
+Book,6,Same speaker before and after,Harry Potter,Ron Weasley,137,1688,54,65,39.416058394160586
+Book,6,"Same speaker before and after, named tags",Harry Potter,Hermione Granger,27,549,10,12,37.03703703703704
+Book,6,"Same speaker before and after, named tags",Harry Potter,Ron Weasley,28,454,8,10,28.571428571428573
+Book,7,Next speaker,Harry Potter,Hermione Granger,265,4107,83,109,31.32075471698113
+Book,7,Next speaker,Harry Potter,Ron Weasley,269,3592,93,117,34.572490706319705
+Book,7,Same speaker before and after,Harry Potter,Hermione Granger,201,2898,64,86,31.8407960199005
+Book,7,Same speaker before and after,Harry Potter,Ron Weasley,197,2491,66,83,33.50253807106599
+Book,7,"Same speaker before and after, named tags",Harry Potter,Hermione Granger,13,167,5,8,38.46153846153846
+Book,7,"Same speaker before and after, named tags",Harry Potter,Ron Weasley,25,319,10,13,40.0
+Film,1,Next speaker,Harry Potter,Hermione Granger,37,313,11,11,29.72972972972973
+Film,1,Next speaker,Harry Potter,Ron Weasley,62,375,16,17,25.806451612903224
+Film,1,Same speaker before and after,Harry Potter,Hermione Granger,10,101,3,3,30.0
+Film,1,Same speaker before and after,Harry Potter,Ron Weasley,39,201,10,10,25.641025641025642
+Film,2,Next speaker,Harry Potter,Hermione Granger,21,204,9,10,42.857142857142854
+Film,2,Next speaker,Harry Potter,Ron Weasley,66,648,13,16,19.696969696969695
+Film,2,Same speaker before and after,Harry Potter,Hermione Granger,10,114,5,5,50.0
+Film,2,Same speaker before and after,Harry Potter,Ron Weasley,38,432,6,8,15.789473684210526
+Film,3,Next speaker,Harry Potter,Hermione Granger,49,415,19,22,38.775510204081634
+Film,3,Next speaker,Harry Potter,Ron Weasley,21,110,8,9,38.095238095238095
+Film,3,Same speaker before and after,Harry Potter,Hermione Granger,25,268,11,11,44.0
+Film,3,Same speaker before and after,Harry Potter,Ron Weasley,6,39,2,2,33.333333333333336
+Film,4,Next speaker,Harry Potter,Hermione Granger,19,103,7,9,36.8421052631579
+Film,4,Next speaker,Harry Potter,Ron Weasley,23,188,9,9,39.130434782608695
+Film,4,Same speaker before and after,Harry Potter,Hermione Granger,16,87,6,8,37.5
+Film,4,Same speaker before and after,Harry Potter,Ron Weasley,18,143,5,5,27.77777777777778
+Film,5,Next speaker,Harry Potter,Hermione Granger,33,254,10,11,30.303030303030305
+Film,5,Next speaker,Harry Potter,Ron Weasley,20,197,7,8,35.0
+Film,5,Same speaker before and after,Harry Potter,Hermione Granger,15,140,7,8,46.666666666666664
+Film,5,Same speaker before and after,Harry Potter,Ron Weasley,6,49,1,1,16.666666666666668
+Film,6,Next speaker,Harry Potter,Hermione Granger,45,396,18,19,40.0
+Film,6,Next speaker,Harry Potter,Ron Weasley,44,322,15,17,34.09090909090909
+Film,6,Same speaker before and after,Harry Potter,Hermione Granger,33,321,13,13,39.39393939393939
+Film,6,Same speaker before and after,Harry Potter,Ron Weasley,28,214,11,13,39.285714285714285
+Film,7,Next speaker,Harry Potter,Hermione Granger,118,1124,38,48,32.20338983050848
+Film,7,Next speaker,Harry Potter,Ron Weasley,84,850,15,18,17.857142857142858
+Film,7,Same speaker before and after,Harry Potter,Hermione Granger,86,864,31,40,36.04651162790697
+Film,7,Same speaker before and after,Harry Potter,Ron Weasley,45,450,9,12,20.0

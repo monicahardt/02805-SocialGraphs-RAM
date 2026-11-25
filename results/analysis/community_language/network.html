@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harry Potter dialogue communities</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --ink: #edf4fb;
+    --muted: #aebed0;
+    --surface: #101d2b;
+    --line: #293c52;
+    --hero: #70d8fb;
+    --villain: #ffa282;
+    font: 15px/1.5 "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #09121d; color: var(--ink); }
+  main { max-width: 1520px; margin: auto; padding: 30px clamp(14px, 4vw, 55px) 33px; }
+  h1, h2, p { margin: 0; }
+  h1 { font-size: clamp(2rem, 4.5vw, 3.6rem); letter-spacing: -.055em; line-height: 1.05; }
+  header p { margin-top: 12px; max-width: 690px; color: var(--muted); }
+  .controls { display: flex; align-items: end; flex-wrap: wrap; gap: 12px 22px; margin: 22px 0 14px; }
+  fieldset { min-width: 0; border: 0; padding: 0; margin: 0; }
+  legend, label { font-size: .82rem; font-weight: 650; padding: 0; display: block; margin-bottom: 5px; }
+  .tabs { display: flex; padding: 2px; border: 1px solid var(--line); border-radius: 7px; }
+  button, select { color: var(--ink); background: var(--surface); font: inherit; min-height: 42px; border: 1px solid var(--line); border-radius: 6px; }
+  button { padding: 5px 14px; cursor: pointer; }
+  button:hover, select:hover { border-color: #7196b6; }
+  button:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid var(--hero); outline-offset: 3px; }
+  .tabs button { min-height: 38px; min-width: 69px; border: 0; }
+  .tabs button[aria-pressed="true"] { color: #0c2639; background: var(--hero); font-weight: 700; }
+  select { padding: 4px 27px 4px 9px; max-width: 100%; }
+  #export { margin-left: auto; }
+  .map { border: 1px solid var(--line); border-radius: 11px; overflow: hidden; background: #0c1724; }
+  .legend { padding: 12px 15px; display: flex; align-items: center; flex-wrap: wrap; gap: 9px 21px; font-size: .85rem; border-bottom: 1px solid var(--line); }
+  .legend span { display: inline-flex; align-items: center; gap: 7px; }
+  .legend i { display: inline-block; width: 9px; height: 9px; }
+  .legend .hero { background: var(--hero); border-radius: 50%; }
+  .legend .villain { background: var(--villain); transform: rotate(45deg); }
+  .legend .tie { width: 20px; height: 3px; background: #98b3ca; }
+  .legend .region { width: 15px; height: 10px; border: 1px dashed #7e9cbe; border-radius: 50%; }
+  .stage { position: relative; }
+  .scroll { overflow: auto; }
+  svg { display: block; width: 100%; min-width: 865px; font-family: "Segoe UI", system-ui, sans-serif; }
+  .node { cursor: pointer; }
+  .edge-hit { cursor: crosshair; }
+  .label { pointer-events: none; }
+  .callout { position: absolute; z-index: 2; pointer-events: none; max-width: calc(100% - 18px); padding: 7px 9px; color: var(--ink); background: #192b3e; border: 1px solid #526982; border-radius: 6px; font-size: .85rem; }
+  .callout b, .callout span { display: block; }
+  .callout span { color: #d0dcea; }
+  .under-map { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px 25px; padding: 13px 15px 14px; border-top: 1px solid var(--line); }
+  .under-map p { max-width: 620px; color: var(--muted); font-size: .84rem; }
+  #selection-note { color: var(--ink); }
+  .evidence { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 18px 30px; margin-top: 22px; }
+  .evidence h2 { font-size: 1rem; }
+  .evidence p { font-size: .86rem; color: var(--muted); margin-top: 6px; max-width: 55ch; }
+  .evidence a { color: #8edfff; }
+  table { border-collapse: collapse; align-self: start; width: 100%; font-size: .85rem; font-variant-numeric: tabular-nums; }
+  th, td { padding: 7px 8px; border-bottom: 1px solid var(--line); text-align: left; }
+  th small, td small { display: block; color: var(--muted); font-weight: 400; }
+  @media (max-width: 720px) {
+    main { padding-top: 20px; }
+    .evidence { grid-template-columns: minmax(0, 1fr); }
+    #export { margin-left: 0; }
+    th, td { padding-inline: 4px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Who talks together and sounds alike?</h1>
+    <p>Harry Potter’s heroes and villains, grouped by dialogue exchanges. Follow the thicker lines to find pairs with more similar vocabulary.</p>
+  </header>
+  <div class="controls">
+    <fieldset>
+      <legend>Medium</legend>
+      <div class="tabs">
+        <button type="button" data-medium="Books" aria-pressed="true">Books</button>
+        <button type="button" data-medium="Films" aria-pressed="false">Films</button>
+      </div>
+    </fieldset>
+    <div>
+      <label for="ties">Dialogue ties</label>
+      <select id="ties">
+        <option value="all">All dialogue ties</option>
+        <option value="same">Same-role ties</option>
+        <option value="within" selected>Same-role ties within communities</option>
+      </select>
+    </div>
+    <div>
+      <label for="person">Character</label>
+      <select id="person"><option value="">All characters</option></select>
+    </div>
+    <button id="export" type="button">Download SVG</button>
+  </div>
+  <section class="map" aria-label="Dialogue network">
+    <div class="legend">
+      <span><i class="hero" aria-hidden="true"></i>Hero</span>
+      <span><i class="villain" aria-hidden="true"></i>Villain</span>
+      <span><i class="region" aria-hidden="true"></i>Dialogue community</span>
+      <span><i class="tie" aria-hidden="true"></i>Thicker tie means greater vocabulary similarity</span>
+    </div>
+    <div class="stage">
+      <div class="scroll">
+        <svg id="network" viewBox="0 0 1180 720" role="group" aria-labelledby="network-title">
+          <title id="network-title">Dialogue community network</title>
+          <g id="drawing"></g>
+        </svg>
+      </div>
+      <div id="tooltip" class="callout" aria-hidden="true" hidden><b></b><span></span></div>
+    </div>
+    <div class="under-map">
+      <p id="selection-note" aria-live="polite"></p>
+      <p>Communities use the full dialogue network and count repeated exchanges. The map shows 29 characters with matched dialogue and explicit hero or villain labels.</p>
+    </div>
+  </section>
+  <section class="evidence" aria-labelledby="vocabulary-summary">
+    <div>
+      <h2 id="vocabulary-summary">Mean vocabulary similarity</h2>
+      <p>These averages compare all pairs of the same role, including pairs with no drawn tie. Use the shuffle comparison to gauge how much support there is for the community pattern.
+      <a href="01_community_similarity.png">See the shuffle comparison</a>.</p>
+    </div>
+    <table>
+      <thead><tr><th scope="col">Role</th><th scope="col">Same community</th><th scope="col">Different communities</th></tr></thead>
+      <tbody id="estimates"></tbody>
+    </table>
+  </section>
+</main>
+<script id="community-data" type="application/json">{"Books": {"nodes": [{"name": "Aberforth Dumbledore", "role": "hero", "community": 0, "x": 131.87, "y": 237.63}, {"name": "Cedric Diggory", "role": "hero", "community": 0, "x": 423.96, "y": 316.23}, {"name": "Dobby", "role": "hero", "community": 0, "x": 305.57, "y": 334.86}, {"name": "Gilderoy Lockhart", "role": "villain", "community": 0, "x": 352.97, "y": 151.49}, {"name": "Harry Potter", "role": "hero", "community": 0, "x": 319.89, "y": 256.52}, {"name": "Hermione Granger", "role": "hero", "community": 0, "x": 251.87, "y": 239.75}, {"name": "Neville Longbottom", "role": "hero", "community": 0, "x": 248.03, "y": 304.64}, {"name": "Peter Pettigrew", "role": "villain", "community": 0, "x": 214.87, "y": 129.15}, {"name": "Quirinus Quirrell", "role": "villain", "community": 0, "x": 500.37, "y": 224.72}, {"name": "Remus Lupin", "role": "hero", "community": 0, "x": 206.14, "y": 193.56}, {"name": "Ron Weasley", "role": "hero", "community": 0, "x": 292.5, "y": 189.02}, {"name": "Rubeus Hagrid", "role": "hero", "community": 0, "x": 373.29, "y": 219.46}, {"name": "Sirius Black", "role": "hero", "community": 0, "x": 187.67, "y": 270.97}, {"name": "Albus Dumbledore", "role": "hero", "community": 1, "x": 793.47, "y": 215.06}, {"name": "Bellatrix Lestrange", "role": "villain", "community": 1, "x": 952.39, "y": 313.57}, {"name": "Corban Yaxley", "role": "villain", "community": 1, "x": 944.83, "y": 181.71}, {"name": "Dolores Umbridge", "role": "villain", "community": 1, "x": 837.84, "y": 262.56}, {"name": "Lily Potter", "role": "hero", "community": 1, "x": 941.57, "y": 98.63}, {"name": "Lucius Malfoy", "role": "villain", "community": 1, "x": 962.92, "y": 246.76}, {"name": "Luna Lovegood", "role": "hero", "community": 1, "x": 861.73, "y": 323.31}, {"name": "Minerva McGonagall", "role": "hero", "community": 1, "x": 886.02, "y": 209.4}, {"name": "Scabior", "role": "villain", "community": 1, "x": 667.14, "y": 236.64}, {"name": "Voldemort", "role": "villain", "community": 1, "x": 902.11, "y": 272.37}, {"name": "Bill Weasley", "role": "hero", "community": 2, "x": 686.19, "y": 585.09}, {"name": "Fred Weasley", "role": "hero", "community": 2, "x": 262.56, "y": 604.99}, {"name": "George Weasley", "role": "hero", "community": 2, "x": 265.78, "y": 533.14}, {"name": "Ginny Weasley", "role": "hero", "community": 2, "x": 485.79, "y": 514.89}, {"name": "Molly Weasley", "role": "hero", "community": 2, "x": 459.67, "y": 606.88}, {"name": "Elphias Doge", "role": "hero", "community": 3, "x": 972, "y": 570}], "edges": [{"a": 5, "b": 4, "turns": 2035, "cosine": 0.799338}, {"a": 5, "b": 10, "turns": 1730, "cosine": 0.755598}, {"a": 5, "b": 11, "turns": 218, "cosine": 0.226781}, {"a": 5, "b": 6, "turns": 35, "cosine": 0.398506}, {"a": 5, "b": 24, "turns": 87, "cosine": 0.520531}, {"a": 5, "b": 13, "turns": 36, "cosine": 0.506984}, {"a": 5, "b": 20, "turns": 24, "cosine": 0.438214}, {"a": 5, "b": 27, "turns": 20, "cosine": 0.439402}, {"a": 5, "b": 3, "turns": 4, "cosine": 0.250388}, {"a": 5, "b": 2, "turns": 32, "cosine": 0.112464}, {"a": 5, "b": 25, "turns": 54, "cosine": 0.492264}, {"a": 5, "b": 9, "turns": 56, "cosine": 0.519024}, {"a": 5, "b": 7, "turns": 10, "cosine": 0.213362}, {"a": 5, "b": 23, "turns": 4, "cosine": 0.172451}, {"a": 5, "b": 1, "turns": 1, "cosine": 0.200458}, {"a": 5, "b": 12, "turns": 49, "cosine": 0.49051}, {"a": 5, "b": 26, "turns": 48, "cosine": 0.489069}, {"a": 5, "b": 19, "turns": 37, "cosine": 0.380083}, {"a": 5, "b": 16, "turns": 71, "cosine": 0.311614}, {"a": 5, "b": 22, "turns": 8, "cosine": 0.249718}, {"a": 5, "b": 21, "turns": 1, "cosine": 0.108063}, {"a": 5, "b": 14, "turns": 4, "cosine": 0.204716}, {"a": 5, "b": 0, "turns": 22, "cosine": 0.255154}, {"a": 7, "b": 9, "turns": 40, "cosine": 0.334581}, {"a": 7, "b": 4, "turns": 13, "cosine": 0.231126}, {"a": 7, "b": 13, "turns": 1, "cosine": 0.274298}, {"a": 7, "b": 22, "turns": 1, "cosine": 0.166862}, {"a": 7, "b": 10, "turns": 4, "cosine": 0.17961}, {"a": 16, "b": 13, "turns": 11, "cosine": 0.30863}, {"a": 16, "b": 10, "turns": 24, "cosine": 0.258917}, {"a": 16, "b": 4, "turns": 101, "cosine": 0.301427}, {"a": 16, "b": 25, "turns": 3, "cosine": 0.153357}, {"a": 16, "b": 20, "turns": 61, "cosine": 0.343403}, {"a": 16, "b": 11, "turns": 57, "cosine": 0.094399}, {"a": 16, "b": 6, "turns": 3, "cosine": 0.154194}, {"a": 16, "b": 24, "turns": 2, "cosine": 0.173735}, {"a": 16, "b": 12, "turns": 1, "cosine": 0.212314}, {"a": 21, "b": 10, "turns": 16, "cosine": 0.123348}, {"a": 21, "b": 4, "turns": 8, "cosine": 0.13708}, {"a": 13, "b": 20, "turns": 76, "cosine": 0.398663}, {"a": 13, "b": 11, "turns": 27, "cosine": 0.146863}, {"a": 13, "b": 4, "turns": 1075, "cosine": 0.57234}, {"a": 13, "b": 10, "turns": 46, "cosine": 0.421822}, {"a": 13, "b": 3, "turns": 4, "cosine": 0.191228}, {"a": 13, "b": 18, "turns": 1, "cosine": 0.196703}, {"a": 13, "b": 26, "turns": 5, "cosine": 0.249219}, {"a": 13, "b": 9, "turns": 1, "cosine": 0.446813}, {"a": 13, "b": 24, "turns": 8, "cosine": 0.288176}, {"a": 13, "b": 1, "turns": 1, "cosine": 0.120961}, {"a": 13, "b": 12, "turns": 10, "cosine": 0.43358}, {"a": 13, "b": 27, "turns": 9, "cosine": 0.292253}, {"a": 13, "b": 23, "turns": 4, "cosine": 0.141853}, {"a": 13, "b": 2, "turns": 1, "cosine": 0.083854}, {"a": 13, "b": 22, "turns": 37, "cosine": 0.357167}, {"a": 13, "b": 6, "turns": 1, "cosine": 0.22876}, {"a": 24, "b": 25, "turns": 188, "cosine": 0.530028}, {"a": 24, "b": 4, "turns": 152, "cosine": 0.544489}, {"a": 24, "b": 10, "turns": 127, "cosine": 0.608825}, {"a": 24, "b": 27, "turns": 74, "cosine": 0.363302}, {"a": 24, "b": 11, "turns": 2, "cosine": 0.120686}, {"a": 24, "b": 26, "turns": 16, "cosine": 0.393593}, {"a": 24, "b": 23, "turns": 2, "cosine": 0.115145}, {"a": 24, "b": 12, "turns": 9, "cosine": 0.355404}, {"a": 24, "b": 9, "turns": 13, "cosine": 0.331397}, {"a": 24, "b": 20, "turns": 2, "cosine": 0.264658}, {"a": 24, "b": 6, "turns": 2, "cosine": 0.271104}, {"a": 18, "b": 11, "turns": 1, "cosine": 0.026121}, {"a": 18, "b": 4, "turns": 14, "cosine": 0.165125}, {"a": 18, "b": 14, "turns": 15, "cosine": 0.27084}, {"a": 18, "b": 6, "turns": 3, "cosine": 0.088001}, {"a": 18, "b": 22, "turns": 7, "cosine": 0.180778}, {"a": 18, "b": 10, "turns": 1, "cosine": 0.13146}, {"a": 27, "b": 4, "turns": 223, "cosine": 0.406539}, {"a": 27, "b": 25, "turns": 41, "cosine": 0.339598}, {"a": 27, "b": 10, "turns": 69, "cosine": 0.434682}, {"a": 27, "b": 26, "turns": 26, "cosine": 0.326527}, {"a": 27, "b": 23, "turns": 21, "cosine": 0.102889}, {"a": 27, "b": 9, "turns": 23, "cosine": 0.336877}, {"a": 27, "b": 12, "turns": 43, "cosine": 0.320772}, {"a": 27, "b": 11, "turns": 7, "cosine": 0.089656}, {"a": 27, "b": 20, "turns": 2, "cosine": 0.23381}, {"a": 23, "b": 10, "turns": 23, "cosine": 0.167648}, {"a": 23, "b": 26, "turns": 7, "cosine": 0.102829}, {"a": 23, "b": 4, "turns": 49, "cosine": 0.168333}, {"a": 23, "b": 25, "turns": 2, "cosine": 0.111819}, {"a": 23, "b": 12, "turns": 4, "cosine": 0.137163}, {"a": 23, "b": 9, "turns": 13, "cosine": 0.145808}, {"a": 22, "b": 4, "turns": 86, "cosine": 0.288671}, {"a": 22, "b": 10, "turns": 7, "cosine": 0.213099}, {"a": 22, "b": 1, "turns": 1, "cosine": 0.061775}, {"a": 22, "b": 14, "turns": 8, "cosine": 0.29433}, {"a": 22, "b": 15, "turns": 1, "cosine": 0.066658}, {"a": 22, "b": 20, "turns": 2, "cosine": 0.19866}, {"a": 22, "b": 11, "turns": 3, "cosine": 0.059154}, {"a": 22, "b": 6, "turns": 6, "cosine": 0.137145}, {"a": 11, "b": 20, "turns": 13, "cosine": 0.099573}, {"a": 11, "b": 4, "turns": 502, "cosine": 0.275834}, {"a": 11, "b": 8, "turns": 7, "cosine": 0.263112}, {"a": 11, "b": 6, "turns": 5, "cosine": 0.110067}, {"a": 11, "b": 10, "turns": 173, "cosine": 0.244621}, {"a": 11, "b": 9, "turns": 6, "cosine": 0.102762}, {"a": 11, "b": 25, "turns": 5, "cosine": 0.134223}, {"a": 11, "b": 26, "turns": 1, "cosine": 0.089418}, {"a": 19, "b": 26, "turns": 7, "cosine": 0.252079}, {"a": 19, "b": 4, "turns": 88, "cosine": 0.34856}, {"a": 19, "b": 6, "turns": 18, "cosine": 0.184923}, {"a": 19, "b": 10, "turns": 40, "cosine": 0.333764}, {"a": 19, "b": 20, "turns": 23, "cosine": 0.185582}, {"a": 20, "b": 10, "turns": 66, "cosine": 0.390379}, {"a": 20, "b": 4, "turns": 202, "cosine": 0.440874}, {"a": 20, "b": 9, "turns": 12, "cosine": 0.320936}, {"a": 20, "b": 25, "turns": 2, "cosine": 0.242128}, {"a": 20, "b": 6, "turns": 4, "cosine": 0.214202}, {"a": 20, "b": 26, "turns": 3, "cosine": 0.217711}, {"a": 3, "b": 4, "turns": 56, "cosine": 0.245688}, {"a": 3, "b": 10, "turns": 34, "cosine": 0.237034}, {"a": 3, "b": 6, "turns": 1, "cosine": 0.137413}, {"a": 3, "b": 26, "turns": 1, "cosine": 0.130988}, {"a": 26, "b": 10, "turns": 80, "cosine": 0.47521}, {"a": 26, "b": 4, "turns": 158, "cosine": 0.450006}, {"a": 26, "b": 25, "turns": 15, "cosine": 0.349669}, {"a": 26, "b": 6, "turns": 7, "cosine": 0.25469}, {"a": 26, "b": 12, "turns": 4, "cosine": 0.278593}, {"a": 26, "b": 9, "turns": 6, "cosine": 0.331737}, {"a": 26, "b": 0, "turns": 1, "cosine": 0.151023}, {"a": 4, "b": 8, "turns": 33, "cosine": 0.254757}, {"a": 4, "b": 10, "turns": 2587, "cosine": 0.834177}, {"a": 4, "b": 25, "turns": 119, "cosine": 0.528246}, {"a": 4, "b": 6, "turns": 170, "cosine": 0.434952}, {"a": 4, "b": 2, "turns": 133, "cosine": 0.239801}, {"a": 4, "b": 9, "turns": 377, "cosine": 0.526971}, {"a": 4, "b": 1, "turns": 74, "cosine": 0.241168}, {"a": 4, "b": 12, "turns": 231, "cosine": 0.53187}, {"a": 4, "b": 14, "turns": 27, "cosine": 0.234458}, {"a": 4, "b": 28, "turns": 21, "cosine": 0.095067}, {"a": 4, "b": 0, "turns": 33, "cosine": 0.269068}, {"a": 4, "b": 17, "turns": 1, "cosine": 0.176384}, {"a": 0, "b": 10, "turns": 4, "cosine": 0.257404}, {"a": 0, "b": 6, "turns": 3, "cosine": 0.14448}, {"a": 25, "b": 10, "turns": 77, "cosine": 0.582611}, {"a": 25, "b": 9, "turns": 1, "cosine": 0.298902}, {"a": 25, "b": 6, "turns": 2, "cosine": 0.274748}, {"a": 25, "b": 12, "turns": 4, "cosine": 0.338342}, {"a": 15, "b": 10, "turns": 4, "cosine": 0.087529}, {"a": 2, "b": 10, "turns": 5, "cosine": 0.090695}, {"a": 6, "b": 10, "turns": 71, "cosine": 0.390951}, {"a": 6, "b": 9, "turns": 16, "cosine": 0.289356}, {"a": 6, "b": 14, "turns": 6, "cosine": 0.134645}, {"a": 6, "b": 12, "turns": 5, "cosine": 0.246951}, {"a": 14, "b": 10, "turns": 11, "cosine": 0.179675}, {"a": 10, "b": 9, "turns": 74, "cosine": 0.469438}, {"a": 10, "b": 1, "turns": 2, "cosine": 0.22869}, {"a": 10, "b": 12, "turns": 29, "cosine": 0.478798}, {"a": 12, "b": 9, "turns": 39, "cosine": 0.392458}, {"a": 12, "b": 17, "turns": 2, "cosine": 0.11954}], "communities": [{"label": "A", "x": 293, "y": 236, "rx": 251, "ry": 183, "count": 13}, {"label": "B", "x": 875, "y": 236, "rx": 251, "ry": 183, "count": 10}, {"label": "C", "x": 432, "y": 569, "rx": 301, "ry": 132, "count": 5}, {"label": "D", "x": 972, "y": 570, "rx": 95, "ry": 66, "count": 1}], "summary": [{"role": "Heroes", "inside": 0.25838175598564783, "across": 0.20013539069945094, "insidePairs": 61, "acrossPairs": 129}, {"role": "Villains", "inside": 0.10780211945496612, "across": 0.08302408385279861, "insidePairs": 18, "acrossPairs": 18}]}, "Films": {"nodes": [{"name": "Aberforth Dumbledore", "role": "hero", "community": 0, "x": 278.23, "y": 118.76}, {"name": "Cedric Diggory", "role": "hero", "community": 0, "x": 448.18, "y": 296.17}, {"name": "Dobby", "role": "hero", "community": 0, "x": 326.2, "y": 337.37}, {"name": "Elphias Doge", "role": "hero", "community": 0, "x": 88.7, "y": 263.24}, {"name": "Harry Potter", "role": "hero", "community": 0, "x": 281.93, "y": 257.29}, {"name": "Hermione Granger", "role": "hero", "community": 0, "x": 285.61, "y": 191.36}, {"name": "Luna Lovegood", "role": "hero", "community": 0, "x": 233.94, "y": 310.2}, {"name": "Ron Weasley", "role": "hero", "community": 0, "x": 340.01, "y": 226.94}, {"name": "Rubeus Hagrid", "role": "hero", "community": 0, "x": 206.22, "y": 193.21}, {"name": "Scabior", "role": "villain", "community": 0, "x": 440.98, "y": 165.48}, {"name": "Albus Dumbledore", "role": "hero", "community": 1, "x": 835.59, "y": 245.65}, {"name": "Bellatrix Lestrange", "role": "villain", "community": 1, "x": 878.74, "y": 313.17}, {"name": "Corban Yaxley", "role": "villain", "community": 1, "x": 1082.07, "y": 249.68}, {"name": "Dolores Umbridge", "role": "villain", "community": 1, "x": 753.12, "y": 271.39}, {"name": "Gilderoy Lockhart", "role": "villain", "community": 1, "x": 697.46, "y": 208.38}, {"name": "Lucius Malfoy", "role": "villain", "community": 1, "x": 927.03, "y": 269.66}, {"name": "Minerva McGonagall", "role": "hero", "community": 1, "x": 779.22, "y": 211.86}, {"name": "Peter Pettigrew", "role": "villain", "community": 1, "x": 1004.13, "y": 201.77}, {"name": "Quirinus Quirrell", "role": "villain", "community": 1, "x": 856.81, "y": 183.17}, {"name": "Voldemort", "role": "villain", "community": 1, "x": 935.83, "y": 205.26}, {"name": "Bill Weasley", "role": "hero", "community": 2, "x": 552.34, "y": 537.43}, {"name": "Fred Weasley", "role": "hero", "community": 2, "x": 420.76, "y": 502.86}, {"name": "George Weasley", "role": "hero", "community": 2, "x": 484.45, "y": 515.84}, {"name": "Ginny Weasley", "role": "hero", "community": 2, "x": 339.67, "y": 547.59}, {"name": "Lily Potter", "role": "hero", "community": 2, "x": 369.61, "y": 660.21}, {"name": "Molly Weasley", "role": "hero", "community": 2, "x": 402.25, "y": 565.16}, {"name": "Remus Lupin", "role": "hero", "community": 2, "x": 471.72, "y": 581.07}, {"name": "Sirius Black", "role": "hero", "community": 2, "x": 425.09, "y": 626.35}, {"name": "Neville Longbottom", "role": "hero", "community": 3, "x": 972, "y": 570}], "edges": [{"a": 5, "b": 7, "turns": 437, "cosine": 0.407713}, {"a": 5, "b": 16, "turns": 16, "cosine": 0.194324}, {"a": 5, "b": 28, "turns": 18, "cosine": 0.228791}, {"a": 5, "b": 4, "turns": 651, "cosine": 0.525172}, {"a": 5, "b": 8, "turns": 39, "cosine": 0.285194}, {"a": 5, "b": 10, "turns": 19, "cosine": 0.321234}, {"a": 5, "b": 15, "turns": 4, "cosine": 0.118291}, {"a": 5, "b": 14, "turns": 3, "cosine": 0.148098}, {"a": 5, "b": 26, "turns": 8, "cosine": 0.282852}, {"a": 5, "b": 27, "turns": 7, "cosine": 0.189232}, {"a": 5, "b": 21, "turns": 9, "cosine": 0.165481}, {"a": 5, "b": 22, "turns": 5, "cosine": 0.183602}, {"a": 5, "b": 19, "turns": 3, "cosine": 0.261981}, {"a": 5, "b": 1, "turns": 1, "cosine": 0.118155}, {"a": 5, "b": 25, "turns": 3, "cosine": 0.236837}, {"a": 5, "b": 13, "turns": 17, "cosine": 0.128371}, {"a": 5, "b": 23, "turns": 10, "cosine": 0.243844}, {"a": 5, "b": 6, "turns": 4, "cosine": 0.188681}, {"a": 5, "b": 3, "turns": 1, "cosine": 0.048789}, {"a": 5, "b": 24, "turns": 1, "cosine": 0.122374}, {"a": 5, "b": 2, "turns": 1, "cosine": 0.059174}, {"a": 5, "b": 12, "turns": 1, "cosine": 0.05385}, {"a": 5, "b": 9, "turns": 3, "cosine": 0.092159}, {"a": 5, "b": 11, "turns": 3, "cosine": 0.13726}, {"a": 5, "b": 20, "turns": 1, "cosine": 0.074405}, {"a": 5, "b": 0, "turns": 8, "cosine": 0.110286}, {"a": 17, "b": 7, "turns": 2, "cosine": 0.075637}, {"a": 17, "b": 27, "turns": 3, "cosine": 0.061887}, {"a": 17, "b": 26, "turns": 3, "cosine": 0.09335}, {"a": 17, "b": 4, "turns": 3, "cosine": 0.104711}, {"a": 17, "b": 19, "turns": 10, "cosine": 0.09357}, {"a": 17, "b": 15, "turns": 1, "cosine": 0.10577}, {"a": 17, "b": 2, "turns": 2, "cosine": 0.020699}, {"a": 13, "b": 10, "turns": 14, "cosine": 0.162989}, {"a": 13, "b": 4, "turns": 27, "cosine": 0.121263}, {"a": 13, "b": 7, "turns": 1, "cosine": 0.101239}, {"a": 13, "b": 16, "turns": 3, "cosine": 0.152996}, {"a": 13, "b": 21, "turns": 4, "cosine": 0.051674}, {"a": 13, "b": 22, "turns": 1, "cosine": 0.045751}, {"a": 9, "b": 4, "turns": 5, "cosine": 0.046845}, {"a": 9, "b": 7, "turns": 7, "cosine": 0.084199}, {"a": 9, "b": 15, "turns": 2, "cosine": 0.021487}, {"a": 10, "b": 16, "turns": 28, "cosine": 0.281204}, {"a": 10, "b": 8, "turns": 21, "cosine": 0.184913}, {"a": 10, "b": 4, "turns": 265, "cosine": 0.31005}, {"a": 10, "b": 18, "turns": 1, "cosine": 0.08739}, {"a": 10, "b": 7, "turns": 19, "cosine": 0.208288}, {"a": 10, "b": 14, "turns": 2, "cosine": 0.154986}, {"a": 10, "b": 19, "turns": 33, "cosine": 0.28918}, {"a": 10, "b": 15, "turns": 18, "cosine": 0.185713}, {"a": 10, "b": 21, "turns": 3, "cosine": 0.091191}, {"a": 10, "b": 22, "turns": 1, "cosine": 0.091874}, {"a": 10, "b": 28, "turns": 1, "cosine": 0.108775}, {"a": 10, "b": 23, "turns": 1, "cosine": 0.133166}, {"a": 10, "b": 11, "turns": 6, "cosine": 0.155538}, {"a": 21, "b": 22, "turns": 88, "cosine": 0.420052}, {"a": 21, "b": 25, "turns": 4, "cosine": 0.115707}, {"a": 21, "b": 4, "turns": 24, "cosine": 0.151802}, {"a": 21, "b": 7, "turns": 17, "cosine": 0.194327}, {"a": 21, "b": 23, "turns": 4, "cosine": 0.096905}, {"a": 21, "b": 16, "turns": 2, "cosine": 0.057327}, {"a": 21, "b": 20, "turns": 1, "cosine": 0.016917}, {"a": 15, "b": 4, "turns": 30, "cosine": 0.152039}, {"a": 15, "b": 8, "turns": 4, "cosine": 0.069538}, {"a": 15, "b": 2, "turns": 9, "cosine": 0.236655}, {"a": 15, "b": 7, "turns": 1, "cosine": 0.084585}, {"a": 15, "b": 19, "turns": 16, "cosine": 0.135945}, {"a": 15, "b": 11, "turns": 6, "cosine": 0.24366}, {"a": 15, "b": 28, "turns": 1, "cosine": 0.045798}, {"a": 15, "b": 27, "turns": 1, "cosine": 0.042871}, {"a": 25, "b": 4, "turns": 33, "cosine": 0.171683}, {"a": 25, "b": 22, "turns": 2, "cosine": 0.135295}, {"a": 25, "b": 23, "turns": 12, "cosine": 0.134407}, {"a": 25, "b": 7, "turns": 9, "cosine": 0.155797}, {"a": 25, "b": 14, "turns": 1, "cosine": 0.071518}, {"a": 25, "b": 27, "turns": 10, "cosine": 0.090999}, {"a": 25, "b": 26, "turns": 2, "cosine": 0.152984}, {"a": 25, "b": 8, "turns": 2, "cosine": 0.130944}, {"a": 25, "b": 11, "turns": 2, "cosine": 0.057077}, {"a": 20, "b": 22, "turns": 2, "cosine": 0.028475}, {"a": 20, "b": 26, "turns": 1, "cosine": 0.062636}, {"a": 20, "b": 6, "turns": 3, "cosine": 0.04179}, {"a": 20, "b": 4, "turns": 4, "cosine": 0.075972}, {"a": 19, "b": 18, "turns": 8, "cosine": 0.062929}, {"a": 19, "b": 4, "turns": 60, "cosine": 0.306584}, {"a": 19, "b": 8, "turns": 12, "cosine": 0.142809}, {"a": 19, "b": 28, "turns": 8, "cosine": 0.105221}, {"a": 19, "b": 1, "turns": 1, "cosine": 0.064864}, {"a": 19, "b": 24, "turns": 2, "cosine": 0.051364}, {"a": 19, "b": 27, "turns": 2, "cosine": 0.110679}, {"a": 19, "b": 11, "turns": 5, "cosine": 0.136928}, {"a": 19, "b": 7, "turns": 9, "cosine": 0.179325}, {"a": 19, "b": 12, "turns": 2, "cosine": 0.036081}, {"a": 19, "b": 23, "turns": 1, "cosine": 0.092664}, {"a": 8, "b": 16, "turns": 3, "cosine": 0.102913}, {"a": 8, "b": 4, "turns": 164, "cosine": 0.287547}, {"a": 8, "b": 18, "turns": 2, "cosine": 0.084563}, {"a": 8, "b": 7, "turns": 34, "cosine": 0.275323}, {"a": 8, "b": 14, "turns": 2, "cosine": 0.123044}, {"a": 8, "b": 28, "turns": 2, "cosine": 0.143047}, {"a": 8, "b": 23, "turns": 1, "cosine": 0.134255}, {"a": 8, "b": 26, "turns": 2, "cosine": 0.164845}, {"a": 6, "b": 4, "turns": 47, "cosine": 0.171145}, {"a": 6, "b": 28, "turns": 3, "cosine": 0.072294}, {"a": 6, "b": 7, "turns": 8, "cosine": 0.131667}, {"a": 6, "b": 23, "turns": 2, "cosine": 0.077192}, {"a": 6, "b": 26, "turns": 1, "cosine": 0.100101}, {"a": 6, "b": 11, "turns": 1, "cosine": 0.035579}, {"a": 6, "b": 2, "turns": 2, "cosine": 0.025677}, {"a": 16, "b": 7, "turns": 26, "cosine": 0.138174}, {"a": 16, "b": 28, "turns": 2, "cosine": 0.078866}, {"a": 16, "b": 4, "turns": 51, "cosine": 0.182138}, {"a": 16, "b": 18, "turns": 7, "cosine": 0.051808}, {"a": 16, "b": 14, "turns": 2, "cosine": 0.093549}, {"a": 16, "b": 22, "turns": 1, "cosine": 0.055784}, {"a": 14, "b": 4, "turns": 29, "cosine": 0.114006}, {"a": 14, "b": 7, "turns": 20, "cosine": 0.117468}, {"a": 23, "b": 4, "turns": 30, "cosine": 0.194172}, {"a": 23, "b": 7, "turns": 13, "cosine": 0.178603}, {"a": 23, "b": 28, "turns": 8, "cosine": 0.089894}, {"a": 23, "b": 26, "turns": 4, "cosine": 0.11107}, {"a": 4, "b": 18, "turns": 10, "cosine": 0.097991}, {"a": 4, "b": 7, "turns": 627, "cosine": 0.484703}, {"a": 4, "b": 28, "turns": 59, "cosine": 0.26369}, {"a": 4, "b": 22, "turns": 18, "cosine": 0.188833}, {"a": 4, "b": 2, "turns": 76, "cosine": 0.280459}, {"a": 4, "b": 26, "turns": 98, "cosine": 0.254343}, {"a": 4, "b": 27, "turns": 70, "cosine": 0.15951}, {"a": 4, "b": 1, "turns": 31, "cosine": 0.159177}, {"a": 4, "b": 24, "turns": 6, "cosine": 0.0878}, {"a": 4, "b": 11, "turns": 23, "cosine": 0.133783}, {"a": 4, "b": 3, "turns": 14, "cosine": 0.050896}, {"a": 4, "b": 0, "turns": 20, "cosine": 0.114686}, {"a": 4, "b": 12, "turns": 1, "cosine": 0.035772}, {"a": 0, "b": 7, "turns": 1, "cosine": 0.142765}, {"a": 22, "b": 7, "turns": 14, "cosine": 0.242248}, {"a": 12, "b": 7, "turns": 6, "cosine": 0.054441}, {"a": 2, "b": 7, "turns": 3, "cosine": 0.04752}, {"a": 2, "b": 11, "turns": 4, "cosine": 0.018355}, {"a": 28, "b": 7, "turns": 15, "cosine": 0.330304}, {"a": 28, "b": 18, "turns": 1, "cosine": 0.078516}, {"a": 28, "b": 26, "turns": 10, "cosine": 0.158553}, {"a": 28, "b": 11, "turns": 5, "cosine": 0.053881}, {"a": 28, "b": 27, "turns": 1, "cosine": 0.092839}, {"a": 11, "b": 7, "turns": 8, "cosine": 0.115027}, {"a": 7, "b": 26, "turns": 3, "cosine": 0.178816}, {"a": 7, "b": 27, "turns": 10, "cosine": 0.135075}, {"a": 27, "b": 26, "turns": 20, "cosine": 0.136929}, {"a": 27, "b": 24, "turns": 2, "cosine": 0.071045}, {"a": 24, "b": 1, "turns": 1, "cosine": 0.019979}], "communities": [{"label": "A", "x": 293, "y": 236, "rx": 251, "ry": 183, "count": 10}, {"label": "B", "x": 875, "y": 236, "rx": 251, "ry": 183, "count": 10}, {"label": "C", "x": 432, "y": 569, "rx": 301, "ry": 132, "count": 8}, {"label": "D", "x": 972, "y": 570, "rx": 95, "ry": 66, "count": 1}], "summary": [{"role": "Heroes", "inside": 0.11390337764021274, "across": 0.09946924625187556, "insidePairs": 65, "acrossPairs": 125}, {"role": "Villains", "inside": 0.07157480930745068, "across": 0.022471050938533233, "insidePairs": 28, "acrossPairs": 8}]}}</script>
+<script>
+  "use strict";
+  const dataset = JSON.parse(document.getElementById("community-data").textContent);
+  const palette = {hero:"#70d8fb", villain:"#ffa282", mixed:"#91a8c2"};
+  const width = 1180, height = 720;
+  const bg = "#0c1724", textColor = "#e7f0ff";
+  const svg = document.getElementById("network");
+  const drawing = document.getElementById("drawing");
+  const tooltip = document.getElementById("tooltip");
+  const stage = document.querySelector(".stage");
+  const media = [...document.querySelectorAll("[data-medium]")];
+  const person = document.getElementById("person");
+  const ties = document.getElementById("ties");
+  let medium = "Books", selected = "";
+
+  function element(tag, attributes, label) {
+    const e = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    Object.entries(attributes).forEach(([name,value]) => e.setAttribute(name,value));
+    if (label !== undefined) e.textContent = label;
+    return e;
+  }
+
+  function addTooltip(target, headline, detail) {
+    const show = event => {
+      const bounds = stage.getBoundingClientRect();
+      tooltip.firstElementChild.textContent = headline;
+      tooltip.lastElementChild.textContent = detail;
+      tooltip.hidden = false;
+      tooltip.style.left = Math.max(6, Math.min(event.clientX-bounds.left+12, bounds.width-tooltip.offsetWidth-6))+"px";
+      tooltip.style.top = Math.max(4, event.clientY-bounds.top-tooltip.offsetHeight-10)+"px";
+    };
+    target.addEventListener("pointermove", show);
+    target.addEventListener("pointerleave", () => { tooltip.hidden = true; });
+  }
+
+  function visibleEdges(view) {
+    return view.edges.filter(edge => {
+      const a = view.nodes[edge.a], b = view.nodes[edge.b];
+      if (ties.value === "all") return true;
+      return a.role === b.role && (ties.value === "same" || a.community === b.community);
+    });
+  }
+
+  function drawLabels(nodes, edges) {
+    const degree = new Map(nodes.map(node => [node.name, 0]));
+    for (const {a,b} of edges) {
+      degree.set(nodes[a].name, degree.get(nodes[a].name)+1);
+      degree.set(nodes[b].name, degree.get(nodes[b].name)+1);
+    }
+    const ranked = [...nodes].sort((a,b) => degree.get(b.name)-degree.get(a.name) || a.name.localeCompare(b.name));
+    const boxes = nodes.map(node => ({left:node.x-10, right:node.x+10, top:node.y-10, bottom:node.y+10}));
+    const placement = [0, -18, 18, -36, 36, -54, 54, -72, 72];
+    const clamp = (x,a,b) => Math.max(a,Math.min(b,x));
+    for (const node of ranked) {
+      const {x,y} = node;
+      const label = element("text", {
+        class:"label", fill:node.name === selected ? "#fff" : textColor, stroke:bg,
+        "stroke-width":3.8, "stroke-linejoin":"round", "paint-order":"stroke", "font-size":14,
+        "font-weight":node.name === selected ? 750 : 530, "aria-hidden":"true",
+      }, node.name);
+      drawing.append(label);
+      const measured = label.getBBox();
+      let best;
+      for (const offset of placement) {
+        for (const horizontal of [x+13, x-13-measured.width]) {
+          const left = clamp(horizontal, 16, width-16-measured.width);
+          const top = clamp(y-measured.height/2+offset, 14, height-14-measured.height);
+          const right = left+measured.width, bottom = top+measured.height;
+          const collisions = boxes.filter(box =>
+            left < box.right+3 && right > box.left-3 && top < box.bottom+2 && bottom > box.top-2
+          ).length;
+          const anchorX = clamp(x,left,right), anchorY = clamp(y,top,bottom);
+          const distance = Math.hypot(anchorX-x,anchorY-y);
+          const score = collisions*1000+distance+Math.abs(horizontal-left);
+          if (!best || score < best.score) best = {left,top,right,bottom,anchorX,anchorY,distance,score};
+        }
+      }
+      if (best.distance > 23) {
+        drawing.insertBefore(element("line", {
+          x1:x,y1:y,x2:best.anchorX,y2:best.anchorY,stroke:"#9cb2cc","stroke-width":.8,opacity:.7,
+          "pointer-events":"none",
+        }), label);
+      }
+      label.setAttribute("x",best.left-measured.x);
+      label.setAttribute("y",best.top-measured.y);
+      boxes.push(best);
+    }
+  }
+
+  function select(name) {
+    selected = name;
+    person.value = name;
+    render();
+  }
+
+  function drawRegion(cluster) {
+    drawing.append(
+      element("ellipse", {
+        cx:cluster.x, cy:cluster.y, rx:cluster.rx, ry:cluster.ry, fill:"#14273d",
+        "fill-opacity":.78, stroke:"#496680", "stroke-dasharray":"4 6", "stroke-width":1.05,
+      }),
+      element("text", {
+        x:cluster.x, y:cluster.y-cluster.ry+27, fill:"#acc4dc", "text-anchor":"middle",
+        "font-size":13, "font-weight":650, "letter-spacing":.3,
+      }, "Community "+cluster.label)
+    );
+  }
+
+  function drawEdge(edge, nodes) {
+    const a = nodes[edge.a], b = nodes[edge.b];
+    const role = a.role === b.role ? a.role : "mixed";
+    const active = selected === a.name || selected === b.name;
+    const opacity = selected
+      ? (active ? .9 : .095)
+      : (role === "mixed" ? .16 : .33+.48*Math.sqrt(edge.cosine));
+    const geometry = {x1:a.x, y1:a.y, x2:b.x, y2:b.y};
+    drawing.append(element("line", {
+      ...geometry, stroke:palette[role], "stroke-width":.65+8*edge.cosine, opacity, "stroke-linecap":"round",
+    }));
+    if (!selected || active) {
+      const hit = element("line", {...geometry, class:"edge-hit", stroke:"transparent", "stroke-width":8});
+      addTooltip(hit,a.name+" / "+b.name,
+        edge.turns+" adjacent transitions · TF-IDF cosine "+edge.cosine.toFixed(3));
+      drawing.append(hit);
+    }
+  }
+
+  function drawNode(node, community) {
+    const {x,y,role,name} = node;
+    const dot = {"fill":palette[role], stroke:bg, "stroke-width":2, class:"node", "data-character":name,
+      "aria-label":name+", "+role+", community "+community.label};
+    if (name === selected) {
+      drawing.append(element("circle", {cx:x,cy:y,r:13,fill:"none",stroke:"#fff","stroke-width":1.3}));
+    }
+    const shape = role === "hero"
+      ? element("circle", {...dot,cx:x,cy:y,r:7.2})
+      : element("polygon", {...dot,points:[[x,y-9],[x+9,y],[x,y+9],[x-9,y]].join(" ")});
+    addTooltip(shape,name,(role==="hero"?"Hero":"Villain")+" · Community "+community.label);
+    shape.addEventListener("click",() => select(name === selected ? "" : name));
+    drawing.append(shape);
+  }
+
+  function updateEvidence(view) {
+    const rows = view.summary.map(result => {
+      const tr = document.createElement("tr");
+      const role = document.createElement("th");
+      role.scope = "row";
+      role.textContent = result.role;
+      tr.append(role);
+      for (const [value,pairs] of [[result.inside,result.insidePairs],[result.across,result.acrossPairs]]) {
+        const td = document.createElement("td");
+        td.textContent = value.toFixed(3);
+        const support = document.createElement("small");
+        support.textContent = pairs + " pairs";
+        td.append(support);
+        tr.append(td);
+      }
+      return tr;
+    });
+    document.getElementById("estimates").replaceChildren(...rows);
+  }
+
+  function render() {
+    const view = dataset[medium];
+    const edges = visibleEdges(view);
+    const name = view.nodes.find(node => node.name === selected);
+    tooltip.hidden = true;
+    document.getElementById("network-title").textContent = medium+" dialogue community network";
+    drawing.replaceChildren(element("rect",{x:0,y:0,width,height,fill:bg}));
+    view.communities.forEach(drawRegion);
+    const chosenEdge = edge => view.nodes[edge.a].name === selected || view.nodes[edge.b].name === selected;
+    const ordered = [...edges].sort((a,b) => Number(chosenEdge(a))-Number(chosenEdge(b)) || a.cosine-b.cosine);
+    ordered.forEach(edge=>drawEdge(edge,view.nodes));
+    view.nodes.forEach(node=>drawNode(node,view.communities[node.community]));
+    drawLabels(view.nodes,view.edges);
+    document.getElementById("selection-note").textContent = name
+      ? name.name+" · Community "+view.communities[name.community].label
+        +" · "+edges.filter(chosenEdge).length+" dialogue ties shown"
+      : medium+" · "+view.nodes.length+" characters · "+edges.length+" dialogue ties shown";
+    updateEvidence(view);
+  }
+
+  function exportMap() {
+    const summary = dataset[medium].summary.map(result =>
+      result.role+" "+result.inside.toFixed(3)+" / "+result.across.toFixed(3)).join("  ·  ");
+    const output = svg.cloneNode(true);
+    output.setAttribute("xmlns","http://www.w3.org/2000/svg");
+    output.setAttribute("width",width);
+    output.setAttribute("height",height+120);
+    output.setAttribute("viewBox","0 -46 "+width+" "+(height+120));
+    output.setAttribute("font-family","Segoe UI, sans-serif");
+    output.prepend(element("rect",{x:0,y:-46,width,height:height+120,fill:bg}));
+    output.append(
+      element("text",{x:28,y:-12,fill:textColor,"font-size":26,"font-weight":700},"Harry Potter dialogue communities · "+medium),
+      element("text",{x:28,y:height+16,fill:palette.hero,"font-size":14},"● Hero"),
+      element("text",{x:110,y:height+16,fill:palette.villain,"font-size":14},"◆ Villain"),
+      element("text",{x:207,y:height+16,fill:"#c8d7e9","font-size":14},"Thicker lines show greater TF-IDF cosine similarity."),
+      element("text",{x:28,y:height+37,fill:"#c8d7e9","font-size":13},"Edges represent adjacent speaker changes. Regions are weighted Louvain communities."),
+      element("text",{x:28,y:height+57,fill:"#c8d7e9","font-size":13},"Mean cosine within / across communities for all same-role pairs · "+summary)
+    );
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(output)],{type:"image/svg+xml"}));
+    link.href = url;
+    link.download = "dialogue-communities-"+medium.toLowerCase()+".svg";
+    link.click();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
+
+  dataset.Books.nodes.map(node=>node.name).sort((a,b)=>a.localeCompare(b)).forEach(name=>person.add(new Option(name,name)));
+  person.addEventListener("change",()=>select(person.value));
+  ties.addEventListener("change",render);
+  media.forEach(button=>button.addEventListener("click",()=>{
+    medium = button.dataset.medium;
+    media.forEach(item=>item.setAttribute("aria-pressed",item===button));
+    render();
+  }));
+  document.getElementById("export").addEventListener("click",exportMap);
+  render();
+</script>
+</body>
+</html>

@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harry Potter dialogue communities</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --ink: #edf4fb;
+    --muted: #aebed0;
+    --surface: #101d2b;
+    --line: #293c52;
+    --hero: #70d8fb;
+    --villain: #ffa282;
+    font: 15px/1.5 "Segoe UI", system-ui, sans-serif;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #09121d; color: var(--ink); }
+  main { max-width: 1520px; margin: auto; padding: 30px clamp(14px, 4vw, 55px) 33px; }
+  h1, h2, p { margin: 0; }
+  h1 { font-size: clamp(2rem, 4.5vw, 3.6rem); letter-spacing: -.055em; line-height: 1.05; }
+  header p { margin-top: 12px; max-width: 690px; color: var(--muted); }
+  .controls { display: flex; align-items: end; flex-wrap: wrap; gap: 12px 22px; margin: 22px 0 14px; }
+  fieldset { min-width: 0; border: 0; padding: 0; margin: 0; }
+  legend, label { font-size: .82rem; font-weight: 650; padding: 0; display: block; margin-bottom: 5px; }
+  .tabs { display: flex; padding: 2px; border: 1px solid var(--line); border-radius: 7px; }
+  button, select { color: var(--ink); background: var(--surface); font: inherit; min-height: 42px; border: 1px solid var(--line); border-radius: 6px; }
+  button { padding: 5px 14px; cursor: pointer; }
+  button:hover, select:hover { border-color: #7196b6; }
+  button:focus-visible, select:focus-visible, a:focus-visible { outline: 2px solid var(--hero); outline-offset: 3px; }
+  .tabs button { min-height: 38px; min-width: 69px; border: 0; }
+  .tabs button[aria-pressed="true"] { color: #0c2639; background: var(--hero); font-weight: 700; }
+  select { padding: 4px 27px 4px 9px; max-width: 100%; }
+  #export { margin-left: auto; }
+  .map { border: 1px solid var(--line); border-radius: 11px; overflow: hidden; background: #0c1724; }
+  .legend { padding: 12px 15px; display: flex; align-items: center; flex-wrap: wrap; gap: 9px 21px; font-size: .85rem; border-bottom: 1px solid var(--line); }
+  .legend span { display: inline-flex; align-items: center; gap: 7px; }
+  .legend i { display: inline-block; width: 9px; height: 9px; }
+  .legend .hero { background: var(--hero); border-radius: 50%; }
+  .legend .villain { background: var(--villain); transform: rotate(45deg); }
+  .legend .tie { width: 20px; height: 3px; background: #98b3ca; }
+  .legend .region { width: 15px; height: 10px; border: 1px dashed #7e9cbe; border-radius: 50%; }
+  .stage { position: relative; }
+  .scroll { overflow: auto; }
+  svg { display: block; width: 100%; min-width: 865px; font-family: "Segoe UI", system-ui, sans-serif; }
+  .node { cursor: pointer; }
+  .edge-hit { cursor: crosshair; }
+  .label { pointer-events: none; }
+  .callout { position: absolute; z-index: 2; pointer-events: none; max-width: calc(100% - 18px); padding: 7px 9px; color: var(--ink); background: #192b3e; border: 1px solid #526982; border-radius: 6px; font-size: .85rem; }
+  .callout b, .callout span { display: block; }
+  .callout span { color: #d0dcea; }
+  .under-map { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 16px 25px; padding: 13px 15px 14px; border-top: 1px solid var(--line); }
+  .under-map p { max-width: 620px; color: var(--muted); font-size: .84rem; }
+  #selection-note { color: var(--ink); }
+  .evidence { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr); gap: 18px 30px; margin-top: 22px; }
+  .evidence h2 { font-size: 1rem; }
+  .evidence p { font-size: .86rem; color: var(--muted); margin-top: 6px; max-width: 55ch; }
+  .evidence a { color: #8edfff; }
+  table { border-collapse: collapse; align-self: start; width: 100%; font-size: .85rem; font-variant-numeric: tabular-nums; }
+  th, td { padding: 7px 8px; border-bottom: 1px solid var(--line); text-align: left; }
+  th small, td small { display: block; color: var(--muted); font-weight: 400; }
+  @media (max-width: 720px) {
+    main { padding-top: 20px; }
+    .evidence { grid-template-columns: minmax(0, 1fr); }
+    #export { margin-left: 0; }
+    th, td { padding-inline: 4px; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Who talks together and sounds alike?</h1>
+    <p>Harry Potter’s heroes and villains, grouped by dialogue exchanges. Follow the thicker lines to find pairs with more similar vocabulary.</p>
+  </header>
+  <div class="controls">
+    <fieldset>
+      <legend>Medium</legend>
+      <div class="tabs">
+        <button type="button" data-medium="Books" aria-pressed="true">Books</button>
+        <button type="button" data-medium="Films" aria-pressed="false">Films</button>
+      </div>
+    </fieldset>
+    <div>
+      <label for="ties">Dialogue ties</label>
+      <select id="ties">
+        <option value="all">All dialogue ties</option>
+        <option value="same">Same-role ties</option>
+        <option value="within" selected>Same-role ties within communities</option>
+      </select>
+    </div>
+    <div>
+      <label for="person">Character</label>
+      <select id="person"><option value="">All characters</option></select>
+    </div>
+    <button id="export" type="button">Download SVG</button>
+  </div>
+  <section class="map" aria-label="Dialogue network">
+    <div class="legend">
+      <span><i class="hero" aria-hidden="true"></i>Hero</span>
+      <span><i class="villain" aria-hidden="true"></i>Villain</span>
+      <span><i class="region" aria-hidden="true"></i>Dialogue community</span>
+      <span><i class="tie" aria-hidden="true"></i>Thicker tie means greater vocabulary similarity</span>
+    </div>
+    <div class="stage">
+      <div class="scroll">
+        <svg id="network" viewBox="0 0 1180 720" role="group" aria-labelledby="network-title">
+          <title id="network-title">Dialogue community network</title>
+          <g id="drawing"></g>
+        </svg>
+      </div>
+      <div id="tooltip" class="callout" aria-hidden="true" hidden><b></b><span></span></div>
+    </div>
+    <div class="under-map">
+      <p id="selection-note" aria-live="polite"></p>
+      <p>Communities use the full dialogue network and count repeated exchanges. The map shows 29 characters with matched dialogue and explicit hero or villain labels.</p>
+    </div>
+  </section>
+  <section class="evidence" aria-labelledby="vocabulary-summary">
+    <div>
+      <h2 id="vocabulary-summary">Mean vocabulary similarity</h2>
+      <p>These averages compare all pairs of the same role, including pairs with no drawn tie. Use the shuffle comparison to gauge how much support there is for the community pattern.
+      <a href="01_community_similarity.png">See the shuffle comparison</a>.</p>
+    </div>
+    <table>
+      <thead><tr><th scope="col">Role</th><th scope="col">Same community</th><th scope="col">Different communities</th></tr></thead>
+      <tbody id="estimates"></tbody>
+    </table>
+  </section>
+</main>
+<script id="community-data" type="application/json">__COMMUNITY_DATA__</script>
+<script>
+  "use strict";
+  const dataset = JSON.parse(document.getElementById("community-data").textContent);
+  const palette = {hero:"#70d8fb", villain:"#ffa282", mixed:"#91a8c2"};
+  const width = 1180, height = 720;
+  const bg = "#0c1724", textColor = "#e7f0ff";
+  const svg = document.getElementById("network");
+  const drawing = document.getElementById("drawing");
+  const tooltip = document.getElementById("tooltip");
+  const stage = document.querySelector(".stage");
+  const media = [...document.querySelectorAll("[data-medium]")];
+  const person = document.getElementById("person");
+  const ties = document.getElementById("ties");
+  let medium = "Books", selected = "";
+
+  function element(tag, attributes, label) {
+    const e = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    Object.entries(attributes).forEach(([name,value]) => e.setAttribute(name,value));
+    if (label !== undefined) e.textContent = label;
+    return e;
+  }
+
+  function addTooltip(target, headline, detail) {
+    const show = event => {
+      const bounds = stage.getBoundingClientRect();
+      tooltip.firstElementChild.textContent = headline;
+      tooltip.lastElementChild.textContent = detail;
+      tooltip.hidden = false;
+      tooltip.style.left = Math.max(6, Math.min(event.clientX-bounds.left+12, bounds.width-tooltip.offsetWidth-6))+"px";
+      tooltip.style.top = Math.max(4, event.clientY-bounds.top-tooltip.offsetHeight-10)+"px";
+    };
+    target.addEventListener("pointermove", show);
+    target.addEventListener("pointerleave", () => { tooltip.hidden = true; });
+  }
+
+  function visibleEdges(view) {
+    return view.edges.filter(edge => {
+      const a = view.nodes[edge.a], b = view.nodes[edge.b];
+      if (ties.value === "all") return true;
+      return a.role === b.role && (ties.value === "same" || a.community === b.community);
+    });
+  }
+
+  function drawLabels(nodes, edges) {
+    const degree = new Map(nodes.map(node => [node.name, 0]));
+    for (const {a,b} of edges) {
+      degree.set(nodes[a].name, degree.get(nodes[a].name)+1);
+      degree.set(nodes[b].name, degree.get(nodes[b].name)+1);
+    }
+    const ranked = [...nodes].sort((a,b) => degree.get(b.name)-degree.get(a.name) || a.name.localeCompare(b.name));
+    const boxes = nodes.map(node => ({left:node.x-10, right:node.x+10, top:node.y-10, bottom:node.y+10}));
+    const placement = [0, -18, 18, -36, 36, -54, 54, -72, 72];
+    const clamp = (x,a,b) => Math.max(a,Math.min(b,x));
+    for (const node of ranked) {
+      const {x,y} = node;
+      const label = element("text", {
+        class:"label", fill:node.name === selected ? "#fff" : textColor, stroke:bg,
+        "stroke-width":3.8, "stroke-linejoin":"round", "paint-order":"stroke", "font-size":14,
+        "font-weight":node.name === selected ? 750 : 530, "aria-hidden":"true",
+      }, node.name);
+      drawing.append(label);
+      const measured = label.getBBox();
+      let best;
+      for (const offset of placement) {
+        for (const horizontal of [x+13, x-13-measured.width]) {
+          const left = clamp(horizontal, 16, width-16-measured.width);
+          const top = clamp(y-measured.height/2+offset, 14, height-14-measured.height);
+          const right = left+measured.width, bottom = top+measured.height;
+          const collisions = boxes.filter(box =>
+            left < box.right+3 && right > box.left-3 && top < box.bottom+2 && bottom > box.top-2
+          ).length;
+          const anchorX = clamp(x,left,right), anchorY = clamp(y,top,bottom);
+          const distance = Math.hypot(anchorX-x,anchorY-y);
+          const score = collisions*1000+distance+Math.abs(horizontal-left);
+          if (!best || score < best.score) best = {left,top,right,bottom,anchorX,anchorY,distance,score};
+        }
+      }
+      if (best.distance > 23) {
+        drawing.insertBefore(element("line", {
+          x1:x,y1:y,x2:best.anchorX,y2:best.anchorY,stroke:"#9cb2cc","stroke-width":.8,opacity:.7,
+          "pointer-events":"none",
+        }), label);
+      }
+      label.setAttribute("x",best.left-measured.x);
+      label.setAttribute("y",best.top-measured.y);
+      boxes.push(best);
+    }
+  }
+
+  function select(name) {
+    selected = name;
+    person.value = name;
+    render();
+  }
+
+  function drawRegion(cluster) {
+    drawing.append(
+      element("ellipse", {
+        cx:cluster.x, cy:cluster.y, rx:cluster.rx, ry:cluster.ry, fill:"#14273d",
+        "fill-opacity":.78, stroke:"#496680", "stroke-dasharray":"4 6", "stroke-width":1.05,
+      }),
+      element("text", {
+        x:cluster.x, y:cluster.y-cluster.ry+27, fill:"#acc4dc", "text-anchor":"middle",
+        "font-size":13, "font-weight":650, "letter-spacing":.3,
+      }, "Community "+cluster.label)
+    );
+  }
+
+  function drawEdge(edge, nodes) {
+    const a = nodes[edge.a], b = nodes[edge.b];
+    const role = a.role === b.role ? a.role : "mixed";
+    const active = selected === a.name || selected === b.name;
+    const opacity = selected
+      ? (active ? .9 : .095)
+      : (role === "mixed" ? .16 : .33+.48*Math.sqrt(edge.cosine));
+    const geometry = {x1:a.x, y1:a.y, x2:b.x, y2:b.y};
+    drawing.append(element("line", {
+      ...geometry, stroke:palette[role], "stroke-width":.65+8*edge.cosine, opacity, "stroke-linecap":"round",
+    }));
+    if (!selected || active) {
+      const hit = element("line", {...geometry, class:"edge-hit", stroke:"transparent", "stroke-width":8});
+      addTooltip(hit,a.name+" / "+b.name,
+        edge.turns+" adjacent transitions · TF-IDF cosine "+edge.cosine.toFixed(3));
+      drawing.append(hit);
+    }
+  }
+
+  function drawNode(node, community) {
+    const {x,y,role,name} = node;
+    const dot = {"fill":palette[role], stroke:bg, "stroke-width":2, class:"node", "data-character":name,
+      "aria-label":name+", "+role+", community "+community.label};
+    if (name === selected) {
+      drawing.append(element("circle", {cx:x,cy:y,r:13,fill:"none",stroke:"#fff","stroke-width":1.3}));
+    }
+    const shape = role === "hero"
+      ? element("circle", {...dot,cx:x,cy:y,r:7.2})
+      : element("polygon", {...dot,points:[[x,y-9],[x+9,y],[x,y+9],[x-9,y]].join(" ")});
+    addTooltip(shape,name,(role==="hero"?"Hero":"Villain")+" · Community "+community.label);
+    shape.addEventListener("click",() => select(name === selected ? "" : name));
+    drawing.append(shape);
+  }
+
+  function updateEvidence(view) {
+    const rows = view.summary.map(result => {
+      const tr = document.createElement("tr");
+      const role = document.createElement("th");
+      role.scope = "row";
+      role.textContent = result.role;
+      tr.append(role);
+      for (const [value,pairs] of [[result.inside,result.insidePairs],[result.across,result.acrossPairs]]) {
+        const td = document.createElement("td");
+        td.textContent = value.toFixed(3);
+        const support = document.createElement("small");
+        support.textContent = pairs + " pairs";
+        td.append(support);
+        tr.append(td);
+      }
+      return tr;
+    });
+    document.getElementById("estimates").replaceChildren(...rows);
+  }
+
+  function render() {
+    const view = dataset[medium];
+    const edges = visibleEdges(view);
+    const name = view.nodes.find(node => node.name === selected);
+    tooltip.hidden = true;
+    document.getElementById("network-title").textContent = medium+" dialogue community network";
+    drawing.replaceChildren(element("rect",{x:0,y:0,width,height,fill:bg}));
+    view.communities.forEach(drawRegion);
+    const chosenEdge = edge => view.nodes[edge.a].name === selected || view.nodes[edge.b].name === selected;
+    const ordered = [...edges].sort((a,b) => Number(chosenEdge(a))-Number(chosenEdge(b)) || a.cosine-b.cosine);
+    ordered.forEach(edge=>drawEdge(edge,view.nodes));
+    view.nodes.forEach(node=>drawNode(node,view.communities[node.community]));
+    drawLabels(view.nodes,view.edges);
+    document.getElementById("selection-note").textContent = name
+      ? name.name+" · Community "+view.communities[name.community].label
+        +" · "+edges.filter(chosenEdge).length+" dialogue ties shown"
+      : medium+" · "+view.nodes.length+" characters · "+edges.length+" dialogue ties shown";
+    updateEvidence(view);
+  }
+
+  function exportMap() {
+    const summary = dataset[medium].summary.map(result =>
+      result.role+" "+result.inside.toFixed(3)+" / "+result.across.toFixed(3)).join("  ·  ");
+    const output = svg.cloneNode(true);
+    output.setAttribute("xmlns","http://www.w3.org/2000/svg");
+    output.setAttribute("width",width);
+    output.setAttribute("height",height+120);
+    output.setAttribute("viewBox","0 -46 "+width+" "+(height+120));
+    output.setAttribute("font-family","Segoe UI, sans-serif");
+    output.prepend(element("rect",{x:0,y:-46,width,height:height+120,fill:bg}));
+    output.append(
+      element("text",{x:28,y:-12,fill:textColor,"font-size":26,"font-weight":700},"Harry Potter dialogue communities · "+medium),
+      element("text",{x:28,y:height+16,fill:palette.hero,"font-size":14},"● Hero"),
+      element("text",{x:110,y:height+16,fill:palette.villain,"font-size":14},"◆ Villain"),
+      element("text",{x:207,y:height+16,fill:"#c8d7e9","font-size":14},"Thicker lines show greater TF-IDF cosine similarity."),
+      element("text",{x:28,y:height+37,fill:"#c8d7e9","font-size":13},"Edges represent adjacent speaker changes. Regions are weighted Louvain communities."),
+      element("text",{x:28,y:height+57,fill:"#c8d7e9","font-size":13},"Mean cosine within / across communities for all same-role pairs · "+summary)
+    );
+    const link = document.createElement("a");
+    const url = URL.createObjectURL(new Blob([new XMLSerializer().serializeToString(output)],{type:"image/svg+xml"}));
+    link.href = url;
+    link.download = "dialogue-communities-"+medium.toLowerCase()+".svg";
+    link.click();
+    setTimeout(()=>URL.revokeObjectURL(url),1000);
+  }
+
+  dataset.Books.nodes.map(node=>node.name).sort((a,b)=>a.localeCompare(b)).forEach(name=>person.add(new Option(name,name)));
+  person.addEventListener("change",()=>select(person.value));
+  ties.addEventListener("change",render);
+  media.forEach(button=>button.addEventListener("click",()=>{
+    medium = button.dataset.medium;
+    media.forEach(item=>item.setAttribute("aria-pressed",item===button));
+    render();
+  }));
+  document.getElementById("export").addEventListener("click",exportMap);
+  render();
+</script>
+</body>
+</html>

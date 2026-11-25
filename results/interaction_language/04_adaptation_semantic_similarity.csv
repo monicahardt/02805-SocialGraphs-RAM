@@ -1,0 +1,36 @@
+story,title,character,book_words,film_words,book_passages,film_passages,own_film_cosine
+1,Philosopher’s Stone,Harry Potter,5100,1733,69,41,0.9154304777872568
+1,Philosopher’s Stone,Ron Weasley,3347,1076,44,26,0.8932719213434401
+1,Philosopher’s Stone,Hermione Granger,1619,972,24,26,0.8239521427049229
+1,Philosopher’s Stone,Severus Snape,312,347,6,7,0.6111119348620181
+2,Chamber of Secrets,Harry Potter,6498,2154,87,51,0.9096335910787559
+2,Chamber of Secrets,Ron Weasley,4579,892,63,29,0.904421734698423
+2,Chamber of Secrets,Hermione Granger,1684,731,27,17,0.8685589344076821
+2,Chamber of Secrets,Dobby,613,498,8,8,0.943398426187455
+2,Chamber of Secrets,Severus Snape,436,219,8,5,0.7949277250529516
+3,Prisoner of Azkaban,Harry Potter,6853,1329,95,35,0.897054610102031
+3,Prisoner of Azkaban,Ron Weasley,4265,796,61,26,0.8916906520131141
+3,Prisoner of Azkaban,Hermione Granger,3558,1027,53,28,0.9245347050982393
+3,Prisoner of Azkaban,Severus Snape,1620,439,23,9,0.8600093066204054
+4,Goblet of Fire,Harry Potter,10888,1072,148,27,0.8657387264403236
+4,Goblet of Fire,Ron Weasley,6715,701,96,18,0.847713899535314
+4,Goblet of Fire,Hermione Granger,6187,659,84,15,0.8308123889474562
+4,Goblet of Fire,Voldemort,659,438,9,8,0.8264407625176622
+4,Goblet of Fire,Severus Snape,822,147,15,4,0.39780052844229485
+5,Order of the Phoenix,Harry Potter,16144,1846,200,41,0.9189902592918264
+5,Order of the Phoenix,Ron Weasley,7741,379,96,16,0.8101373332888503
+5,Order of the Phoenix,Hermione Granger,11637,800,141,18,0.8810586934667248
+5,Order of the Phoenix,Severus Snape,1890,311,21,4,0.8691762943035113
+5,Order of the Phoenix,Bellatrix Lestrange,313,145,4,3,0.6725156397538458
+6,Half-Blood Prince,Harry Potter,14514,2057,190,40,0.9220358146289163
+6,Half-Blood Prince,Ron Weasley,4995,826,74,18,0.8576097605706977
+6,Half-Blood Prince,Hermione Granger,5365,1079,74,22,0.8793489994940208
+6,Half-Blood Prince,Voldemort,532,372,7,6,0.635949251780837
+6,Half-Blood Prince,Severus Snape,2011,373,28,9,0.8612020395072724
+6,Half-Blood Prince,Bellatrix Lestrange,502,210,6,4,0.7327573610213406
+7,Deathly Hallows,Harry Potter,14986,3787,196,74,0.9484921215828696
+7,Deathly Hallows,Ron Weasley,8299,2238,111,49,0.92897480298769
+7,Deathly Hallows,Hermione Granger,8230,2350,114,53,0.9493492269081149
+7,Deathly Hallows,Voldemort,1423,1007,20,23,0.9041116668199188
+7,Deathly Hallows,Severus Snape,1704,549,21,8,0.8376505978472967
+7,Deathly Hallows,Bellatrix Lestrange,529,334,7,9,0.7818735973871505

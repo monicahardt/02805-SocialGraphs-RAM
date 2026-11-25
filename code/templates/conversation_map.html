@@ -1,0 +1,361 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Harry Potter · Who says what to whom?</title>
+<style>
+  :root {
+    color-scheme: dark;
+    --bg: #09141e;
+    --surface: #10212d;
+    --ink: #edf3f4;
+    --muted: #a9bfcb;
+    --line: #2b4351;
+    --aqua: #88d6d7;
+    --gold: #efbc79;
+    font: 15px/1.52 "Segoe UI", system-ui, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; }
+  [hidden] { display: none !important; }
+  body { margin: 0; background: var(--bg); color: var(--ink); }
+  main { max-width: 1560px; padding: 33px clamp(14px, 3.6vw, 53px) 30px; margin: auto; }
+  h1, h2, h3, p, blockquote { margin: 0; }
+  h1 { font: 400 clamp(2.35rem, 5.1vw, 4.4rem)/1.02 Georgia, serif; letter-spacing: -.058em; }
+  header p { color: var(--muted); max-width: 66ch; margin-top: 11px; }
+  .controls { display: flex; align-items: end; flex-wrap: wrap; gap: 11px 20px; margin: 24px 0 15px; }
+  fieldset { margin: 0; padding: 0; border: 0; }
+  label, legend { display: block; font-size: .81rem; font-weight: 650; padding: 0; margin: 0 0 5px; }
+  select, button { min-height: 40px; font: inherit; color: var(--ink); border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+  select { padding: 5px 25px 5px 8px; max-width: 100%; }
+  button { cursor: pointer; padding: 4px 13px; }
+  select:hover, button:hover { border-color: var(--aqua); }
+  select:focus-visible, button:focus-visible, summary:focus-visible, a:focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+  .medium_buttons { display: flex; gap: 4px; }
+  .medium_buttons button[aria-pressed="true"] { background: var(--aqua); color: #112f37; font-weight: 700; border-color: transparent; }
+  .workspace { display: grid; grid-template-columns: minmax(0, 1fr) 360px; align-items: start; gap: 15px; }
+  .chart, .inspector { min-width: 0; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+  .chart { overflow: hidden; }
+  .legend { display: flex; gap: 7px 17px; align-items: center; flex-wrap: wrap; padding: 13px 16px; font-size: .82rem; }
+  .legend span { display: inline-flex; align-items: center; gap: 6px; }
+  .legend i { display: inline-block; width: 23px; height: 3px; background: var(--aqua); border-radius: 2px; }
+  .legend i.gold { background: var(--gold); }
+  .legend .detail { color: var(--muted); }
+  .stage { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); position: relative; }
+  .scroll { overflow: auto; background: radial-gradient(ellipse at 50% 53%, #142d3a 0%, #0d1d28 53%, #0b1923 82%); }
+  #network { display: block; width: 100%; min-width: 720px; font-family: "Segoe UI", system-ui, sans-serif; }
+  #network .node-hit, #network .edge-hit { cursor: pointer; }
+  #network .label { pointer-events: none; }
+  .tooltip { pointer-events: none; position: absolute; z-index: 2; max-width: calc(100% - 16px); background: #183644; border: 1px solid #587986; padding: 7px 10px; border-radius: 6px; font-size: .83rem; }
+  .tooltip b, .tooltip span { display: block; }
+  .caption { color: var(--muted); font-size: .81rem; padding: 10px 16px; }
+  .inspector { padding: 15px 15px 17px; }
+  .pair-fields { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  .pair-fields select { width: 100%; font-size: .88rem; padding-right: 18px; }
+  .inspector h2 { margin-top: 16px; font-size: 1.18rem; line-height: 1.30; letter-spacing: -.012em; }
+  .scope { color: var(--muted); margin-top: 4px; font-size: .82rem; }
+  .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; margin: 14px 0; }
+  .stats > div { border-top: 2px solid #466473; padding-top: 7px; }
+  .stats .active { border-color: var(--gold); }
+  .stats span { display: block; color: var(--muted); font-size: .77rem; }
+  .stats strong { display: block; font-size: 1.36rem; font-variant-numeric: tabular-nums; }
+  .inspector h3 { font-size: .89rem; margin-top: 14px; }
+  .tags { padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 5px; margin: 7px 0; }
+  .tags li { border: 1px solid #3f5967; border-radius: 5px; padding: 3px 6px; font-size: .78rem; color: #d6e8eb; }
+  .tags small { margin-left: 5px; color: var(--muted); }
+  .examples { margin: 6px 0 0; padding: 0; list-style: none; }
+  .examples li { padding: 9px 0; border-bottom: 1px solid var(--line); }
+  .examples li:last-child { border-bottom: 0; }
+  .examples blockquote { font: 400 .98rem/1.34 Georgia, serif; color: var(--ink); }
+  .examples small, .empty { display: block; margin-top: 6px; color: var(--muted); font-size: .78rem; }
+  details { color: var(--muted); margin-top: 18px; font-size: .85rem; }
+  summary { cursor: pointer; color: var(--aqua); font-weight: 650; width: fit-content; }
+  details p { margin-top: 8px; max-width: 103ch; }
+  details a { color: var(--aqua); }
+  @media (max-width: 980px) {
+    .workspace { grid-template-columns: minmax(0, 1fr); }
+    .inspector { width: 100%; }
+    .pair-fields, .stats { max-width: 520px; }
+  }
+  @media (max-width: 470px) {
+    main { padding-top: 22px; }
+    .controls { gap: 10px 10px; }
+    .controls > div { min-width: 0; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>Who says what to whom?</h1>
+    <p>Follow an arrow from a speaker to a likely conversation partner. Select it to read the dialogue and compare the exchange across books and films.</p>
+  </header>
+  <div class="controls">
+    <fieldset>
+      <legend>Medium</legend>
+      <div class="medium_buttons">
+        <button type="button" data-medium="Book" aria-pressed="false">Books</button>
+        <button type="button" data-medium="Film" aria-pressed="true">Films</button>
+      </div>
+    </fieldset>
+    <div>
+      <label for="installment">Installment</label>
+      <select id="installment"><option value="0">All installments</option></select>
+    </div>
+    <div>
+      <label for="mode">Dialogue shown</label>
+      <select id="mode">
+        <option value="question">Question-bearing turns</option>
+        <option value="all">All inferred turns</option>
+      </select>
+    </div>
+  </div>
+  <div class="workspace">
+    <section class="chart" aria-label="Directed dialogue network">
+      <div class="legend">
+        <span><i class="gold" aria-hidden="true"></i>Selected arrow</span>
+        <span><i aria-hidden="true"></i>Other outgoing arrows from the speaker</span>
+        <span class="detail">Thicker arrows represent more turns.</span>
+      </div>
+      <div class="stage">
+        <div class="scroll">
+          <svg id="network" viewBox="0 0 940 705" role="group" aria-labelledby="chart-title">
+            <title id="chart-title">Directed dialogue of 15 Harry Potter characters</title>
+            <defs id="arrows"></defs>
+            <g id="drawing"></g>
+          </svg>
+        </div>
+        <div id="tooltip" class="tooltip" hidden aria-hidden="true"><b></b><span></span></div>
+      </div>
+      <p id="caption" class="caption" aria-live="polite"></p>
+    </section>
+    <aside class="inspector">
+      <div class="pair-fields">
+        <div><label for="speaker">Speaker</label><select id="speaker"></select></div>
+        <div><label for="partner">Likely partner</label><select id="partner"></select></div>
+      </div>
+      <h2 id="pair-title"></h2>
+      <p id="scope" class="scope"></p>
+      <div id="stats" class="stats" aria-live="polite"></div>
+      <h3>Distinctive words</h3>
+      <ul id="terms" class="tags"></ul>
+      <p id="no-words" class="empty" hidden>No repeated content words in this selection.</p>
+      <h3 id="excerpt-title"></h3>
+      <ul id="examples" class="examples"></ul>
+      <p id="no-excerpts" class="empty" hidden>No matching turns in this selection.</p>
+    </aside>
+  </div>
+  <details>
+    <summary>How exchanges and words were selected</summary>
+    <p>An arrow points from the middle speaker in an A–B–A sequence to the person who speaks on both sides of that turn. Consecutive lines by one speaker are merged. The sequence breaks at changes of source or segment and at unknown or generic speakers. Group conversations can make the intended addressee ambiguous.</p>
+    <p>The map shows the 15 characters with the most participation in inferred exchanges across both media, ranked by the smaller of their book and film totals. Arrows show pairs among those characters. Question-bearing turns contain a question mark. The final two films share installment seven.</p>
+    <p>Distinctive words are repeated terms weighted by TF-IDF across directed pairs in the selected medium, installment, and dialogue mode. Common words and the two selected characters’ name components are filtered. Counts beside terms are raw occurrences. Excerpts favor turns containing those words and show at most one excerpt per source segment.</p>
+    <p>Record numbers identify entries in the combined dialogue files. <a href="../../../book_data/all_books.csv">Book dialogue</a> · <a href="../../../movie_data/all_movies.csv">Film dialogue</a> · <a href="harry_question_gap.png">Harry’s question-rate analysis</a></p>
+  </details>
+</main>
+<script id="conversation-data" type="application/json">__CONVERSATION_DATA__</script>
+<script>
+  "use strict";
+  const {nodes, data, installments} = JSON.parse(document.getElementById("conversation-data").textContent);
+  const pick = id => document.getElementById(id);
+  const drawing = pick("drawing"), stage = document.querySelector(".stage"), tooltip = pick("tooltip");
+  const installment = pick("installment"), mode = pick("mode"), speaker = pick("speaker"), partner = pick("partner");
+  const palette = {chosen:"#efbc79", outgoing:"#88d6d7", context:"#658592"};
+  const buttons = [...document.querySelectorAll("[data-medium]")];
+  const names = nodes.map(n => n.name);
+  const HARRY = names.indexOf("Harry Potter"), HERMIONE = names.indexOf("Hermione Granger"), RON = names.indexOf("Ron Weasley");
+  let medium = "Film", source = HARRY, target = HERMIONE;
+  const amount = edge => mode.value === "question" ? edge.questions : edge.turns;
+  const scopeName = id => installments[id] || "All installments";
+
+  function svg(tag, attributes, label) {
+    const el = document.createElementNS("http://www.w3.org/2000/svg", tag);
+    for (const [key, value] of Object.entries(attributes)) el.setAttribute(key, value);
+    if (label !== undefined) el.textContent = label;
+    return el;
+  }
+
+  function html(tag, text, className) {
+    const el = document.createElement(tag);
+    if (text !== undefined) el.textContent = text;
+    if (className) el.className = className;
+    return el;
+  }
+
+  function tip(element, title, detail) {
+    element.addEventListener("pointermove", event => {
+      const bounds = stage.getBoundingClientRect();
+      tooltip.firstElementChild.textContent = title;
+      tooltip.lastElementChild.textContent = detail;
+      tooltip.hidden = false;
+      tooltip.style.left = Math.max(6, Math.min(event.clientX-bounds.left+12, bounds.width-tooltip.offsetWidth-6))+"px";
+      tooltip.style.top = Math.max(4, event.clientY-bounds.top-tooltip.offsetHeight-10)+"px";
+    });
+    element.addEventListener("pointerleave", () => {tooltip.hidden = true;});
+  }
+
+  function selectedEdge(version) {
+    return data[version][installment.value].find(e => e.a === source && e.b === target);
+  }
+
+  function selectPair(a,b) {
+    source = a;
+    target = b;
+    speaker.value = String(a);
+    partner.replaceChildren();
+    sortedNames.filter(({i})=>i!==a).forEach(({name,i})=>partner.add(new Option(name,i)));
+    partner.value = String(b);
+    render();
+  }
+
+  function selectSpeaker(i) {
+    const outgoing = data[medium][installment.value].filter(edge=>edge.a===i);
+    outgoing.sort((a,b)=>amount(b)-amount(a) || b.turns-a.turns || a.b-b.b);
+    const best = outgoing[0]?.b ?? (i===target ? (i===HARRY ? HERMIONE : HARRY) : target);
+    selectPair(i,best);
+  }
+
+  function edgeGeometry(edge) {
+    const a = nodes[edge.a], b = nodes[edge.b];
+    const dx = b.x-a.x, dy = b.y-a.y, length = Math.hypot(dx,dy);
+    const bend = Math.min(length*.18, 44);
+    const control = [(a.x+b.x)/2-dy/length*bend, (a.y+b.y)/2+dx/length*bend];
+    const shifted = (p, pad) => {
+      const x = control[0]-p.x, y = control[1]-p.y;
+      const norm = Math.hypot(x,y);
+      return [p.x+pad*x/norm, p.y+pad*y/norm];
+    };
+    const start = shifted(a, 15), end = shifted(b, 18);
+    return {
+      path:"M "+start.join(" ")+" Q "+control.join(" ")+" "+end.join(" "),
+      mid:[(start[0]+2*control[0]+end[0])/4, (start[1]+2*control[1]+end[1])/4]
+    };
+  }
+
+  function group(edge) {
+    if (edge.a === source && edge.b === target) return "chosen";
+    return edge.a === source ? "outgoing" : "context";
+  }
+
+  function drawEdge(edge, layer) {
+    const family = group(edge);
+    const quantity = amount(edge);
+    const {path} = edgeGeometry(edge);
+    const size = .55 + 1.16*Math.log2(1+quantity);
+    layer.append(svg("path", {
+      d:path, fill:"none", stroke:palette[family], "stroke-width":size,
+      opacity:{chosen:1,outgoing:.74,context:.19}[family], "marker-end":"url(#arrow-"+family+")",
+    }));
+    const hit = svg("path", {d:path, class:"edge-hit", fill:"none", stroke:"transparent", "stroke-width":12,
+      "data-edge":edge.a+"-"+edge.b, "aria-hidden":"true"});
+    tip(hit,names[edge.a]+" → "+names[edge.b],edge.turns+" turns · "+edge.questions+" contain a question");
+    hit.addEventListener("click",()=>selectPair(edge.a,edge.b));
+    layer.append(hit);
+  }
+
+  function annotate(edge) {
+    const {mid:[x,y]} = edgeGeometry(edge);
+    const score = amount(edge);
+    const type = mode.value === "question" ? "question " : "";
+    const label = score+" "+type+(score===1?"turn":"turns");
+    const fill = palette[group(edge)];
+    const text = svg("text",{x,y:y-7,fill,"font-weight":650,"font-size":12,"text-anchor":"middle",class:"label"},label);
+    drawing.append(text);
+    const box = text.getBBox();
+    drawing.insertBefore(svg("rect",{x:box.x-6,y:box.y-3,width:box.width+12,height:box.height+6,
+      rx:5,fill:"#102530",stroke:"#365968","stroke-width":.8,class:"label"}),text);
+  }
+
+  function drawNode(node,i,used) {
+    const {x,y,name} = node;
+    const state = i===source ? "chosen" : i===target ? "outgoing" : "context";
+    const active = state!=="context", fill = active ? palette[state] : "#bed5dd";
+    if (active) drawing.append(svg("circle",{cx:x,cy:y,r:18,fill:"none",stroke:fill,opacity:.45,"stroke-width":1.4}));
+    drawing.append(svg("circle",{cx:x,cy:y,r:active?10:6.5,fill,opacity:used || active ? 1:.38,stroke:"#0a1a23","stroke-width":2}));
+    const inCenter = [HARRY,HERMIONE,RON].includes(i);
+    const side = x<290 ? 1 : x>650 ? -1 : 0;
+    drawing.append(svg("text",{
+      x:x+(inCenter?0:side*13), y:inCenter?y+35:side?y+4:y-16,
+      "text-anchor":inCenter || !side ? "middle" : side>0?"start":"end",
+      fill, opacity:used || active ? 1:.54, "font-weight":active?720:560, "font-size":inCenter?16:14,
+      "paint-order":"stroke", stroke:"#101e29", "stroke-width":4, "stroke-linejoin":"round", class:"label",
+    },name));
+    const hit = svg("circle",{cx:x,cy:y,r:17,fill:"transparent",class:"node-hit","data-person":i,
+      "aria-label":name+", select as speaker"});
+    hit.addEventListener("click",()=>selectSpeaker(i));
+    tip(hit,name,i===source?"Selected speaker":i===target?"Likely partner":"Select as speaker");
+    drawing.append(hit);
+  }
+
+  function showInspector() {
+    const scope = scopeName(installment.value);
+    pick("pair-title").textContent = names[source]+" → "+names[target];
+    pick("scope").textContent = medium+" · "+scope;
+    for (const button of buttons) button.setAttribute("aria-pressed",button.dataset.medium===medium);
+    pick("stats").replaceChildren(...["Book","Film"].map(version => {
+      const edge = selectedEdge(version);
+      const cell = html("div",undefined,version===medium?"active":"");
+      const percent = edge ? (100*edge.questions/edge.turns).toFixed(1)+"%" : "—";
+      const detail = edge ? edge.questions+" question turns / "+edge.turns+" turns" : "No inferred turns";
+      cell.append(html("span",version),html("strong",percent),html("span",detail));
+      return cell;
+    }));
+    const shown = selectedEdge(medium)?.[mode.value];
+    const words = shown?.words || [], excerpts = shown?.examples || [];
+    pick("terms").replaceChildren(...words.map(([word,count])=>{
+      const li=html("li",word);
+      li.append(html("small",count));
+      return li;
+    }));
+    pick("no-words").hidden = words.length>0;
+    pick("excerpt-title").textContent = mode.value==="question"?"Question-bearing turns":"Dialogue excerpts";
+    pick("examples").replaceChildren(...excerpts.map(e=>{
+      const li=html("li");
+      li.append(html("blockquote","“"+e.text+"”"),html("small",
+        scopeName(e.installment)+e.part+" · "+e.chapter+" · record "+e.record));
+      return li;
+    }));
+    pick("no-excerpts").hidden = excerpts.length>0;
+  }
+
+  function render() {
+    tooltip.hidden=true;
+    drawing.replaceChildren();
+    const all = data[medium][installment.value].filter(e=>amount(e)>0);
+    const edges = all.filter(e=>amount(e)>=2 || group(e)==="chosen");
+    const order = {context:0, outgoing:1, chosen:2};
+    edges.sort((a,b)=>order[group(a)]-order[group(b)] || amount(a)-amount(b));
+    const layer = svg("g",{});
+    drawing.append(layer);
+    edges.forEach(edge=>drawEdge(edge,layer));
+    const used = new Set(edges.flatMap(({a,b})=>[a,b]));
+    nodes.forEach((node,i)=>drawNode(node,i,used.has(i)));
+    const chosen = edges.find(edge=>group(edge)==="chosen");
+    if (chosen) annotate(chosen);
+    if (source===HARRY && (target===RON || target===HERMIONE)) {
+      const comparison=edges.find(edge=>edge.a===HARRY && edge.b===(target===RON?HERMIONE:RON));
+      if (comparison) annotate(comparison);
+    }
+    pick("chart-title").textContent = medium+" directed dialogue network, "+scopeName(installment.value);
+    pick("caption").textContent = edges.length+" arrows shown. Arrows appear at two or more "+(mode.value==="question"?"question-bearing turns":"turns")+", plus the selected pair when it has a single matching turn.";
+    showInspector();
+  }
+
+  for (const [id, fill] of Object.entries(palette)) {
+    const marker = svg("marker",{id:"arrow-"+id,markerWidth:10,markerHeight:9,refX:8,refY:4.5,
+      orient:"auto",markerUnits:"userSpaceOnUse",viewBox:"0 0 10 9"});
+    marker.append(svg("path",{d:"M 0 0 L 10 4.5 L 0 9 Z",fill}));
+    pick("arrows").append(marker);
+  }
+  Object.entries(installments).forEach(([id,name])=>installment.add(new Option(name,id)));
+  const sortedNames = names.map((name,i)=>({name,i})).sort((a,b)=>a.name.localeCompare(b.name));
+  sortedNames.forEach(({name,i})=>speaker.add(new Option(name,i)));
+  speaker.addEventListener("change",()=>selectSpeaker(Number(speaker.value)));
+  partner.addEventListener("change",()=>selectPair(source,Number(partner.value)));
+  installment.addEventListener("change",render);
+  mode.addEventListener("change",render);
+  buttons.forEach(button=>button.addEventListener("click",()=>{medium=button.dataset.medium;render();}));
+  selectPair(HARRY,HERMIONE);
+</script>
+</body>
+</html>

@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harry Potter dialogue embeddings</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #202939;
+      --muted: #536075;
+      --hairline: #d9dee7;
+      --grid: #e8ebf1;
+      --paper: #f7f7f5;
+      --white: #fff;
+      --accent: #34547a;
+      --sans: "Segoe UI", system-ui, sans-serif;
+    }
+    *, *::before, *::after { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 15px/1.55 var(--sans); }
+    main { max-width: 1200px; margin-inline: auto; padding: 44px 32px 30px; }
+    h1, h2, p { margin: 0; }
+    h1 { font-size: clamp(1.9rem, 4vw, 3.15rem); line-height: 1.12; letter-spacing: -.045em; }
+    header p { margin-top: 10px; max-width: 650px; color: var(--muted); }
+    h2 { font-size: 1rem; line-height: 1.3; letter-spacing: -.01em; }
+    .controls { display: flex; align-items: end; gap: 16px 24px; flex-wrap: wrap; margin: 27px 0 16px; }
+    fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
+    legend, .control-label { display: block; padding: 0; margin-bottom: 5px; font-size: .83rem; font-weight: 600; }
+    .method-options { display: flex; padding: 3px; border: 1px solid var(--hairline); border-radius: 8px; background: var(--white); }
+    button, select { font: inherit; color: inherit; }
+    button { cursor: pointer; }
+    .method-options button { min-height: 36px; border: 0; padding: 4px 14px; border-radius: 5px; background: var(--white); }
+    .method-options button:hover { background: #eef2f7; }
+    .method-options button[aria-pressed="true"] { background: var(--accent); color: var(--white); }
+    select { min-height: 43px; padding: 4px 28px 4px 10px; border: 1px solid var(--hairline); border-radius: 7px; background: var(--white); }
+    button:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid #456b9e; outline-offset: 3px; }
+    .workspace { display: grid; grid-template-columns: minmax(0, 1fr) minmax(210px, 245px); gap: 15px; align-items: start; }
+    .map { min-width: 0; background: var(--white); border: 1px solid var(--hairline); border-radius: 10px; overflow: hidden; }
+    .legend { display: flex; align-items: center; justify-content: space-between; gap: 10px 22px; flex-wrap: wrap; padding: 14px 17px 3px; }
+    .legend-points, .legend-point { display: flex; align-items: center; gap: 10px; }
+    .legend-points { gap: 20px; }
+    .legend-point { font-size: .83rem; }
+    .legend-shape { display: inline-block; flex: 0 0 9px; height: 9px; width: 9px; background: var(--accent); border-radius: 50%; }
+    .legend-shape.film { border-radius: 0; transform: rotate(45deg); }
+    .color-key { display: grid; grid-template-columns: 140px; gap: 2px; font-size: .76rem; }
+    .color-ramp { height: 6px; border-radius: 5px; }
+    .color-values { display: flex; justify-content: space-between; color: var(--muted); font-variant-numeric: tabular-nums; }
+    .chart { position: relative; }
+    #projection { display: block; width: 100%; height: clamp(370px, 47vw, 520px); }
+    #projection.orbit-view { cursor: grab; touch-action: none; }
+    #projection.orbit-view.dragging, #projection.orbit-view.dragging .mark { cursor: grabbing; }
+    .orbit-controls { display: flex; align-items: center; flex-wrap: wrap; gap: 5px 7px; padding: 6px 16px 0; color: var(--muted); font-size: .8rem; }
+    .orbit-controls[hidden] { display: none; }
+    .orbit-controls button { border: 1px solid var(--hairline); background: var(--white); border-radius: 5px; min-width: 32px; min-height: 31px; padding: 2px 8px; }
+    .orbit-controls button:hover { background: #eef2f7; }
+    #projection .grid { stroke: var(--grid); stroke-width: 1; }
+    #projection .zero { stroke: #c9d2df; }
+    #projection .tick { fill: #57667a; font-size: 11px; }
+    #projection .axis { fill: var(--muted); font-size: 12px; }
+    #projection .pair { stroke: #435879; stroke-width: 1.5; stroke-dasharray: 4 4; pointer-events: none; }
+    #projection .mark { stroke: var(--white); stroke-width: 1.25; cursor: pointer; }
+    #projection .mark:hover { stroke: var(--ink); stroke-width: 2; opacity: 1; }
+    #projection .halo { fill: none; stroke: var(--ink); stroke-width: 1.25; pointer-events: none; }
+    #projection .point-label { fill: var(--ink); stroke: var(--white); stroke-width: 3; stroke-linejoin: round; paint-order: stroke; font-size: 11px; font-weight: 600; pointer-events: none; }
+    #projection .label-leader { stroke: #8793a7; stroke-width: .75; pointer-events: none; }
+    .tooltip { position: absolute; z-index: 2; max-width: calc(100% - 18px); padding: 7px 10px; border: 1px solid var(--hairline); border-radius: 6px; background: var(--white); box-shadow: 0 4px 16px #20334a1a; font-size: .82rem; pointer-events: none; }
+    .tooltip strong { display: block; }
+    .projection-info { border-top: 1px solid var(--grid); color: var(--muted); font-size: .82rem; padding: 10px 15px; }
+    .selection { padding: 16px; background: var(--white); border: 1px solid var(--hairline); border-radius: 10px; }
+    #character-select { width: 100%; max-width: 100%; }
+    .selection h2 { margin-top: 17px; }
+    .selection-hint { color: var(--muted); font-size: .85rem; margin-top: 13px; }
+    .stats { margin: 10px 0 0; }
+    .stats > div { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 7px; padding: 9px 0; border-top: 1px solid var(--grid); }
+    .stats dt { display: flex; align-items: center; gap: 8px; }
+    .stats dd { margin: 0; font-weight: 650; font-variant-numeric: tabular-nums; }
+    .stats small { grid-column: 1 / -1; color: var(--muted); font-size: .8rem; }
+    .installments { color: var(--muted); font-size: .83rem; margin-top: 4px; }
+    .method-info { border-top: 1px solid var(--hairline); margin-top: 16px; padding-top: 14px; }
+    .selection .method-info h2 { margin-top: 0; }
+    .method-info p { color: var(--muted); font-size: .85rem; margin-top: 7px; }
+    .method-info code { overflow-wrap: anywhere; }
+    details { margin-top: 17px; }
+    summary { width: fit-content; cursor: pointer; color: var(--accent); font-size: .87rem; font-weight: 600; }
+    details p { color: var(--muted); font-size: .87rem; margin-top: 8px; max-width: 850px; }
+    @media (max-width: 780px) {
+      main { padding: 24px 16px; }
+      .workspace { grid-template-columns: minmax(0, 1fr); }
+      #projection { height: 430px; }
+    }
+    @media (max-width: 450px) {
+      main { padding-inline: 12px; }
+      .controls { margin-top: 20px; gap: 11px 12px; }
+      .method-options button { padding-inline: 10px; font-size: .88rem; }
+      #projection { height: 350px; }
+      .legend { padding-inline: 12px; }
+      .legend-points { gap: 11px; }
+      .color-key { grid-template-columns: 112px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Harry Potter dialogue embeddings</h1>
+      <p>Compare how the same characters’ book and film dialogue group under three methods. Color shows betweenness in each medium’s dialogue network.</p>
+    </header>
+    <div class="controls">
+      <fieldset>
+        <legend>Embedding method</legend>
+        <div class="method-options">
+          <button type="button" data-method="bert" aria-pressed="false">BERT</button>
+          <button type="button" data-method="word2vec" aria-pressed="false">Word2Vec</button>
+          <button type="button" data-method="tfidf" aria-pressed="true">TF-IDF</button>
+        </div>
+      </fieldset>
+      <div>
+        <label for="medium-select" class="control-label">Medium</label>
+        <select id="medium-select">
+          <option value="both">Books and films</option>
+          <option value="books">Books</option>
+          <option value="movies">Films</option>
+        </select>
+      </div>
+      <div>
+        <label for="view-select" class="control-label">Projection</label>
+        <select id="view-select">
+          <option value="2d">2D</option>
+          <option value="3d">3D</option>
+        </select>
+      </div>
+    </div>
+    <div class="workspace">
+      <section class="map" aria-label="Embedding map and legend">
+        <div class="legend">
+          <div class="legend-points">
+            <span class="legend-point"><span class="legend-shape" aria-hidden="true"></span>Book</span>
+            <span class="legend-point"><span class="legend-shape film" aria-hidden="true"></span>Film</span>
+          </div>
+          <div class="color-key" aria-label="Betweenness centrality color scale">
+            <span>Betweenness centrality</span>
+            <span class="color-ramp" id="color-ramp" aria-hidden="true"></span>
+            <span class="color-values"><span>0</span><span id="max-centrality"></span></span>
+          </div>
+        </div>
+        <div class="orbit-controls" id="orbit-controls" aria-label="3D rotation controls" hidden>
+          <span>Drag to rotate</span>
+          <button type="button" data-orbit="left" aria-label="Rotate left">←</button>
+          <button type="button" data-orbit="right" aria-label="Rotate right">→</button>
+          <button type="button" data-orbit="up" aria-label="Tilt up">↑</button>
+          <button type="button" data-orbit="down" aria-label="Tilt down">↓</button>
+          <button type="button" data-orbit="reset">Reset view</button>
+        </div>
+        <div class="chart">
+          <svg id="projection" role="group" aria-labelledby="plot-title">
+            <title id="plot-title">Character dialogue projected into two dimensions</title>
+            <g id="plot"></g>
+          </svg>
+          <div class="tooltip" id="tooltip" aria-hidden="true" hidden><strong></strong><span></span></div>
+        </div>
+        <p class="projection-info" id="projection-info" aria-live="polite"></p>
+      </section>
+      <aside class="selection">
+        <label for="character-select" class="control-label">Character</label>
+        <select id="character-select">
+          <option value="">All characters</option>
+        </select>
+        <div id="character-info" aria-live="polite"></div>
+        <section class="method-info" aria-live="polite" aria-atomic="true">
+          <h2 id="method-heading"></h2>
+          <p id="method-description"></p>
+          <p id="checkpoint-note" hidden>Checkpoint <code id="model-name"></code></p>
+        </section>
+      </aside>
+    </div>
+    <details>
+      <summary>How the map was computed</summary>
+      <p>Each point pools a character’s dialogue from installments where they speak in both media. The two final films are grouped as one installment. The roster requires at least 100 words on each side.</p>
+      <p>Each method fits its own PCA to unit-normalized book and film profiles together. The 2D views show the first two components. The 3D views for TF-IDF and BERT add the third.</p>
+      <p id="centrality-method"></p>
+    </details>
+  </main>
+  <noscript>Enable JavaScript to switch projections and select characters.</noscript>
+  <script id="embedding-data" type="application/json">__EMBEDDING_DATA__</script>
+  <script>
+    "use strict";
+    const data = JSON.parse(document.getElementById("embedding-data").textContent);
+    const {profiles, projections, projections3d} = data;
+    const mediumNames = {books: "Book", movies: "Film"};
+    const methods = {bert: "BERT", word2vec: "Word2Vec", tfidf: "TF-IDF"};
+    const methodNotes = {
+      tfidf: "A shared vocabulary is fitted across the book and film dialogue profiles. Each profile gives more weight to words that occur often in its dialogue and are rare across the other profiles.",
+      word2vec: "One skip-gram model is trained on book and film dialogue together. It learns to predict nearby words within a dialogue line using negative sampling. A character’s profile is a TF-IDF-weighted average of their word vectors.",
+      bert: "Following the BERT notebook, pretrained MiniLM embeds each dialogue line and splits long lines at word boundaries. The passage vectors are normalized, averaged with token-count weights, and normalized again for each book or film profile.",
+    };
+    const ramp = ["#440154", "#3b528b", "#21918c", "#5ec962", "#fde725"];
+    const maxCentrality = Math.max(...profiles.map(profile => profile.centrality));
+    const number = new Intl.NumberFormat();
+    const svg = document.getElementById("projection");
+    const plot = document.getElementById("plot");
+    const tooltip = document.getElementById("tooltip");
+    const characterSelect = document.getElementById("character-select");
+    const mediumSelect = document.getElementById("medium-select");
+    const viewSelect = document.getElementById("view-select");
+    const orbitControls = document.getElementById("orbit-controls");
+    const info = document.getElementById("character-info");
+    const projectionInfo = document.getElementById("projection-info");
+    const methodHeading = document.getElementById("method-heading");
+    const methodDescription = document.getElementById("method-description");
+    const checkpointNote = document.getElementById("checkpoint-note");
+    const buttons = [...document.querySelectorAll("[data-method]")];
+    const params = new URLSearchParams(location.search);
+    const requestedMethod = params.get("method");
+    let method = Object.hasOwn(methods, requestedMethod) ? requestedMethod : "tfidf";
+    let selected = "Harry Potter";
+    let medium = "both";
+    let view = params.get("view") === "3d" ? "3d" : "2d";
+    const initialOrbit = {yaw:-.62, pitch:.36};
+    let orbit = {...initialOrbit};
+    let gesture = null;
+    let suppressClick = false;
+    let pendingDraw = false;
+
+    function color(value) {
+      const position = Math.sqrt(maxCentrality ? value / maxCentrality : 0) * (ramp.length - 1);
+      const i = Math.min(Math.floor(position), ramp.length - 2);
+      const mix = position - i;
+      const channels = hex => hex.slice(1).match(/../g).map(pair => parseInt(pair, 16));
+      const a = channels(ramp[i]), b = channels(ramp[i + 1]);
+      return "rgb(" + a.map((n, j) => Math.round(n + mix * (b[j] - n))).join(",") + ")";
+    }
+
+    function svgElement(tag, attributes, content) {
+      const node = document.createElementNS("http://www.w3.org/2000/svg", tag);
+      for (const [key, value] of Object.entries(attributes)) node.setAttribute(key, value);
+      if (content !== undefined) node.textContent = content;
+      return node;
+    }
+
+    function htmlElement(tag, content, className) {
+      const node = document.createElement(tag);
+      if (content !== undefined) node.textContent = content;
+      if (className) node.className = className;
+      return node;
+    }
+
+    function renderDetails() {
+      const matches = profiles.filter(profile => profile.name === selected);
+      info.replaceChildren();
+      if (!matches.length) {
+        info.append(htmlElement("p", "Pick a point or a name to compare its book and film profiles.", "selection-hint"));
+        return;
+      }
+      const list = htmlElement("dl", undefined, "stats");
+      for (const profile of matches) {
+        const row = htmlElement("div");
+        const label = htmlElement("dt");
+        const chip = htmlElement("span", undefined, "legend-shape" + (profile.medium === "movies" ? " film" : ""));
+        chip.style.backgroundColor = color(profile.centrality);
+        chip.setAttribute("aria-hidden", "true");
+        label.append(chip, mediumNames[profile.medium]);
+        const value = htmlElement("dd", profile.centrality.toFixed(4));
+        value.title = "Normalized betweenness centrality";
+        const support = htmlElement("small", number.format(profile.words) + " dialogue words");
+        row.append(label, value, support);
+        list.append(row);
+      }
+      const scope = matches[0].installments;
+      info.append(
+        htmlElement("h2", "Betweenness centrality"), list,
+        htmlElement("p", (scope.length === 1 ? "Matched installment " : "Matched installments ") + scope.join(", "), "installments")
+      );
+    }
+
+    function renderMethodInfo() {
+      methodHeading.textContent = "How " + methods[method] + " was built";
+      methodDescription.textContent = methodNotes[method];
+      checkpointNote.hidden = method !== "bert";
+    }
+
+    function selectCharacter(name) {
+      selected = name;
+      characterSelect.value = name;
+      renderDetails();
+      draw();
+    }
+
+    function tickValues(limit, steps) {
+      const target = 2 * limit / steps;
+      const magnitude = 10 ** Math.floor(Math.log10(target));
+      const step = [1, 2, 2.5, 5, 10].find(value => value * magnitude >= target) * magnitude;
+      const range = Math.floor(limit / step);
+      return Array.from({length: 2 * range + 1}, (_, i) => (i - range) * step);
+    }
+
+    function showTooltip(profile, x, y) {
+      tooltip.firstElementChild.textContent = profile.name + " · " + mediumNames[profile.medium];
+      tooltip.lastElementChild.textContent = "Betweenness " + profile.centrality.toFixed(4);
+      tooltip.hidden = false;
+      tooltip.style.left = Math.max(5, Math.min(x + 10, svg.clientWidth - tooltip.offsetWidth - 6)) + "px";
+      tooltip.style.top = Math.max(3, y - tooltip.offsetHeight - 10) + "px";
+    }
+
+    function drawTopLabels(visible, positions, bounds) {
+      const ranked = [...visible].sort((a, b) => profiles[b].centrality - profiles[a].centrality);
+      const names = new Set();
+      const placed = [...plot.querySelectorAll(".orbit-axis-label")].map(label => {
+        const {x, y, width, height} = label.getBBox();
+        return {left:x, right:x+width, top:y, bottom:y+height};
+      });
+      const points = visible.map(i => positions[i]);
+      const offsets = [0, -14, 14, -28, 28, -42, 42, -56, 56, -70, 70, -84, 84];
+      const clamp = (value, min, max) => Math.max(min, Math.min(value, max));
+      const near = (value, min, max, margin) => value > min - margin && value < max + margin;
+
+      for (const i of ranked) {
+        const name = profiles[i].name;
+        if (names.has(name)) continue;
+        names.add(name);
+        const [x, y] = positions[i];
+        const label = svgElement("text", {class:"point-label", "aria-hidden":"true"}, name);
+        plot.append(label);
+        const measured = label.getBBox();
+        const {width, height} = measured;
+
+        let best;
+        for (const offset of offsets) {
+          for (const start of [x + 11, x - width - 11]) {
+            const left = clamp(start, bounds.left, bounds.right - width);
+            const top = clamp(y - height / 2 + offset, bounds.top, bounds.bottom - height);
+            const right = left + width, bottom = top + height;
+            const overlaps = placed.filter(box =>
+              left < box.right + 5 && right > box.left - 5 &&
+              top < box.bottom + 4 && bottom > box.top - 4
+            ).length;
+            const covered = points.filter(([px, py]) => near(px, left, right, 4) && near(py, top, bottom, 4)).length;
+            const anchorX = clamp(x, left, right), anchorY = clamp(y, top, bottom);
+            const distance = Math.hypot(x - anchorX, y - anchorY);
+            const score = 1000 * overlaps + 12 * covered + distance + Math.abs(start - left);
+            if (!best || score < best.score) best = {left, top, right, bottom, anchorX, anchorY, distance, score};
+          }
+        }
+        if (best.distance > 16) {
+          const {anchorX:x2, anchorY:y2} = best;
+          plot.insertBefore(svgElement("line", {x1:x, y1:y, x2, y2, class:"label-leader"}), label);
+        }
+        label.setAttribute("x", best.left - measured.x);
+        label.setAttribute("y", best.top - measured.y);
+        placed.push(best);
+        if (names.size === 10) break;
+      }
+    }
+
+    function drawFlatAxes(positions, variance, width, height, pad) {
+      const plotWidth = width - pad.left - pad.right;
+      const plotHeight = height - pad.top - pad.bottom;
+      const maxX = Math.max(...positions.map(([x]) => Math.abs(x))) * 1.12;
+      const maxY = Math.max(...positions.map(([, y]) => Math.abs(y))) * 1.13;
+      const scale = Math.min(plotWidth / (2 * maxX), plotHeight / (2 * maxY));
+      const xAt = value => pad.left + plotWidth / 2 + value * scale;
+      const yAt = value => pad.top + plotHeight / 2 - value * scale;
+      for (const t of tickValues(plotWidth / (2 * scale), width < 480 ? 4 : 7)) {
+        const x = xAt(t);
+        plot.append(
+          svgElement("line", {x1:x, x2:x, y1:pad.top, y2:height-pad.bottom, class:t === 0 ? "grid zero" : "grid"}),
+          svgElement("text", {x, y:height-pad.bottom+17, "text-anchor":"middle", class:"tick"}, +t.toFixed(4))
+        );
+      }
+      for (const t of tickValues(plotHeight / (2 * scale), 6)) {
+        const y = yAt(t);
+        plot.append(
+          svgElement("line", {x1:pad.left, x2:width-pad.right, y1:y, y2:y, class:t === 0 ? "grid zero" : "grid"}),
+          svgElement("text", {x:pad.left-7, y:y+4, "text-anchor":"end", class:"tick"}, +t.toFixed(4))
+        );
+      }
+      plot.append(
+        svgElement("text", {x:xAt(0), y:height-10, "text-anchor":"middle", class:"axis"}, "PC 1 · " + variance[0] + "%"),
+        svgElement("text", {x:14, y:yAt(0), "text-anchor":"middle", transform:"rotate(-90 14 " + yAt(0) + ")", class:"axis"}, "PC 2 · " + variance[1] + "%")
+      );
+      return positions.map(([x, y]) => [xAt(x), yAt(y)]);
+    }
+
+    function drawOrbitAxes(positions, variance, width, height) {
+      const limits = variance.map((_, i) => 1.08 * Math.max(...positions.map(point => Math.abs(point[i]))));
+      const cy = Math.cos(orbit.yaw), sy = Math.sin(orbit.yaw);
+      const cp = Math.cos(orbit.pitch), sp = Math.sin(orbit.pitch);
+      const rotate = ([x, y, z]) => {
+        const lateral = cy*x + sy*z;
+        const distance = cy*z - sy*x;
+        return [lateral, cp*y - sp*distance, sp*y + cp*distance];
+      };
+      const rotatedCorners = Array.from({length:8}, (_, corner) =>
+        rotate(limits.map((limit, i) => corner & (1 << i) ? limit : -limit)));
+      const maxX = Math.max(...rotatedCorners.map(([x]) => Math.abs(x)));
+      const maxY = Math.max(...rotatedCorners.map(([, y]) => Math.abs(y)));
+      const scale = Math.min((width-78)/(2*maxX), (height-74)/(2*maxY));
+      const toScreen = ([x,y,z]) => [width/2+x*scale, height/2-y*scale, z];
+      const line = ([x1, y1], [x2, y2], classification) =>
+        svgElement("line", {x1, y1, x2, y2, class:classification});
+      const corners = rotatedCorners.map(toScreen);
+      for (let corner = 0; corner < corners.length; corner++) {
+        for (const axis of [1, 2, 4]) {
+          if (!(corner & axis)) plot.append(line(corners[corner], corners[corner | axis], "grid"));
+        }
+      }
+      const start = corners[0];
+      variance.forEach((value, i) => {
+        const end = corners[1 << i];
+        const middle = [(start[0]+end[0])/2, (start[1]+end[1])/2];
+        const dx = middle[0]-width/2, dy = middle[1]-height/2;
+        const distance = Math.max(1, Math.hypot(dx,dy));
+        plot.append(
+          line(start, end, "grid zero"),
+          svgElement("text", {
+            x:Math.max(44, Math.min(width-44, middle[0]+20*dx/distance)),
+            y:Math.max(12, Math.min(height-12, middle[1]+20*dy/distance)),
+            "text-anchor":"middle", "dominant-baseline":"middle", class:"axis orbit-axis-label",
+          }, "PC " + (i+1) + " · " + value + "%")
+        );
+      });
+      return positions.map(point => toScreen(rotate(point)));
+    }
+
+    function draw() {
+      tooltip.hidden = true;
+      const width = svg.clientWidth, height = svg.clientHeight;
+      if (!width || !height) return;
+
+      const in3d = view === "3d";
+      const {positions, variance} = in3d ? projections3d[method] : projections[method];
+      const pad = in3d
+        ? {top:16, right:16, bottom:16, left:16}
+        : {top:16, right:21, bottom:48, left:57};
+      const visible = profiles.map((profile, i) => i).filter(i => medium === "both" || profiles[i].medium === medium);
+      svg.setAttribute("viewBox", "0 0 " + width + " " + height);
+      document.getElementById("plot-title").textContent =
+        methods[method] + " " + view.toUpperCase() + " dialogue projection colored by betweenness centrality";
+      plot.replaceChildren();
+      const markPositions = in3d
+        ? drawOrbitAxes(positions, variance, width, height)
+        : drawFlatAxes(positions, variance, width, height, pad);
+
+      const selection = visible.filter(i => profiles[i].name === selected);
+      if (selection.length === 2) {
+        const [[x1, y1], [x2, y2]] = selection.map(i => markPositions[i]);
+        plot.append(svgElement("line", {x1, y1, x2, y2, class:"pair"}));
+      }
+      const others = visible.filter(i => profiles[i].name !== selected);
+      if (in3d) others.sort((a, b) => markPositions[a][2] - markPositions[b][2]);
+      const indices = [...others, ...selection];
+      for (const i of indices) {
+        const profile = profiles[i];
+        const [x, y] = markPositions[i];
+        const active = profile.name === selected;
+        const size = active ? 7 : 5.5;
+        const attributes = {
+          fill: color(profile.centrality), opacity: active ? 1 : .78, class: "mark",
+          "data-profile": profile.name, "data-medium": profile.medium,
+          "aria-label": profile.name + ", " + mediumNames[profile.medium] + ", betweenness " + profile.centrality.toFixed(4),
+        };
+        const mark = profile.medium === "books"
+          ? svgElement("circle", {...attributes, cx:x, cy:y, r:size})
+          : svgElement("polygon", {...attributes, points:[[x,y-size*1.22],[x+size*1.22,y],[x,y+size*1.22],[x-size*1.22,y]].join(" ")});
+        if (active) plot.append(svgElement("circle", {cx:x, cy:y, r:10, class:"halo"}));
+        mark.addEventListener("pointerenter", () => showTooltip(profile, x, y));
+        mark.addEventListener("pointerleave", () => { tooltip.hidden = true; });
+        mark.addEventListener("click", () => selectCharacter(profile.name));
+        plot.append(mark);
+      }
+      if (!gesture?.moved) {
+        drawTopLabels(visible, markPositions, {left:pad.left, top:pad.top, right:width-pad.right, bottom:height-pad.bottom});
+      }
+      const captured = variance.reduce((total, value) => total + value, 0).toFixed(1);
+      const caption = methods[method] + " · " + visible.length + " profiles · " + captured + "% variance in " + view.toUpperCase();
+      if (projectionInfo.textContent !== caption) projectionInfo.textContent = caption;
+    }
+
+    function syncView() {
+      const supports3d = Object.hasOwn(projections3d, method);
+      viewSelect.querySelector('option[value="3d"]').disabled = !supports3d;
+      if (!supports3d) view = "2d";
+      viewSelect.value = view;
+      orbitControls.hidden = view !== "3d";
+      svg.classList.toggle("orbit-view", view === "3d");
+      for (const button of buttons) button.setAttribute("aria-pressed", button.dataset.method === method);
+      renderMethodInfo();
+      draw();
+    }
+
+    function setOrbit(yaw, pitch) {
+      orbit = {yaw, pitch:Math.max(-1.48, Math.min(pitch, 1.48))};
+      if (pendingDraw) return;
+      pendingDraw = true;
+      requestAnimationFrame(() => {
+        pendingDraw = false;
+        draw();
+      });
+    }
+
+    const names = [...new Set(profiles.map(profile => profile.name))].sort((a, b) => a.localeCompare(b));
+    for (const name of names) characterSelect.add(new Option(name, name));
+    characterSelect.value = selected;
+    characterSelect.addEventListener("change", () => selectCharacter(characterSelect.value));
+    mediumSelect.addEventListener("change", () => { medium = mediumSelect.value; draw(); });
+    viewSelect.addEventListener("change", () => {
+      view = viewSelect.value;
+      syncView();
+    });
+    for (const button of buttons) {
+      button.addEventListener("click", () => {
+        method = button.dataset.method;
+        syncView();
+      });
+    }
+    const nudge = {left:[-.23,0], right:[.23,0], up:[0,.20], down:[0,-.20]};
+    for (const button of orbitControls.querySelectorAll("button")) {
+      button.addEventListener("click", () => {
+        const delta = nudge[button.dataset.orbit];
+        if (delta) setOrbit(orbit.yaw + delta[0], orbit.pitch + delta[1]);
+        else setOrbit(initialOrbit.yaw, initialOrbit.pitch);
+      });
+    }
+    svg.addEventListener("pointerdown", event => {
+      if (view !== "3d" || event.button !== 0 || !event.isPrimary) return;
+      suppressClick = false;
+      gesture = {id:event.pointerId, x:event.clientX, y:event.clientY, ...orbit, moved:false};
+    });
+    svg.addEventListener("pointermove", event => {
+      if (gesture?.id !== event.pointerId) return;
+      const dx = event.clientX - gesture.x, dy = event.clientY - gesture.y;
+      if (!gesture.moved && Math.hypot(dx, dy) < 4) return;
+      if (!gesture.moved) {
+        gesture.moved = true;
+        svg.setPointerCapture(event.pointerId);
+        svg.classList.add("dragging");
+      }
+      setOrbit(gesture.yaw + dx*.011, gesture.pitch + dy*.011);
+    });
+    function endOrbit(event) {
+      if (gesture?.id !== event.pointerId) return;
+      suppressClick = gesture.moved && event.type === "pointerup";
+      gesture = null;
+      svg.classList.remove("dragging");
+      if (suppressClick) setOrbit(orbit.yaw, orbit.pitch);
+      else if (event.type === "pointercancel") draw();
+    }
+    svg.addEventListener("pointerup", endOrbit);
+    svg.addEventListener("pointercancel", endOrbit);
+    svg.addEventListener("pointerleave", event => {
+      if (gesture?.id === event.pointerId && !gesture.moved) gesture = null;
+    });
+    svg.addEventListener("click", event => {
+      if (suppressClick) {
+        suppressClick = false;
+        event.stopPropagation();
+      }
+    }, true);
+    document.getElementById("color-ramp").style.background = "linear-gradient(to right," + ramp.join(",") + ")";
+    document.getElementById("max-centrality").textContent = maxCentrality.toFixed(3);
+    document.getElementById("model-name").textContent = data.bertModel;
+    const [bookNodes, bookEdges] = data.graphSizes.books;
+    const [filmNodes, filmEdges] = data.graphSizes.movies;
+    document.getElementById("centrality-method").textContent =
+      "Betweenness is normalized and computed separately on full named-speaker graphs. An undirected edge joins speakers found on consecutive lines in the same source segment. The book graph has " +
+      number.format(bookNodes) + " nodes and " + number.format(bookEdges) + " edges. The film graph has " +
+      number.format(filmNodes) + " nodes and " + number.format(filmEdges) + " edges. The color scale uses a square-root stretch and stays fixed across methods and medium filters.";
+    renderDetails();
+    syncView();
+    new ResizeObserver(draw).observe(svg);
+  </script>
+</body>
+</html>
