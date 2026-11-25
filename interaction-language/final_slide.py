@@ -8,7 +8,7 @@ from matplotlib.colors import LinearSegmentedColormap
 from matplotlib.patches import Patch
 from matplotlib.ticker import MultipleLocator, PercentFormatter
 
-from analyse import unit_residuals
+from analyse import read_project, top_book_characters, unit_residuals
 from figures import SERIF, axis, plt, save, text
 from slide_2_options import MEDIA, read_results
 
@@ -22,6 +22,8 @@ FIGURE_NAMES = {
     'tfidf_matrix': '07_all_character_tfidf_similarity_matrices',
     'bert_matrix': '07_all_character_bert_similarity_matrices',
     'bert_top_30_matrix': '07_top_30_bert_similarity_matrices',
+    'tfidf_top_20_matrix': '07_top_20_tfidf_similarity_matrices',
+    'bert_top_20_matrix': '07_top_20_bert_similarity_matrices',
 }
 PAPER = '#faf8f2'
 INK = '#202c2c'
@@ -70,7 +72,7 @@ def mean_pair_cosines(cosines):
     return np.ma.masked_invalid(cosines).mean(axis=0).filled(np.nan)
 
 
-def cast_mean_cosines(stories, matrices):
+def cast_mean_cosines(stories, matrices, *, cast=None):
     """Average matched cosine scores and order characters by total exchanges."""
     names = sorted({name for story in stories for name in story['characters']})
     index = {name: i for i, name in enumerate(names)}
@@ -89,19 +91,22 @@ def cast_mean_cosines(stories, matrices):
     scores = np.divide(totals, counts, out=np.full_like(totals, np.nan), where=counts > 0)
     for matrix in scores:
         np.fill_diagonal(matrix, 1)
-    order = np.argsort(-exchange_counts, kind='stable')
+    order = np.argsort(-exchange_counts, kind='stable') if cast is None else [index[name] for name in cast]
     return [names[i] for i in order], scores[:, order][:, :, order]
 
 
 def render_similarity_matrices(out, names, mean_scores, story_count, *, mode):
     """Draw the book and film cosine matrices on a common scale."""
-    bert = mode != 'tfidf_matrix'
-    top_cast = mode == 'bert_top_30_matrix'
+    bert = mode.startswith('bert')
+    book_ranked = mode in ('tfidf_top_20_matrix', 'bert_top_20_matrix')
+    compact_cast = book_ranked or mode == 'bert_top_30_matrix'
     title = 'BERT cosine similarity' if bert else 'TF–IDF cosine similarity'
     lower_limit = -1 if np.nanmin(mean_scores) < 0 else 0
     fig = plt.figure(figsize=(30, 19.5), facecolor=PAPER)
     text(fig, .040, .957, title, 38, INK, fontfamily=SERIF)
-    if top_cast:
+    if book_ranked:
+        subtitle = f'Top {len(names)} matched characters by total book dialogue word count'
+    elif compact_cast:
         subtitle = f'Top {len(names)} by dialogue lines across {story_count} matched book and film stories'
     else:
         subtitle = f'{len(names)} matched characters across {story_count} stories · Ordered by total book and film exchanges'
@@ -120,14 +125,14 @@ def render_similarity_matrices(out, names, mean_scores, story_count, *, mode):
         heatmap = ax.imshow(scores, cmap=palette, vmin=lower_limit, vmax=1, interpolation='nearest')
         ax.set_xticks(range(len(names)), names, rotation=90)
         ax.set_yticks(range(len(names)), names)
-        ax.tick_params(axis='both', which='both', length=0, labelsize=10 if top_cast else 7.5, colors=INK, pad=4)
+        ax.tick_params(axis='both', which='both', length=0, labelsize=10 if compact_cast else 7.5, colors=INK, pad=4)
         boundaries = np.arange(len(names) - 1) + .5
         ax.set_xticks(boundaries, minor=True)
         ax.set_yticks(boundaries, minor=True)
         ax.grid(which='minor', color=PAPER, linewidth=.35)
         for (i, j), score in np.ndenumerate(scores):
             if np.isfinite(score):
-                ax.text(j, i, f'{score:.3f}', va='center', ha='center', fontsize=8 if top_cast else 4.7,
+                ax.text(j, i, f'{score:.3f}', va='center', ha='center', fontsize=10 if book_ranked else 8 if compact_cast else 4.7,
                         color=PAPER if heatmap.norm(score) >= .65 else INK)
 
         scale = axis(fig, [center - .105, .133, .210, .011])
@@ -138,7 +143,7 @@ def render_similarity_matrices(out, names, mean_scores, story_count, *, mode):
 
     fig.add_artist(plt.Line2D([.040, .960], [.091, .091], transform=fig.transFigure,
                              color=BASELINE, linewidth=.7))
-    if top_cast:
+    if bert and compact_cast:
         note = 'Each cell compares two character profiles averaged over their own matched stories. All pairs are included.'
     else:
         note = 'Scores average the stories where both characters are matched. Gray cells have no shared matched story.'
@@ -344,6 +349,10 @@ def main():
                        help='Export mean book and film MiniLM cosine similarity matrices for all matched characters.')
     views.add_argument('--bert-top-30-matrix', dest='mode', action='store_const', const='bert_top_30_matrix',
                        help='Export MiniLM cosine matrices for every pair among the 30 characters with most dialogue.')
+    views.add_argument('--tf-idf-top-20-matrix', dest='mode', action='store_const', const='tfidf_top_20_matrix',
+                       help='Export TF–IDF matrices for the top 20 by book dialogue word count.')
+    views.add_argument('--bert-top-20-matrix', dest='mode', action='store_const', const='bert_top_20_matrix',
+                       help='Export MiniLM matrices for the top 20 by book dialogue word count.')
     parser.add_argument('--model-dir', type=Path, help='Local MiniLM checkpoint for BERT matrices.')
     parser.set_defaults(mode='correlation')
     args = parser.parse_args()
@@ -353,10 +362,16 @@ def main():
 
     with plt.rc_context({'font.family': ['Segoe UI', 'DejaVu Sans'], 'svg.fonttype': 'path',
                          'svg.hashsalt': FIGURE_NAMES[args.mode]}):
-        if args.mode == 'bert_top_30_matrix':
+        if args.mode in ('bert_top_30_matrix', 'bert_top_20_matrix'):
             from adaptation_semantics import top_cast_cosines
 
-            names, scores = top_cast_cosines(repo, stories, args.model_dir)
+            names, scores = top_cast_cosines(repo, stories, args.model_dir,
+                                             by_book_words=args.mode == 'bert_top_20_matrix')
+            render_similarity_matrices(args.results_dir, names, scores, len(stories), mode=args.mode)
+        elif args.mode == 'tfidf_top_20_matrix':
+            _, counts, _, _ = read_project(repo)
+            cast = top_book_characters(stories, counts)
+            names, scores = cast_mean_cosines(stories, matrices, cast=cast)
             render_similarity_matrices(args.results_dir, names, scores, len(stories), mode=args.mode)
         elif args.mode in ('tfidf_matrix', 'bert_matrix'):
             if args.mode == 'bert_matrix':

@@ -11,8 +11,8 @@ from matplotlib.patheffects import withStroke
 from matplotlib.ticker import MaxNLocator
 from sklearn.manifold import TSNE
 
-from adaptation_semantics import mean_cast_profiles, top_matched_profiles
-from analyse import read_project
+from adaptation_semantics import mean_cast_profiles, selected_cast_profiles, top_matched_profiles
+from analyse import read_project, top_book_characters
 from figures import SERIF, axis, plt, save, text
 from final_slide import BASELINE, BOOK, FILM, GRID, INK, PAPER, SECONDARY
 from slide_2_options import MEDIA, read_results
@@ -68,17 +68,20 @@ def draw_exchanges(ax, points, exchanges, max_count, color):
                                      alpha=.30, capstyle='round', zorder=1))
 
 
-def render(out, names, points, story_count, projection, *, exchanges=None):
+def render(out, names, points, story_count, projection, *, exchanges=None, by_book_words=False):
     """Draw both media on identical axes and label the character positions."""
     label, filename = FIGURES[projection]
+    if by_book_words:
+        filename += '_top_20'
+        subtitle = f'MiniLM embeddings · Top {len(names)} matched characters by book dialogue word count'
+    else:
+        subtitle = f'MiniLM embeddings · Top {len(names)} by dialogue lines across {story_count} matched book and film stories'
     if exchanges is not None:
         filename += '_with_exchanges'
         max_count = max(1, max(matrix.max() for matrix in exchanges.values()))
     fig = plt.figure(figsize=(16, 9), facecolor=PAPER)
     text(fig, .055, .936, f'Character dialogue in a shared {label} projection', 29, INK, fontfamily=SERIF)
-    text(fig, .055, .881,
-         f'MiniLM embeddings · Top {len(names)} by dialogue lines across {story_count} matched book and film stories',
-         13, SECONDARY)
+    text(fig, .055, .881, subtitle, 13, SECONDARY)
 
     lower = points.min(axis=(0, 1))
     upper = points.max(axis=(0, 1))
@@ -135,17 +138,23 @@ def main():
     parser.add_argument('--model-dir', type=Path, help='Local copy of the pinned MiniLM checkpoint.')
     parser.add_argument('--projection', choices=FIGURES, default='pacmap')
     parser.add_argument('--show-exchanges', action='store_true', help='Draw lines scaled by observed exchanges.')
+    parser.add_argument('--top-20-book-words', action='store_true', help='Select the top 20 by book dialogue word count.')
     args = parser.parse_args()
 
     stats, matrices = read_results(args.results_dir)
     stories = stats['stories']
-    blocks, _, _, _ = read_project(ROOT)
-    names, profiles = top_matched_profiles(blocks, stories, args.model_dir)
+    blocks, counts, _, _ = read_project(ROOT)
+    if args.top_20_book_words:
+        names = top_book_characters(stories, counts)
+        profiles = selected_cast_profiles(blocks, stories, names, args.model_dir)
+    else:
+        names, profiles = top_matched_profiles(blocks, stories, args.model_dir)
     points = project_profiles(names, profiles, args.projection)
     exchanges = sum_exchanges(names, stories, matrices) if args.show_exchanges else None
     with plt.rc_context({'font.family': ['Segoe UI', 'DejaVu Sans'], 'svg.fonttype': 'path',
                          'svg.hashsalt': FIGURES[args.projection][1]}):
-        render(args.results_dir, names, points, len(stories), args.projection, exchanges=exchanges)
+        render(args.results_dir, names, points, len(stories), args.projection,
+               exchanges=exchanges, by_book_words=args.top_20_book_words)
 
 
 if __name__ == '__main__':

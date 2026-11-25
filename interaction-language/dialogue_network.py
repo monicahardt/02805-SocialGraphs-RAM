@@ -9,8 +9,11 @@ from pathlib import Path
 from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
 from matplotlib.ticker import StrMethodFormatter
 
-from analyse import MEDIUMS, write_rows
-from figures import HIGHLIGHTS, MAP_GRID, MAP_INK, MAP_MUTED, MAP_PAPER, MEDIA_STYLE, SERIF, draw_profile, plt, save, text, voice_axes
+from analyse import MEDIUMS, read_project, top_book_characters, write_rows
+from figures import (
+    HIGHLIGHTS, MAP_GRID, MAP_INK, MAP_MUTED, MAP_PAPER, MEDIA_STYLE, SERIF,
+    character_voice_map, draw_profile, plt, save, text, voice_axes,
+)
 
 
 FIGURE = '05_dialogue_network_by_language'
@@ -29,14 +32,16 @@ LABEL_OFFSETS = {
 }
 
 
-def networks(results):
+def networks(results, *, cast=None):
     stats = json.loads((results / 'statistics.json').read_text(encoding='utf-8'))
     positions = {(row['character'], row['medium']): (row['x'], row['y'])
-                 for row in stats['language_axes']['coordinates']}
+                 for row in stats['language_axes']['coordinates'] if cast is None or row['character'] in cast}
     counts = {medium: Counter() for medium in MEDIUMS}
     with (results / 'matched_pairs.csv').open(encoding='utf-8', newline='') as source:
         for row in csv.DictReader(source):
             pair = tuple(sorted((row['character_a'], row['character_b'])))
+            if cast is not None and not all(name in cast for name in pair):
+                continue
             for medium in MEDIUMS:
                 exchanges = int(row[f'{medium.lower()}_switches'])
                 if exchanges:
@@ -69,7 +74,7 @@ def line_width(share):
     return .45 + 23 * share
 
 
-def render(out, positions, edges):
+def render(out, positions, edges, *, by_book_words=False):
     featured = [e for e in edges if e['featured']]
     context = [e for e in edges if e['shown'] and not e['featured']]
     highlighted = {(e[end], e['medium']) for e in featured for end in ('character_a', 'character_b')}
@@ -77,7 +82,9 @@ def render(out, positions, edges):
                  for medium in MEDIUMS]
     same_top = top_pairs[0] == top_pairs[1] and len(top_pairs[0]) == FEATURED_COUNT
     title = 'The same five ties lead in books and films' if same_top else 'The strongest ties in each dialogue network'
-    subtitle = 'The language map connects characters who exchange turns.'
+    cast_size = len({name for name, _ in positions})
+    subtitle = (f'Top {cast_size} matched characters by book dialogue word count' if by_book_words
+                else 'The language map connects characters who exchange turns.')
     fig = plt.figure(figsize=(13.3333, 7.5), facecolor=MAP_PAPER)
     text(fig, .071, .923, title, 33, MAP_INK, fontfamily=SERIF, weight='bold')
     text(fig, .073, .853, subtitle, 13.5, MAP_MUTED)
@@ -154,20 +161,26 @@ def render(out, positions, edges):
     fig.add_artist(plt.Line2D([.073, .932], [.124, .124], transform=fig.transFigure, color=MAP_GRID))
     text(fig, .073, .092, 'Bold lines mark the top five pairs per medium. Faint lines show each character’s strongest tie.',
          10.5, MAP_MUTED)
-    cast = len({name for name, _ in positions})
-    text(fig, .932, .092, f'{cast} characters · {len(context) + len(featured)} of {len(edges)} links shown',
+    text(fig, .932, .092, f'{cast_size} characters · {len(context) + len(featured)} of {len(edges)} links shown',
          10.5, MAP_MUTED, ha='right')
     text(fig, .073, .049, 'A vertical score of 20 means about 20 directions and 80 questions.', 10.5, MAP_MUTED)
-    text(fig, .932, .049, 'A 5% line means 5 of every 100 exchanges in that medium.', 10.5, MAP_MUTED, ha='right')
-    save(fig, out, FIGURE)
+    scope = 'among the selected cast' if by_book_words else 'in that medium'
+    text(fig, .932, .049, f'A 5% line means 5 of every 100 exchanges {scope}.', 10.5, MAP_MUTED, ha='right')
+    save(fig, out, f'{FIGURE}_top_20' if by_book_words else FIGURE)
 
 
-def render_interactive(out, positions, edges):
+def render_interactive(out, positions, edges, *, by_book_words=False):
     nodes = [dict(name=name, label=short_name(name), medium=medium, x=x, y=y)
              for (name, medium), (x, y) in positions.items()]
     data = json.dumps(dict(nodes=nodes, edges=edges), separators=(',', ':')).replace('<', r'\u003c')
     template = Path(__file__).with_name('dialogue_network_view.html').read_text(encoding='utf-8')
-    (out / f'{FIGURE}.html').write_text(template.replace('NETWORK_PAYLOAD', data), encoding='utf-8')
+    scope = ''
+    if by_book_words:
+        scope = 'Top 20 matched characters by book dialogue word count. '
+        template = template.replace('in its medium', 'among the selected cast in its medium')
+    filename = f'{FIGURE}_top_20' if by_book_words else FIGURE
+    html = template.replace('NETWORK_SCOPE', scope).replace('NETWORK_PAYLOAD', data)
+    (out / f'{filename}.html').write_text(html, encoding='utf-8')
 
 
 def main():
@@ -176,17 +189,26 @@ def main():
                         default=Path(__file__).resolve().parents[1] / 'results' / 'interaction_language',
                         help='Directory containing the outputs from analyse.py.')
     parser.add_argument('--out', type=Path, help='Output directory. Defaults to --results-dir.')
+    parser.add_argument('--top-20-book-words', action='store_true', help='Plot the top 20 by book dialogue word count.')
     args = parser.parse_args()
-    positions, counts = networks(args.results_dir)
+    cast = None
+    if args.top_20_book_words:
+        stats = json.loads((args.results_dir / 'statistics.json').read_text(encoding='utf-8'))
+        _, corpus_counts, _, _ = read_project(Path(__file__).resolve().parents[1])
+        cast = set(top_book_characters(stats['stories'], corpus_counts))
+    positions, counts = networks(args.results_dir, cast=cast)
     edges = network_rows(counts)
     out = args.out or args.results_dir
     out.mkdir(parents=True, exist_ok=True)
     plt.rcParams.update({'font.family': ['Segoe UI', 'DejaVu Sans'], 'svg.fonttype': 'path',
                          'svg.hashsalt': 'hp-dialogue-language-network'})
-    render(out, positions, edges)
-    render_interactive(out, positions, edges)
-    write_rows(out / 'dialogue_network_edges.csv', edges)
-    print(f'Saved the dialogue network views and edge list to {out.resolve()}')
+    render(out, positions, edges, by_book_words=args.top_20_book_words)
+    render_interactive(out, positions, edges, by_book_words=args.top_20_book_words)
+    if cast is None:
+        write_rows(out / 'dialogue_network_edges.csv', edges)
+    else:
+        character_voice_map(out, stats['language_axes'], cast=cast)
+    print(f'Saved the dialogue network views to {out.resolve()}')
 
 
 if __name__ == '__main__':

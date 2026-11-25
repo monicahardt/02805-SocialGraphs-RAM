@@ -13,7 +13,7 @@ import torch
 from transformers import AutoModel, AutoTokenizer
 
 from adaptation_vocabulary import SIMILARITY_CHARACTERS, render_similarity
-from analyse import MEDIUMS, MIN_WORDS, SHORT_TITLES, read_project, write_rows
+from analyse import MEDIUMS, MIN_WORDS, SHORT_TITLES, read_project, top_book_characters, write_rows
 from figures import plt
 
 
@@ -109,10 +109,15 @@ def top_matched_profiles(blocks, stories, model_dir):
             for block in blocks[record['story'], medium]:
                 counts.update(line.speaker for line in block.lines if line.speaker in matched)
     names = sorted(counts, key=lambda name: (-counts[name], name))[:CAST_SIZE]
+    return names, selected_cast_profiles(blocks, stories, names, model_dir)
+
+
+def selected_cast_profiles(blocks, stories, names, model_dir):
+    """Encode the selected characters in each of their matched stories."""
     selected = set(names)
     selected_stories = [{**record, 'characters': [name for name in record['characters'] if name in selected]}
                         for record in stories]
-    return names, matched_cast_profiles(blocks, selected_stories, model_dir)
+    return matched_cast_profiles(blocks, selected_stories, model_dir)
 
 
 def mean_cast_profiles(names, profiles):
@@ -125,10 +130,14 @@ def mean_cast_profiles(names, profiles):
     return means / np.linalg.norm(means, axis=-1, keepdims=True)
 
 
-def top_cast_cosines(repo, stories, model_dir):
+def top_cast_cosines(repo, stories, model_dir, *, by_book_words=False):
     """Compare the averaged embeddings of every pair in the selected cast."""
-    blocks, _, _, _ = read_project(repo)
-    names, profiles = top_matched_profiles(blocks, stories, model_dir)
+    blocks, counts, _, _ = read_project(repo)
+    if by_book_words:
+        names = top_book_characters(stories, counts)
+        profiles = selected_cast_profiles(blocks, stories, names, model_dir)
+    else:
+        names, profiles = top_matched_profiles(blocks, stories, model_dir)
     vectors = mean_cast_profiles(names, profiles)
     return names, np.clip(vectors @ vectors.swapaxes(-1, -2), -1, 1)
 

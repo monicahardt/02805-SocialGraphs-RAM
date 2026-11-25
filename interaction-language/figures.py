@@ -115,13 +115,14 @@ def voice_axes(fig, bounds, positions):
     return ax
 
 
-def character_voice_map(out, axes):
+def character_voice_map(out, axes, *, cast=None):
     positions = {(p['character'], p['medium']): (p['x'], p['y'])
-                 for p in axes['coordinates']}
+                 for p in axes['coordinates'] if cast is None or p['character'] in cast}
+    subtitle = (f'Book and film dialogue for {len(positions) // 2} characters' if cast is None
+                else f'Top {len(cast)} matched characters by book dialogue word count')
     fig = plt.figure(figsize=(13.3333, 7.5), facecolor=MAP_PAPER)
     text(fig, .071, .923, 'How the characters speak', 35, MAP_INK, fontfamily=SERIF, weight='bold')
-    text(fig, .073, .855, f'Book and film dialogue for {len(positions) // 2} characters',
-         14.5, MAP_MUTED)
+    text(fig, .073, .855, subtitle, 14.5, MAP_MUTED)
     ax = voice_axes(fig, [.105, .230, .823, .505], positions)
     paired = [
         name
@@ -152,7 +153,8 @@ def character_voice_map(out, axes):
         text(fig, x_legend, .855, f'{"●" if marker == "o" else "◆"}  {medium}', 13, color, weight='bold')
     text(fig, .105, .779, 'Share of directions ↑', 15, MAP_INK, weight='bold')
     text(fig, .305, .779, 'among questions and directions', 11.8, MAP_MUTED)
-    count = axes['directive_comparison']['more_directive_in_films']
+    count = (axes['directive_comparison']['more_directive_in_films'] if cast is None
+             else sum(positions[name, 'Films'][1] > positions[name, 'Books'][1] for name in paired))
     text(fig, .928, .779, f'{count} of {len(paired)} characters score higher in films',
          11.8, MAP_MUTED, ha='right')
     text(fig, .105, .155, '←  Hostile', 15, MAP_INK, weight='bold')
@@ -162,7 +164,8 @@ def character_voice_map(out, axes):
     fig.add_artist(plt.Line2D([.073, .928], [.087, .087], color=MAP_GRID, transform=fig.transFigure))
     text(fig, .073, .062, 'Tone is net supportive minus hostile phrases per 1,000 words.', 10.4, MAP_MUTED)
     text(fig, .073, .032, 'Dotted lines connect the book and film points for each character.', 10.4, MAP_MUTED)
-    save(fig, out, '01_switches_and_vocabulary')
+    filename = '01_switches_and_vocabulary' if cast is None else '01_switches_and_vocabulary_top_20'
+    save(fig, out, filename)
 
 
 def adaptation_comparison(out, stats):

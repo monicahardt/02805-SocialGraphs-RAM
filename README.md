@@ -6,6 +6,35 @@ Social Graphs project comparing character interactions and language across the H
 
 Are characters who interact more frequently linguistically more similar, and does this relationship differ between the books and film adaptations?
 
+## Top 20 characters
+
+The top-20 figures rank characters by their total recorded dialogue words across all seven books. To qualify, a character needs at least 100 dialogue words in both the book and film versions of at least one story.
+
+| Rank | Character | Book dialogue words |
+| ---: | --- | ---: |
+| 1 | Harry Potter | 74,983 |
+| 2 | Ron Weasley | 39,941 |
+| 3 | Hermione Granger | 38,280 |
+| 4 | Albus Dumbledore | 23,585 |
+| 5 | Rubeus Hagrid | 11,647 |
+| 6 | Severus Snape | 8,795 |
+| 7 | Remus Lupin | 7,867 |
+| 8 | Minerva McGonagall | 6,048 |
+| 9 | Fred Weasley | 5,919 |
+| 10 | Molly Weasley | 5,351 |
+| 11 | Sirius Black | 5,255 |
+| 12 | Draco Malfoy | 4,558 |
+| 13 | Cornelius Fudge | 4,236 |
+| 14 | George Weasley | 3,848 |
+| 15 | Dolores Umbridge | 3,670 |
+| 16 | Alastor Moody | 3,082 |
+| 17 | Ginny Weasley | 2,889 |
+| 18 | Voldemort | 2,752 |
+| 19 | Horace Slughorn | 2,734 |
+| 20 | Vernon Dursley | 2,687 |
+
+Ted Tonks has 3,253 recorded dialogue words in the books and zero in the film dataset, so the matched cast includes Vernon Dursley at rank 20.
+
 ## Reproduce the presentation graphs
 
 Run these commands from the repository root in PowerShell. The first two set up the environment.

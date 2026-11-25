@@ -87,6 +87,16 @@ def content_counts(counts, name_words):
             if len(word) >= 3 and word not in stop and word.removesuffix("'s") not in stop}
 
 
+def top_book_characters(stories, counts):
+    """Rank the matched cast by spoken words across the book corpus."""
+    matched = {name for story in stories for name in story['characters']}
+    totals = Counter()
+    for (_, medium), speakers in counts.items():
+        if medium == 'Books':
+            totals.update({name: profile.total() for name, profile in speakers.items() if name in matched})
+    return sorted(matched, key=lambda name: (-totals[name], name))[:20]
+
+
 def omit_ambiguous_repeats(blocks, counts):
     """Remove adjacent identical lines credited to different named speakers."""
     filtered, updated = {}, {}
